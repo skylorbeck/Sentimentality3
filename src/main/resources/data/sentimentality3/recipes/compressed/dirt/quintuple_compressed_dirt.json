@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "sentimentality2:quadruple_compressed_dirt"
+        }
+    },
+    "result": {
+        "item": "sentimentality2:quintuple_compressed_dirt",
+        "count": 1
+    }
+}

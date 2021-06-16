@@ -1,0 +1,34 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_block": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"item": "minecraft:brown_mushroom"
+                    }
+                ]
+            }
+        },
+		"has_block2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"item": "minecraft:red_mushroom"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["has_block","has_block2"]
+    ],
+    "rewards": {
+        "recipes": [
+            "sentimentality2:brown_mushroom_block",
+            "sentimentality2:red_mushroom_block"
+        ]
+    }
+}

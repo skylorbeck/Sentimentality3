@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sentimentality2:block/quadruple_compressed_gravel_block"
+  }
+}

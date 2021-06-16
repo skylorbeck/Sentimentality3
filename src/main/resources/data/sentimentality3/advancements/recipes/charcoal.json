@@ -1,0 +1,26 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_block": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:charcoal"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["has_block"]
+    ],
+    "rewards": {
+        "recipes": [
+            "sentimentality2:charcoal_from_charcoal_nugget",
+            "sentimentality2:charcoal_nugget_from_charcoal",
+            "sentimentality2:charcoal_block_from_charcoal",
+            "sentimentality2:charcoal_from_charcoal_block"
+        ]
+    }
+}

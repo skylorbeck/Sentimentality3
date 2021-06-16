@@ -1,0 +1,37 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "block/warped_fungus",
+		"1": "sentimentality2:block/warped_mushroom_underside",
+		"2": "sentimentality2:block/warped_mushroom_cap",
+		"particle": "block/warped_fungus"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 5, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.5, 0.5, 7.5]},
+			"faces": {
+				"north": {"uv": [7, 11, 9, 16], "texture": "#0"},
+				"east": {"uv": [7, 11, 9, 16], "texture": "#0"},
+				"south": {"uv": [7, 11, 9, 16], "texture": "#0"},
+				"west": {"uv": [7, 11, 9, 16], "texture": "#0"},
+				"up": {"uv": [7, 14, 9, 16], "texture": "#0"},
+				"down": {"uv": [7, 14, 9, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, 5, 3],
+			"to": [13, 9, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.5, 5.5, 2.5]},
+			"faces": {
+				"north": {"uv": [3, 7, 13, 11], "texture": "#0"},
+				"east": {"uv": [3, 7, 13, 11], "texture": "#0"},
+				"south": {"uv": [3, 7, 13, 11], "texture": "#0"},
+				"west": {"uv": [3, 7, 13, 11], "texture": "#0"},
+				"up": {"uv": [0, 0, 10, 10], "texture": "#2"},
+				"down": {"uv": [0, 0, 10, 10], "texture": "#1"}
+			}
+		}
+	]
+}

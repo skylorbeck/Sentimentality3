@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "sentimentality2:triple_compressed_granite"
+        }
+    },
+    "result": {
+        "item": "sentimentality2:quadruple_compressed_granite",
+        "count": 1
+    }
+}

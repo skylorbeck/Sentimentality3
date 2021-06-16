@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:netherrack"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality2:extratool/netherrack_axe",
+      "sentimentality2:extratool/netherrack_hoe",
+      "sentimentality2:extratool/netherrack_pickaxe",
+      "sentimentality2:extratool/netherrack_shovel",
+      "sentimentality2:extratool/netherrack_sword",
+      "sentimentality2:netherrack_furnace",
+      "sentimentality2:netherrack_blast_furnace",
+      "sentimentality2:netherrack_blast_smoker"
+    ]
+  }
+}

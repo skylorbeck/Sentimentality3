@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "sentimentality2:sextuple_compressed_netherrack"
+        }
+    },
+    "result": {
+        "item": "sentimentality2:septuple_compressed_netherrack",
+        "count": 1
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item":"sentimentality2:small_stick_bundle"
+        }
+    ],
+    "result": {
+        "item": "minecraft:stick",
+        "count": 4
+    }
+}

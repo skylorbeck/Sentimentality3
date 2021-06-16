@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "sentimentality2:octuple_compressed_andesite"
+        }
+    },
+    "result": {
+        "item": "sentimentality2:nonuple_compressed_andesite",
+        "count": 1
+    }
+}

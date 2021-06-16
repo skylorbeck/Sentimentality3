@@ -1,0 +1,30 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_block": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:end_stone"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["has_block"]
+    ],
+    "rewards": {
+        "recipes": [
+            "sentimentality2:endstone_furnace",
+            "sentimentality2:endstone_blast_furnace",
+            "sentimentality2:endstone_smoker",
+            "sentimentality2:endstone_axe",
+            "sentimentality2:endstone_hoe",
+            "sentimentality2:endstone_pickaxe",
+            "sentimentality2:endstone_shovel",
+            "sentimentality2:endstone_sword"
+        ]
+    }
+}

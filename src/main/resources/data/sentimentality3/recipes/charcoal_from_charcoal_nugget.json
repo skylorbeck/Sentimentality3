@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sentimentality2:charcoal_nugget"
+    },
+    {
+      "item": "sentimentality2:charcoal_nugget"
+    },
+    {
+      "item": "sentimentality2:charcoal_nugget"
+    },
+    {
+      "item": "sentimentality2:charcoal_nugget"
+    },
+    {
+      "item": "sentimentality2:charcoal_nugget"
+    },
+    {
+      "item": "sentimentality2:charcoal_nugget"
+    },
+    {
+      "item": "sentimentality2:charcoal_nugget"
+    },
+    {
+      "item": "sentimentality2:charcoal_nugget"
+    }
+  ],
+  "result": {
+    "item": "minecraft:charcoal",
+    "count": 1
+  }
+}

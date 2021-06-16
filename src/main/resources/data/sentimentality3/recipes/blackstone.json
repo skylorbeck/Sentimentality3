@@ -1,0 +1,23 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "000",
+		"010",
+		"000"
+    ],
+    "key": {
+        "0": [
+		{"tag": "sentimentality2:stone"},
+		{"tag": "minecraft:stone_bricks"},
+		{"tag": "minecraft:stone_crafting_materials"},
+		{"item": "minecraft:stone"}
+		],
+		"1": {
+            "tag": "minecraft:coals"
+        }
+    },
+    "result": {
+        "item": "minecraft:blackstone",
+        "count": 8
+    }
+}

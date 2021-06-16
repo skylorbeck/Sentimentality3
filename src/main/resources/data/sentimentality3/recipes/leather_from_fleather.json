@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "sentimentality2:fleather"
+    },
+    "result": "minecraft:leather",
+    "experience": 0.1,
+    "cookingtime": 200
+}

@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality2:quintuple_compressed_diorite"
+        }
+    ],
+    "result": {
+        "item": "sentimentality2:quadruple_compressed_diorite",
+        "count": 9
+    }
+}

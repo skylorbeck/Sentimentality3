@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "010",
+    "121",
+    "010"
+  ],
+  "key": {
+    "0": {
+    "item": "minecraft:iron_ingot"
+    },
+    "1": {
+      "item": "minecraft:slime_ball"
+    },
+    "2": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result": {
+    "item": "sentimentality2:slime_chunk_locator"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:lapis_block"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality2:extratool/lapis_axe",
+      "sentimentality2:extratool/lapis_hoe",
+      "sentimentality2:extratool/lapis_pickaxe",
+      "sentimentality2:extratool/lapis_shovel",
+      "sentimentality2:extratool/lapis_sword"
+    ]
+  }
+}

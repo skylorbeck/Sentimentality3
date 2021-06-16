@@ -1,0 +1,42 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_block": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "minecraft:wool"						
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["has_block"]
+    ],
+    "rewards": {
+        "recipes": [
+            "sentimentality2:wool/black_wool",
+            "sentimentality2:wool/blue_wool",
+            "sentimentality2:wool/brown_wool",
+            "sentimentality2:wool/cyan_wool",
+            "sentimentality2:wool/gray_wool",
+            "sentimentality2:wool/green_wool",
+            "sentimentality2:wool/light_blue_wool",
+            "sentimentality2:wool/light_gray_wool",
+            "sentimentality2:wool/lime_wool",
+            "sentimentality2:wool/magenta_wool",
+            "sentimentality2:wool/orange_wool",
+            "sentimentality2:wool/pink_wool",
+            "sentimentality2:wool/purple_wool",
+            "sentimentality2:wool/red_wool",
+            "sentimentality2:wool/white_wool",
+            "sentimentality2:wool/yellow_wool",
+            "sentimentality2:woolboot",
+            "sentimentality2:woolchest",
+            "sentimentality2:woolhelm",
+            "sentimentality2:woolpant"
+        ]
+    }
+}

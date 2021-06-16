@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sentimentality2:block/nonuple_compressed_diorite_block"
+  }
+}

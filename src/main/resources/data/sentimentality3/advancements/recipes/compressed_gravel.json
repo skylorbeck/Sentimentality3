@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gravel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality2:compressed/gravel/monuple_compressed_gravel",
+      "sentimentality2:compressed/gravel/couple_compressed_gravel",
+      "sentimentality2:compressed/gravel/triple_compressed_gravel",
+      "sentimentality2:compressed/gravel/quadruple_compressed_gravel",
+      "sentimentality2:compressed/gravel/quintuple_compressed_gravel",
+      "sentimentality2:compressed/gravel/sextuple_compressed_gravel",
+      "sentimentality2:compressed/gravel/septuple_compressed_gravel",
+      "sentimentality2:compressed/gravel/octuple_compressed_gravel",
+      "sentimentality2:compressed/gravel/nonuple_compressed_gravel",
+      "sentimentality2:compressed/gravel/monuple_compressed_gravel_u",
+      "sentimentality2:compressed/gravel/couple_compressed_gravel_u",
+      "sentimentality2:compressed/gravel/triple_compressed_gravel_u",
+      "sentimentality2:compressed/gravel/quadruple_compressed_gravel_u",
+      "sentimentality2:compressed/gravel/quintuple_compressed_gravel_u",
+      "sentimentality2:compressed/gravel/sextuple_compressed_gravel_u",
+      "sentimentality2:compressed/gravel/septuple_compressed_gravel_u",
+      "sentimentality2:compressed/gravel/octuple_compressed_gravel_u",
+      "sentimentality2:compressed/gravel/nonuple_compressed_gravel_u"
+    ]
+  }
+}

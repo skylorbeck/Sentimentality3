@@ -1,0 +1,26 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "  3",
+    "101",
+    "2 2"
+  ],
+  "key": {
+    "0": {
+      "tag": "minecraft:wool"
+    },
+    "1": {
+      "item": "minecraft:gold_ingot"
+    },
+    "2": {
+      "item": "minecraft:golden_leggings"
+    },
+    "3": {
+      "item": "minecraft:golden_helmet"
+    }
+  },
+    "result": {
+    "item": "minecraft:golden_horse_armor",
+	 "count": 1
+  }
+}

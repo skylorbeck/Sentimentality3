@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "sentimentality2:monuple_compressed_gravel"
+        }
+    },
+    "result": {
+        "item": "sentimentality2:couple_compressed_gravel",
+        "count": 1
+    }
+}

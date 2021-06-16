@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality2:quadruple_compressed_netherrack"
+        }
+    ],
+    "result": {
+        "item": "sentimentality2:triple_compressed_netherrack",
+        "count": 9
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:rotten_flesh",
+      "item_h": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh",
+      "item_h": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh",
+      "item_h": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh",
+      "item_h": "minecraft:rotten_flesh"
+    }
+  ],
+  "result": {
+    "item": "sentimentality2:fleather",
+    "item_h": "sentimentality2:fleather",
+    "count": 1
+  }
+}

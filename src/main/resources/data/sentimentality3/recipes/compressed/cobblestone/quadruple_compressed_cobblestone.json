@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "sentimentality2:triple_compressed_cobblestone"
+        }
+    },
+    "result": {
+        "item": "sentimentality2:quadruple_compressed_cobblestone",
+        "count": 1
+    }
+}

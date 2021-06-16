@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality2:monuple_compressed_cobblestone"
+        }
+    ],
+    "result": {
+        "item": "minecraft:cobblestone",
+        "count": 9
+    }
+}

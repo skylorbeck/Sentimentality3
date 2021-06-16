@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality2:couple_compressed_dirt"
+        }
+    ],
+    "result": {
+        "item": "sentimentality2:monuple_compressed_dirt",
+        "count": 9
+    }
+}

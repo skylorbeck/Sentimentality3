@@ -1,0 +1,24 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_block": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:coal"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["has_block"]
+    ],
+    "rewards": {
+        "recipes": [
+            "sentimentality2:coal_from_coal_nugget",
+            "sentimentality2:coal_nuggets_from_coal"
+        ]
+    }
+}

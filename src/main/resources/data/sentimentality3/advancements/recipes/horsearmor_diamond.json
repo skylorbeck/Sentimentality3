@@ -1,0 +1,55 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_block": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:diamond"
+                    }
+                ]
+            }
+        },
+		"has_block2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"tag": "minecraft:wool"
+                    }
+                ]
+            }
+        },
+		"has_block3": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"item": "minecraft:diamond_leggings"
+                    }
+                ]
+            }
+        },
+		"has_block4": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+						"item": "minecraft:diamond_helmet"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_block","has_block2","has_block3","has_block4"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "sentimentality2:diamond_horse_armor"
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:nether_bricks"
+          }
+        ]
+      }
+    }
+  },
+  "has_block2": {
+  "trigger": "minecraft:inventory_changed",
+  "conditions": {
+    "items": [
+      {
+        "item": "minecraft:red_nether_bricks"
+      }
+    ]
+  }
+},
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality2:extratool/netherbrick_axe",
+      "sentimentality2:extratool/netherbrick_hoe",
+      "sentimentality2:extratool/netherbrick_pickaxe",
+      "sentimentality2:extratool/netherbrick_shovel",
+      "sentimentality2:extratool/netherbrick_sword",
+      "sentimentality2:extratool/red_netherbrick_axe",
+      "sentimentality2:extratool/red_netherbrick_hoe",
+      "sentimentality2:extratool/red_netherbrick_pickaxe",
+      "sentimentality2:extratool/red_netherbrick_shovel",
+      "sentimentality2:extratool/red_netherbrick_sword"
+    ]
+  }
+}

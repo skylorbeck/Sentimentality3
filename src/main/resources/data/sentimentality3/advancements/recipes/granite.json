@@ -1,0 +1,33 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_block": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:quartz"						
+                    }
+                ]
+            }
+        },
+		"has_block2": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "tag": "sentimentality2:stone"					
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["has_block","has_block2"]
+    ],
+    "rewards": {
+        "recipes": [
+            "sentimentality2:granite"
+        ]
+    }
+}

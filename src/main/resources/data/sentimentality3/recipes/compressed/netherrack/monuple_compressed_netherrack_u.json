@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality2:monuple_compressed_netherrack"
+        }
+    ],
+    "result": {
+        "item": "minecraft:netherrack",
+        "count": 9
+    }
+}

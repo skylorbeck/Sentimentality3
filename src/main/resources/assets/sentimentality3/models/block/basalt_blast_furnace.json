@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "sentimentality2:block/basalt_blast_furnace_top",
+        "front": "sentimentality2:block/basalt_blast_furnace_front",
+        "side": "sentimentality2:block/basalt_blast_furnace_side"
+    }
+}

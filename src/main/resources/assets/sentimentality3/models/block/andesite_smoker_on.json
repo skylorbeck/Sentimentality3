@@ -1,0 +1,9 @@
+{
+  "parent": "block/orientable_with_bottom",
+  "textures": {
+    "top": "sentimentality2:block/andesite_smoker_top",
+    "bottom": "sentimentality2:block/andesite_smoker_bottom",
+    "side": "sentimentality2:block/andesite_smoker_side",
+    "front": "sentimentality2:block/andesite_smoker_front_on"
+  }
+}

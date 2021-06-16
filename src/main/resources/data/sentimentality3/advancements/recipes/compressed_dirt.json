@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:dirt"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality2:compressed/dirt/monuple_compressed_dirt",
+      "sentimentality2:compressed/dirt/couple_compressed_dirt",
+      "sentimentality2:compressed/dirt/triple_compressed_dirt",
+      "sentimentality2:compressed/dirt/quadruple_compressed_dirt",
+      "sentimentality2:compressed/dirt/quintuple_compressed_dirt",
+      "sentimentality2:compressed/dirt/sextuple_compressed_dirt",
+      "sentimentality2:compressed/dirt/septuple_compressed_dirt",
+      "sentimentality2:compressed/dirt/octuple_compressed_dirt",
+      "sentimentality2:compressed/dirt/nonuple_compressed_dirt",
+      "sentimentality2:compressed/dirt/monuple_compressed_dirt_u",
+      "sentimentality2:compressed/dirt/couple_compressed_dirt_u",
+      "sentimentality2:compressed/dirt/triple_compressed_dirt_u",
+      "sentimentality2:compressed/dirt/quadruple_compressed_dirt_u",
+      "sentimentality2:compressed/dirt/quintuple_compressed_dirt_u",
+      "sentimentality2:compressed/dirt/sextuple_compressed_dirt_u",
+      "sentimentality2:compressed/dirt/septuple_compressed_dirt_u",
+      "sentimentality2:compressed/dirt/octuple_compressed_dirt_u",
+      "sentimentality2:compressed/dirt/nonuple_compressed_dirt_u"
+    ]
+  }
+}

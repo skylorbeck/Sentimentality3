@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:sand"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality2:compressed/sand/monuple_compressed_sand",
+      "sentimentality2:compressed/sand/couple_compressed_sand",
+      "sentimentality2:compressed/sand/triple_compressed_sand",
+      "sentimentality2:compressed/sand/quadruple_compressed_sand",
+      "sentimentality2:compressed/sand/quintuple_compressed_sand",
+      "sentimentality2:compressed/sand/sextuple_compressed_sand",
+      "sentimentality2:compressed/sand/septuple_compressed_sand",
+      "sentimentality2:compressed/sand/octuple_compressed_sand",
+      "sentimentality2:compressed/sand/nonuple_compressed_sand",
+      "sentimentality2:compressed/sand/monuple_compressed_sand_u",
+      "sentimentality2:compressed/sand/couple_compressed_sand_u",
+      "sentimentality2:compressed/sand/triple_compressed_sand_u",
+      "sentimentality2:compressed/sand/quadruple_compressed_sand_u",
+      "sentimentality2:compressed/sand/quintuple_compressed_sand_u",
+      "sentimentality2:compressed/sand/sextuple_compressed_sand_u",
+      "sentimentality2:compressed/sand/septuple_compressed_sand_u",
+      "sentimentality2:compressed/sand/octuple_compressed_sand_u",
+      "sentimentality2:compressed/sand/nonuple_compressed_sand_u"
+    ]
+  }
+}

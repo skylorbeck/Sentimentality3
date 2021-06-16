@@ -1,0 +1,29 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "sentimentality2:item/red_netherbrick_axe"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.85
+      },
+      "model": "sentimentality2:item/tools/red_netherbrick/axe/2"
+    },
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.9
+      },
+      "model": "sentimentality2:item/tools/red_netherbrick/axe/3"
+    },
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.95
+      },
+      "model": "sentimentality2:item/tools/red_netherbrick/axe/4"
+    }
+  ]
+}

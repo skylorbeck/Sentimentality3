@@ -1,0 +1,40 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sentimentality2:item/pdd"
+  },
+  "overrides": [
+    {"predicate": {"custom_model_data": 10 },"model": "item/pdd_100" },
+    {"predicate": {"custom_model_data": 11 }, "model": "item/pdd_101" },
+    {"predicate": {"custom_model_data": 12 }, "model": "item/pdd_102" },
+    {"predicate": {"custom_model_data": 13 }, "model": "item/pdd_103" },
+    {"predicate": {"custom_model_data": 14 }, "model": "item/pdd_104" },
+    {"predicate": {"custom_model_data": 15 }, "model": "item/pdd_105" },
+    {"predicate": {"custom_model_data": 16 }, "model": "item/pdd_106" },
+    {"predicate": {"custom_model_data": 17 }, "model": "item/pdd_107" },
+    {"predicate": {"custom_model_data": 18 }, "model": "item/pdd_108" },
+    {"predicate": {"custom_model_data": 19 }, "model": "item/pdd_109" },
+    {"predicate": {"custom_model_data": 20 },"model": "item/pdd_200" },
+    {"predicate": {"custom_model_data": 21 }, "model": "item/pdd_201" },
+    {"predicate": {"custom_model_data": 22 }, "model": "item/pdd_202" },
+    {"predicate": {"custom_model_data": 23 }, "model": "item/pdd_203" },
+    {"predicate": {"custom_model_data": 24 }, "model": "item/pdd_204" },
+    {"predicate": {"custom_model_data": 25 }, "model": "item/pdd_205" },
+    {"predicate": {"custom_model_data": 26 }, "model": "item/pdd_206" },
+    {"predicate": {"custom_model_data": 27 }, "model": "item/pdd_207" },
+    {"predicate": {"custom_model_data": 28 }, "model": "item/pdd_208" },
+    {"predicate": {"custom_model_data": 29 }, "model": "item/pdd_209" },
+    {"predicate": {"custom_model_data": 110 }, "model": "item/pdd_110" },
+    {"predicate": {"custom_model_data": 111 }, "model": "item/pdd_111" },
+    {"predicate": {"custom_model_data": 112 }, "model": "item/pdd_112" },
+    {"predicate": {"custom_model_data": 113 }, "model": "item/pdd_113" },
+    {"predicate": {"custom_model_data": 114 }, "model": "item/pdd_114" },
+    {"predicate": {"custom_model_data": 115 }, "model": "item/pdd_115" },
+    {"predicate": {"custom_model_data": 210 }, "model": "item/pdd_210" },
+    {"predicate": {"custom_model_data": 211 }, "model": "item/pdd_211" },
+    {"predicate": {"custom_model_data": 212 }, "model": "item/pdd_212" },
+    {"predicate": {"custom_model_data": 213 }, "model": "item/pdd_213" },
+    {"predicate": {"custom_model_data": 214 }, "model": "item/pdd_214" },
+    {"predicate": {"custom_model_data": 215 }, "model": "item/pdd_215" }
+  ]
+}

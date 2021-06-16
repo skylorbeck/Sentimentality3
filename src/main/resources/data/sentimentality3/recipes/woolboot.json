@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "# #",
+        "# #"
+    ],
+    "key": {
+        "#": {
+            "tag": "minecraft:wool"
+        }
+    },
+    "result": {
+        "item": "sentimentality2:wool_boots",
+        "count": 1
+    }
+}

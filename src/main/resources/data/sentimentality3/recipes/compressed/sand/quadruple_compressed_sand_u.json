@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality2:quadruple_compressed_sand"
+        }
+    ],
+    "result": {
+        "item": "sentimentality2:triple_compressed_sand",
+        "count": 9
+    }
+}

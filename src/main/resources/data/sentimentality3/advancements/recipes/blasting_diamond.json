@@ -1,0 +1,50 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_block": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+				{
+				  "item": "minecraft:diamond_pickaxe"
+				},
+				{
+				  "item": "minecraft:diamond_shovel"
+				},
+				{
+				  "item": "minecraft:diamond_axe"
+				},
+				{
+				  "item": "minecraft:diamond_hoe"
+				},
+				{
+				  "item": "minecraft:diamond_sword"
+				},
+				{
+				  "item": "minecraft:diamond_helmet"
+				},
+				{
+				  "item": "minecraft:diamond_chestplate"
+				},
+				{
+				  "item": "minecraft:diamond_leggings"
+				},
+				{
+				  "item": "minecraft:diamond_boots"
+				},
+				{
+				  "item": "minecraft:diamond_horse_armor"
+				}
+			  ]
+            }
+        }
+    },
+    "requirements": [
+        ["has_block"]
+    ],
+    "rewards": {
+        "recipes": [
+            "sentimentality2:diamond_from_blasting"
+        ]
+    }
+}

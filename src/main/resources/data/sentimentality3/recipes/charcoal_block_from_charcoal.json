@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "000",
+    "000",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:charcoal"
+    }
+  },
+  "result": {
+    "item": "sentimentality2:charcoal_block",
+    "count": 1
+  }
+}

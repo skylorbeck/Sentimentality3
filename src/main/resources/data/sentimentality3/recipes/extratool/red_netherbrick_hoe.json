@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item":"minecraft:red_nether_bricks"
+    }
+  },
+  "result": {
+    "item": "sentimentality2:rednetherbrick_hoe"
+  }
+}

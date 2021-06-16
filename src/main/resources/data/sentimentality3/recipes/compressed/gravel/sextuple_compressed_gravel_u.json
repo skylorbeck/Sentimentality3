@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality2:sextuple_compressed_gravel"
+        }
+    ],
+    "result": {
+        "item": "sentimentality2:quintuple_compressed_gravel",
+        "count": 9
+    }
+}
