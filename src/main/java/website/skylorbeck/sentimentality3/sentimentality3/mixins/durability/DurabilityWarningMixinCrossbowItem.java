@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.TitleS2CPacket;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import website.skylorbeck.sentimentality2.Ref;
+import website.skylorbeck.sentimentality3.sentimentality3.Ref;
 
 @Mixin(CrossbowItem.class)
 public abstract class DurabilityWarningMixinCrossbowItem {
@@ -34,7 +34,7 @@ public abstract class DurabilityWarningMixinCrossbowItem {
             if (isCharged(itemStack)) {
                 BlockPos pos = user.getBlockPos();
                 int curDam = itemStack.getMaxDamage() - itemStack.getDamage();
-                CompoundTag tag = itemStack.getOrCreateTag();
+                NbtCompound tag = itemStack.getOrCreateTag();
                 if (curDam >= 12) {
                     tag.remove("hasPlayedSound1");
                     tag.remove("hasPlayedSound2");

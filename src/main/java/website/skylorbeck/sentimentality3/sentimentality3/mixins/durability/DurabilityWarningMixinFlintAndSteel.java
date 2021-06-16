@@ -5,7 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FlintAndSteelItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.TitleS2CPacket;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import website.skylorbeck.sentimentality2.Ref;
+import website.skylorbeck.sentimentality3.sentimentality3.Ref;
 
 
 @Mixin(FlintAndSteelItem.class)
@@ -30,7 +30,7 @@ public abstract class DurabilityWarningMixinFlintAndSteel {
         BlockPos pos = context.getBlockPos();
         if (Ref.durabilityWarn && !world.isClient) {
             int curDam = stack.getMaxDamage() - stack.getDamage();
-            CompoundTag tag = stack.getOrCreateTag();
+            NbtCompound tag = stack.getOrCreateTag();
             if (curDam>=11){
                 tag.remove("hasPlayedSound1");
                 tag.remove("hasPlayedSound2");

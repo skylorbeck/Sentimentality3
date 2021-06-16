@@ -6,7 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShearsItem;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.TitleS2CPacket;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import website.skylorbeck.sentimentality2.Ref;
+import website.skylorbeck.sentimentality3.sentimentality3.Ref;
 
 @Mixin(ShearsItem.class)
 public abstract class DurabilityWarningMixinShear {
@@ -25,7 +25,7 @@ public abstract class DurabilityWarningMixinShear {
     public void checkDur(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, CallbackInfoReturnable<Boolean> cir) {
         if (Ref.durabilityWarn && !world.isClient && miner instanceof PlayerEntity) {
             int curDam = stack.getMaxDamage() - stack.getDamage();
-            CompoundTag tag = stack.getOrCreateTag();
+            NbtCompound tag = stack.getOrCreateTag();
             if (curDam>=11){
                 tag.remove("hasPlayedSound1");
                 tag.remove("hasPlayedSound2");

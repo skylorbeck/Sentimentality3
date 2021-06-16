@@ -5,7 +5,6 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.DyeableArmorItem;
 import net.minecraft.item.DyeableItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtCompound;
 
 public class ExtraDyeableArmorItem extends DyeableArmorItem implements DyeableItem {//extends the dyeable armor system but makes it default to white so that clothes default to white

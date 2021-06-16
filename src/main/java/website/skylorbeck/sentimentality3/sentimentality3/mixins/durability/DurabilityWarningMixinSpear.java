@@ -6,7 +6,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.TridentItem;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.TitleS2CPacket;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import website.skylorbeck.sentimentality2.Ref;
+import website.skylorbeck.sentimentality3.sentimentality3.Ref;
 
 @Mixin(TridentItem.class)
 public abstract class DurabilityWarningMixinSpear {
@@ -25,7 +25,7 @@ public abstract class DurabilityWarningMixinSpear {
     public void checkDur(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, CallbackInfoReturnable<Boolean> cir) {
         if (Ref.durabilityWarn && !world.isClient && miner instanceof PlayerEntity && state.getHardness(world, pos) != 0.0F) {
             int curDam = stack.getMaxDamage() - stack.getDamage();
-            CompoundTag tag = stack.getOrCreateTag();
+            NbtCompound tag = stack.getOrCreateTag();
             if (curDam>=11){
                 tag.remove("hasPlayedSound1");
                 tag.remove("hasPlayedSound2");
@@ -54,7 +54,7 @@ public abstract class DurabilityWarningMixinSpear {
     @Inject(at = @At("RETURN"), method = "postHit")
     public void checkDur2(ItemStack stack, LivingEntity target, LivingEntity attacker, CallbackInfoReturnable<Boolean> cir) {
         int curDam = stack.getMaxDamage() - stack.getDamage();
-        CompoundTag tag = stack.getOrCreateTag();
+        NbtCompound tag = stack.getOrCreateTag();
         if (curDam>=11){
             tag.putBoolean("hasPlayedSound1",false);
             tag.putBoolean("hasPlayedSound2",false);
