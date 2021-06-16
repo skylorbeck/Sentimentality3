@@ -7,11 +7,11 @@
     ],
     "key": {
         "#": {
-            "item": "sentimentality2:quadruple_compressed_gravel"
+            "item": "sentimentality3:quadruple_compressed_gravel"
         }
     },
     "result": {
-        "item": "sentimentality2:quintuple_compressed_gravel",
+        "item": "sentimentality3:quintuple_compressed_gravel",
         "count": 1
     }
 }

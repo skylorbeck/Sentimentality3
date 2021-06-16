@@ -1,7 +1,7 @@
 {
   "variants": {
     "": [
-      { "model": "sentimentality2:block/couple_compressed_cobblestone_block" }
+      { "model": "sentimentality3:block/couple_compressed_cobblestone_block" }
     ]
   }
 }

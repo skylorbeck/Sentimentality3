@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "sentimentality2:item/blackstone_axe"
+    "layer0": "sentimentality3:item/blackstone_axe"
   },
   "overrides": [
     {
@@ -9,21 +9,21 @@
         "damaged": 1,
         "damage": 0.85
       },
-      "model": "sentimentality2:item/tools/blackstone/axe/2"
+      "model": "sentimentality3:item/tools/blackstone/axe/2"
     },
     {
       "predicate": {
         "damaged": 1,
         "damage": 0.9
       },
-      "model": "sentimentality2:item/tools/blackstone/axe/3"
+      "model": "sentimentality3:item/tools/blackstone/axe/3"
     },
     {
       "predicate": {
         "damaged": 1,
         "damage": 0.95
       },
-      "model": "sentimentality2:item/tools/blackstone/axe/4"
+      "model": "sentimentality3:item/tools/blackstone/axe/4"
     }
   ]
 }

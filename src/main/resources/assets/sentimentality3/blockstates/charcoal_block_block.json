@@ -1,7 +1,7 @@
 {
   "variants": {
     "": [
-      { "model": "sentimentality2:block/charcoal_block" }
+      { "model": "sentimentality3:block/charcoal_block" }
     ]
   }
 }

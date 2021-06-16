@@ -27,10 +27,10 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:chainboot",
-            "sentimentality2:chainchest",
-            "sentimentality2:chainhelm",
-            "sentimentality2:chainpant"
+            "sentimentality3:chainboot",
+            "sentimentality3:chainchest",
+            "sentimentality3:chainhelm",
+            "sentimentality3:chainpant"
         ]
     }
 }

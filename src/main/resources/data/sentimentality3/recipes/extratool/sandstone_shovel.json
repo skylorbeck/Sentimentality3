@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "tag": "sentimentality2:sandstone"
+      "tag": "sentimentality3:sandstone"
     }
   },
   "result": {
-    "item": "sentimentality2:sandstone_shovel"
+    "item": "sentimentality3:sandstone_shovel"
   }
 }

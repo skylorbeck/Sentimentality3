@@ -10,13 +10,13 @@
       "item": "minecraft:polished_basalt"
     },
     "X": {
-      "item": "sentimentality2:basalt_furnaceitem"
+      "item": "sentimentality3:basalt_furnaceitem"
     },
     "I": {
       "item": "minecraft:iron_ingot"
     }
   },
   "result": {
-    "item": "sentimentality2:basalt_blast_furnaceitem"
+    "item": "sentimentality3:basalt_blast_furnaceitem"
   }
 }

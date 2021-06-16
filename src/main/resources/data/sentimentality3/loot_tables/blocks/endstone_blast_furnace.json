@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "sentimentality2:endstone_blast_furnaceitem"
+          "name": "sentimentality3:endstone_blast_furnaceitem"
         }
       ],
       "conditions": [

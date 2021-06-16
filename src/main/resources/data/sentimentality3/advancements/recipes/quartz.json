@@ -17,9 +17,9 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:chiseled_quartz_from_pillar_quartz",
-            "sentimentality2:quartz_from_block",
-            "sentimentality2:quartz_from_chiseled_quartz"
+            "sentimentality3:chiseled_quartz_from_pillar_quartz",
+            "sentimentality3:quartz_from_block",
+            "sentimentality3:quartz_from_chiseled_quartz"
         ]
     }
 }

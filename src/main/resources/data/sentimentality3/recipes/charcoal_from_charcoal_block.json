@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "sentimentality2:charcoal_block"
+      "item": "sentimentality3:charcoal_block"
     }
   ],
   "result": {

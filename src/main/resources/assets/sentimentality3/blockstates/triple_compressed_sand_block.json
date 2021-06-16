@@ -1,7 +1,7 @@
 {
   "variants": {
     "": [
-      { "model": "sentimentality2:block/triple_compressed_sand_block" }
+      { "model": "sentimentality3:block/triple_compressed_sand_block" }
     ]
   }
 }

@@ -17,8 +17,8 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:feather_block",
-            "sentimentality2:feather_from_block"
+            "sentimentality3:feather_block",
+            "sentimentality3:feather_from_block"
         ]
     }
 }

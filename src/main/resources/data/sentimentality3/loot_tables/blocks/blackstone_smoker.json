@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "sentimentality2:blackstone_smokeritem"
+          "name": "sentimentality3:blackstone_smokeritem"
         }
       ],
       "conditions": [

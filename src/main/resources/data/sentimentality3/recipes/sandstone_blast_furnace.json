@@ -10,13 +10,13 @@
       "item": "minecraft:smooth_sandstone"
     },
     "X": {
-      "item": "sentimentality2:sandstone_furnaceitem"
+      "item": "sentimentality3:sandstone_furnaceitem"
     },
     "I": {
       "item": "minecraft:iron_ingot"
     }
   },
   "result": {
-    "item": "sentimentality2:sandstone_blast_furnaceitem"
+    "item": "sentimentality3:sandstone_blast_furnaceitem"
   }
 }

@@ -7,11 +7,11 @@
     ],
     "key": {
         "#": {
-            "item": "sentimentality2:couple_compressed_dirt"
+            "item": "sentimentality3:couple_compressed_dirt"
         }
     },
     "result": {
-        "item": "sentimentality2:triple_compressed_dirt",
+        "item": "sentimentality3:triple_compressed_dirt",
         "count": 1
     }
 }

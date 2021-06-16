@@ -10,13 +10,13 @@
       "item": "minecraft:end_stone_bricks"
     },
     "X": {
-      "item": "sentimentality2:endstone_furnaceitem"
+      "item": "sentimentality3:endstone_furnaceitem"
     },
     "I": {
       "item": "minecraft:iron_ingot"
     }
   },
   "result": {
-    "item": "sentimentality2:endstone_blast_furnaceitem"
+    "item": "sentimentality3:endstone_blast_furnaceitem"
   }
 }

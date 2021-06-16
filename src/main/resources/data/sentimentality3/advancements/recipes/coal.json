@@ -17,8 +17,8 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:coal_from_coal_nugget",
-            "sentimentality2:coal_nuggets_from_coal"
+            "sentimentality3:coal_from_coal_nugget",
+            "sentimentality3:coal_nuggets_from_coal"
         ]
     }
 }

@@ -17,14 +17,14 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:basalt_furnace",
-            "sentimentality2:basalt_blast_furnace",
-            "sentimentality2:basalt_smoker",
-            "sentimentality2:basalt_axe",
-            "sentimentality2:basalt_hoe",
-            "sentimentality2:basalt_pickaxe",
-            "sentimentality2:basalt_shovel",
-            "sentimentality2:basalt_sword"
+            "sentimentality3:basalt_furnace",
+            "sentimentality3:basalt_blast_furnace",
+            "sentimentality3:basalt_smoker",
+            "sentimentality3:basalt_axe",
+            "sentimentality3:basalt_hoe",
+            "sentimentality3:basalt_pickaxe",
+            "sentimentality3:basalt_shovel",
+            "sentimentality3:basalt_sword"
         ]
     }
 }

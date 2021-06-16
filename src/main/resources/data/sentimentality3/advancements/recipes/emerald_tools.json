@@ -17,11 +17,11 @@
   ],
   "rewards": {
     "recipes": [
-      "sentimentality2:extratool/emerald_axe",
-      "sentimentality2:extratool/emerald_hoe",
-      "sentimentality2:extratool/emerald_pickaxe",
-      "sentimentality2:extratool/emerald_shovel",
-      "sentimentality2:extratool/emerald_sword"
+      "sentimentality3:extratool/emerald_axe",
+      "sentimentality3:extratool/emerald_hoe",
+      "sentimentality3:extratool/emerald_pickaxe",
+      "sentimentality3:extratool/emerald_shovel",
+      "sentimentality3:extratool/emerald_sword"
     ]
   }
 }

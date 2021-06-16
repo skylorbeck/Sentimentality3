@@ -2,11 +2,11 @@
     "type": "crafting_shapeless",
     "ingredients": [
         {
-            "item": "sentimentality2:triple_compressed_andesite"
+            "item": "sentimentality3:triple_compressed_andesite"
         }
     ],
     "result": {
-        "item": "sentimentality2:couple_compressed_andesite",
+        "item": "sentimentality3:couple_compressed_andesite",
         "count": 9
     }
 }

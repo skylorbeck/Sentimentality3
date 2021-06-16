@@ -17,10 +17,10 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:charcoal_from_charcoal_nugget",
-            "sentimentality2:charcoal_nugget_from_charcoal",
-            "sentimentality2:charcoal_block_from_charcoal",
-            "sentimentality2:charcoal_from_charcoal_block"
+            "sentimentality3:charcoal_from_charcoal_nugget",
+            "sentimentality3:charcoal_nugget_from_charcoal",
+            "sentimentality3:charcoal_block_from_charcoal",
+            "sentimentality3:charcoal_from_charcoal_block"
         ]
     }
 }

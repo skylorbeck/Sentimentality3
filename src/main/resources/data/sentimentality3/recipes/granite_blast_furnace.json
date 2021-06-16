@@ -10,13 +10,13 @@
       "item": "minecraft:polished_granite"
     },
     "X": {
-      "item": "sentimentality2:granite_furnaceitem"
+      "item": "sentimentality3:granite_furnaceitem"
     },
     "I": {
       "item": "minecraft:iron_ingot"
     }
   },
   "result": {
-    "item": "sentimentality2:granite_blast_furnaceitem"
+    "item": "sentimentality3:granite_blast_furnaceitem"
   }
 }

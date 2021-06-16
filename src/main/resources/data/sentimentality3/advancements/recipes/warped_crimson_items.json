@@ -20,16 +20,16 @@
   ],
   "rewards": {
     "recipes": [
-      "sentimentality2:extratool/warped_axe",
-      "sentimentality2:extratool/warped_hoe",
-      "sentimentality2:extratool/warped_pickaxe",
-      "sentimentality2:extratool/warped_shovel",
-      "sentimentality2:extratool/warped_sword",
-      "sentimentality2:extratool/crimson_axe",
-      "sentimentality2:extratool/crimson_hoe",
-      "sentimentality2:extratool/crimson_pickaxe",
-      "sentimentality2:extratool/crimson_shovel",
-      "sentimentality2:extratool/crimson_sword"
+      "sentimentality3:extratool/warped_axe",
+      "sentimentality3:extratool/warped_hoe",
+      "sentimentality3:extratool/warped_pickaxe",
+      "sentimentality3:extratool/warped_shovel",
+      "sentimentality3:extratool/warped_sword",
+      "sentimentality3:extratool/crimson_axe",
+      "sentimentality3:extratool/crimson_hoe",
+      "sentimentality3:extratool/crimson_pickaxe",
+      "sentimentality3:extratool/crimson_shovel",
+      "sentimentality3:extratool/crimson_sword"
     ]
   }
 }

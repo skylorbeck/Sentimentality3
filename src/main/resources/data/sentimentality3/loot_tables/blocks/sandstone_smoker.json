@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "sentimentality2:sandstone_smokeritem"
+          "name": "sentimentality3:sandstone_smokeritem"
         }
       ],
       "conditions": [

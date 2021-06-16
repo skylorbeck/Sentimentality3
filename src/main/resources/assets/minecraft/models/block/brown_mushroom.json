@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "block/brown_mushroom",
-		"1": "sentimentality2:block/brown_mushroom_underside",
+		"1": "sentimentality3:block/brown_mushroom_underside",
 		"particle": "block/brown_mushroom"
 	},
 	"elements": [

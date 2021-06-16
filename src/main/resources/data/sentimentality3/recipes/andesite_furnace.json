@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "tag": "sentimentality2:andesite"
+      "tag": "sentimentality3:andesite"
     }
   },
   "result": {
-    "item": "sentimentality2:andesite_furnaceitem"
+    "item": "sentimentality3:andesite_furnaceitem"
   }
 }

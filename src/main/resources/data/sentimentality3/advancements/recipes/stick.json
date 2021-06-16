@@ -17,10 +17,10 @@
   ],
   "rewards": {
     "recipes": [
-      "sentimentality2:small_stick_bundle",
-      "sentimentality2:small_stick_bundle_u",
-      "sentimentality2:large_stick_bundle",
-      "sentimentality2:large_stick_bundle_u"
+      "sentimentality3:small_stick_bundle",
+      "sentimentality3:small_stick_bundle_u",
+      "sentimentality3:large_stick_bundle",
+      "sentimentality3:large_stick_bundle_u"
     ]
   }
 }

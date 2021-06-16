@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "sentimentality2:item/red_sandstone_sword_3"
+        "layer0": "sentimentality3:item/red_sandstone_sword_3"
     }
 }

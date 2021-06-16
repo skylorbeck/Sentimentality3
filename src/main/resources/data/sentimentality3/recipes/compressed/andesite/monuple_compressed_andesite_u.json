@@ -2,7 +2,7 @@
     "type": "crafting_shapeless",
     "ingredients": [
         {
-            "item": "sentimentality2:monuple_compressed_andesite"
+            "item": "sentimentality3:monuple_compressed_andesite"
         }
     ],
     "result": {

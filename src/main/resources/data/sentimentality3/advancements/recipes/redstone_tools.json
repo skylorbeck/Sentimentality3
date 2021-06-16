@@ -17,11 +17,11 @@
   ],
   "rewards": {
     "recipes": [
-      "sentimentality2:extratool/redstone_axe",
-      "sentimentality2:extratool/redstone_hoe",
-      "sentimentality2:extratool/redstone_pickaxe",
-      "sentimentality2:extratool/redstone_shovel",
-      "sentimentality2:extratool/redstone_sword"
+      "sentimentality3:extratool/redstone_axe",
+      "sentimentality3:extratool/redstone_hoe",
+      "sentimentality3:extratool/redstone_pickaxe",
+      "sentimentality3:extratool/redstone_shovel",
+      "sentimentality3:extratool/redstone_sword"
     ]
   }
 }

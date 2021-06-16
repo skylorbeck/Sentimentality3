@@ -17,24 +17,24 @@
   ],
   "rewards": {
     "recipes": [
-      "sentimentality2:compressed/sand/monuple_compressed_sand",
-      "sentimentality2:compressed/sand/couple_compressed_sand",
-      "sentimentality2:compressed/sand/triple_compressed_sand",
-      "sentimentality2:compressed/sand/quadruple_compressed_sand",
-      "sentimentality2:compressed/sand/quintuple_compressed_sand",
-      "sentimentality2:compressed/sand/sextuple_compressed_sand",
-      "sentimentality2:compressed/sand/septuple_compressed_sand",
-      "sentimentality2:compressed/sand/octuple_compressed_sand",
-      "sentimentality2:compressed/sand/nonuple_compressed_sand",
-      "sentimentality2:compressed/sand/monuple_compressed_sand_u",
-      "sentimentality2:compressed/sand/couple_compressed_sand_u",
-      "sentimentality2:compressed/sand/triple_compressed_sand_u",
-      "sentimentality2:compressed/sand/quadruple_compressed_sand_u",
-      "sentimentality2:compressed/sand/quintuple_compressed_sand_u",
-      "sentimentality2:compressed/sand/sextuple_compressed_sand_u",
-      "sentimentality2:compressed/sand/septuple_compressed_sand_u",
-      "sentimentality2:compressed/sand/octuple_compressed_sand_u",
-      "sentimentality2:compressed/sand/nonuple_compressed_sand_u"
+      "sentimentality3:compressed/sand/monuple_compressed_sand",
+      "sentimentality3:compressed/sand/couple_compressed_sand",
+      "sentimentality3:compressed/sand/triple_compressed_sand",
+      "sentimentality3:compressed/sand/quadruple_compressed_sand",
+      "sentimentality3:compressed/sand/quintuple_compressed_sand",
+      "sentimentality3:compressed/sand/sextuple_compressed_sand",
+      "sentimentality3:compressed/sand/septuple_compressed_sand",
+      "sentimentality3:compressed/sand/octuple_compressed_sand",
+      "sentimentality3:compressed/sand/nonuple_compressed_sand",
+      "sentimentality3:compressed/sand/monuple_compressed_sand_u",
+      "sentimentality3:compressed/sand/couple_compressed_sand_u",
+      "sentimentality3:compressed/sand/triple_compressed_sand_u",
+      "sentimentality3:compressed/sand/quadruple_compressed_sand_u",
+      "sentimentality3:compressed/sand/quintuple_compressed_sand_u",
+      "sentimentality3:compressed/sand/sextuple_compressed_sand_u",
+      "sentimentality3:compressed/sand/septuple_compressed_sand_u",
+      "sentimentality3:compressed/sand/octuple_compressed_sand_u",
+      "sentimentality3:compressed/sand/nonuple_compressed_sand_u"
     ]
   }
 }

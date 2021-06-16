@@ -2,11 +2,11 @@
     "type": "crafting_shapeless",
     "ingredients": [
         {
-            "item": "sentimentality2:quadruple_compressed_granite"
+            "item": "sentimentality3:quadruple_compressed_granite"
         }
     ],
     "result": {
-        "item": "sentimentality2:triple_compressed_granite",
+        "item": "sentimentality3:triple_compressed_granite",
         "count": 9
     }
 }

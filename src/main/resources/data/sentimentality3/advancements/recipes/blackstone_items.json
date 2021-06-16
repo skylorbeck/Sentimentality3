@@ -17,14 +17,14 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:blackstone_furnace",
-            "sentimentality2:blackstone_blast_furnace",
-            "sentimentality2:blackstone_smoker",
-            "sentimentality2:extratool/blackstone_axe",
-            "sentimentality2:extratool/blackstone_hoe",
-            "sentimentality2:extratool/blackstone_pickaxe",
-            "sentimentality2:extratool/blackstone_shovel",
-            "sentimentality2:extratool/blackstone_sword"
+            "sentimentality3:blackstone_furnace",
+            "sentimentality3:blackstone_blast_furnace",
+            "sentimentality3:blackstone_smoker",
+            "sentimentality3:extratool/blackstone_axe",
+            "sentimentality3:extratool/blackstone_hoe",
+            "sentimentality3:extratool/blackstone_pickaxe",
+            "sentimentality3:extratool/blackstone_shovel",
+            "sentimentality3:extratool/blackstone_sword"
 
         ]
     }

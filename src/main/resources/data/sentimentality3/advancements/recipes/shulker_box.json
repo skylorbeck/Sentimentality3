@@ -24,7 +24,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "sentimentality2/shulker_box"
+                "recipe": "sentimentality3/shulker_box"
             }
         }
     },
@@ -37,7 +37,7 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2/shulker_box"
+            "sentimentality3/shulker_box"
         ]
     }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "sentimentality2:item/charcoal_nugget"
+    "layer0": "sentimentality3:item/charcoal_nugget"
   }
 }

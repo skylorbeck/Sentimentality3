@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "sentimentality2:diorite_furnaceitem"
+          "name": "sentimentality3:diorite_furnaceitem"
         }
       ],
       "conditions": [

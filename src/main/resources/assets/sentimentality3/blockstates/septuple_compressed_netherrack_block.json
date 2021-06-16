@@ -1,7 +1,7 @@
 {
   "variants": {
     "": [
-      { "model": "sentimentality2:block/septuple_compressed_netherrack_block" }
+      { "model": "sentimentality3:block/septuple_compressed_netherrack_block" }
     ]
   }
 }

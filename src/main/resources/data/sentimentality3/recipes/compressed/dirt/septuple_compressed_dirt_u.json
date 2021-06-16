@@ -2,11 +2,11 @@
     "type": "crafting_shapeless",
     "ingredients": [
         {
-            "item": "sentimentality2:septuple_compressed_dirt"
+            "item": "sentimentality3:septuple_compressed_dirt"
         }
     ],
     "result": {
-        "item": "sentimentality2:sextuple_compressed_dirt",
+        "item": "sentimentality3:sextuple_compressed_dirt",
         "count": 9
     }
 }

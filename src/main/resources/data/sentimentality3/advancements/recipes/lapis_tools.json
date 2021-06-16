@@ -17,11 +17,11 @@
   ],
   "rewards": {
     "recipes": [
-      "sentimentality2:extratool/lapis_axe",
-      "sentimentality2:extratool/lapis_hoe",
-      "sentimentality2:extratool/lapis_pickaxe",
-      "sentimentality2:extratool/lapis_shovel",
-      "sentimentality2:extratool/lapis_sword"
+      "sentimentality3:extratool/lapis_axe",
+      "sentimentality3:extratool/lapis_hoe",
+      "sentimentality3:extratool/lapis_pickaxe",
+      "sentimentality3:extratool/lapis_shovel",
+      "sentimentality3:extratool/lapis_sword"
     ]
   }
 }

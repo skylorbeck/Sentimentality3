@@ -2,11 +2,11 @@
     "type": "crafting_shapeless",
     "ingredients": [
         {
-            "item": "sentimentality2:quadruple_compressed_diorite"
+            "item": "sentimentality3:quadruple_compressed_diorite"
         }
     ],
     "result": {
-        "item": "sentimentality2:triple_compressed_diorite",
+        "item": "sentimentality3:triple_compressed_diorite",
         "count": 9
     }
 }

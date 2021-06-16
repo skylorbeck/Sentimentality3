@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "sentimentality2:block/feather_block_top",
-    "side": "sentimentality2:block/feather_block_side"
+    "end": "sentimentality3:block/feather_block_top",
+    "side": "sentimentality3:block/feather_block_side"
   }
 }

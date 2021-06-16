@@ -10,13 +10,13 @@
       "item": "minecraft:polished_andesite"
     },
     "X": {
-      "item": "sentimentality2:andesite_furnaceitem"
+      "item": "sentimentality3:andesite_furnaceitem"
     },
     "I": {
       "item": "minecraft:iron_ingot"
     }
   },
   "result": {
-    "item": "sentimentality2:andesite_blast_furnaceitem"
+    "item": "sentimentality3:andesite_blast_furnaceitem"
   }
 }

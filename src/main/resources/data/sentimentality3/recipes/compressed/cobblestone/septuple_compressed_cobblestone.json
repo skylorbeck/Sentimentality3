@@ -7,11 +7,11 @@
     ],
     "key": {
         "#": {
-            "item": "sentimentality2:sextuple_compressed_cobblestone"
+            "item": "sentimentality3:sextuple_compressed_cobblestone"
         }
     },
     "result": {
-        "item": "sentimentality2:septuple_compressed_cobblestone",
+        "item": "sentimentality3:septuple_compressed_cobblestone",
         "count": 1
     }
 }

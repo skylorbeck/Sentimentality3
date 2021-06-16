@@ -1,0 +1,16 @@
+Credits:
+
+modified open source code:
+Grass Swing fix https://github.com/Rongmario/CleanCut
+Bow Infinity Fix https://github.com/Parker8283/BowInfinityFix // Separated with intent to make my own bows
+Better Dropped Items https://github.com/Draylar/better-dropped-items // added spin, accounted for flat items floating, made blocks land on their bottoms, accounted for water, accounted for various flat but non-<0.5y blocks, accounted for snow, accounted for cobweb
+Numeric Ping https://github.com/creeper123123321/NumericPing // updated to current version of minecraft with new methods
+
+
+
+Vanilla Tweaks:
+https://vanillatweaks.net/share#TEht3T r205225
+Suggested additional pack:
+https://vanillatweaks.net/share/#tHYevF
+
+Many many thanks to everyone who helped me figure things out. Special thanks to my wife for working full time during a pandemic while her husband sits at home and plays minecraft.

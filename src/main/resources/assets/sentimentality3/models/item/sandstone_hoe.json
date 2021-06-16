@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "sentimentality2:item/sandstone_hoe"
+    "layer0": "sentimentality3:item/sandstone_hoe"
   },
   "overrides": [
     {
@@ -9,21 +9,21 @@
         "damaged": 1,
         "damage": 0.85
       },
-      "model": "sentimentality2:item/tools/sandstone/hoe/2"
+      "model": "sentimentality3:item/tools/sandstone/hoe/2"
     },
     {
       "predicate": {
         "damaged": 1,
         "damage": 0.9
       },
-      "model": "sentimentality2:item/tools/sandstone/hoe/3"
+      "model": "sentimentality3:item/tools/sandstone/hoe/3"
     },
     {
       "predicate": {
         "damaged": 1,
         "damage": 0.95
       },
-      "model": "sentimentality2:item/tools/sandstone/hoe/4"
+      "model": "sentimentality3:item/tools/sandstone/hoe/4"
     }
   ]
 }

@@ -17,8 +17,8 @@
   ],
   "rewards": {
     "recipes": [
-      "sentimentality2:fleather_from_flesh",
-      "sentimentality2:leather_from_fleather"
+      "sentimentality3:fleather_from_flesh",
+      "sentimentality3:leather_from_fleather"
     ]
   }
 }

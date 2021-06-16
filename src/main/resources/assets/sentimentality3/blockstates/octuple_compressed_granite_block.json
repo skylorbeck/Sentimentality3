@@ -1,7 +1,7 @@
 {
   "variants": {
     "": [
-      { "model": "sentimentality2:block/octuple_compressed_granite_block" }
+      { "model": "sentimentality3:block/octuple_compressed_granite_block" }
     ]
   }
 }

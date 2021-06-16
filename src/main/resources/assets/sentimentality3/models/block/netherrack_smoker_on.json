@@ -1,9 +1,9 @@
 {
   "parent": "block/orientable_with_bottom",
   "textures": {
-    "top": "sentimentality2:block/netherrack_smoker_top",
-    "bottom": "sentimentality2:block/netherrack_smoker_bottom",
-    "side": "sentimentality2:block/netherrack_smoker_side",
-    "front": "sentimentality2:block/netherrack_smoker_front_on"
+    "top": "sentimentality3:block/netherrack_smoker_top",
+    "bottom": "sentimentality3:block/netherrack_smoker_bottom",
+    "side": "sentimentality3:block/netherrack_smoker_side",
+    "front": "sentimentality3:block/netherrack_smoker_front_on"
   }
 }

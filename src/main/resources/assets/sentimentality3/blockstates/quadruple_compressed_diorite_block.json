@@ -1,7 +1,7 @@
 {
   "variants": {
     "": [
-      { "model": "sentimentality2:block/quadruple_compressed_diorite_block" }
+      { "model": "sentimentality3:block/quadruple_compressed_diorite_block" }
     ]
   }
 }

@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "tag": "sentimentality2:quartz"
+      "tag": "sentimentality3:quartz"
     }
   },
   "result": {
-    "item": "sentimentality2:quartz_pick"
+    "item": "sentimentality3:quartz_pick"
   }
 }

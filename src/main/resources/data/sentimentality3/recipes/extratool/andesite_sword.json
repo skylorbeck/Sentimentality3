@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "tag": "sentimentality2:andesite"
+      "tag": "sentimentality3:andesite"
     }
   },
   "result": {
-    "item": "sentimentality2:andesite_sword"
+    "item": "sentimentality3:andesite_sword"
   }
 }

@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "sentimentality2:item/wool_leggings",
-    "layer1": "sentimentality2:item/wool_overlay"
+    "layer0": "sentimentality3:item/wool_leggings",
+    "layer1": "sentimentality3:item/wool_overlay"
   }
 }

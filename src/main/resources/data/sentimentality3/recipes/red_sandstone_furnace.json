@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "tag": "sentimentality2:redsandstone"
+      "tag": "sentimentality3:redsandstone"
     }
   },
   "result": {
-    "item": "sentimentality2:red_sandstone_furnaceitem"
+    "item": "sentimentality3:red_sandstone_furnaceitem"
   }
 }

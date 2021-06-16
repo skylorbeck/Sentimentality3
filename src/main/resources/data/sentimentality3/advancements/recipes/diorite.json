@@ -16,7 +16,7 @@
             "conditions": {
                 "items": [
                     {
-                        "tag": "sentimentality2:stone"					
+                        "tag": "sentimentality3:stone"
                     }
                 ]
             }
@@ -27,7 +27,7 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:diorite"
+            "sentimentality3:diorite"
         ]
     }
 }

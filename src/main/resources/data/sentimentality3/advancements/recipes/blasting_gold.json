@@ -44,7 +44,7 @@
     ],
     "rewards": {
         "recipes": [
-            "sentimentality2:gold_ingot_from_blasting"
+            "sentimentality3:gold_ingot_from_blasting"
         ]
     }
 }

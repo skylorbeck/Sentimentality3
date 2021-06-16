@@ -10,10 +10,10 @@
       "tag": "minecraft:logs"
     },
     "X": {
-      "item": "sentimentality2:diorite_furnaceitem"
+      "item": "sentimentality3:diorite_furnaceitem"
     }
   },
   "result": {
-    "item": "sentimentality2:diorite_smokeritem"
+    "item": "sentimentality3:diorite_smokeritem"
   }
 }

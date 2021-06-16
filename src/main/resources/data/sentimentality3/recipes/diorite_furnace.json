@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "tag": "sentimentality2:diorite"
+      "tag": "sentimentality3:diorite"
     }
   },
   "result": {
-    "item": "sentimentality2:diorite_furnaceitem"
+    "item": "sentimentality3:diorite_furnaceitem"
   }
 }

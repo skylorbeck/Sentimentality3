@@ -6,7 +6,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "sentimentality2:sandstone"
+            "tag": "sentimentality3:sandstone"
           }
         ]
       }
@@ -16,7 +16,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "sentimentality2:redsandstone"
+            "tag": "sentimentality3:redsandstone"
           }
         ]
       }
@@ -27,22 +27,22 @@
   ],
   "rewards": {
     "recipes": [
-      "sentimentality2:extratool/sandstone_axe",
-      "sentimentality2:extratool/sandstone_hoe",
-      "sentimentality2:extratool/sandstone_pickaxe",
-      "sentimentality2:extratool/sandstone_shovel",
-      "sentimentality2:extratool/sandstone_sword",
-      "sentimentality2:extratool/red_sandstone_axe",
-      "sentimentality2:extratool/red_sandstone_hoe",
-      "sentimentality2:extratool/red_sandstone_pickaxe",
-      "sentimentality2:extratool/red_sandstone_shovel",
-      "sentimentality2:extratool/red_sandstone_sword",
-      "sentimentality2:sandstone_furnace",
-      "sentimentality2:sandstone_blast_furnace",
-      "sentimentality2:sandstone_smoker",
-      "sentimentality2:red_sandstone_furnace",
-      "sentimentality2:red_sandstone_blast_furnace",
-      "sentimentality2:red_sandstone_smoker"
+      "sentimentality3:extratool/sandstone_axe",
+      "sentimentality3:extratool/sandstone_hoe",
+      "sentimentality3:extratool/sandstone_pickaxe",
+      "sentimentality3:extratool/sandstone_shovel",
+      "sentimentality3:extratool/sandstone_sword",
+      "sentimentality3:extratool/red_sandstone_axe",
+      "sentimentality3:extratool/red_sandstone_hoe",
+      "sentimentality3:extratool/red_sandstone_pickaxe",
+      "sentimentality3:extratool/red_sandstone_shovel",
+      "sentimentality3:extratool/red_sandstone_sword",
+      "sentimentality3:sandstone_furnace",
+      "sentimentality3:sandstone_blast_furnace",
+      "sentimentality3:sandstone_smoker",
+      "sentimentality3:red_sandstone_furnace",
+      "sentimentality3:red_sandstone_blast_furnace",
+      "sentimentality3:red_sandstone_smoker"
 
     ]
   }
