@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "id": "sentimentality3",
-  "version": "${version}",
-  "name": "Sentimentality3",
-  "description": "",
+  "version": "1.0.0",
+  "name": "Sentimentality 3",
+  "description": "A collection of changes that look to improve the vanilla experience without being overpowered",
   "authors": [
-    "SkylorBeck"
+    "Skylor Beck"
   ],
   "contact": {
-    "website": "skylorbeck.website",
-    "repo": "https://github.com/Skylortrexler/Sentimentality3"
+    "homepage": "https://www.skylorbeck.website",
+    "issues": "https://github.com/Skylortrexler/Sentimentality3/issues"
   },
   "license": "MIT",
   "icon": "assets/sentimentality3/icon.png",
