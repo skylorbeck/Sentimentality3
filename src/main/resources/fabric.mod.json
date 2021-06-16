@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "sentimentality3",
+  "version": "${version}",
+  "name": "Sentimentality3",
+  "description": "",
+  "authors": [
+    "SkylorBeck"
+  ],
+  "contact": {
+    "website": "skylorbeck.website",
+    "repo": "https://github.com/Skylortrexler/Sentimentality3"
+  },
+  "license": "MIT",
+  "icon": "assets/sentimentality3/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "website.skylorbeck.sentimentality3.sentimentality3.client.Sentimentality3Client"
+    ],
+    "main": [
+      "website.skylorbeck.sentimentality3.sentimentality3.Sentimentality3"
+    ]
+  },
+  "mixins": [
+    "sentimentality3.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17"
+  }
+}
