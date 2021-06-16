@@ -1,0 +1,10 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sentimentality2:item/scl"
+  },
+  "overrides": [
+    {"predicate": {"custom_model_data": 0 },"model": "item/scl_0" },
+    {"predicate": {"custom_model_data": 1 }, "model": "item/scl_1" }
+  ]
+}

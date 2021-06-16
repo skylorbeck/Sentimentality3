@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "sentimentality2:item/blackstone_sword_2"
+    }
+}

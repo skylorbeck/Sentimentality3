@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "tag": "sentimentality2:diorite"
+    }
+  },
+  "result": {
+    "item": "sentimentality2:diorite_shovel"
+  }
+}

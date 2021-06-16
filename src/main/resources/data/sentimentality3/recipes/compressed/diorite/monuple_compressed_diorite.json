@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:diorite"
+        }
+    },
+    "result": {
+        "item": "sentimentality2:monuple_compressed_diorite",
+        "count": 1
+    }
+}

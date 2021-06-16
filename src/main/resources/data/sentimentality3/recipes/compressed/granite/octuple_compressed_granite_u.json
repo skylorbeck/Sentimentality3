@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality2:octuple_compressed_granite"
+        }
+    ],
+    "result": {
+        "item": "sentimentality2:septuple_compressed_granite",
+        "count": 9
+    }
+}

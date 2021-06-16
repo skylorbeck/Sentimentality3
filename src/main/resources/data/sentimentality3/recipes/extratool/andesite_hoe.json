@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "tag": "sentimentality2:andesite"
+    }
+  },
+  "result": {
+    "item": "sentimentality2:andesite_hoe"
+  }
+}

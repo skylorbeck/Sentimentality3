@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "sentimentality2:item/pdd_11",
+    "layer1": "sentimentality2:item/pdd_2xx"
+  }
+}

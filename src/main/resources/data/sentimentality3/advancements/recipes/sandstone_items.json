@@ -1,0 +1,49 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "sentimentality2:sandstone"
+          }
+        ]
+      }
+    },
+    "has_block2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "sentimentality2:redsandstone"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block","has_block2"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality2:extratool/sandstone_axe",
+      "sentimentality2:extratool/sandstone_hoe",
+      "sentimentality2:extratool/sandstone_pickaxe",
+      "sentimentality2:extratool/sandstone_shovel",
+      "sentimentality2:extratool/sandstone_sword",
+      "sentimentality2:extratool/red_sandstone_axe",
+      "sentimentality2:extratool/red_sandstone_hoe",
+      "sentimentality2:extratool/red_sandstone_pickaxe",
+      "sentimentality2:extratool/red_sandstone_shovel",
+      "sentimentality2:extratool/red_sandstone_sword",
+      "sentimentality2:sandstone_furnace",
+      "sentimentality2:sandstone_blast_furnace",
+      "sentimentality2:sandstone_smoker",
+      "sentimentality2:red_sandstone_furnace",
+      "sentimentality2:red_sandstone_blast_furnace",
+      "sentimentality2:red_sandstone_smoker"
+
+    ]
+  }
+}

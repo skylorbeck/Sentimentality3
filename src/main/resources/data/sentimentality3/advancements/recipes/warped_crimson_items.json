@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:crimson_planks"
+          },
+          {
+            "item": "minecraft:warped_planks"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality2:extratool/warped_axe",
+      "sentimentality2:extratool/warped_hoe",
+      "sentimentality2:extratool/warped_pickaxe",
+      "sentimentality2:extratool/warped_shovel",
+      "sentimentality2:extratool/warped_sword",
+      "sentimentality2:extratool/crimson_axe",
+      "sentimentality2:extratool/crimson_hoe",
+      "sentimentality2:extratool/crimson_pickaxe",
+      "sentimentality2:extratool/crimson_shovel",
+      "sentimentality2:extratool/crimson_sword"
+    ]
+  }
+}

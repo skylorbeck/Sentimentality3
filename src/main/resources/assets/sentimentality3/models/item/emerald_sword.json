@@ -1,0 +1,29 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "sentimentality2:item/emerald_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.85
+      },
+      "model": "sentimentality2:item/tools/emerald/sword/2"
+    },
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.9
+      },
+      "model": "sentimentality2:item/tools/emerald/sword/3"
+    },
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.95
+      },
+      "model": "sentimentality2:item/tools/emerald/sword/4"
+    }
+  ]
+}
