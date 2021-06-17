@@ -34,9 +34,8 @@ public abstract class AbstractExtraFurnaceBlock extends BlockWithEntity {//this 
         this.setDefaultState(this.getDefaultState().with(FACING, Direction.NORTH).with(LIT, false));
     }
 
-    @Override
-    public BlockEntity createBlockEntity(BlockView world) {
-        return new ExtraFurnaceBlockEntity();
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new ExtraFurnaceBlockEntity(pos,state);
     }
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {

@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import website.skylorbeck.sentimentality2.AbstractExtraFurnaceBlockEntity;
+import website.skylorbeck.sentimentality3.sentimentality3.AbstractExtraFurnaceBlockEntity;
 
 @Mixin(FurnaceOutputSlot.class)
 public class XPFixMixin extends Slot {//this fix is to make custom furnaces give xp on crafts

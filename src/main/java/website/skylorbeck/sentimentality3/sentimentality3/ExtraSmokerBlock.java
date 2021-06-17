@@ -21,8 +21,8 @@ public class ExtraSmokerBlock extends AbstractExtraFurnaceBlock {//copy of vanil
         super(settings);
     }
 
-    public BlockEntity createBlockEntity(BlockView world) {
-        return new ExtraSmokerBlockEntity();
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new ExtraSmokerBlockEntity(pos,state);
     }
 
     protected void openScreen(World world, BlockPos pos, PlayerEntity player) {

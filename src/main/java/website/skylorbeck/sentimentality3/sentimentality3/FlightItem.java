@@ -1,12 +1,7 @@
 package website.skylorbeck.sentimentality3.sentimentality3;
 
-import dev.emi.trinkets.api.SlotGroups;
-import dev.emi.trinkets.api.Slots;
+
 import dev.emi.trinkets.api.TrinketItem;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import top.theillusivec4.caelus.api.CaelusApi;
 
 
 public class FlightItem extends TrinketItem {
@@ -15,8 +10,9 @@ public class FlightItem extends TrinketItem {
         super(settings);
     }
 
+/*
     @Override
-    public void tick(PlayerEntity player, ItemStack stack) {
+    public void inventoryTick(PlayerEntity player, ItemStack stack) {
         EntityAttributeInstance attribute = player.getAttributeInstance(CaelusApi.getInstance().getFlightAttribute());
         if (player.isFallFlying() && !player.isCreative()) {
             if (tickcount >= 20) {
@@ -50,5 +46,6 @@ public class FlightItem extends TrinketItem {
         assert attribute != null;
         attribute.setBaseValue(0);
     }
+*/
 
 }

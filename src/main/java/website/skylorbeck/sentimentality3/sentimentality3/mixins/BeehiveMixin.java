@@ -36,7 +36,7 @@ public class BeehiveMixin {
                 } else {
                     text = "This hive contains " + beeCount + " bees";
                 }
-                ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, (new TitleS2CPacket(TitleS2CPacket.Action.ACTIONBAR, Text.of(text))));//send packet to client to display bee count as brief message on action bar
+                ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, (new TitleS2CPacket( Text.of(text))));//send packet to client to display bee count as brief message on action bar
             }
         }
     }

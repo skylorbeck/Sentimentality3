@@ -3,7 +3,7 @@ package website.skylorbeck.sentimentality3.sentimentality3;
 import me.shedaniel.autoconfig.AutoConfig;
 
 public class Ref {//hardcoded references for use in registration and otherwise
-    public static final String MODID = "sentimentality2";
+    public static final String MODID = "sentimentality3";
     public static final String display = "display";
     public static final String color = "color";
     public static ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();

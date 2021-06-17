@@ -2,6 +2,7 @@ package website.skylorbeck.sentimentality3.sentimentality3;
 
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
@@ -76,8 +77,8 @@ public class Registrar {
         //furnace entity
         if (Ref.furnaces) {
             Declarer.EXTRA_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                    "sentimentality2:furnace",
-                    BlockEntityType.Builder.create(ExtraFurnaceBlockEntity::new,
+                    "sentimentality3:furnace",
+                    FabricBlockEntityTypeBuilder.create(ExtraFurnaceBlockEntity::new,
                             Declarer.sandstone_furnaceblock,
                             Declarer.red_sandstone_furnaceblock,
                             Declarer.andesite_furnaceblock,
@@ -92,8 +93,8 @@ public class Registrar {
         //blast furnace entity
         if (Ref.blasts) {
             Declarer.EXTRA_BLAST_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                    "sentimentality2:blast_furnace",
-                    BlockEntityType.Builder.create(ExtraBlastFurnaceBlockEntity::new,
+                    "sentimentality3:blast_furnace",
+                    FabricBlockEntityTypeBuilder.create(ExtraBlastFurnaceBlockEntity::new,
                             Declarer.sandstone_blast_furnaceblock,
                             Declarer.red_sandstone_blast_furnaceblock,
                             Declarer.andesite_blast_furnaceblock,
@@ -108,8 +109,8 @@ public class Registrar {
         //smoker entity
         if (Ref.smokers) {
             Declarer.EXTRA_SMOKER_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                    "sentimentality2:smoker",
-                    BlockEntityType.Builder.create(ExtraSmokerBlockEntity::new,
+                    "sentimentality3:smoker",
+                    FabricBlockEntityTypeBuilder.create(ExtraSmokerBlockEntity::new,
                             Declarer.sandstone_smokerblock,
                             Declarer.red_sandstone_smokerblock,
                             Declarer.andesite_smokerblock,

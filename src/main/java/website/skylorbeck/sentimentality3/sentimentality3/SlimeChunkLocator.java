@@ -40,7 +40,7 @@ public class SlimeChunkLocator extends Item {
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {//todo only work when selected?
         if (entity instanceof PlayerEntity && world.isClient) {//only a player on the client
             if (waitingForSeed){//don't spam the server
                 waitTime++;

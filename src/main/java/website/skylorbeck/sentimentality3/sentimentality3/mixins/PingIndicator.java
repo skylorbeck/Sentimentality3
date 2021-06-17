@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import website.skylorbeck.sentimentality2.Ref;
+import website.skylorbeck.sentimentality3.sentimentality3.Ref;
 
 @Mixin({PlayerListHud.class})
 public abstract class PingIndicator extends DrawableHelper {
@@ -18,7 +18,7 @@ public abstract class PingIndicator extends DrawableHelper {
     @Inject(method = "renderLatencyIcon",at = @At("HEAD"),cancellable = true)
     public void sentimentalRenderLatencyIcon(MatrixStack matrixStack, int i, int j, int k, PlayerListEntry playerListEntry, CallbackInfo ci) {
         if (Ref.pingIndicator) {
-            RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);//white
+            RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);//white
             int ping = playerListEntry.getLatency();
             int rgb;
             if (ping < 0) {
@@ -37,7 +37,7 @@ public abstract class PingIndicator extends DrawableHelper {
 
             String pingString = this.toSubscriptNumbers(Integer.toString(ping));
             this.setZOffset(this.getZOffset() + 100);
-            DrawableHelper.drawCenteredString(matrixStack, MinecraftClient.getInstance().textRenderer, pingString, j + i - 11, k - 1, rgb);
+            DrawableHelper.drawCenteredText(matrixStack, MinecraftClient.getInstance().textRenderer, pingString, j + i - 11, k - 1, rgb);
             this.setZOffset(this.getZOffset() - 100);
             ci.cancel();
         }

@@ -1,5 +1,6 @@
 package website.skylorbeck.sentimentality3.sentimentality3;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.RecipeType;
@@ -7,10 +8,11 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.SmokerScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.math.BlockPos;
 
 public class ExtraSmokerBlockEntity extends AbstractExtraFurnaceBlockEntity {//copy of vanilla
-    public ExtraSmokerBlockEntity() {
-        super(Declarer.EXTRA_SMOKER_FURNACE_ENTITY, RecipeType.SMOKING);
+    public ExtraSmokerBlockEntity(BlockPos pos, BlockState state) {
+        super(Declarer.EXTRA_SMOKER_FURNACE_ENTITY,pos,state, RecipeType.SMOKING);
     }
 
     @Override

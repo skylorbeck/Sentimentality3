@@ -14,6 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -29,11 +30,17 @@ public abstract class Cropmixin {
     @Shadow public abstract boolean isMature(BlockState state);
     private static final Random RANDOM = new Random();
 
-    @Inject(at = @At("HEAD"),cancellable = true,method = "hasRandomTicks")
-    private boolean randomTicks(BlockState state, CallbackInfoReturnable<Boolean> cir) {
+
+    /**
+     * @author
+     * SkylorBeck
+     * Reason: Cannot inject booleans anymore :(
+     */
+    @Overwrite
+//    @Inject(at = @At("HEAD"),cancellable = true,method = "hasRandomTicks")
+    public boolean hasRandomTicks(BlockState state) {
         if (Ref.cropSparkle) {
-            cir.setReturnValue(true);
-            return cir.getReturnValue();
+            return true;
         }else{
             return !this.isMature(state);}
     }

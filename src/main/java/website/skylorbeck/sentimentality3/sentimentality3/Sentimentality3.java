@@ -14,7 +14,7 @@ import website.skylorbeck.sentimentality3.sentimentality3.client.Sentimentality3
 import java.util.Objects;
 
 public class Sentimentality3 implements ModInitializer {
-    public static final Identifier sentimentality3_get_seed= new Identifier("sentimentality2", "get_seed");
+    public static final Identifier sentimentality3_get_seed= new Identifier("sentimentality3", "get_seed");
 
     @Override
     public void onInitialize() {

@@ -35,7 +35,7 @@ public abstract class DurabilityWarningMixinSword {
                 case 9:
                     if (!tag.getBoolean("hasPlayedSound1")) {
                         world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.4f, 0.8F + world.random.nextFloat() * 0.4F);
-                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket(TitleS2CPacket.Action.ACTIONBAR, new TranslatableText(stack.getItem().getTranslationKey()).append(" is close to breaking!"))));
+                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is close to breaking!"))));
                         tag.putBoolean("hasPlayedSound1", true);
                     }
                         break;
@@ -43,7 +43,7 @@ public abstract class DurabilityWarningMixinSword {
                 case 4:
                     if (!tag.getBoolean("hasPlayedSound2")) {
                         world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.6f, 0.8F + world.random.nextFloat() * 0.4F);
-                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket(TitleS2CPacket.Action.ACTIONBAR, new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
+                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
                         tag.putBoolean("hasPlayedSound2", true);
                     }
                     break;
@@ -64,7 +64,7 @@ public abstract class DurabilityWarningMixinSword {
             case 9:
                 if (!tag.getBoolean("hasPlayedSound1")) {
                     attacker.world.playSound(null, attacker.getBlockPos(), SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.2f, 0.8F + attacker.world.random.nextFloat() * 0.4F);
-                    ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket(TitleS2CPacket.Action.ACTIONBAR, new TranslatableText(stack.getItem().getTranslationKey()).append(" is close to breaking!"))));
+                    ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket(new TranslatableText(stack.getItem().getTranslationKey()).append(" is close to breaking!"))));
                     tag.putBoolean("hasPlayedSound1", true);
                 }
                 break;
@@ -72,7 +72,7 @@ public abstract class DurabilityWarningMixinSword {
             case 4:
                 if (!tag.getBoolean("hasPlayedSound2")) {
                     attacker.world.playSound(null, attacker.getBlockPos(), SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.4f, 0.8F + attacker.world.random.nextFloat() * 0.4F);
-                    ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket(TitleS2CPacket.Action.ACTIONBAR, new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
+                    ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
                     tag.putBoolean("hasPlayedSound2", true);
                 }
                 break;

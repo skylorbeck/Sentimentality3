@@ -4,6 +4,22 @@
   "package": "website.skylorbeck.sentimentality3.sentimentality3.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "BeehiveMixin",
+    "Cropmixin",
+    "GrassSwingFix",
+    "InfinityFix",
+    "ItemEntityMixin",
+    "ItemEntityRendererMixin",
+    "PingIndicator",
+    "repairCostMixin",
+    "XPFixMixin",
+    "durability.DurabilityWarningMixinBowItem",
+    "durability.DurabilityWarningMixinCrossbowItem",
+    "durability.DurabilityWarningMixinFlintAndSteel",
+    "durability.DurabilityWarningMixinShear",
+    "durability.DurabilityWarningMixinSpear",
+    "durability.DurabilityWarningMixinSword",
+    "durability.DurabilityWarningMixinTool"
   ],
   "client": [
   ],

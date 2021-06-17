@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.LockableContainerBlockEntity;
 import net.minecraft.entity.ExperienceOrbEntity;
@@ -17,7 +18,7 @@ import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.*;
 import net.minecraft.screen.FurnaceScreenHandler;
 import net.minecraft.screen.PropertyDelegate;
@@ -25,8 +26,8 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Tickable;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
@@ -36,7 +37,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Iterator;
 import java.util.List;
 
-public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerBlockEntity implements SidedInventory, RecipeUnlocker, RecipeInputProvider, Tickable {//this is essentially a copy of minecrafts default furnace code but without the constant rebuilding of the library on every smelt
+public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerBlockEntity implements SidedInventory, RecipeUnlocker, RecipeInputProvider {//this is essentially a copy of minecrafts default furnace code but without the constant rebuilding of the library on every smelt
     private static final int[] TOP_SLOTS = new int[]{0};
     private static final int[] BOTTOM_SLOTS = new int[]{2, 1};
     private static final int[] SIDE_SLOTS = new int[]{1};
@@ -57,8 +58,8 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
         return new FurnaceScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
-    protected AbstractExtraFurnaceBlockEntity(BlockEntityType blockEntityType, RecipeType recipeType) {
-        super(blockEntityType);
+    protected AbstractExtraFurnaceBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, RecipeType<? extends AbstractCookingRecipe> recipeType) {
+        super(blockEntityType,pos,state);
         this.inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
@@ -105,15 +106,15 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
         return this.burnTime > 0;
     }
     @Override
-    public void fromTag(BlockState state, CompoundTag tag) {
-        super.fromTag(state, tag);
+    public void readNbt(NbtCompound tag) {
+        super.readNbt( tag);
         this.inventory = DefaultedList.ofSize(this.size(), ItemStack.EMPTY);
-        Inventories.fromTag(tag, this.inventory);
+        Inventories.readNbt(tag, this.inventory);
         this.burnTime = tag.getShort("BurnTime");
         this.cookTime = tag.getShort("CookTime");
         this.cookTimeTotal = tag.getShort("CookTimeTotal");
         this.fuelTime = this.getFuelTime(this.inventory.get(1));
-        CompoundTag compoundTag = tag.getCompound("RecipesUsed");
+        NbtCompound compoundTag = tag.getCompound("RecipesUsed");
 
         for (String string : compoundTag.getKeys()) {
             this.recipesUsed.put(new Identifier(string), compoundTag.getInt(string));
@@ -121,19 +122,20 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
 
     }
     @Override
-    public CompoundTag toTag(CompoundTag tag) {
-        super.toTag(tag);
+    public NbtCompound writeNbt(NbtCompound tag) {
+        super.writeNbt(tag);
         tag.putShort("BurnTime", (short)this.burnTime);
         tag.putShort("CookTime", (short)this.cookTime);
         tag.putShort("CookTimeTotal", (short)this.cookTimeTotal);
-        Inventories.toTag(tag, this.inventory);
-        CompoundTag compoundTag = new CompoundTag();
+        Inventories.writeNbt(tag, this.inventory);
+        NbtCompound compoundTag = new NbtCompound();
         this.recipesUsed.forEach((identifier, integer) -> compoundTag.putInt(identifier.toString(), integer));
         tag.put("RecipesUsed", compoundTag);
         return tag;
     }
+/*
     @Override
-    public void tick() {
+    public void tick(World world, BlockPos pos, BlockState state, AbstractFurnaceBlockEntity blockEntity) {
         boolean bl = this.isBurning();
         boolean bl2 = false;
         if (this.isBurning()) {
@@ -188,6 +190,7 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
         }
 
     }
+*/
     protected boolean canAcceptRecipeOutput(@Nullable Recipe<?> recipe) {
         if (!this.inventory.get(0).isEmpty() && recipe != null) {
             ItemStack itemStack = recipe.getOutput();
@@ -399,10 +402,10 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
     }
 
     @Override
-    public void provideRecipeInputs(RecipeFinder finder) {
+    public void provideRecipeInputs(RecipeMatcher finder) {
 
         for (ItemStack itemStack : this.inventory) {
-            finder.addItem(itemStack);
+            finder.addInput(itemStack);
         }
 
     }

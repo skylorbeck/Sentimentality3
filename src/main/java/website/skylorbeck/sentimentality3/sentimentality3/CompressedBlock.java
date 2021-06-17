@@ -23,31 +23,31 @@ public class CompressedBlock extends Block {
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
         switch (this.getDefaultState().get(compression)){//append different tooltips based on the state given at block registration
             case 1:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.monuple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.monuple"));
                 break;
             case 2:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.couple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.couple"));
                 break;
             case 3:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.triple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.triple"));
                 break;
             case 4:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.quadruple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.quadruple"));
                 break;
             case 5:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.quintuple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.quintuple"));
                 break;
             case 6:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.sextuple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.sextuple"));
                 break;
             case 7:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.septuple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.septuple"));
                 break;
             case 8:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.octuple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.octuple"));
                 break;
             case 9:
-                tooltip.add(new TranslatableText("block.sentimentality2.compressed.nonuple"));
+                tooltip.add(new TranslatableText("block.sentimentality3.compressed.nonuple"));
                 break;
         }
     }

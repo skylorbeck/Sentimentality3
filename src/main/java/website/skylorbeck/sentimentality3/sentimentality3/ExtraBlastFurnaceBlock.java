@@ -14,6 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
@@ -22,8 +23,9 @@ public class ExtraBlastFurnaceBlock extends AbstractExtraFurnaceBlock {//copy of
     protected ExtraBlastFurnaceBlock(Settings settings) {
         super(settings);
     }
-    public BlockEntity createBlockEntity(BlockView world) {
-        return new ExtraBlastFurnaceBlockEntity();
+
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new ExtraBlastFurnaceBlockEntity(pos,state);
     }
 
     protected void openScreen(World world, BlockPos pos, PlayerEntity player) {
@@ -53,4 +55,5 @@ public class ExtraBlastFurnaceBlock extends AbstractExtraFurnaceBlock {//copy of
             world.addParticle(ParticleTypes.SMOKE, d + i, e + j, f + k, 0.0D, 0.0D, 0.0D);
         }
     }
+
 }

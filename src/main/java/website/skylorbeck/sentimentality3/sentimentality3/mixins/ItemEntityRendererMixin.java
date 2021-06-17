@@ -3,8 +3,8 @@ package website.skylorbeck.sentimentality3.sentimentality3.mixins;
 import net.minecraft.block.*;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.render.entity.EntityRenderer;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.ItemEntityRenderer;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
@@ -43,12 +43,12 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
     @Shadow
     protected abstract int getRenderedAmount(ItemStack stack);
 
-    protected ItemEntityRendererMixin(EntityRenderDispatcher dispatcher) {
-        super(dispatcher);
+    protected ItemEntityRendererMixin(EntityRendererFactory.Context ctx) {
+        super(ctx);
     }
 
     @Inject(at = @At("RETURN"), method = "<init>")
-    private void onConstructor(EntityRenderDispatcher dispatcher, ItemRenderer renderer, CallbackInfo callback) {
+    private void onConstructor(EntityRendererFactory.Context context, CallbackInfo ci) {
         this.shadowRadius = 0.15f;//shadow size fix
     }
 
@@ -60,7 +60,7 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
             int seed = itemStack.isEmpty() ? 187 : Item.getRawId(item) + itemStack.getDamage();//seeds the random with it's own rawid and the itemstacks damage. Usually ends up being only the raw id.
             this.random.setSeed(seed);
             matrixStack.push();
-            BakedModel bakedModel = this.itemRenderer.getHeldItemModel(itemStack, itemEntity.world, null);
+            BakedModel bakedModel = this.itemRenderer.getHeldItemModel(itemStack, itemEntity.world, null,seed);
             boolean hasDepthInGui = bakedModel.hasDepth();
             int renderCount = this.getRenderedAmount(itemStack);
             boolean flat = false;
