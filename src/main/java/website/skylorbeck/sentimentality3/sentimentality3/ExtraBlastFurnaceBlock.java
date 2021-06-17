@@ -4,6 +4,8 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
@@ -23,11 +25,14 @@ public class ExtraBlastFurnaceBlock extends AbstractExtraFurnaceBlock {//copy of
     protected ExtraBlastFurnaceBlock(Settings settings) {
         super(settings);
     }
-
+    @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new ExtraBlastFurnaceBlockEntity(pos,state);
     }
-
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return ExtraFurnaceBlockEntity::tick;
+    }
     protected void openScreen(World world, BlockPos pos, PlayerEntity player) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof ExtraBlastFurnaceBlockEntity) {
