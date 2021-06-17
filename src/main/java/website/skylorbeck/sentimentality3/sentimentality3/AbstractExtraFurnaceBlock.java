@@ -10,6 +10,7 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -83,19 +84,22 @@ public abstract class AbstractExtraFurnaceBlock extends BlockWithEntity {//this 
 
         super.onBreak(world, pos, state, player);
     }
-    @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (!state.isOf(newState.getBlock())) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof ExtraFurnaceBlockEntity) {
-                ItemScatterer.spawn(world, pos, (ExtraFurnaceBlockEntity)blockEntity);
-                ((ExtraFurnaceBlockEntity)blockEntity).dropExperience(world, Vec3d.ofCenter(pos));
+            if (blockEntity instanceof AbstractExtraFurnaceBlockEntity) {
+                if (world instanceof ServerWorld) {
+                    ItemScatterer.spawn(world, pos, (AbstractExtraFurnaceBlockEntity)blockEntity);
+                    ((AbstractExtraFurnaceBlockEntity)blockEntity).getRecipesUsedAndDropExperience((ServerWorld)world, Vec3d.ofCenter(pos));
+                }
+
                 world.updateComparators(pos, this);
             }
 
             super.onStateReplaced(state, world, pos, newState, moved);
         }
     }
+
     @Override
     public boolean hasComparatorOutput(BlockState state) {
         return true;

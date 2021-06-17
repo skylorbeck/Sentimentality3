@@ -3,6 +3,7 @@ package website.skylorbeck.sentimentality3.sentimentality3;
 import com.google.common.collect.Lists;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+import it.unimi.dsi.fastutil.objects.ObjectIterator;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
@@ -25,6 +26,7 @@ import net.minecraft.recipe.*;
 import net.minecraft.screen.FurnaceScreenHandler;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
@@ -408,4 +410,18 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
         }
 
     }
-}
+
+    public List<Recipe<?>> getRecipesUsedAndDropExperience(ServerWorld world, Vec3d pos) {
+        List<Recipe<?>> list = Lists.newArrayList();
+        ObjectIterator var4 = this.recipesUsed.object2IntEntrySet().iterator();
+
+        while(var4.hasNext()) {
+            Object2IntMap.Entry<Identifier> entry = (Object2IntMap.Entry)var4.next();
+            world.getRecipeManager().get((Identifier)entry.getKey()).ifPresent((recipe) -> {
+                list.add(recipe);
+                dropExperience(world, pos, entry.getIntValue(), ((AbstractCookingRecipe)recipe).getExperience());
+            });
+        }
+
+        return list;
+    }}
