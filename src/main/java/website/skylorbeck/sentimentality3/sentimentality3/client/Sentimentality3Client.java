@@ -1,9 +1,12 @@
 package website.skylorbeck.sentimentality3.sentimentality3.client;
 
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.example.ExampleConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.minecraft.util.Identifier;
 import website.skylorbeck.sentimentality3.sentimentality3.ExtraHUD;
+import website.skylorbeck.sentimentality3.sentimentality3.ModConfig;
 import website.skylorbeck.sentimentality3.sentimentality3.Registrar;
 import website.skylorbeck.sentimentality3.sentimentality3.SlimeChunkLocator;
 
@@ -13,6 +16,8 @@ public class Sentimentality3Client implements ClientModInitializer {
     public ExtraHUD extraHUD;
     @Override
     public void onInitializeClient() {
+        AutoConfig.getGuiRegistry(ModConfig.class);
+
         ClientSidePacketRegistry.INSTANCE.register(sentimentality3_send_seed, (packetContext, attachedData) -> {
             long seed = attachedData.readLong();
             packetContext.getTaskQueue().execute(() -> {

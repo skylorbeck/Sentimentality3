@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "sentimentality3",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "name": "Sentimentality 3",
   "description": "A collection of changes that look to improve the vanilla experience without being overpowered",
   "authors": [
@@ -20,6 +20,9 @@
     ],
     "main": [
       "website.skylorbeck.sentimentality3.sentimentality3.Sentimentality3"
+    ],
+    "modmenu": [
+      "website.skylorbeck.sentimentality3.sentimentality3.ModImpl"
     ]
   },
   "mixins": [

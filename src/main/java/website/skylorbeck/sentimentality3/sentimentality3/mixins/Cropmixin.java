@@ -29,12 +29,10 @@ import java.util.Random;
 public abstract class Cropmixin {
     @Shadow public abstract boolean isMature(BlockState state);
     private static final Random RANDOM = new Random();
-
-
     /**
      * @author
      * SkylorBeck
-     * Reason: Cannot inject booleans anymore :(
+     * @reason Cannot inject booleans anymore :(
      */
     @Overwrite
 //    @Inject(at = @At("HEAD"),cancellable = true,method = "hasRandomTicks")
