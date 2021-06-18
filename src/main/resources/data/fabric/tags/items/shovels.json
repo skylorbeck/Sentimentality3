@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "sentimentality3:granite_shovel",
+    "sentimentality3:diorite_shovel",
+    "sentimentality3:andesite_shovel",
+    "sentimentality3:quartz_shovel",
+    "sentimentality3:netherrack_shovel",
+    "sentimentality3:netherbrick_shovel",
+    "sentimentality3:rednetherbrick_shovel",
+    "sentimentality3:sandstone_shovel",
+    "sentimentality3:redsandstone_shovel",
+    "sentimentality3:lapis_shovel",
+    "sentimentality3:emerald_shovel",
+    "sentimentality3:flint_shovel",
+    "sentimentality3:redstone_shovel",
+    "sentimentality3:blackstone_shovel",
+    "sentimentality3:basalt_shovel",
+    "sentimentality3:endstone_shovel",
+    "sentimentality3:warped_shovel",
+    "sentimentality3:crimson_shovel"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "sentimentality3:granite_pick",
+    "sentimentality3:diorite_pick",
+    "sentimentality3:andesite_pick",
+    "sentimentality3:quartz_pick",
+    "sentimentality3:netherrack_pick",
+    "sentimentality3:netherbrick_pick",
+    "sentimentality3:rednetherbrick_pick",
+    "sentimentality3:sandstone_pick",
+    "sentimentality3:redsandstone_pick",
+    "sentimentality3:lapis_pick",
+    "sentimentality3:emerald_pick",
+    "sentimentality3:flint_pick",
+    "sentimentality3:redstone_pick",
+    "sentimentality3:blackstone_pick",
+    "sentimentality3:basalt_pick",
+    "sentimentality3:endstone_pick",
+    "sentimentality3:warped_pick",
+    "sentimentality3:crimson_pick"
+  ]
+}
