@@ -5,22 +5,15 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.fabricmc.fabric.api.tag.TagRegistry;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.fabricmc.fabric.impl.tool.attribute.ToolManagerImpl;
-import net.fabricmc.fabric.impl.tool.attribute.handlers.ModdedToolsModdedBlocksToolHandler;
-import net.fabricmc.fabric.impl.tool.attribute.handlers.ModdedToolsVanillaBlocksToolHandler;
 import net.minecraft.block.Block;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.tag.ItemTags;
-import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraBlastFurnaceBlockEntity;
+import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraFurnaceBlockEntity;
+import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraSmokerBlockEntity;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Registrar {
@@ -328,6 +321,20 @@ public class Registrar {
                 regItem("crimson_shovel", Declarer.crimson_shovel);
                 regItem("crimson_sword", Declarer.crimson_sword);
                 regItem("crimson_hoe", Declarer.crimson_hoe);
+            }
+            if (Ref.amethystTools){
+                regItem("amethyst_pick", Declarer.amethyst_pick);
+                regItem("amethyst_axe", Declarer.amethyst_axe);
+                regItem("amethyst_shovel", Declarer.amethyst_shovel);
+                regItem("amethyst_sword", Declarer.amethyst_sword);
+                regItem("amethyst_hoe", Declarer.amethyst_hoe);
+            }
+            if (Ref.copperTools){
+                regItem("copper_pick", Declarer.copper_pick);
+                regItem("copper_axe", Declarer.copper_axe);
+                regItem("copper_shovel", Declarer.copper_shovel);
+                regItem("copper_sword", Declarer.copper_sword);
+                regItem("copper_hoe", Declarer.copper_hoe);
             }
         }
 

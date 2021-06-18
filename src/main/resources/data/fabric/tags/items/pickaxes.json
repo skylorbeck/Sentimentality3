@@ -18,6 +18,9 @@
     "sentimentality3:basalt_pick",
     "sentimentality3:endstone_pick",
     "sentimentality3:warped_pick",
-    "sentimentality3:crimson_pick"
+    "sentimentality3:crimson_pick",
+    "sentimentality3:amethyst_pick",
+    "sentimentality3:copper_pick"
+
   ]
 }

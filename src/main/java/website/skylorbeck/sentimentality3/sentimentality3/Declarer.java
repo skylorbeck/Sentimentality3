@@ -2,16 +2,17 @@ package website.skylorbeck.sentimentality3.sentimentality3;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.state.property.Properties;
-
-import java.util.function.ToIntFunction;
+import website.skylorbeck.sentimentality3.sentimentality3.furnaces.*;
+import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraAxeItem;
+import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraHoeItem;
+import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraPickaxeItem;
+import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraToolMaterials;
 
 public class Declarer {
 
@@ -342,4 +343,14 @@ public class Declarer {
     public static final Item warped_pick = new ExtraPickaxeItem(ExtraToolMaterials.WARPED, 1, -2.8F, (new FabricItemSettings().group(ItemGroup.TOOLS)));
     public static final Item warped_axe = new ExtraAxeItem(ExtraToolMaterials.WARPED, 7.0F, -3.2F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
     public static final Item warped_hoe = new ExtraHoeItem(ExtraToolMaterials.WARPED, -1, -2.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item amethyst_sword = new SwordItem(ExtraToolMaterials.AMETHYST, 3, -2.4F, (new FabricItemSettings()).group(ItemGroup.COMBAT));
+    public static final Item amethyst_shovel = new ShovelItem(ExtraToolMaterials.AMETHYST, 1.5F, -3.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item amethyst_pick = new ExtraPickaxeItem(ExtraToolMaterials.AMETHYST, 1, -2.8F, (new FabricItemSettings().group(ItemGroup.TOOLS)));
+    public static final Item amethyst_axe = new ExtraAxeItem(ExtraToolMaterials.AMETHYST, 7.0F, -3.2F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item amethyst_hoe = new ExtraHoeItem(ExtraToolMaterials.AMETHYST, -1, -2.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item copper_sword = new SwordItem(ExtraToolMaterials.COPPER, 3, -2.4F, (new FabricItemSettings()).group(ItemGroup.COMBAT));
+    public static final Item copper_shovel = new ShovelItem(ExtraToolMaterials.COPPER, 1.5F, -3.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item copper_pick = new ExtraPickaxeItem(ExtraToolMaterials.COPPER, 1, -2.8F, (new FabricItemSettings().group(ItemGroup.TOOLS)));
+    public static final Item copper_axe = new ExtraAxeItem(ExtraToolMaterials.COPPER, 7.0F, -3.2F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item copper_hoe = new ExtraHoeItem(ExtraToolMaterials.COPPER, -1, -2.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
 }
