@@ -73,7 +73,6 @@ public enum ExtraToolMaterials implements ToolMaterial {
         return Ingredient.ofItems(Blocks.COBBLED_DEEPSLATE);
     }),
 
-
     ;
     private final int miningLevel;
     private final int itemDurability;

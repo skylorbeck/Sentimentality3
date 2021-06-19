@@ -248,6 +248,7 @@
   "block.sentimentality3.blackstone_furnace": "Blackstone Furnace",
   "block.sentimentality3.netherrack_furnace": "Netherrack Furnace",
   "block.sentimentality3.basalt_furnace": "Basalt Furnace",
+  "block.sentimentality3.deepslate_furnace": "Deepslate Furnace",
 
   "block.sentimentality3.sandstone_blast_furnace": "Sandstone Blast Furnace",
   "block.sentimentality3.red_sandstone_blast_furnace": "Red Blast Sandstone Furnace",
@@ -258,6 +259,7 @@
   "block.sentimentality3.blackstone_blast_furnace": "Blackstone Blast Furnace",
   "block.sentimentality3.netherrack_blast_furnace": "Netherrack Blast Furnace",
   "block.sentimentality3.basalt_blast_furnace": "Basalt Blast Furnace",
+  "block.sentimentality3.deepslate_blast_furnace": "Deepslate Blast Furnace",
 
   "block.sentimentality3.sandstone_smoker": "Sandstone Smoker",
   "block.sentimentality3.red_sandstone_smoker": "Red Sandstone Smoker",
@@ -268,6 +270,7 @@
   "block.sentimentality3.blackstone_smoker": "Blackstone Smoker",
   "block.sentimentality3.netherrack_smoker": "Netherrack Smoker",
   "block.sentimentality3.basalt_smoker": "Basalt Smoker",
+  "block.sentimentality3.deepslate_smoker": "Deepslate Smoker",
 
   "item.sentimentality3.wool_leggings": "Wool Leggings",
   "item.sentimentality3.wool_chestplate": "Wool Chestplate",

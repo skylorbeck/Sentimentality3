@@ -71,10 +71,6 @@ public class Registrar {
             FuelRegistry.INSTANCE.add(Declarer.coal_nugget, 200);
         }
         //gliders
-        if (Ref.gliders) {
-            regItem("glider_leather", Declarer.glider_leather);
-            regItem("glider_iron", Declarer.glider_iron);
-        }
 
         //block entities
         //furnace entity
@@ -90,7 +86,8 @@ public class Registrar {
                             Declarer.endstone_furnaceblock,
                             Declarer.blackstone_furnaceblock,
                             Declarer.netherrack_furnaceblock,
-                            Declarer.basalt_furnaceblock
+                            Declarer.basalt_furnaceblock,
+                            Declarer.deepslate_furnaceblock
                     ).build(null));
         }
         //blast furnace entity
@@ -106,7 +103,8 @@ public class Registrar {
                             Declarer.endstone_blast_furnaceblock,
                             Declarer.blackstone_blast_furnaceblock,
                             Declarer.netherrack_blast_furnaceblock,
-                            Declarer.basalt_blast_furnaceblock
+                            Declarer.basalt_blast_furnaceblock,
+                            Declarer.deepslate_blast_furnaceblock
                     ).build(null));
         }
         //smoker entity
@@ -122,7 +120,8 @@ public class Registrar {
                             Declarer.endstone_smokerblock,
                             Declarer.blackstone_smokerblock,
                             Declarer.netherrack_smokerblock,
-                            Declarer.basalt_smokerblock
+                            Declarer.basalt_smokerblock,
+                            Declarer.deepslate_smokerblock
                     ).build(null));
         }
         //furnaces
@@ -145,6 +144,8 @@ public class Registrar {
             regItem("netherrack_furnaceitem", Declarer.netherrack_furnace);
             regBlock("basalt_furnace", Declarer.basalt_furnaceblock);
             regItem("basalt_furnaceitem", Declarer.basalt_furnace);
+            regBlock("deepslate_furnace", Declarer.deepslate_furnaceblock);
+            regItem("deepslate_furnaceitem", Declarer.deepslate_furnace);
         }
         //blast furnaces
         if (Ref.blasts) {
@@ -166,6 +167,8 @@ public class Registrar {
             regItem("netherrack_blast_furnaceitem", Declarer.netherrack_blast_furnace);
             regBlock("basalt_blast_furnace", Declarer.basalt_blast_furnaceblock);
             regItem("basalt_blast_furnaceitem", Declarer.basalt_blast_furnace);
+            regBlock("deepslate_blast_furnace", Declarer.deepslate_blast_furnaceblock);
+            regItem("deepslate_blast_furnaceitem", Declarer.deepslate_blast_furnace);
         }
         //smokers
         if (Ref.smokers) {
@@ -187,6 +190,8 @@ public class Registrar {
             regItem("netherrack_smokeritem", Declarer.netherrack_smoker);
             regBlock("basalt_smoker", Declarer.basalt_smokerblock);
             regItem("basalt_smokeritem", Declarer.basalt_smoker);
+            regBlock("deepslate_smoker", Declarer.deepslate_smokerblock);
+            regItem("deepslate_smokeritem", Declarer.deepslate_smoker);
         }
         //wool armor
         if (Ref.woolArmor) {

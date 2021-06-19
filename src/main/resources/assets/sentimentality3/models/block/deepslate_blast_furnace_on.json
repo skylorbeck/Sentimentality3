@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "sentimentality3:block/deepslate_blast_furnace_top",
+        "front": "sentimentality3:block/deepslate_blast_furnace_front_on",
+        "side": "sentimentality3:block/deepslate_blast_furnace_side"
+    }
+}

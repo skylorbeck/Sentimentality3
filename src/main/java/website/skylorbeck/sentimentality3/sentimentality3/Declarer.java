@@ -22,8 +22,6 @@ public class Declarer {
     public static BlockEntityType<ExtraBlastFurnaceBlockEntity> EXTRA_BLAST_FURNACE_ENTITY;
     public static BlockEntityType<ExtraSmokerBlockEntity> EXTRA_SMOKER_FURNACE_ENTITY;
     //gliders
-    public static final Item glider_leather = new FlightItem(new FabricItemSettings().group(ItemGroup.TRANSPORTATION).maxCount(1).maxDamage(50));
-    public static final Item glider_iron = new FlightItem(new FabricItemSettings().group(ItemGroup.TRANSPORTATION).maxCount(1).maxDamage(100));
     //custom personal items
     public static final Item chunk_loader = new Chunkloader(new FabricItemSettings().group(ItemGroup.TOOLS));
     public static final Item personal_daylight_detector = new PDDItem(new FabricItemSettings().group(ItemGroup.TOOLS));
@@ -228,6 +226,8 @@ public class Declarer {
     public static final BlockItem basalt_furnace = new BlockItem(basalt_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
     public static final Block endstone_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).breakByTool(FabricToolTags.PICKAXES), 2);
     public static final BlockItem endstone_furnace = new BlockItem(endstone_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
+    public static final Block deepslate_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).breakByTool(FabricToolTags.PICKAXES), 2);
+    public static final BlockItem deepslate_furnace = new BlockItem(deepslate_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
     //blast furnaces
     public static final Block sandstone_blast_furnaceblock = new ExtraBlastFurnaceBlock(FabricBlockSettings.copyOf(Blocks.BLAST_FURNACE).breakByTool(FabricToolTags.PICKAXES));
     public static final BlockItem sandstone_blast_furnace = new BlockItem(sandstone_blast_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
@@ -247,6 +247,8 @@ public class Declarer {
     public static final BlockItem basalt_blast_furnace = new BlockItem(basalt_blast_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
     public static final Block endstone_blast_furnaceblock = new ExtraBlastFurnaceBlock(FabricBlockSettings.copyOf(Blocks.BLAST_FURNACE).breakByTool(FabricToolTags.PICKAXES));
     public static final BlockItem endstone_blast_furnace = new BlockItem(endstone_blast_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
+    public static final Block deepslate_blast_furnaceblock = new ExtraBlastFurnaceBlock(FabricBlockSettings.copyOf(Blocks.BLAST_FURNACE).breakByTool(FabricToolTags.PICKAXES));
+    public static final BlockItem deepslate_blast_furnace = new BlockItem(deepslate_blast_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
     //smokers
     public static final Block sandstone_smokerblock = new ExtraSmokerBlock(FabricBlockSettings.copyOf(Blocks.SMOKER).breakByTool(FabricToolTags.PICKAXES));
     public static final BlockItem sandstone_smoker = new BlockItem(sandstone_smokerblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
@@ -266,6 +268,8 @@ public class Declarer {
     public static final BlockItem basalt_smoker = new BlockItem(basalt_smokerblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
     public static final Block endstone_smokerblock = new ExtraSmokerBlock(FabricBlockSettings.copyOf(Blocks.SMOKER).breakByTool(FabricToolTags.PICKAXES));
     public static final BlockItem endstone_smoker = new BlockItem(endstone_smokerblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
+    public static final Block deepslate_smokerblock = new ExtraSmokerBlock(FabricBlockSettings.copyOf(Blocks.SMOKER).breakByTool(FabricToolTags.PICKAXES));
+    public static final BlockItem deepslate_smoker = new BlockItem(deepslate_smokerblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
     //wool armor
     public static final Item wool_helmet = new ExtraDyeableArmorItem(ExtraArmorMaterials.WOOL, EquipmentSlot.HEAD, new FabricItemSettings().group(ItemGroup.COMBAT));
     public static final Item wool_chestplate = new ExtraDyeableArmorItem(ExtraArmorMaterials.WOOL, EquipmentSlot.CHEST, new FabricItemSettings().group(ItemGroup.COMBAT));

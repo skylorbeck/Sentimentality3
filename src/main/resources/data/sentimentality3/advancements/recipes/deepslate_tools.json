@@ -39,7 +39,10 @@
       "sentimentality3:compressed/cobbled_deepslate/sextuple_compressed_cobbled_deepslate_u",
       "sentimentality3:compressed/cobbled_deepslate/septuple_compressed_cobbled_deepslate_u",
       "sentimentality3:compressed/cobbled_deepslate/octuple_compressed_cobbled_deepslate_u",
-      "sentimentality3:compressed/cobbled_deepslate/nonuple_compressed_cobbled_deepslate_u"
+      "sentimentality3:compressed/cobbled_deepslate/nonuple_compressed_cobbled_deepslate_u",
+      "sentimentality3:deepslate_furnace",
+      "sentimentality3:deepslate_blast_furnace",
+      "sentimentality3:deepslate_smoker"
     ]
   }
 }
