@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": [
+      { "model": "sentimentality3:block/septuple_compressed_cobbled_deepslate_block" }
+    ]
+  }
+}

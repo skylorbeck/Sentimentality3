@@ -69,6 +69,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean netherrack = true;
     public static boolean sand = true;
     public static boolean gravel = true;
+    public static boolean deepslate = true;
 
     public static void getSettings(){
 
@@ -133,6 +134,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         netherrack = config.toggles.compressedBlocks.netherrack;
         sand = config.toggles.compressedBlocks.sand;
         gravel = config.toggles.compressedBlocks.gravel;
+        deepslate = config.toggles.compressedBlocks.deepslate;
     }
 
     public static void getSomeSettings() {

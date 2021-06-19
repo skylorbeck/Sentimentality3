@@ -17,8 +17,8 @@ import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraSmokerBl
 import java.util.Objects;
 
 public class Registrar {
-//todo deepslate compressed blocks
     //todo deepslate furnaces
+
     public static void clientRegister() {//separated because servers don't like when they have this stuff registered on them
         //particles
         Declarer.END_FIRE_FLAME = Registry.register(Registry.PARTICLE_TYPE, new Identifier(Ref.MODID, "end_fire_flame"), FabricParticleTypes.simple());
@@ -512,6 +512,26 @@ public class Registrar {
                 regBlock("octuple_compressed_gravel_block", Declarer.octuple_compressed_gravel_block);
                 regItem("nonuple_compressed_gravel", Declarer.nonuple_compressed_gravel);
                 regBlock("nonuple_compressed_gravel_block", Declarer.nonuple_compressed_gravel_block);
+            }
+            if (Ref.deepslate) {
+                regItem("monuple_compressed_cobbled_deepslate", Declarer.monuple_compressed_cobbled_deepslate);
+                regBlock("monuple_compressed_cobbled_deepslate_block", Declarer.monuple_compressed_cobbled_deepslate_block);
+                regItem("couple_compressed_cobbled_deepslate", Declarer.couple_compressed_cobbled_deepslate);
+                regBlock("couple_compressed_cobbled_deepslate_block", Declarer.couple_compressed_cobbled_deepslate_block);
+                regItem("triple_compressed_cobbled_deepslate", Declarer.triple_compressed_cobbled_deepslate);
+                regBlock("triple_compressed_cobbled_deepslate_block", Declarer.triple_compressed_cobbled_deepslate_block);
+                regItem("quadruple_compressed_cobbled_deepslate", Declarer.quadruple_compressed_cobbled_deepslate);
+                regBlock("quadruple_compressed_cobbled_deepslate_block", Declarer.quadruple_compressed_cobbled_deepslate_block);
+                regItem("quintuple_compressed_cobbled_deepslate", Declarer.quintuple_compressed_cobbled_deepslate);
+                regBlock("quintuple_compressed_cobbled_deepslate_block", Declarer.quintuple_compressed_cobbled_deepslate_block);
+                regItem("sextuple_compressed_cobbled_deepslate", Declarer.sextuple_compressed_cobbled_deepslate);
+                regBlock("sextuple_compressed_cobbled_deepslate_block", Declarer.sextuple_compressed_cobbled_deepslate_block);
+                regItem("septuple_compressed_cobbled_deepslate", Declarer.septuple_compressed_cobbled_deepslate);
+                regBlock("septuple_compressed_cobbled_deepslate_block", Declarer.septuple_compressed_cobbled_deepslate_block);
+                regItem("octuple_compressed_cobbled_deepslate", Declarer.octuple_compressed_cobbled_deepslate);
+                regBlock("octuple_compressed_cobbled_deepslate_block", Declarer.octuple_compressed_cobbled_deepslate_block);
+                regItem("nonuple_compressed_cobbled_deepslate", Declarer.nonuple_compressed_cobbled_deepslate);
+                regBlock("nonuple_compressed_cobbled_deepslate_block", Declarer.nonuple_compressed_cobbled_deepslate_block);
             }
         }
     }

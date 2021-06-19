@@ -105,7 +105,7 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
             boolean isInCobweb = itemEntity.world.getBlockState(itemEntity.getBlockPos()).getBlock() == Blocks.COBWEB;//check to see if item is stuck in cobweb
             if (itemEntity.isSubmergedInWater() || isAboveWater1 || isInCobweb) {//if it's either of those, make is spin but at 1/4th speed
                 rotation = rotation / 4;
-                if (rotation % 2 == 0) {//50/50 chance to rotate either direction
+                if (random.nextBoolean()) {//50/50 chance to rotate either direction
                     matrixStack.multiply(Vec3f.POSITIVE_X.getRadialQuaternion(rotation));
                     matrixStack.multiply(Vec3f.POSITIVE_Y.getRadialQuaternion(rotation));
                     matrixStack.multiply(Vec3f.POSITIVE_Z.getRadialQuaternion(rotation));
@@ -116,7 +116,7 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
                 }
                 rotator.setRotation(new Vec3d(0, 0, rotation));
             } else if (!itemEntity.isOnGround() && !itemEntity.isSubmergedInWater()) {//if the item  isn't on the ground and isn't in water, spin at full speed
-                if (rotation % 2 == 0) {
+                if (random.nextBoolean()) {
                     matrixStack.multiply(Vec3f.POSITIVE_X.getRadialQuaternion(rotation));
                     matrixStack.multiply(Vec3f.POSITIVE_Y.getRadialQuaternion(rotation));
                     matrixStack.multiply(Vec3f.POSITIVE_Z.getRadialQuaternion(rotation));

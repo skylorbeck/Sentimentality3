@@ -39,7 +39,7 @@ public class Declarer {
     public static final Item charcoal_nugget = new Item(new FabricItemSettings().group(ItemGroup.MISC));
     public static final Item coal_nugget = new Item(new FabricItemSettings().group(ItemGroup.MISC));
     //compressed cobble
-    public static final Block monuple_compressed_cobblestone_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).breakByTool(FabricToolTags.PICKAXES).breakByTool(FabricToolTags.PICKAXES), 1);
+    public static final Block monuple_compressed_cobblestone_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).breakByTool(FabricToolTags.PICKAXES), 1);
     public static final BlockItem monuple_compressed_cobblestone = new BlockItem(monuple_compressed_cobblestone_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Block couple_compressed_cobblestone_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).breakByTool(FabricToolTags.PICKAXES), 2);
     public static final BlockItem couple_compressed_cobblestone = new BlockItem(couple_compressed_cobblestone_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
@@ -190,6 +190,25 @@ public class Declarer {
     public static final BlockItem octuple_compressed_gravel = new BlockItem(octuple_compressed_gravel_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Block nonuple_compressed_gravel_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL).breakByTool(FabricToolTags.SHOVELS), 9);
     public static final BlockItem nonuple_compressed_gravel = new BlockItem(nonuple_compressed_gravel_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    //compressed cobbled deepslate
+    public static final Block monuple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 1);
+    public static final BlockItem monuple_compressed_cobbled_deepslate = new BlockItem(monuple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block couple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 2);
+    public static final BlockItem couple_compressed_cobbled_deepslate = new BlockItem(couple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block triple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 3);
+    public static final BlockItem triple_compressed_cobbled_deepslate = new BlockItem(triple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block quadruple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 4);
+    public static final BlockItem quadruple_compressed_cobbled_deepslate = new BlockItem(quadruple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block quintuple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 5);
+    public static final BlockItem quintuple_compressed_cobbled_deepslate = new BlockItem(quintuple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block sextuple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 6);
+    public static final BlockItem sextuple_compressed_cobbled_deepslate = new BlockItem(sextuple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block septuple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 7);
+    public static final BlockItem septuple_compressed_cobbled_deepslate = new BlockItem(septuple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block octuple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 8);
+    public static final BlockItem octuple_compressed_cobbled_deepslate = new BlockItem(octuple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block nonuple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).breakByTool(FabricToolTags.PICKAXES), 9);
+    public static final BlockItem nonuple_compressed_cobbled_deepslate = new BlockItem(nonuple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
     //furnaces
     public static final Block sandstone_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).breakByTool(FabricToolTags.PICKAXES),0);
     public static final BlockItem sandstone_furnace = new BlockItem(sandstone_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));

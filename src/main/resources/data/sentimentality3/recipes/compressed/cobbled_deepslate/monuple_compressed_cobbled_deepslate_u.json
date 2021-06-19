@@ -1,0 +1,12 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality3:monuple_compressed_cobbled_deepslate"
+        }
+    ],
+    "result": {
+        "item": "minecraft:cobbled_deepslate",
+        "count": 9
+    }
+}
