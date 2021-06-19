@@ -5,7 +5,6 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BeehiveMixin",
-    "Cropmixin",
     "GrassSwingFix",
     "InfinityFix",
     "ItemEntityMixin",
@@ -22,6 +21,8 @@
     "durability.DurabilityWarningMixinTool"
   ],
   "client": [
+    "Cropmixin"
+
   ],
   "injectors": {
     "defaultRequire": 1

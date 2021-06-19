@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "sentimentality3",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "name": "Sentimentality 3",
   "description": "A collection of changes that look to improve the vanilla experience without being overpowered",
   "authors": [

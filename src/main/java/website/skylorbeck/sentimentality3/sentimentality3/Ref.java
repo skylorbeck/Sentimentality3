@@ -125,7 +125,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         crimsonTools = config.toggles.toolToggles.crimsonTools;
         amethystTools = config.toggles.toolToggles.amethystTools;
         copperTools = config.toggles.toolToggles.copperTools;
-        deepslateTools = config.toggles.toolToggles.copperTools;
+        deepslateTools = config.toggles.toolToggles.deepslateTools;
         cobble = config.toggles.compressedBlocks.cobble;
         dirt = config.toggles.compressedBlocks.dirt;
         diorite = config.toggles.compressedBlocks.diorite;

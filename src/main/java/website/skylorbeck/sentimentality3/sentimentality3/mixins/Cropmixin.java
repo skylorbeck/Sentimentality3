@@ -42,7 +42,6 @@ public abstract class Cropmixin {
         }else{
             return !this.isMature(state);}
     }
-
     @Inject(at = @At("HEAD"),cancellable = true,method = "randomTick")
     private void sparkleTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
         if (Ref.cropSparkle) {

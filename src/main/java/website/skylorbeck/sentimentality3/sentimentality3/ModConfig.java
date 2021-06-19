@@ -197,6 +197,9 @@ public class ModConfig implements ConfigData {
         @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean copperTools = true;
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.Gui.RequiresRestart
+        boolean deepslateTools = true;
     }
 
     static class compressedBlocks{

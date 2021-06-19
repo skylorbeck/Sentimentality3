@@ -100,12 +100,12 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
             matrixStack.multiply(Vec3f.POSITIVE_X.getRadialQuaternion(1.571F));//lay items on their side to start
 
             ItemEntityRotator rotator = (ItemEntityRotator) itemEntity;
-            float rotation = ((float) itemEntity.getItemAge() + partialTicks) / 10.0F + itemEntity.getHeight();//seeds the rotation with the item's age and it's height to keep it moving at a fixed rate over time and relative to it's falling speed
+            float rotation = ((float) itemEntity.getItemAge() + partialTicks) / 10f + itemEntity.getHeight() +itemEntity.uniqueOffset;//seeds the rotation with the item's age and it's height to keep it moving at a fixed rate over time and relative to it's falling speed
             boolean isAboveWater1 = itemEntity.world.getBlockState(itemEntity.getBlockPos()).getFluidState().getFluid().isIn(FluidTags.WATER);//check to see if the item is directly above water to prevent water bouncing
             boolean isInCobweb = itemEntity.world.getBlockState(itemEntity.getBlockPos()).getBlock() == Blocks.COBWEB;//check to see if item is stuck in cobweb
             if (itemEntity.isSubmergedInWater() || isAboveWater1 || isInCobweb) {//if it's either of those, make is spin but at 1/4th speed
                 rotation = rotation / 4;
-                if (random.nextBoolean()) {//50/50 chance to rotate either direction
+                if (rotation % 2 == 0) {//50/50 chance to rotate either direction
                     matrixStack.multiply(Vec3f.POSITIVE_X.getRadialQuaternion(rotation));
                     matrixStack.multiply(Vec3f.POSITIVE_Y.getRadialQuaternion(rotation));
                     matrixStack.multiply(Vec3f.POSITIVE_Z.getRadialQuaternion(rotation));
@@ -116,7 +116,7 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
                 }
                 rotator.setRotation(new Vec3d(0, 0, rotation));
             } else if (!itemEntity.isOnGround() && !itemEntity.isSubmergedInWater()) {//if the item  isn't on the ground and isn't in water, spin at full speed
-                if (random.nextBoolean()) {
+                if (rotation % 2 == 0) {
                     matrixStack.multiply(Vec3f.POSITIVE_X.getRadialQuaternion(rotation));
                     matrixStack.multiply(Vec3f.POSITIVE_Y.getRadialQuaternion(rotation));
                     matrixStack.multiply(Vec3f.POSITIVE_Z.getRadialQuaternion(rotation));
