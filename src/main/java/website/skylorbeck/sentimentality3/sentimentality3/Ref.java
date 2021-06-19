@@ -60,6 +60,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean crimsonTools = true;
     public static boolean amethystTools = true;
     public static boolean copperTools = true;
+    public static boolean deepslateTools = true;
     public static boolean cobble = true;
     public static boolean dirt = true;
     public static boolean diorite = true;
@@ -123,6 +124,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         crimsonTools = config.toggles.toolToggles.crimsonTools;
         amethystTools = config.toggles.toolToggles.amethystTools;
         copperTools = config.toggles.toolToggles.copperTools;
+        deepslateTools = config.toggles.toolToggles.copperTools;
         cobble = config.toggles.compressedBlocks.cobble;
         dirt = config.toggles.compressedBlocks.dirt;
         diorite = config.toggles.compressedBlocks.diorite;

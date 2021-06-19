@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:cobbled_deepslate"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality3:extratool/deepslate_axe",
+      "sentimentality3:extratool/deepslate_hoe",
+      "sentimentality3:extratool/deepslate_pickaxe",
+      "sentimentality3:extratool/deepslate_shovel",
+      "sentimentality3:extratool/deepslate_sword"
+    ]
+  }
+}

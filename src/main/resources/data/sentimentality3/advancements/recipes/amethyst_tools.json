@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:amethyst_shard"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_block"]
+  ],
+  "rewards": {
+    "recipes": [
+      "sentimentality3:extratool/amethyst_axe",
+      "sentimentality3:extratool/amethyst_hoe",
+      "sentimentality3:extratool/amethyst_pickaxe",
+      "sentimentality3:extratool/amethyst_shovel",
+      "sentimentality3:extratool/amethyst_sword"
+    ]
+  }
+}

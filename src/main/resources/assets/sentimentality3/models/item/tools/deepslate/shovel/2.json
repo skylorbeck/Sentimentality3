@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "sentimentality3:item/deepslate_shovel_2"
+    }
+}

@@ -68,7 +68,11 @@ public enum ExtraToolMaterials implements ToolMaterial {
     }),
     COPPER(2,250,4.0F,2.0F,14, () -> {//speed of stone, else iron
         return Ingredient.ofItems(Items.COPPER_INGOT);
-    })
+    }),
+    DEEPSLATE(1, 131, 4.0F, 1.0F, 5, () -> {//speed of stone, else iron
+        return Ingredient.ofItems(Blocks.COBBLED_DEEPSLATE);
+    }),
+
 
     ;
     private final int miningLevel;

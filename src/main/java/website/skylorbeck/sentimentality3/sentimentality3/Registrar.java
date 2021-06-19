@@ -17,7 +17,8 @@ import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraSmokerBl
 import java.util.Objects;
 
 public class Registrar {
-
+//todo deepslate compressed blocks
+    //todo deepslate furnaces
     public static void clientRegister() {//separated because servers don't like when they have this stuff registered on them
         //particles
         Declarer.END_FIRE_FLAME = Registry.register(Registry.PARTICLE_TYPE, new Identifier(Ref.MODID, "end_fire_flame"), FabricParticleTypes.simple());
@@ -335,6 +336,13 @@ public class Registrar {
                 regItem("copper_shovel", Declarer.copper_shovel);
                 regItem("copper_sword", Declarer.copper_sword);
                 regItem("copper_hoe", Declarer.copper_hoe);
+            }
+            if (Ref.deepslateTools){
+                regItem("deepslate_pick", Declarer.deepslate_pick);
+                regItem("deepslate_axe", Declarer.deepslate_axe);
+                regItem("deepslate_shovel", Declarer.deepslate_shovel);
+                regItem("deepslate_sword", Declarer.deepslate_sword);
+                regItem("deepslate_hoe", Declarer.deepslate_hoe);
             }
         }
 

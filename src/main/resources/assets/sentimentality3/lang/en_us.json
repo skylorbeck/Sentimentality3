@@ -97,6 +97,8 @@
   "text.autoconfig.sentimentality3.option.toggles.toolToggles.warpedTools.@Tooltip": "Game Must Be Restarted For Changes To Take Effect",
   "text.autoconfig.sentimentality3.option.toggles.toolToggles.crimsonTools.@Tooltip": "Game Must Be Restarted For Changes To Take Effect",
   "text.autoconfig.sentimentality3.option.toggles.toolToggles.amethystTools.@Tooltip": "Game Must Be Restarted For Changes To Take Effect",
+  "text.autoconfig.sentimentality3.option.toggles.toolToggles.copperTools.@Tooltip": "Game Must Be Restarted For Changes To Take Effect",
+  "text.autoconfig.sentimentality3.option.toggles.toolToggles.deepslateTools.@Tooltip": "Game Must Be Restarted For Changes To Take Effect",
   "text.autoconfig.sentimentality3.option.toggles.allCompressedBlocks.@Tooltip": "Game Must Be Restarted For Changes To Take Effect",
   "text.autoconfig.sentimentality3.option.toggles.compressedBlocks.@Tooltip[0]":  "'All Compressed Blocks' Must Be Enabled",
   "text.autoconfig.sentimentality3.option.toggles.compressedBlocks.@Tooltip[1]":  "To Disable Individual Compressed Blocks",
@@ -356,5 +358,10 @@
   "item.sentimentality3.copper_shovel": "Copper Shovel",
   "item.sentimentality3.copper_axe": "Copper Axe",
   "item.sentimentality3.copper_pick": "Copper Pickaxe",
-  "item.sentimentality3.copper_hoe": "Copper Hoe"
+  "item.sentimentality3.copper_hoe": "Copper Hoe",
+  "item.sentimentality3.deepslate_sword": "Deepslate Sword",
+  "item.sentimentality3.deepslate_shovel": "Deepslate Shovel",
+  "item.sentimentality3.deepslate_axe": "Deepslate Axe",
+  "item.sentimentality3.deepslate_pick": "Deepslate Pickaxe",
+  "item.sentimentality3.deepslate_hoe": "Deepslate Hoe"
 }

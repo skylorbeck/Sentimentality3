@@ -7,6 +7,10 @@
     "minecraft:polished_diorite",
     "minecraft:granite",
     "minecraft:polished_granite",
-    "minecraft:cobblestone"
+    "minecraft:cobblestone",
+    "minecraft:polished_deepslate",
+    "minecraft:cobbled_deepslate",
+    "minecraft:deepslate_tiles",
+    "minecraft:deepslate_bricks"
   ]
 }

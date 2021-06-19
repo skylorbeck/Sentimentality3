@@ -353,4 +353,9 @@ public class Declarer {
     public static final Item copper_pick = new ExtraPickaxeItem(ExtraToolMaterials.COPPER, 1, -2.8F, (new FabricItemSettings().group(ItemGroup.TOOLS)));
     public static final Item copper_axe = new ExtraAxeItem(ExtraToolMaterials.COPPER, 7.0F, -3.2F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
     public static final Item copper_hoe = new ExtraHoeItem(ExtraToolMaterials.COPPER, -1, -2.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item deepslate_sword = new SwordItem(ExtraToolMaterials.DEEPSLATE, 3, -2.4F, (new FabricItemSettings()).group(ItemGroup.COMBAT));
+    public static final Item deepslate_shovel = new ShovelItem(ExtraToolMaterials.DEEPSLATE, 1.5F, -3.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item deepslate_pick = new ExtraPickaxeItem(ExtraToolMaterials.DEEPSLATE, 1, -2.8F, (new FabricItemSettings().group(ItemGroup.TOOLS)));
+    public static final Item deepslate_axe = new ExtraAxeItem(ExtraToolMaterials.DEEPSLATE, 7.0F, -3.2F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
+    public static final Item deepslate_hoe = new ExtraHoeItem(ExtraToolMaterials.DEEPSLATE, -1, -2.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));
 }
