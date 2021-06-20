@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Arm;
+import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 
 import java.time.LocalTime;
@@ -44,10 +45,7 @@ public class ExtraHUD {
         int localHour = LocalTime.now().getHour();
         int localMinute = LocalTime.now().getMinute();
         String amPm = "AM";
-        boolean left = false;
-        if (client.options.mainArm == Arm.LEFT) {
-            left = true;
-        }//if player left handed
+        boolean left = client.options.mainArm == Arm.LEFT;//if player left handed
 
 
         if (time >= 24000) {//compensate for the fact that time is counted upwards forever
@@ -87,7 +85,7 @@ public class ExtraHUD {
                 sleepAdj = 8;
             }
             itemRenderer.renderInGui(new ItemStack(Items.RED_BED), 0, scaledHeight - 18 - sleepAdj);
-            if (sleeping * 100 / playerEntities.size() >= SleepEventManager.percent) {//calculate percent of players sleeping, defaults to 50%
+            if (sleeping * 100 / playerEntities.size() >= world.getGameRules().getInt(GameRules.PLAYERS_SLEEPING_PERCENTAGE)) {//calculate percent of players sleeping, defaults to 50%
                 color = 43520;//green
             } else {
                 color = 16733525;//orange-red
@@ -105,26 +103,26 @@ public class ExtraHUD {
         int clockPosY = 0;
         int clockAdj = 0;
         switch (Ref.clockCorner) {
-            case 0://top left
+            case 0 -> {//top left
                 clockPosX = 1;
                 clockPosY = 1;
                 clockAdj = 0;
-                break;
-            case 1://top right
+            }
+            case 1 -> {//top right
                 clockPosX = scaledWidth - 38;
                 clockPosY = 1;
                 clockAdj = -12;
-                break;
-            case 2://bottom left
+            }
+            case 2 -> {//bottom left
                 clockPosX = 1;
                 clockPosY = scaledHeight - 8;
                 clockAdj = 0;
-                break;
-            case 3://bottom right
+            }
+            case 3 -> {//bottom right
                 clockPosX = scaledWidth - 38;
                 clockPosY = scaledHeight - 8;
                 clockAdj = -12;
-                break;
+            }
         }
         if (Ref.doClock) {
             if (Ref.clockAmPm && !Ref.clockMilitary) {//positioning changes if there is AMPM on the end or not.

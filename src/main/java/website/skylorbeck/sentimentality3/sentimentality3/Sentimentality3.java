@@ -29,7 +29,6 @@ public class Sentimentality3 implements ModInitializer {
             });
         });
         Registrar.register();//register everything serverside
-        ServerTickCallback.EVENT.register(SleepEventManager::onTick);
         Ref.getSettings();//gets all settings at launch to save on file reads. Certain settings would read every frame(!) insanely bad
         configHolder.getConfig();
         configHolder.registerSaveListener((manager, data) ->{//listen for config file changes

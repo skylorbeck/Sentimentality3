@@ -21,7 +21,11 @@
       "sentimentality3:extratool/copper_hoe",
       "sentimentality3:extratool/copper_pickaxe",
       "sentimentality3:extratool/copper_shovel",
-      "sentimentality3:extratool/copper_sword"
+      "sentimentality3:extratool/copper_sword",
+      "sentimentality3:copper_boots",
+      "sentimentality3:copper_chestplate",
+      "sentimentality3:copper_helmet",
+      "sentimentality3:copper_leggings"
     ]
   }
 }

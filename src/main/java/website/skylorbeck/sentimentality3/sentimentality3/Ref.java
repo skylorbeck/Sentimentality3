@@ -28,6 +28,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean blasts = true;
     public static boolean smokers = true;
     public static boolean woolArmor = true;
+    public static boolean copperArmor = true;
     public static boolean allTools = true;
     public static boolean allCompressedBlocks = true;
     public static boolean cropSparkle = true;
@@ -35,7 +36,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static int sparkleCount = 2;
     public static boolean doSleepStuff = true;
     public static boolean showSleepCount = true;
-    public static int sleepPercent = 50;
     public static boolean doClock = true;
     public static int clockCorner = 1;
     public static boolean clockMilitary = false;
@@ -93,6 +93,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         blasts = config.toggles.blasts;
         smokers = config.toggles.smokers;
         woolArmor = config.toggles.woolArmor;
+        copperArmor = config.toggles.copperArmor;
         allTools = config.toggles.allTools;
         allCompressedBlocks = config.toggles.allCompressedBlocks;
         cropSparkle = config.cropStuff.cropSparkle;
@@ -100,7 +101,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
         sparkleCount = config.cropStuff.sparkleCount;
         doSleepStuff = config.sleepStuff.doSleepStuff;
         showSleepCount = config.sleepStuff.showSleepCount;
-        sleepPercent = config.sleepStuff.sleepPercent;
         doClock = config.clockStuff.doClock;
         clockCorner = config.clockStuff.clockCorner;
         clockMilitary = config.clockStuff.clockMilitary;
@@ -150,7 +150,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
         sparkleCount = config.cropStuff.sparkleCount;
         doSleepStuff = config.sleepStuff.doSleepStuff;
         showSleepCount = config.sleepStuff.showSleepCount;
-        sleepPercent = config.sleepStuff.sleepPercent;
         doClock = config.clockStuff.doClock;
         clockCorner = config.clockStuff.clockCorner;
         clockMilitary = config.clockStuff.clockMilitary;

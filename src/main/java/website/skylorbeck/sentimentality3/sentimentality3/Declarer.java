@@ -275,6 +275,11 @@ public class Declarer {
     public static final Item wool_chestplate = new ExtraDyeableArmorItem(ExtraArmorMaterials.WOOL, EquipmentSlot.CHEST, new FabricItemSettings().group(ItemGroup.COMBAT));
     public static final Item wool_leggings = new ExtraDyeableArmorItem(ExtraArmorMaterials.WOOL, EquipmentSlot.LEGS, new FabricItemSettings().group(ItemGroup.COMBAT));
     public static final Item wool_boots = new ExtraDyeableArmorItem(ExtraArmorMaterials.WOOL, EquipmentSlot.FEET, new FabricItemSettings().group(ItemGroup.COMBAT));
+    //copper armor
+    public static final Item copper_helmet = new ArmorItem(ExtraArmorMaterials.COPPER, EquipmentSlot.HEAD, new FabricItemSettings().group(ItemGroup.COMBAT));
+    public static final Item copper_chestplate = new ArmorItem(ExtraArmorMaterials.COPPER, EquipmentSlot.CHEST, new FabricItemSettings().group(ItemGroup.COMBAT));
+    public static final Item copper_leggings = new ArmorItem(ExtraArmorMaterials.COPPER, EquipmentSlot.LEGS, new FabricItemSettings().group(ItemGroup.COMBAT));
+    public static final Item copper_boots = new ArmorItem(ExtraArmorMaterials.COPPER, EquipmentSlot.FEET, new FabricItemSettings().group(ItemGroup.COMBAT));
     //tools
     public static final Item granite_sword = new SwordItem(ExtraToolMaterials.GRANITE, 3, -2.4F, (new FabricItemSettings()).group(ItemGroup.COMBAT));
     public static final Item granite_shovel = new ShovelItem(ExtraToolMaterials.GRANITE, 1.5F, -3.0F, (new FabricItemSettings()).group(ItemGroup.TOOLS));

@@ -22,7 +22,7 @@ public class ModConfig implements ConfigData {
 
     public boolean beehiveTips = true;
 
-    public boolean durabilityWarn = true;
+    public boolean durabilityWarn = false;
     /*@ConfigEntry.Gui.CollapsibleObject()
     public durabilityStuff durabilityStuff = new durabilityStuff();*/
 
@@ -80,6 +80,9 @@ public class ModConfig implements ConfigData {
         @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean woolArmor = true;
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.Gui.RequiresRestart
+        boolean copperArmor = true;
 
         @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
@@ -122,9 +125,9 @@ public class ModConfig implements ConfigData {
         boolean showSleepCount = true;
 
         //@ConfigEntry.Gui.RequiresRestart
-        @ConfigEntry.BoundedDiscrete(max = 100, min = 1)
+/*        @ConfigEntry.BoundedDiscrete(max = 100, min = 1)
         @ConfigEntry.Gui.Tooltip
-        int sleepPercent = 50;
+        int sleepPercent = 50;*/
     }
 
     static class clockStuff {

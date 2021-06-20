@@ -1,12 +1,14 @@
 package website.skylorbeck.sentimentality3.sentimentality3.mixins.durability;
 
 import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.packet.s2c.play.SubtitleS2CPacket;
 import net.minecraft.network.packet.s2c.play.TitleS2CPacket;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -35,7 +37,7 @@ public abstract class DurabilityWarningMixinTool {
                 case 9:
                     if (!tag.getBoolean("hasPlayedSound1")) {
                         world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.4f, 0.8F + world.random.nextFloat() * 0.4F);
-                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) miner, (new TitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is close to breaking!"))));
+                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) miner, (new SubtitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is close to breaking!"))));
                         tag.putBoolean("hasPlayedSound1", true);
                     }
                     break;
@@ -43,7 +45,7 @@ public abstract class DurabilityWarningMixinTool {
                 case 4:
                     if (!tag.getBoolean("hasPlayedSound2")) {
                         world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.6f, 0.8F + world.random.nextFloat() * 0.4F);
-                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) miner, (new TitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
+                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) miner, (new SubtitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
                         tag.putBoolean("hasPlayedSound2", true);
                     }
                     break;
@@ -72,7 +74,7 @@ public abstract class DurabilityWarningMixinTool {
             case 4:
                 if (!tag.getBoolean("hasPlayedSound2")) {
                     attacker.world.playSound(null, attacker.getBlockPos(), SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.4f, 0.8F + attacker.world.random.nextFloat() * 0.4F);
-                    ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new TitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
+                    ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) attacker, (new SubtitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
                     tag.putBoolean("hasPlayedSound2", true);
                 }
                 break;

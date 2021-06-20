@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "# #",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:copper_ingot"
+        }
+    },
+    "result": {
+        "item": "sentimentality3:copper_chestplate",
+        "count": 1
+    }
+}

@@ -33,6 +33,11 @@ public enum ExtraArmorMaterials implements ArmorMaterial {
                 Items.LIGHT_BLUE_WOOL,
                 Items.LIGHT_GRAY_WOOL
         );
+    }),
+    COPPER("copper",10,new int[]{1,4,5,2},15,SoundEvents.ITEM_ARMOR_EQUIP_IRON,0.0f,0.0f,()->{//Chainmail defense, durability between leather and chain, enchantability of leather
+        return Ingredient.ofItems(
+                Items.COPPER_INGOT
+        );
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};

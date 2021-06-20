@@ -70,7 +70,7 @@ public class Registrar {
             regItem("coal_nugget", Declarer.coal_nugget);
             FuelRegistry.INSTANCE.add(Declarer.coal_nugget, 200);
         }
-        //gliders
+
 
         //block entities
         //furnace entity
@@ -199,6 +199,13 @@ public class Registrar {
             regItem("wool_chestplate", Declarer.wool_chestplate);
             regItem("wool_leggings", Declarer.wool_leggings);
             regItem("wool_boots", Declarer.wool_boots);
+        }
+        //copper armor
+        if (Ref.copperArmor) {
+            regItem("copper_helmet", Declarer.copper_helmet);
+            regItem("copper_chestplate", Declarer.copper_chestplate);
+            regItem("copper_leggings", Declarer.copper_leggings);
+            regItem("copper_boots", Declarer.copper_boots);
         }
         //tools
         if (Ref.allTools) {

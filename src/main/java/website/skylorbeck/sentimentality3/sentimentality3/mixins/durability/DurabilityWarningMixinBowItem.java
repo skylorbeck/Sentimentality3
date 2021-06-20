@@ -6,6 +6,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.packet.s2c.play.SubtitleS2CPacket;
 import net.minecraft.network.packet.s2c.play.TitleS2CPacket;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -34,14 +35,14 @@ public abstract class DurabilityWarningMixinBowItem {
                 case 10:
                     if (!tag.getBoolean("hasPlayedSound1")) {
                         world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.4f, 0.8F + world.random.nextFloat() * 0.4F);
-                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) user, (new TitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is close to breaking!"))));
+                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) user, (new SubtitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is close to breaking!"))));
                         tag.putBoolean("hasPlayedSound1", true);
                     }
                         break;
                 case 5:
                     if (!tag.getBoolean("hasPlayedSound2")) {
                         world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.6f, 0.8F + world.random.nextFloat() * 0.4F);
-                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) user, (new TitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
+                        ServerSidePacketRegistry.INSTANCE.sendToPlayer((PlayerEntity) user, (new SubtitleS2CPacket( new TranslatableText(stack.getItem().getTranslationKey()).append(" is VERY close to breaking!!"))));
                         tag.putBoolean("hasPlayedSound2", true);
                     }
                     break;
