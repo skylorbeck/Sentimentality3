@@ -1,7 +1,6 @@
 package website.skylorbeck.sentimentality3.sentimentality3.client;
 
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.example.ExampleConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.minecraft.util.Identifier;

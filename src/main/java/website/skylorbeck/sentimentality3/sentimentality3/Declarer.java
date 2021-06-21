@@ -3,7 +3,9 @@ package website.skylorbeck.sentimentality3.sentimentality3;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.HayBlock;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -226,7 +228,7 @@ public class Declarer {
     public static final BlockItem basalt_furnace = new BlockItem(basalt_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
     public static final Block endstone_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).breakByTool(FabricToolTags.PICKAXES), 2);
     public static final BlockItem endstone_furnace = new BlockItem(endstone_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
-    public static final Block deepslate_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).breakByTool(FabricToolTags.PICKAXES), 2);
+    public static final Block deepslate_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).breakByTool(FabricToolTags.PICKAXES), 0);
     public static final BlockItem deepslate_furnace = new BlockItem(deepslate_furnaceblock, new FabricItemSettings().group(ItemGroup.DECORATIONS));
     //blast furnaces
     public static final Block sandstone_blast_furnaceblock = new ExtraBlastFurnaceBlock(FabricBlockSettings.copyOf(Blocks.BLAST_FURNACE).breakByTool(FabricToolTags.PICKAXES));
