@@ -13,6 +13,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean pingIndicator = true;
     public static boolean infinityFix = true;
     public static boolean itemEntity = true;
+    public static boolean altItemEntity = false;
     public static boolean beehiveTips = true;
     public static boolean durabilityWarn = true;
     public static boolean chunker = true;

@@ -17,7 +17,8 @@ import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraSmokerBl
 import java.util.Objects;
 
 public class Registrar {
-    //todo deepslate furnaces
+    //todo COMPRESSED TUFF
+    //todo compressed calcite
 
     public static void clientRegister() {//separated because servers don't like when they have this stuff registered on them
         //particles

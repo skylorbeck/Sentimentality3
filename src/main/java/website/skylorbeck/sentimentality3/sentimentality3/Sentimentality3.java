@@ -27,9 +27,9 @@ public class Sentimentality3 implements ModInitializer {
                 ServerSidePacketRegistry.INSTANCE.sendToPlayer(packetContext.getPlayer(), Sentimentality3Client.sentimentality3_send_seed, data);
             });
         });
-        Registrar.register();//register everything serverside
-        Ref.getSettings();//gets all settings at launch to save on file reads. Certain settings would read every frame(!) insanely bad
         configHolder.getConfig();
+        Ref.getSettings();//gets all settings at launch to save on file reads. Certain settings would read every frame(!) insanely bad
+        Registrar.register();//register everything serverside
         configHolder.registerSaveListener((manager, data) ->{//listen for config file changes
             Ref.getSomeSettings();//gets settings that don't need a full restart to properly do.
             //Logger.getLogger(Ref.MODID).log(Level.WARNING,"SAVE EVENT TRIGGERED");//this was used to help me see if it was actually working

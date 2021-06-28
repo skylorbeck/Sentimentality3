@@ -19,6 +19,7 @@ public class ModConfig implements ConfigData {
     public boolean infinityFix = true;
 
     public boolean itemEntity = true;
+//    public boolean altItemEntity = true;
 
     public boolean beehiveTips = true;
 
