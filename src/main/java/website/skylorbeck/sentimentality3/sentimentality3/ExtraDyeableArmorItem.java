@@ -13,7 +13,7 @@ public class ExtraDyeableArmorItem extends DyeableArmorItem implements DyeableIt
     }
     @Override
     public int getColor(ItemStack stack) {
-        NbtCompound compoundTag = stack.getSubTag("display");
+        NbtCompound compoundTag = stack.getSubNbt("display");
         return compoundTag != null && compoundTag.contains("color", 99) ? compoundTag.getInt("color") : 16777215;//white
     }
 }

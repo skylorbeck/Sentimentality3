@@ -23,7 +23,7 @@ public class PDDItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        NbtCompound compoundTag = stack.getOrCreateTag();
+        NbtCompound compoundTag = stack.getOrCreateNbt();
         //both must be private or all the PDD overwrite each other
         //daylight or torchlight modes
         boolean mode = compoundTag.getBoolean("mode");
@@ -44,7 +44,7 @@ public class PDDItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
             ItemStack itemStack = user.getStackInHand(hand);
-            NbtCompound compoundTag = itemStack.getOrCreateTag();
+            NbtCompound compoundTag = itemStack.getOrCreateNbt();
             boolean mode2 = compoundTag.getBoolean("mode");
             mode2 = !mode2;//invert mode
             compoundTag.putBoolean("mode",mode2);

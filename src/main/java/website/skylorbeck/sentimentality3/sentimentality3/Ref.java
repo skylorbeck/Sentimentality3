@@ -74,13 +74,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
 
     public static void getSettings(){
 
-        showItems = config.showItems;
-        repairCost = config.repairCost;
-        pingIndicator = config.pingIndicator;
-        infinityFix = config.infinityFix;
-        itemEntity = config.itemEntity;
-        beehiveTips = config.beehiveTips;
-        durabilityWarn = config.durabilityWarn;
         chunker = config.toggles.chunker;
         slimer = config.toggles.slimer;
         daylighter = config.toggles.daylighter;
@@ -97,15 +90,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
         copperArmor = config.toggles.copperArmor;
         allTools = config.toggles.allTools;
         allCompressedBlocks = config.toggles.allCompressedBlocks;
-        cropSparkle = config.cropStuff.cropSparkle;
-        sparkleType = config.cropStuff.sparkleType;
-        sparkleCount = config.cropStuff.sparkleCount;
-        doSleepStuff = config.sleepStuff.doSleepStuff;
-        showSleepCount = config.sleepStuff.showSleepCount;
-        doClock = config.clockStuff.doClock;
-        clockCorner = config.clockStuff.clockCorner;
-        clockMilitary = config.clockStuff.clockMilitary;
-        clockAmPm = config.clockStuff.clockAmPm;
         graniteTools = config.toggles.toolToggles.graniteTools;
         dioriteTools = config.toggles.toolToggles.dioriteTools;
         andesiteTools = config.toggles.toolToggles.andesiteTools;
@@ -136,6 +120,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         sand = config.toggles.compressedBlocks.sand;
         gravel = config.toggles.compressedBlocks.gravel;
         deepslate = config.toggles.compressedBlocks.deepslate;
+        getSomeSettings();
     }
 
     public static void getSomeSettings() {

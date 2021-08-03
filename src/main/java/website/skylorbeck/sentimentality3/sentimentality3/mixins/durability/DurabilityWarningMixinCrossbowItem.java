@@ -34,7 +34,7 @@ public abstract class DurabilityWarningMixinCrossbowItem {
             if (isCharged(itemStack)) {
                 BlockPos pos = user.getBlockPos();
                 int curDam = itemStack.getMaxDamage() - itemStack.getDamage();
-                NbtCompound tag = itemStack.getOrCreateTag();
+                NbtCompound tag = itemStack.getOrCreateNbt();
                 if (curDam >= 12) {
                     tag.remove("hasPlayedSound1");
                     tag.remove("hasPlayedSound2");

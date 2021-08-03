@@ -33,7 +33,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Caelus
-    modImplementation "top.theillusivec4.caelus:caelus-fabric:0.0.16-1.17"
+//    modImplementation "top.theillusivec4.caelus:caelus-fabric:0.0.16-1.17"
 
     // Trinkets
 //    modImplementation "dev.emi:trinkets:3.0.0"
@@ -94,6 +94,6 @@ publishing {
     // select the repositories you want to publish to
     repositories {
         // uncomment to publish to the local maven
-        // mavenLocal()
+         mavenLocal()
     }
 }

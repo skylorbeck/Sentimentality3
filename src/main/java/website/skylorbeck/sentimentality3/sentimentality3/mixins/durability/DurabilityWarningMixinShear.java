@@ -25,7 +25,7 @@ public abstract class DurabilityWarningMixinShear {
     public void checkDur(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, CallbackInfoReturnable<Boolean> cir) {
         if (Ref.durabilityWarn && !world.isClient && miner instanceof PlayerEntity) {
             int curDam = stack.getMaxDamage() - stack.getDamage();
-            NbtCompound tag = stack.getOrCreateTag();
+            NbtCompound tag = stack.getOrCreateNbt();
             if (curDam>=11){
                 tag.remove("hasPlayedSound1");
                 tag.remove("hasPlayedSound2");

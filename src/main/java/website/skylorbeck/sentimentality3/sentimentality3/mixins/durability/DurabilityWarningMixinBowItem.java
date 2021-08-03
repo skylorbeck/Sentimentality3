@@ -25,7 +25,7 @@ public abstract class DurabilityWarningMixinBowItem {
         if (Ref.durabilityWarn && !world.isClient && user instanceof PlayerEntity) {
             BlockPos pos = user.getBlockPos();
             int curDam = stack.getMaxDamage() - stack.getDamage();
-            NbtCompound tag = stack.getOrCreateTag();
+            NbtCompound tag = stack.getOrCreateNbt();
             if (curDam>=11){
                 tag.remove("hasPlayedSound1");
                 tag.remove("hasPlayedSound2");

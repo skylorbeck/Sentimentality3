@@ -29,7 +29,7 @@ public class Chunkloader extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        NbtCompound compoundTag = itemStack.getOrCreateTag();
+        NbtCompound compoundTag = itemStack.getNbt();
         BlockPos blockPos = user.getBlockPos();
         Chunk chunk = world.getChunk(blockPos);
         ChunkPos chunkPos = chunk.getPos();

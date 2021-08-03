@@ -26,7 +26,7 @@ public class Registrar {
         ParticleFactoryRegistry.getInstance().register(Declarer.END_FIRE_FLAME, FlameParticle.Factory::new);
         //tying the color provider to the wool armor
         ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-                        stack.getSubTag(Ref.display) != null && Objects.requireNonNull(stack.getSubTag(Ref.display)).contains(Ref.color, 99) ? Objects.requireNonNull(stack.getSubTag(Ref.display)).getInt(Ref.color) : 16777215,
+                        stack.getSubNbt(Ref.display) != null && Objects.requireNonNull(stack.getSubNbt(Ref.display)).contains(Ref.color, 99) ? Objects.requireNonNull(stack.getSubNbt(Ref.display)).getInt(Ref.color) : 16777215,
                 Declarer.wool_helmet,
                 Declarer.wool_chestplate,
                 Declarer.wool_leggings,

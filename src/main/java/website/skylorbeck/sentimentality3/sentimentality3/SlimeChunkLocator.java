@@ -55,7 +55,7 @@ public class SlimeChunkLocator extends Item {
                 waitingForSeed = true;
             }
             if(hasSeed){//once you get the seed
-                NbtCompound compoundTag = stack.getOrCreateTag();
+                NbtCompound compoundTag = stack.getOrCreateNbt();
                 compoundTag.putLong("seed",seed);//if the user has an NBT viewing mod, they could get the seed too easily with this
                 int bool = findChunk(seed,entity.getChunkPos().x,entity.getChunkPos().z) ? 1: 0;
                 compoundTag.putInt("CustomModelData", bool);//save result to NBT for custom model

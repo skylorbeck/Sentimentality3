@@ -26,7 +26,7 @@ public abstract class DurabilityWarningMixinTool {
     public void checkDur(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner, CallbackInfoReturnable<Boolean> cir) {
         if (Ref.durabilityWarn && !world.isClient && miner instanceof PlayerEntity && state.getHardness(world, pos) != 0.0F) {
             int curDam = stack.getMaxDamage() - stack.getDamage();
-            NbtCompound tag = stack.getOrCreateTag();
+            NbtCompound tag = stack.getOrCreateNbt();
             if (curDam >= 11) {
                 tag.remove("hasPlayedSound1");
                 tag.remove("hasPlayedSound2");
@@ -55,7 +55,7 @@ public abstract class DurabilityWarningMixinTool {
     @Inject(at = @At("RETURN"), method = "postHit")
     public void checkDur2(ItemStack stack, LivingEntity target, LivingEntity attacker, CallbackInfoReturnable<Boolean> cir) {
         int curDam = stack.getMaxDamage() - stack.getDamage();
-        NbtCompound tag = stack.getOrCreateTag();
+        NbtCompound tag = stack.getOrCreateNbt();
         if (curDam>=11){
             tag.putBoolean("hasPlayedSound1",false);
             tag.putBoolean("hasPlayedSound2",false);

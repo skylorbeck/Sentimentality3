@@ -43,7 +43,7 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
     private static final int[] TOP_SLOTS = new int[]{0};
     private static final int[] BOTTOM_SLOTS = new int[]{2, 1};
     private static final int[] SIDE_SLOTS = new int[]{1};
-    protected DefaultedList<ItemStack> inventory;
+    public DefaultedList<ItemStack> inventory;
     public int burnTime;
     public int fuelTime;
     public int cookTime;
@@ -65,33 +65,21 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
         this.inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
-                switch (index) {
-                    case 0:
-                        return AbstractExtraFurnaceBlockEntity.this.burnTime;
-                    case 1:
-                        return AbstractExtraFurnaceBlockEntity.this.fuelTime;
-                    case 2:
-                        return AbstractExtraFurnaceBlockEntity.this.cookTime;
-                    case 3:
-                        return AbstractExtraFurnaceBlockEntity.this.cookTimeTotal;
-                    default:
-                        return 0;
-                }
+                return switch (index) {
+                    case 0 -> AbstractExtraFurnaceBlockEntity.this.burnTime;
+                    case 1 -> AbstractExtraFurnaceBlockEntity.this.fuelTime;
+                    case 2 -> AbstractExtraFurnaceBlockEntity.this.cookTime;
+                    case 3 -> AbstractExtraFurnaceBlockEntity.this.cookTimeTotal;
+                    default -> 0;
+                };
             }
 
             public void set(int index, int value) {
                 switch (index) {
-                    case 0:
-                        AbstractExtraFurnaceBlockEntity.this.burnTime = value;
-                        break;
-                    case 1:
-                        AbstractExtraFurnaceBlockEntity.this.fuelTime = value;
-                        break;
-                    case 2:
-                        AbstractExtraFurnaceBlockEntity.this.cookTime = value;
-                        break;
-                    case 3:
-                        AbstractExtraFurnaceBlockEntity.this.cookTimeTotal = value;
+                    case 0 -> AbstractExtraFurnaceBlockEntity.this.burnTime = value;
+                    case 1 -> AbstractExtraFurnaceBlockEntity.this.fuelTime = value;
+                    case 2 -> AbstractExtraFurnaceBlockEntity.this.cookTime = value;
+                    case 3 -> AbstractExtraFurnaceBlockEntity.this.cookTimeTotal = value;
                 }
 
             }
@@ -310,7 +298,7 @@ public abstract class AbstractExtraFurnaceBlockEntity extends LockableContainerB
     }
     public void setStack(int slot, ItemStack stack) {
         ItemStack itemStack = (ItemStack)this.inventory.get(slot);
-        boolean bl = !stack.isEmpty() && stack.isItemEqualIgnoreDamage(itemStack) && ItemStack.areTagsEqual(stack, itemStack);
+        boolean bl = !stack.isEmpty() && stack.isItemEqualIgnoreDamage(itemStack) && ItemStack.areNbtEqual(stack, itemStack);
         this.inventory.set(slot, stack);
         if (stack.getCount() > this.getMaxCountPerStack()) {
             stack.setCount(this.getMaxCountPerStack());
