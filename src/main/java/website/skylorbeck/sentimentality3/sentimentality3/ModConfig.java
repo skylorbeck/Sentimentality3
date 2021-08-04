@@ -36,62 +36,47 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject()
     sleepStuff sleepStuff = new sleepStuff();
 
+    @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Gui.CollapsibleObject()
     toggles toggles = new toggles();
     static class toggles {
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean chunker = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean slimer = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean daylighter = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean fleather = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean charcoal = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean coalChunks = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean sticks = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean featherBlock = true;
 
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         @ConfigEntry.Gui.Excluded
         boolean gliders = false;
 
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean furnaces = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean blasts = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean smokers = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean woolArmor = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean copperArmor = true;
 
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean allTools = true;
         @ConfigEntry.Gui.Tooltip(count = 2)
         @ConfigEntry.Gui.CollapsibleObject()
         toolToggles toolToggles = new toolToggles();
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean allCompressedBlocks = true;
         @ConfigEntry.Gui.Tooltip(count = 2)
@@ -141,97 +126,67 @@ public class ModConfig implements ConfigData {
     }
 
     static class toolToggles{
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean graniteTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean dioriteTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean andesiteTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean quartzTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean netherrackTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean netherbrickTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean redNetherbrickTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean sandstoneTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean redSandstoneTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean lapisTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean emeraldTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean flintTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean redstoneTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean blackstoneTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean basaltTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean endstoneTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean warpedTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean crimsonTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean amethystTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean copperTools = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean deepslateTools = true;
     }
 
     static class compressedBlocks{
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean cobble = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean dirt = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean diorite = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean andesite = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean granite = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean netherrack = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean sand = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean gravel = true;
-        @ConfigEntry.Gui.Tooltip
         @ConfigEntry.Gui.RequiresRestart
         boolean deepslate = true;
     }
