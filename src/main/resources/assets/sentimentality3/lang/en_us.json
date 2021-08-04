@@ -280,6 +280,8 @@
   "item.sentimentality3.copper_chestplate": "Copper Chestplate",
   "item.sentimentality3.copper_helmet": "Copper Helmet",
   "item.sentimentality3.copper_boots": "Copper Boots",
+  "text.autoconfig.sentimentality3.option.toggles.copperArmor": "Copper Armor",
+
 
   "item.sentimentality3.granite_sword": "Granite Sword",
   "item.sentimentality3.granite_shovel": "Granite Shovel",
