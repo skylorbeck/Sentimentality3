@@ -33,8 +33,10 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject()
     clockStuff clockStuff = new clockStuff();
 
-    @ConfigEntry.Gui.CollapsibleObject()
-    sleepStuff sleepStuff = new sleepStuff();
+//    @ConfigEntry.Gui.CollapsibleObject()
+//    sleepStuff sleepStuff = new sleepStuff();
+    public boolean showSleepCount = true;
+
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Gui.CollapsibleObject()
