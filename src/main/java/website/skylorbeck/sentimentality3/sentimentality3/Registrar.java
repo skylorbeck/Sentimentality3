@@ -10,9 +10,9 @@ import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraBlastFurnaceBlockEntity;
-import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraFurnaceBlockEntity;
-import website.skylorbeck.sentimentality3.sentimentality3.furnaces.ExtraSmokerBlockEntity;
+import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraBlastFurnaceBlockEntity;
+import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraFurnaceBlockEntity;
+import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraSmokerBlockEntity;
 
 import java.util.Objects;
 
@@ -76,7 +76,7 @@ public class Registrar {
         //block entities
         //furnace entity
         if (Ref.furnaces) {
-            Declarer.EXTRA_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+            website.skylorbeck.minecraft.skylorlib.Declarer.EXTRA_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                     "sentimentality3:furnace",
                     FabricBlockEntityTypeBuilder.create(ExtraFurnaceBlockEntity::new,
                             Declarer.sandstone_furnaceblock,
@@ -93,7 +93,7 @@ public class Registrar {
         }
         //blast furnace entity
         if (Ref.blasts) {
-            Declarer.EXTRA_BLAST_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+            website.skylorbeck.minecraft.skylorlib.Declarer.EXTRA_BLAST_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                     "sentimentality3:blast_furnace",
                     FabricBlockEntityTypeBuilder.create(ExtraBlastFurnaceBlockEntity::new,
                             Declarer.sandstone_blast_furnaceblock,
@@ -110,7 +110,7 @@ public class Registrar {
         }
         //smoker entity
         if (Ref.smokers) {
-            Declarer.EXTRA_SMOKER_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+            website.skylorbeck.minecraft.skylorlib.Declarer.EXTRA_SMOKER_FURNACE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                     "sentimentality3:smoker",
                     FabricBlockEntityTypeBuilder.create(ExtraSmokerBlockEntity::new,
                             Declarer.sandstone_smokerblock,

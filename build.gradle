@@ -22,6 +22,8 @@ repositories {
         url = "https://ladysnake.jfrog.io/artifactory/mods"
     }
     maven { url "https://maven.shedaniel.me/" }
+    mavenLocal()
+
 }
 dependencies {
     //to change the versions see the gradle.properties file
@@ -43,7 +45,9 @@ dependencies {
         exclude(group: "net.fabricmc.fabric-api")
     }
     //modmenu
-    modImplementation "com.terraformersmc:modmenu:2.0.2"
+    modImplementation "com.terraformersmc:modmenu:2.0.4"
+    modImplementation ("website.skylorbeck.minecraft:SkylorLib:1.0.0")
+
 
 
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
