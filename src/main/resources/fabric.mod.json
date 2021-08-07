@@ -9,9 +9,10 @@
   ],
   "contact": {
     "homepage": "https://www.skylorbeck.website",
+    "repo": "https://github.com/Skylortrexler/Sentimentality3",
     "issues": "https://github.com/Skylortrexler/Sentimentality3/issues"
   },
-  "license": "GPLv3",
+  "license": "LGPLv3",
   "icon": "assets/sentimentality3/icon.png",
   "environment": "*",
   "entrypoints": {
