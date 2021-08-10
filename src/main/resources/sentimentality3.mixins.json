@@ -6,6 +6,7 @@
   "mixins": [
     "BeehiveMixin",
     "GrassSwingFix",
+    "HostileEntityMixin",
     "InfinityFix",
     "ItemEntityMixin",
     "ItemEntityRendererMixin",
@@ -21,7 +22,6 @@
   ],
   "client": [
     "Cropmixin"
-
   ],
   "injectors": {
     "defaultRequire": 1
