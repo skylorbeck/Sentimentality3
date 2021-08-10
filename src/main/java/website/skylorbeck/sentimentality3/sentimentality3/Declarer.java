@@ -10,7 +10,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
-import website.skylorbeck.sentimentality3.sentimentality3.furnaces.*;
+import website.skylorbeck.minecraft.skylorlib.furnaces.*;
 import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraAxeItem;
 import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraHoeItem;
 import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraPickaxeItem;
@@ -20,9 +20,7 @@ public class Declarer {
 
     //entities
     public static DefaultParticleType END_FIRE_FLAME;
-    public static BlockEntityType<ExtraFurnaceBlockEntity> EXTRA_FURNACE_ENTITY;
-    public static BlockEntityType<ExtraBlastFurnaceBlockEntity> EXTRA_BLAST_FURNACE_ENTITY;
-    public static BlockEntityType<ExtraSmokerBlockEntity> EXTRA_SMOKER_FURNACE_ENTITY;
+
     //gliders
     //custom personal items
     public static final Item chunk_loader = new Chunkloader(new FabricItemSettings().group(ItemGroup.TOOLS));

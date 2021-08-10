@@ -6,12 +6,12 @@
   "mixins": [
     "BeehiveMixin",
     "GrassSwingFix",
+    "HostileEntityMixin",
     "InfinityFix",
     "ItemEntityMixin",
     "ItemEntityRendererMixin",
     "PingIndicator",
     "repairCostMixin",
-    "XPFixMixin",
     "durability.DurabilityWarningMixinBowItem",
     "durability.DurabilityWarningMixinCrossbowItem",
     "durability.DurabilityWarningMixinFlintAndSteel",
@@ -22,7 +22,6 @@
   ],
   "client": [
     "Cropmixin"
-
   ],
   "injectors": {
     "defaultRequire": 1

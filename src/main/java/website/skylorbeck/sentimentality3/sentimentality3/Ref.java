@@ -35,7 +35,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean cropSparkle = true;
     public static ModConfig.CropStuff.SparkleType sparkleType = ModConfig.CropStuff.SparkleType.INSTANT_EFFECT;
     public static int sparkleCount = 2;
-    public static boolean doSleepStuff = true;
     public static boolean showSleepCount = true;
     public static boolean doClock = true;
     public static int clockCorner = 1;
@@ -134,8 +133,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         cropSparkle = config.cropStuff.cropSparkle;
         sparkleType = config.cropStuff.sparkleType;
         sparkleCount = config.cropStuff.sparkleCount;
-        doSleepStuff = config.sleepStuff.doSleepStuff;
-        showSleepCount = config.sleepStuff.showSleepCount;
+        showSleepCount = config.showSleepCount;
         doClock = config.clockStuff.doClock;
         clockCorner = config.clockStuff.clockCorner;
         clockMilitary = config.clockStuff.clockMilitary;
