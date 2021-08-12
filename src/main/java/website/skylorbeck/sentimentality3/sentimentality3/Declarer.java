@@ -11,6 +11,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
 import website.skylorbeck.minecraft.skylorlib.furnaces.*;
+import website.skylorbeck.minecraft.skylorlib.misc.CompressedBlock;
 import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraAxeItem;
 import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraHoeItem;
 import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraPickaxeItem;

@@ -46,7 +46,7 @@ dependencies {
     }
     //modmenu
     modImplementation "com.terraformersmc:modmenu:2.0.4"
-    modImplementation ("website.skylorbeck.minecraft:SkylorLib:1.0.0")
+    modImplementation ("website.skylorbeck.minecraft:SkylorLib:1.0.1")
 
 
 
