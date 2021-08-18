@@ -333,5 +333,7 @@
   "item.sentimentality3.deepslate_shovel": "Deepslate Shovel",
   "item.sentimentality3.deepslate_axe": "Deepslate Axe",
   "item.sentimentality3.deepslate_pick": "Deepslate Pickaxe",
-  "item.sentimentality3.deepslate_hoe": "Deepslate Hoe"
+  "item.sentimentality3.deepslate_hoe": "Deepslate Hoe",
+
+  "itemGroup.sentimentality3.category": "Sentimentality 3"
 }

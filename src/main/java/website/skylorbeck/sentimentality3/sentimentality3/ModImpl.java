@@ -9,7 +9,7 @@ import net.fabricmc.api.Environment;
 
 public class ModImpl implements ModMenuApi {
     public String getModId() {
-        return "sentimentality2";
+        return "sentimentality3";
     }
 
 
