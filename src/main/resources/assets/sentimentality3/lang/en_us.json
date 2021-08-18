@@ -95,16 +95,6 @@
   "item.sentimentality3.pdd_block": "Personal Daylight Detector - Blocklight",
   "item.sentimentality3.pdd_tip": "Use in hand to change mode",
 
-  "block.sentimentality3.compressed.monuple":"Nine Blocks",
-  "block.sentimentality3.compressed.couple":"81 Blocks",
-  "block.sentimentality3.compressed.triple":"729 Blocks",
-  "block.sentimentality3.compressed.quadruple":"6,561 Blocks",
-  "block.sentimentality3.compressed.quintuple":"59,049 Blocks",
-  "block.sentimentality3.compressed.sextuple":"531,441 Blocks",
-  "block.sentimentality3.compressed.septuple":"4,782,969 Blocks",
-  "block.sentimentality3.compressed.octuple":"43,046,721 Blocks",
-  "block.sentimentality3.compressed.nonuple":"387,420,489 Blocks",
-
   "block.sentimentality3.monuple_compressed_cobblestone_block": "Monuple Compressed Cobblestone",
   "block.sentimentality3.couple_compressed_cobblestone_block": "Couple Compressed Cobblestone",
   "block.sentimentality3.triple_compressed_cobblestone_block": "Triple Compressed Cobblestone",

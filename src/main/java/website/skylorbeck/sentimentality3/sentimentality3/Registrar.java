@@ -5,22 +5,15 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.fabricmc.fabric.impl.tool.attribute.ToolManagerImpl;
-import net.fabricmc.fabric.impl.tool.attribute.handlers.ModdedToolsVanillaBlocksToolHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.MiningToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraBlastFurnaceBlockEntity;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraFurnaceBlockEntity;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraSmokerBlockEntity;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 public class Registrar {

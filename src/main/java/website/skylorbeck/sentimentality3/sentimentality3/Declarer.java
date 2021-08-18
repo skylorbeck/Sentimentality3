@@ -6,16 +6,17 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HayBlock;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
-import website.skylorbeck.minecraft.skylorlib.furnaces.*;
+import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraBlastFurnaceBlock;
+import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraFurnaceBlock;
+import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraSmokerBlock;
 import website.skylorbeck.minecraft.skylorlib.misc.CompressedBlock;
-import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraAxeItem;
-import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraHoeItem;
-import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraPickaxeItem;
-import website.skylorbeck.sentimentality3.sentimentality3.tools.ExtraToolMaterials;
+import website.skylorbeck.minecraft.skylorlib.tools.ExtraAxeItem;
+import website.skylorbeck.minecraft.skylorlib.tools.ExtraHoeItem;
+import website.skylorbeck.minecraft.skylorlib.tools.ExtraPickaxeItem;
+import website.skylorbeck.minecraft.skylorlib.tools.ExtraToolMaterials;
 
 public class Declarer {
 
