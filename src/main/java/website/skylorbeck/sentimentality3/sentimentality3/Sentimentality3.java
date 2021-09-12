@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 import website.skylorbeck.sentimentality3.sentimentality3.client.Sentimentality3Client;
 
 import java.util.Objects;
-
+//todo fix dependencies
 public class Sentimentality3 implements ModInitializer {
     public static final Identifier sentimentality3_get_seed= new Identifier("sentimentality3", "get_seed");
 
