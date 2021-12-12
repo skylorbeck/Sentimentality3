@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '0.9-SNAPSHOT'
+    id 'fabric-loom' version '0.10-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -46,7 +46,7 @@ dependencies {
     }
     //modmenu
     modImplementation "com.terraformersmc:modmenu:2.0.4"
-    modImplementation ("website.skylorbeck.minecraft:SkylorLib:1.0.4")
+    modImplementation ("website.skylorbeck.minecraft:SkylorLib:1.0.6")
 
 
 

@@ -36,5 +36,4 @@ public class Sentimentality3 implements ModInitializer {
             return ActionResult.SUCCESS;
         });
     }
-
 }

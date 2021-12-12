@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "sentimentality3",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "name": "Sentimentality 3",
   "description": "A collection of changes that look to improve the vanilla experience without being overpowered",
   "authors": [
@@ -33,7 +33,7 @@
   "depends": {
     "fabricloader": ">=0.11.6",
     "fabric": "*",
-    "minecraft": "1.17.1",
-    "skylorlib": ">=1.0.4"
+    "minecraft": "1.18.1",
+    "skylorlib": ">=1.0.6"
   }
 }

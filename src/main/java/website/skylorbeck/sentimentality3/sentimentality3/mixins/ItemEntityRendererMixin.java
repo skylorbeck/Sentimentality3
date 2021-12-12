@@ -60,7 +60,7 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
             int seed = itemStack.isEmpty() ? 187 : Item.getRawId(item) + itemStack.getDamage();//seeds the random with it's own rawid and the itemstacks damage. Usually ends up being only the raw id.
             this.random.setSeed(seed);
             matrixStack.push();
-            BakedModel bakedModel = this.itemRenderer.getHeldItemModel(itemStack, itemEntity.world, null,seed);
+            BakedModel bakedModel = this.itemRenderer.getModel(itemStack, itemEntity.world, null,seed);
             boolean hasDepthInGui = bakedModel.hasDepth();
             int renderCount = this.getRenderedAmount(itemStack);
             boolean flat = false;
