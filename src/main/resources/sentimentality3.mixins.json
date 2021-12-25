@@ -6,7 +6,6 @@
   "mixins": [
     "BeehiveMixin",
     "GrassSwingFix",
-    "HostileEntityMixin",
     "InfinityFix",
     "ItemEntityMixin",
     "ItemEntityRendererMixin",

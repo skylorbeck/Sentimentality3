@@ -35,7 +35,6 @@ public class Registrar {
 
     }
     public static void register() {
-
         //personal items
         if (Ref.daylighter) {
             regItem("personal_daylight_detector", Declarer.personal_daylight_detector);
@@ -555,5 +554,6 @@ public class Registrar {
     }
     public static void regBlock(String name, Block blockid){
         Registry.register(Registry.BLOCK, new Identifier(Ref.MODID, name), blockid);
+
     }
 }
