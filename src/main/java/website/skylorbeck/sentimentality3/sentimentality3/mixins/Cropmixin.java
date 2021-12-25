@@ -19,6 +19,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import website.skylorbeck.sentimentality3.sentimentality3.Ref;
 
 import javax.swing.*;
@@ -28,18 +29,14 @@ import java.util.Random;
 public abstract class Cropmixin {
     @Shadow public abstract boolean isMature(BlockState state);
     private static final Random RANDOM = new Random();
-    /**
-     * @author
-     * SkylorBeck
-     * @reason Cannot inject booleans anymore :(
-     */
-    @Overwrite
-//    @Inject(at = @At("HEAD"),cancellable = true,method = "hasRandomTicks")
-    public boolean hasRandomTicks(BlockState state) {
+
+    @Inject(at = @At("HEAD"),cancellable = true,method = "hasRandomTicks")
+    public void hasRandomTicks(BlockState state, CallbackInfoReturnable<Boolean> cir) {
         if (Ref.cropSparkle) {
-            return true;
-        }else{
-            return !this.isMature(state);}
+            cir.setReturnValue(true);
+        } else {
+            cir.setReturnValue(!this.isMature(state));
+        }
     }
     @Inject(at = @At("HEAD"),cancellable = true,method = "randomTick")
     private void sparkleTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
