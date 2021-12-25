@@ -8,6 +8,8 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.item.Item;
+import net.minecraft.tag.BlockTags;
+import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraBlastFurnaceBlockEntity;
@@ -554,6 +556,5 @@ public class Registrar {
     }
     public static void regBlock(String name, Block blockid){
         Registry.register(Registry.BLOCK, new Identifier(Ref.MODID, name), blockid);
-
     }
 }

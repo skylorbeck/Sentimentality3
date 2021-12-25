@@ -5,13 +5,20 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
+import net.fabricmc.fabric.impl.datagen.FabricDataGenHelper;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
+import website.skylorbeck.minecraft.skylorlib.SkylorLib;
 import website.skylorbeck.sentimentality3.sentimentality3.client.Sentimentality3Client;
 
 import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 //todo fix dependencies
 public class Sentimentality3 implements ModInitializer {
     public static final Identifier sentimentality3_get_seed= new Identifier("sentimentality3", "get_seed");
@@ -36,4 +43,6 @@ public class Sentimentality3 implements ModInitializer {
             return ActionResult.SUCCESS;
         });
     }
+
+
 }

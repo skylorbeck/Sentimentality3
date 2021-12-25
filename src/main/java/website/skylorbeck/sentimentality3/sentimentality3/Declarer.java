@@ -3,6 +3,7 @@ package website.skylorbeck.sentimentality3.sentimentality3;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.tinyremapper.extension.mixin.common.Logger;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HayBlock;
@@ -19,7 +20,11 @@ import website.skylorbeck.minecraft.skylorlib.tools.ExtraHoeItem;
 import website.skylorbeck.minecraft.skylorlib.tools.ExtraPickaxeItem;
 import website.skylorbeck.minecraft.skylorlib.tools.ExtraToolMaterials;
 
+import java.util.logging.Level;
+
 public class Declarer {
+    public static final Logger logger = new Logger(Logger.Level.ERROR);
+
     public static final ItemGroup sentimentality3 = FabricItemGroupBuilder.build(
             new Identifier("sentimentality3", "category"),
             () -> new ItemStack(Declarer.chunk_loader));

@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "sentimentality3:monuple_compressed_dirt_block",
+    "sentimentality3:couple_compressed_dirt_block",
+    "sentimentality3:triple_compressed_dirt_block",
+    "sentimentality3:quadruple_compressed_dirt_block",
+    "sentimentality3:quintuple_compressed_dirt_block",
+    "sentimentality3:sextuple_compressed_dirt_block",
+    "sentimentality3:septuple_compressed_dirt_block",
+    "sentimentality3:octuple_compressed_dirt_block",
+    "sentimentality3:nonuple_compressed_dirt_block",
+    "sentimentality3:monuple_compressed_gravel_block",
+    "sentimentality3:couple_compressed_gravel_block",
+    "sentimentality3:triple_compressed_gravel_block",
+    "sentimentality3:quadruple_compressed_gravel_block",
+    "sentimentality3:quintuple_compressed_gravel_block",
+    "sentimentality3:sextuple_compressed_gravel_block",
+    "sentimentality3:septuple_compressed_gravel_block",
+    "sentimentality3:octuple_compressed_gravel_block",
+    "sentimentality3:nonuple_compressed_gravel_block",
+    "sentimentality3:monuple_compressed_sand_block",
+    "sentimentality3:couple_compressed_sand_block",
+    "sentimentality3:triple_compressed_sand_block",
+    "sentimentality3:quadruple_compressed_sand_block",
+    "sentimentality3:quintuple_compressed_sand_block",
+    "sentimentality3:sextuple_compressed_sand_block",
+    "sentimentality3:septuple_compressed_sand_block",
+    "sentimentality3:octuple_compressed_sand_block",
+    "sentimentality3:nonuple_compressed_sand_block"
+  ]
+}

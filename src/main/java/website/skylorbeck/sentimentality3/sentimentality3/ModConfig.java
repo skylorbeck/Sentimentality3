@@ -38,9 +38,9 @@ public class ModConfig implements ConfigData {
     public boolean showSleepCount = true;
 
 
-    @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.Gui.CollapsibleObject()
-    toggles toggles = new toggles();
+//    @ConfigEntry.Gui.Tooltip
+//    @ConfigEntry.Gui.CollapsibleObject()
+//    toggles toggles = new toggles();
     static class toggles {
         @ConfigEntry.Gui.RequiresRestart
         boolean chunker = true;

@@ -23,6 +23,9 @@
     "main": [
       "website.skylorbeck.sentimentality3.sentimentality3.Sentimentality3"
     ],
+    "fabric-datagen": [
+      "website.skylorbeck.sentimentality3.sentimentality3.DataGenerator"
+    ],
     "modmenu": [
       "website.skylorbeck.sentimentality3.sentimentality3.ModImpl"
     ]

@@ -2,7 +2,40 @@ plugins {
     id 'fabric-loom' version '0.10-SNAPSHOT'
     id 'maven-publish'
 }
+sourceSets {
+    main{
+        resources {
+            srcDirs += [
+                    'src/main/generated'
+            ]
+        }
+    }
+}
 
+loom {
+    runs {
+        datagen {
+            server()
+
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/resources")}"
+
+            runDir "build/datagen"
+        }
+        datagenClient {
+            client()
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/resources")}"
+            vmArg "-Dfabric-api.datagen.strict-validation"
+
+            ideConfigGenerated = true
+            runDir "build/datagen"
+        }
+    }
+}
+assemble.dependsOn runDatagen
 sourceCompatibility = JavaVersion.VERSION_16
 targetCompatibility = JavaVersion.VERSION_16
 
