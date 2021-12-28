@@ -1,0 +1,16 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "sentimentality3:large_stick_bundle"
+        },
+        {
+            "item": "sentimentality3:charcoal_block"
+        }
+    ],
+    "result": {
+
+        "item": "minecraft:torch",
+        "count": 64
+    }
+}
