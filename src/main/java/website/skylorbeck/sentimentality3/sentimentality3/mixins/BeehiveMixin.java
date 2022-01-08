@@ -30,13 +30,8 @@ public class BeehiveMixin {
                 if (beehiveBlockEntity != null) {
                     beeCount = beehiveBlockEntity.getBeeCount();
                 }
-                String text;
-                if (beeCount == 1) {//if statement to determine grammar
-                    text = "This hive contains " + beeCount + " bee";
-                } else {
-                    text = "This hive contains " + beeCount + " bees";
-                }
-                ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, (new TitleS2CPacket( Text.of(text))));//send packet to client to display bee count as brief message on action bar
+                String text = "This hive contains " + beeCount + (beeCount == 1 ? " bee" : " bees");
+                ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, (new TitleS2CPacket(Text.of(text))));//send packet to client to display bee count as brief message on action bar
             }
         }
     }
