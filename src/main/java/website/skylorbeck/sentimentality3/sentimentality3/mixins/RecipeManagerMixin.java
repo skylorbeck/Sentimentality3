@@ -28,6 +28,9 @@ public class RecipeManagerMixin {
         if (Declarer.BLACKSTONE != null) {
             map.put(new Identifier(Ref.MODID,"blackstone"), Declarer.BLACKSTONE);
         }
+        if (Declarer.BLAZEROD != null) {
+            map.put(new Identifier(Ref.MODID,"blazerod"), Declarer.BLAZEROD);
+        }
         
         if (Declarer.ANDESITE_BLAST != null) {
             map.put(new Identifier(Ref.MODID,"andesite_blast"), Declarer.ANDESITE_BLAST);
@@ -37,6 +40,15 @@ public class RecipeManagerMixin {
         }
         if (Declarer.ANDESITE_SMOKER != null) {
             map.put(new Identifier(Ref.MODID,"andesite_smoker"), Declarer.ANDESITE_SMOKER);
+        }
+        if (Declarer.BLACKSTONE_BLAST != null) {
+            map.put(new Identifier(Ref.MODID,"blackstone_blast"), Declarer.BLACKSTONE_BLAST);
+        }
+        if (Declarer.BLACKSTONE_FURNACE != null) {
+            map.put(new Identifier(Ref.MODID,"blackstone_furnace"), Declarer.BLACKSTONE_FURNACE);
+        }
+        if (Declarer.BLACKSTONE_SMOKER != null) {
+            map.put(new Identifier(Ref.MODID,"blackstone_smoker"), Declarer.BLACKSTONE_SMOKER);
         }
         if (Declarer.BASALT_BLAST != null) {
             map.put(new Identifier(Ref.MODID,"basalt_blast"), Declarer.BASALT_BLAST);

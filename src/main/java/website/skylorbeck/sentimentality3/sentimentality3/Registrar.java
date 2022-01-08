@@ -480,8 +480,6 @@ public class Registrar {
 
         if (Ref.recipes) {
             Identifier tempID;
-            JsonObject tempObject;
-            JsonObject tempObject2;
             //todo individual groups
             Declarer.ARROW = DynamicRecipeLoader.createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.FLINT),Registry.ITEM.getId(Items.STICK),Registry.ITEM.getId(Items.FEATHER)),
@@ -494,9 +492,6 @@ public class Registrar {
                     Lists.newArrayList(false,false,false),
                     Registry.ITEM.getId(Items.BREAD),
                     1);
-
-            tempObject = new JsonObject();
-            tempObject2 = new JsonObject();
             Declarer.BLACKSTONE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
                     Lists.newArrayList(new String[]{Ref.MODID+":stone","minecraft:stone_bricks","minecraft:stone_crafting_materials","minecraft:stone"},new String[]{"minecraft:coals"}),
                     Lists.newArrayList(Lists.newArrayList(true,true,true,false),Lists.newArrayList(true)),
@@ -504,6 +499,18 @@ public class Registrar {
                     Registry.ITEM.getId(Items.BLACKSTONE),
                     8
             );
+            Declarer.AMETHYST = DynamicRecipeLoader.createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.AMETHYST_BLOCK)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Items.AMETHYST_SHARD),
+                    4);
+            tempID= Registry.ITEM.getId(Items.BLAZE_POWDER);
+            Declarer.BLAZEROD = DynamicRecipeLoader.createShapelessRecipeJson(
+                    Lists.newArrayList(tempID,tempID),
+                    Lists.newArrayList(false,false),
+                    Registry.ITEM.getId(Items.BLAZE_ROD),
+                    2);
+
 
             //personal items
             if (Ref.daylighter) {
@@ -536,6 +543,13 @@ public class Registrar {
                         Registry.ITEM.getId(Declarer.andesite_furnace),
                         1
                 );
+                Declarer.BLACKSTONE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
+                        Lists.newArrayList(new Identifier(Ref.MODID,"blackstone")),//items
+                        Lists.newArrayList(true),//type
+                        Lists.newArrayList("000","0 0","000"),//pattern
+                        Registry.ITEM.getId(Declarer.blackstone_furnace),
+                        1
+                );
                 Declarer.BASALT_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
                         Lists.newArrayList(new Identifier(Ref.MODID,"basalt")),//items
                         Lists.newArrayList(true),//type
@@ -553,6 +567,13 @@ public class Registrar {
                         Registry.ITEM.getId(Declarer.andesite_blast_furnace),
                         1
                 );
+                Declarer.BLACKSTONE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT),Registry.ITEM.getId(Declarer.blackstone_furnace),new Identifier(Ref.MODID,"blackstone")),//items
+                        Lists.newArrayList(false,false,true),//type
+                        Lists.newArrayList("000","010","222"),//pattern
+                        Registry.ITEM.getId(Declarer.blackstone_blast_furnace),
+                        1
+                );
                 Declarer.BASALT_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
                         Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT),Registry.ITEM.getId(Declarer.basalt_furnace),new Identifier(Ref.MODID,"basalt")),//items
                         Lists.newArrayList(false,false,true),//type
@@ -568,6 +589,13 @@ public class Registrar {
                         Lists.newArrayList(false,true),//type
                         Lists.newArrayList(" 1 ","101"," 1 "),//pattern
                         Registry.ITEM.getId(Declarer.andesite_smoker),
+                        1
+                );
+                Declarer.BLACKSTONE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Declarer.blackstone_furnace),new Identifier("minecraft","logs")),//items
+                        Lists.newArrayList(false,true),//type
+                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
+                        Registry.ITEM.getId(Declarer.blackstone_smoker),
                         1
                 );
                 Declarer.BASALT_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(

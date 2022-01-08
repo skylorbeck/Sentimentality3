@@ -11,7 +11,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DynamicRecipeLoader {
-
     //todo abstract this to skylib
     public static JsonObject createShapelessRecipeJson(ArrayList<Identifier> items, ArrayList<Boolean> type, Identifier output, int outputCount) {
         JsonObject json = new JsonObject();

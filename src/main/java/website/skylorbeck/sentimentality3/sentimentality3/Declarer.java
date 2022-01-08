@@ -401,9 +401,15 @@ public class Declarer {
     public static JsonObject ARROW = null;
     public static JsonObject BREAD = null;
     public static JsonObject BLACKSTONE = null;
+    public static JsonObject AMETHYST = null;
+    public static JsonObject BLAZEROD = null;
+
     public static JsonObject ANDESITE_FURNACE = null;
     public static JsonObject ANDESITE_BLAST = null;
     public static JsonObject ANDESITE_SMOKER = null;
+    public static JsonObject BLACKSTONE_FURNACE = null;
+    public static JsonObject BLACKSTONE_BLAST = null;
+    public static JsonObject BLACKSTONE_SMOKER = null;
     public static JsonObject BASALT_FURNACE = null;
     public static JsonObject BASALT_BLAST = null;
     public static JsonObject BASALT_SMOKER = null;
