@@ -1,5 +1,6 @@
 package website.skylorbeck.sentimentality3.sentimentality3;
 
+import com.google.common.collect.Lists;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -8,8 +9,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.item.Item;
-import net.minecraft.tag.BlockTags;
-import net.minecraft.tag.Tag;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraBlastFurnaceBlockEntity;
@@ -476,127 +476,130 @@ public class Registrar {
         regItem("nonuple_compressed_cobbled_deepslate", Declarer.nonuple_compressed_cobbled_deepslate);
         regBlock("nonuple_compressed_cobbled_deepslate_block", Declarer.nonuple_compressed_cobbled_deepslate_block);
 
-        //personal items
-        if (Ref.daylighter) {
-        }
-        if (Ref.slimer) {
-        }
-        if (Ref.chunker) {
-        }
-        //misc items
-        if (Ref.fleather) {
-        }
-        if (Ref.charcoal) {
-        }
-        if (Ref.sticks) {
-
-        }
-        if (Ref.featherBlock) {
-        }
-        if (Ref.coalChunks) {
-        }
-
-
-        //block entities
-        //furnace entity
-        if (Ref.furnaces) {
-
-        }
-        //blast furnace entity
-        if (Ref.blasts) {
-
-        }
-        //smoker entity
-        if (Ref.smokers) {
-
-        }
-        //furnaces
-        if (Ref.furnaces) {
-
-        }
-        //blast furnaces
-        if (Ref.blasts) {
-        }
-        //smokers
-        if (Ref.smokers) {
-        }
-        //wool armor
-        if (Ref.woolArmor) {
-        }
-        //copper armor
-        if (Ref.copperArmor) {
-        }
-        //tools
-        if (Ref.allTools) {
-            if (Ref.graniteTools) {
+        if (Ref.recipes) {
+            DynamicRecipeLoader.Arrow = DynamicRecipeLoader.createShapelessRecipeJson(Lists.newArrayList(Items.FLINT,Items.STICK,Items.FEATHER),Lists.newArrayList("item","item","item"),Registry.ITEM.getId(Items.ARROW),4);
+            //personal items
+            if (Ref.daylighter) {
+            }
+            if (Ref.slimer) {
+            }
+            if (Ref.chunker) {
+            }
+            //misc items
+            if (Ref.fleather) {
+            }
+            if (Ref.charcoal) {
+            }
+            if (Ref.sticks) {
 
             }
-            if (Ref.dioriteTools) {
+            if (Ref.featherBlock) {
             }
-            if (Ref.andesiteTools) {
+            if (Ref.coalChunks) {
             }
-            if (Ref.quartzTools) {
-            }
-            if (Ref.netherrackTools) {
-            }
-            if (Ref.netherbrickTools) {
-            }
-            if (Ref.redNetherbrickTools) {
-            }
-            if (Ref.sandstoneTools) {
-            }
-            if (Ref.redSandstoneTools) {
-            }
-            if (Ref.lapisTools) {
-            }
-            if (Ref.emeraldTools) {
-            }
-            if (Ref.flintTools) {
-            }
-            if (Ref.redstoneTools) {
-            }
-            if (Ref.blackstoneTools) {
-            }
-            if (Ref.basaltTools) {
-            }
-            if (Ref.endstoneTools) {
-            }
-            if (Ref.warpedTools) {
-            }
-            if (Ref.crimsonTools) {
-            }
-            if (Ref.amethystTools) {
-            }
-            if (Ref.copperTools) {
-            }
-            if (Ref.deepslateTools) {
-            }
-        }
 
-        //compressed cobble
-        if (Ref.allCompressedBlocks) {
-            if (Ref.cobble) {
+
+            //block entities
+            //furnace entity
+            if (Ref.furnaces) {
+
             }
-            //compressed dirt
-            if (Ref.dirt) {
+            //blast furnace entity
+            if (Ref.blasts) {
+
             }
-            //compressed diorite
-            if (Ref.diorite) {
+            //smoker entity
+            if (Ref.smokers) {
+
             }
-            //compressed granite
-            if (Ref.granite) {
+            //furnaces
+            if (Ref.furnaces) {
+
             }
-            //compressed andesite
-            if (Ref.andesite) {
+            //blast furnaces
+            if (Ref.blasts) {
             }
-            //compressed netherrack
-            if (Ref.netherrack) {
+            //smokers
+            if (Ref.smokers) {
             }
-            if (Ref.sand) {
+            //wool armor
+            if (Ref.woolArmor) {
             }
-            if (Ref.gravel) {
+            //copper armor
+            if (Ref.copperArmor) {
             }
-            if (Ref.deepslate) {
+            //tools
+            if (Ref.allTools) {
+                if (Ref.graniteTools) {
+
+                }
+                if (Ref.dioriteTools) {
+                }
+                if (Ref.andesiteTools) {
+                }
+                if (Ref.quartzTools) {
+                }
+                if (Ref.netherrackTools) {
+                }
+                if (Ref.netherbrickTools) {
+                }
+                if (Ref.redNetherbrickTools) {
+                }
+                if (Ref.sandstoneTools) {
+                }
+                if (Ref.redSandstoneTools) {
+                }
+                if (Ref.lapisTools) {
+                }
+                if (Ref.emeraldTools) {
+                }
+                if (Ref.flintTools) {
+                }
+                if (Ref.redstoneTools) {
+                }
+                if (Ref.blackstoneTools) {
+                }
+                if (Ref.basaltTools) {
+                }
+                if (Ref.endstoneTools) {
+                }
+                if (Ref.warpedTools) {
+                }
+                if (Ref.crimsonTools) {
+                }
+                if (Ref.amethystTools) {
+                }
+                if (Ref.copperTools) {
+                }
+                if (Ref.deepslateTools) {
+                }
+            }
+
+            //compressed cobble
+            if (Ref.allCompressedBlocks) {
+                if (Ref.cobble) {
+                }
+                //compressed dirt
+                if (Ref.dirt) {
+                }
+                //compressed diorite
+                if (Ref.diorite) {
+                }
+                //compressed granite
+                if (Ref.granite) {
+                }
+                //compressed andesite
+                if (Ref.andesite) {
+                }
+                //compressed netherrack
+                if (Ref.netherrack) {
+                }
+                if (Ref.sand) {
+                }
+                if (Ref.gravel) {
+                }
+                if (Ref.deepslate) {
+                }
             }
         }
     }

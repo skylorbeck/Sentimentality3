@@ -41,6 +41,12 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Gui.CollapsibleObject()
     toggles toggles = new toggles();
+
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Gui.CollapsibleObject()
+    RecipeStuff recipeStuff = new RecipeStuff();
+
+
     static class toggles {
         @ConfigEntry.Gui.RequiresRestart
         boolean chunker = true;
@@ -95,6 +101,10 @@ public class ModConfig implements ConfigData {
         public int durabilityThreshold2 = 5;
     }*/
 
+    public static class RecipeStuff {
+        public boolean allRecipes = true;
+    }
+
     public static class CropStuff {
         public boolean cropSparkle = true;
         public enum SparkleType {
@@ -107,15 +117,6 @@ public class ModConfig implements ConfigData {
         public SparkleType sparkleType = SparkleType.INSTANT_EFFECT; //SparkleType.valueOf("INSTANT_EFFECT");
         @ConfigEntry.BoundedDiscrete(min=1,max = 15)
         public int sparkleCount = 2;
-    }
-    static class sleepStuff {
-        boolean doSleepStuff = true;
-        boolean showSleepCount = true;
-
-        //@ConfigEntry.Gui.RequiresRestart
-/*        @ConfigEntry.BoundedDiscrete(max = 100, min = 1)
-        @ConfigEntry.Gui.Tooltip
-        int sleepPercent = 50;*/
     }
 
     static class clockStuff {

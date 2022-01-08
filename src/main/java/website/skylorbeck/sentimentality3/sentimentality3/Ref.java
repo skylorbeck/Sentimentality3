@@ -70,6 +70,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean sand = true;
     public static boolean gravel = true;
     public static boolean deepslate = true;
+    public static boolean recipes = true;
 
     public static void getSettings() {
         chunker = config.toggles.chunker;
@@ -118,6 +119,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         sand = config.toggles.compressedBlocks.sand;
         gravel = config.toggles.compressedBlocks.gravel;
         deepslate = config.toggles.compressedBlocks.deepslate;
+        recipes = config.recipeStuff.allRecipes;
         getSomeSettings();
 
     }
