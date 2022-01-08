@@ -36,7 +36,7 @@ public class GrassSwingFix {
         float reach = manager.getReachDistance();
         Vec3d end = camera.add(rotation.x * reach, rotation.y * reach, rotation.z * reach);
         EntityHitResult result = ProjectileUtil.getEntityCollision(world, player, camera, end, new Box(camera, end), EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR.and(e -> e != null && e.collides() && e instanceof LivingEntity));
-        if (result != null) {//only pass if a livingentity was hit
+        if (result != null && result.getEntity().getFirstPassenger()!=player) {//only pass if a livingentity was hit
             manager.attackEntity(player, result.getEntity());
             return true;
         }
