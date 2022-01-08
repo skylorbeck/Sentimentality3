@@ -3,7 +3,6 @@ package website.skylorbeck.sentimentality3.sentimentality3;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -13,9 +12,8 @@ import java.util.logging.Logger;
 
 public class DynamicRecipeLoader {
 
-    public static JsonObject Arrow = null;
-
-    public static JsonObject createShapelessRecipeJson(ArrayList<Item> items, ArrayList<String> type, Identifier output, int outputCount) {
+    //todo abstract this to skylib
+    public static JsonObject createShapelessRecipeJson(ArrayList<Identifier> items, ArrayList<Boolean> type, Identifier output, int outputCount) {
         JsonObject json = new JsonObject();
         json.addProperty("type", "minecraft:crafting_shapeless");
         JsonObject individualKey;
@@ -23,7 +21,7 @@ public class DynamicRecipeLoader {
 
         for (int i = 0; i < items.size(); ++i) {
             individualKey = new JsonObject();
-            individualKey.addProperty(type.get(i),Registry.ITEM.getId(items.get(i)).toString());
+            individualKey.addProperty(type.get(i)?"tag":"item",items.get(i).toString());
             itemArray.add(individualKey);
         }
 
@@ -35,7 +33,8 @@ public class DynamicRecipeLoader {
 //        Logger.getAnonymousLogger().log(Level.SEVERE,json.toString());
         return json;
     }
-    public static JsonObject createShapedRecipeJson(ArrayList<Character> keys, ArrayList<Item> items, ArrayList<String> type, ArrayList<String> pattern, Identifier output,int outputCount) {
+
+    public static JsonObject createShapedRecipeJson(ArrayList<Identifier> items, ArrayList<Boolean> type, ArrayList<String> pattern, Identifier output,int outputCount) {
         JsonObject json = new JsonObject();
         json.addProperty("type", "minecraft:crafting_shaped");
         JsonArray jsonArray = new JsonArray();
@@ -46,10 +45,10 @@ public class DynamicRecipeLoader {
         JsonObject individualKey;
         JsonObject keyList = new JsonObject();
 
-        for (int i = 0; i < keys.size(); ++i) {
+        for (int i = 0; i < items.size(); ++i) {
             individualKey = new JsonObject();
-            individualKey.addProperty(type.get(i), Registry.ITEM.getId(items.get(i)).toString());
-            keyList.add(keys.get(i) + "", individualKey);
+            individualKey.addProperty(type.get(i)?"tag":"item",items.get(i).toString());
+            keyList.add(i + "", individualKey);
         }
 
         json.add("key", keyList);
@@ -57,6 +56,35 @@ public class DynamicRecipeLoader {
         result.addProperty("item", output.toString());
         result.addProperty("count", outputCount);
         json.add("result", result);
+        //Logger.getAnonymousLogger().log(Level.SEVERE,json.toString());
+        return json;
+    }
+    public static JsonObject createShapedRecipeJsonComplex(ArrayList<String[]> items,ArrayList<ArrayList<Boolean>> type, ArrayList<String> pattern, Identifier output,int outputCount) {
+        JsonObject json = new JsonObject();
+        json.addProperty("type", "minecraft:crafting_shaped");
+        JsonArray jsonArray = new JsonArray();
+        jsonArray.add(pattern.get(0));
+        jsonArray.add(pattern.get(1));
+        jsonArray.add(pattern.get(2));
+        json.add("pattern", jsonArray);
+        JsonObject keyList = new JsonObject();
+
+        for (int i = 0; i < items.size(); ++i) {
+            jsonArray = new JsonArray();
+            for (int j = 0; j < items.get(i).length; j++) {
+                JsonObject jsonObject = new JsonObject();
+                jsonObject.addProperty(type.get(i).get(j)?"tag":"item",items.get(i)[j]);
+                jsonArray.add(jsonObject);
+            }
+            keyList.add(i + "",jsonArray);
+        }
+
+        json.add("key", keyList);
+        JsonObject result = new JsonObject();
+        result.addProperty("item", output.toString());
+        result.addProperty("count", outputCount);
+        json.add("result", result);
+        //Logger.getAnonymousLogger().log(Level.SEVERE,json.toString());
         return json;
     }
 }

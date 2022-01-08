@@ -1,5 +1,6 @@
 package website.skylorbeck.sentimentality3.sentimentality3;
 
+import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -396,4 +397,14 @@ public class Declarer {
     public static final Item deepslate_pick = new ExtraPickaxeItem(ExtraToolMaterials.DEEPSLATE, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
     public static final Item deepslate_axe = new ExtraAxeItem(ExtraToolMaterials.DEEPSLATE, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
     public static final Item deepslate_hoe = new ExtraHoeItem(ExtraToolMaterials.DEEPSLATE, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
+
+    public static JsonObject ARROW = null;
+    public static JsonObject BREAD = null;
+    public static JsonObject BLACKSTONE = null;
+    public static JsonObject ANDESITE_FURNACE = null;
+    public static JsonObject ANDESITE_BLAST = null;
+    public static JsonObject ANDESITE_SMOKER = null;
+    public static JsonObject BASALT_FURNACE = null;
+    public static JsonObject BASALT_BLAST = null;
+    public static JsonObject BASALT_SMOKER = null;
 }
