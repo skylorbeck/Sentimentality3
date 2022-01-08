@@ -28,10 +28,31 @@ public class RecipeManagerMixin {
         if (Declarer.BLACKSTONE != null) {
             map.put(new Identifier(Ref.MODID,"blackstone"), Declarer.BLACKSTONE);
         }
+        if (Declarer.AMETHYST != null) {
+            map.put(new Identifier(Ref.MODID,"amethyst"), Declarer.AMETHYST);
+        }
         if (Declarer.BLAZEROD != null) {
             map.put(new Identifier(Ref.MODID,"blazerod"), Declarer.BLAZEROD);
         }
-        
+        if (Declarer.BROWN_MUSHROOM != null) {
+            map.put(new Identifier(Ref.MODID,"brown_mushroom"), Declarer.BROWN_MUSHROOM);
+        }
+        if (Declarer.RED_MUSHROOM != null) {
+            map.put(new Identifier(Ref.MODID,"red_mushroom"), Declarer.RED_MUSHROOM);
+        }
+        if (Declarer.CHAINBOOT != null) {
+            map.put(new Identifier(Ref.MODID,"chainboot"), Declarer.CHAINBOOT);
+        }
+        if (Declarer.CHAINPANT != null) {
+            map.put(new Identifier(Ref.MODID,"chainpant"), Declarer.CHAINPANT);
+        }
+        if (Declarer.CHAINCHEST != null) {
+            map.put(new Identifier(Ref.MODID,"chainchest"), Declarer.CHAINCHEST);
+        }
+        if (Declarer.CHAINHELM != null) {
+            map.put(new Identifier(Ref.MODID,"chainhelm"), Declarer.CHAINHELM);
+        }
+
         if (Declarer.ANDESITE_BLAST != null) {
             map.put(new Identifier(Ref.MODID,"andesite_blast"), Declarer.ANDESITE_BLAST);
         }

@@ -403,6 +403,12 @@ public class Declarer {
     public static JsonObject BLACKSTONE = null;
     public static JsonObject AMETHYST = null;
     public static JsonObject BLAZEROD = null;
+    public static JsonObject BROWN_MUSHROOM = null;
+    public static JsonObject RED_MUSHROOM = null;
+    public static JsonObject CHAINBOOT = null;
+    public static JsonObject CHAINPANT = null;
+    public static JsonObject CHAINCHEST = null;
+    public static JsonObject CHAINHELM = null;
 
     public static JsonObject ANDESITE_FURNACE = null;
     public static JsonObject ANDESITE_BLAST = null;

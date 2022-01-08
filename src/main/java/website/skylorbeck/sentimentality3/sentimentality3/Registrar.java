@@ -510,7 +510,46 @@ public class Registrar {
                     Lists.newArrayList(false,false),
                     Registry.ITEM.getId(Items.BLAZE_ROD),
                     2);
-
+            tempID = Registry.ITEM.getId(Items.BROWN_MUSHROOM);
+            Declarer.BROWN_MUSHROOM = DynamicRecipeLoader.createShapelessRecipeJson(
+                    Lists.newArrayList(tempID,tempID),
+                    Lists.newArrayList(false,false),
+                    Registry.ITEM.getId(Items.BROWN_MUSHROOM_BLOCK),
+                    1);
+            tempID = Registry.ITEM.getId(Items.RED_MUSHROOM);
+            Declarer.RED_MUSHROOM = DynamicRecipeLoader.createShapelessRecipeJson(
+                    Lists.newArrayList(tempID,tempID),
+                    Lists.newArrayList(false,false),
+                    Registry.ITEM.getId(Items.RED_MUSHROOM_BLOCK),
+                    1);
+            Declarer.CHAINBOOT = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET),Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false,false),//type
+                    Lists.newArrayList("0 0","1 1"),//pattern
+                    Registry.ITEM.getId(Items.CHAINMAIL_BOOTS),
+                    1
+            );
+            Declarer.CHAINCHEST = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET),Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false,false),//type
+                    Lists.newArrayList("0 0","111","000"),//pattern
+                    Registry.ITEM.getId(Items.CHAINMAIL_CHESTPLATE),
+                    1
+            );
+            Declarer.CHAINPANT = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET),Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false,false),//type
+                    Lists.newArrayList("0 0","1 1","0 0"),//pattern
+                    Registry.ITEM.getId(Items.CHAINMAIL_LEGGINGS),
+                    1
+            );
+            Declarer.CHAINHELM = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET),Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false,false),//type
+                    Lists.newArrayList("010","1 1"),//pattern
+                    Registry.ITEM.getId(Items.CHAINMAIL_HELMET),
+                    1
+            );
 
             //personal items
             if (Ref.daylighter) {

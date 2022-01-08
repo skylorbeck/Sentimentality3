@@ -37,9 +37,9 @@ public class DynamicRecipeLoader {
         JsonObject json = new JsonObject();
         json.addProperty("type", "minecraft:crafting_shaped");
         JsonArray jsonArray = new JsonArray();
-        jsonArray.add(pattern.get(0));
-        jsonArray.add(pattern.get(1));
-        jsonArray.add(pattern.get(2));
+        for (String s : pattern) {
+            jsonArray.add(s);
+        }
         json.add("pattern", jsonArray);
         JsonObject individualKey;
         JsonObject keyList = new JsonObject();
@@ -62,9 +62,9 @@ public class DynamicRecipeLoader {
         JsonObject json = new JsonObject();
         json.addProperty("type", "minecraft:crafting_shaped");
         JsonArray jsonArray = new JsonArray();
-        jsonArray.add(pattern.get(0));
-        jsonArray.add(pattern.get(1));
-        jsonArray.add(pattern.get(2));
+        for (String s : pattern) {
+            jsonArray.add(s);
+        }
         json.add("pattern", jsonArray);
         JsonObject keyList = new JsonObject();
 
