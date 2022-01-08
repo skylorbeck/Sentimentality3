@@ -72,7 +72,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean deepslate = true;
 
     public static void getSettings() {
-    /*
         chunker = config.toggles.chunker;
         slimer = config.toggles.slimer;
         daylighter = config.toggles.daylighter;
@@ -119,7 +118,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
         sand = config.toggles.compressedBlocks.sand;
         gravel = config.toggles.compressedBlocks.gravel;
         deepslate = config.toggles.compressedBlocks.deepslate;
-     */
         getSomeSettings();
 
     }
