@@ -550,7 +550,65 @@ public class Registrar {
                     Registry.ITEM.getId(Items.CHAINMAIL_HELMET),
                     1
             );
-
+            Declarer.CHESTS = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft","logs")),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("000","0 0","000"),//pattern
+                    Registry.ITEM.getId(Items.CHEST),
+                    4
+            );
+            Declarer.CLAY = DynamicRecipeLoader.createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.CLAY)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Items.CLAY_BALL),
+                    4);
+            Declarer.CHUNKLOADER = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.DIAMOND),Registry.ITEM.getId(Items.GOLD_INGOT),Registry.ITEM.getId(Items.ENDER_PEARL)),//items
+                    Lists.newArrayList(false,false,false),//type
+                    Lists.newArrayList("010","121","010"),//pattern
+                    Registry.ITEM.getId(Declarer.chunk_loader),
+                    1
+            );
+            Declarer.QUARTZ_PILLAR_CHISELED = DynamicRecipeLoader.createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_PILLAR)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Items.CHISELED_QUARTZ_BLOCK),
+                    1);
+            Declarer.COPPERBOOT = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.COPPER_INGOT)),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("0 0","0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.copper_boots),
+                    1
+            );
+            Declarer.COPPERCHEST = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.COPPER_INGOT)),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("0 0","000","000"),//pattern
+                    Registry.ITEM.getId(Declarer.copper_chestplate),
+                    1
+            );
+            Declarer.COPPERPANT = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.COPPER_INGOT)),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("0 0","0 0","0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.copper_leggings),
+                    1
+            );
+            Declarer.COPPERHELM = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.COPPER_INGOT)),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("000","0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.copper_helmet),
+                    1
+            );
+            Declarer.HORSE_DIAMOND = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft","wool"),Registry.ITEM.getId(Items.DIAMOND),Registry.ITEM.getId(Items.DIAMOND_LEGGINGS),Registry.ITEM.getId(Items.DIAMOND_HELMET)),//items
+                    Lists.newArrayList(true,false,false,false),//type
+                    Lists.newArrayList("  3","101","2 2"),//pattern
+                    Registry.ITEM.getId(Items.DIAMOND_HORSE_ARMOR),
+                    1
+            );
             //personal items
             if (Ref.daylighter) {
             }
@@ -562,6 +620,17 @@ public class Registrar {
             if (Ref.fleather) {
             }
             if (Ref.charcoal) {
+                tempID = Registry.ITEM.getId(Items.CHARCOAL);
+                Declarer.CHARCOAL_BLOCK = DynamicRecipeLoader.createShapelessRecipeJson(
+                        Lists.newArrayList(tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID),
+                        Lists.newArrayList(false,false,false,false,false,false,false,false,false),
+                        Registry.ITEM.getId(Declarer.charcoal_block),
+                        1);
+                Declarer.CHARCOAL_BLOCK_U = DynamicRecipeLoader.createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Declarer.charcoal_block)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Items.CHARCOAL),
+                        9);
             }
             if (Ref.sticks) {
 
@@ -569,6 +638,28 @@ public class Registrar {
             if (Ref.featherBlock) {
             }
             if (Ref.coalChunks) {
+                tempID = Registry.ITEM.getId(Declarer.charcoal_nugget);
+                Declarer.CHARCOAL_NUGGET_U = DynamicRecipeLoader.createShapelessRecipeJson(
+                        Lists.newArrayList(tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID),
+                        Lists.newArrayList(false,false,false,false,false,false,false,false),
+                        Registry.ITEM.getId(Items.CHARCOAL),
+                        1);
+                Declarer.CHARCOAL_NUGGET = DynamicRecipeLoader.createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.CHARCOAL)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Declarer.charcoal_nugget),
+                        8);
+                tempID = Registry.ITEM.getId(Declarer.coal_nugget);
+                Declarer.COAL_NUGGET_U = DynamicRecipeLoader.createShapelessRecipeJson(
+                        Lists.newArrayList(tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID),
+                        Lists.newArrayList(false,false,false,false,false,false,false,false),
+                        Registry.ITEM.getId(Items.COAL),
+                        1);
+                Declarer.COAL_NUGGET = DynamicRecipeLoader.createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.COAL)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Declarer.coal_nugget),
+                        8);
             }
 
 
@@ -596,6 +687,13 @@ public class Registrar {
                         Registry.ITEM.getId(Declarer.basalt_furnace),
                         1
                 );
+                Declarer.DEEPSLATE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
+                        Lists.newArrayList(new Identifier(Ref.MODID,"deepslate")),//items
+                        Lists.newArrayList(true),//type
+                        Lists.newArrayList("000","0 0","000"),//pattern
+                        Registry.ITEM.getId(Declarer.deepslate_furnace),
+                        1
+                );
             }
             //blast furnace entity
             if (Ref.blasts) {
@@ -620,28 +718,43 @@ public class Registrar {
                         Registry.ITEM.getId(Declarer.basalt_blast_furnace),
                         1
                 );
+                Declarer.DEEPSLATE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT),Registry.ITEM.getId(Declarer.deepslate_furnace),new Identifier(Ref.MODID,"deepslate")),//items
+                        Lists.newArrayList(false,false,true),//type
+                        Lists.newArrayList("000","010","222"),//pattern
+                        Registry.ITEM.getId(Declarer.deepslate_blast_furnace),
+                        1
+                );
             }
             //smoker entity
             if (Ref.smokers) {
+                tempID = new Identifier("minecraft","logs");
                 Declarer.ANDESITE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.andesite_furnace),new Identifier("minecraft","logs")),//items
+                        Lists.newArrayList(Registry.ITEM.getId(Declarer.andesite_furnace),tempID),//items
                         Lists.newArrayList(false,true),//type
                         Lists.newArrayList(" 1 ","101"," 1 "),//pattern
                         Registry.ITEM.getId(Declarer.andesite_smoker),
                         1
                 );
                 Declarer.BLACKSTONE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.blackstone_furnace),new Identifier("minecraft","logs")),//items
+                        Lists.newArrayList(Registry.ITEM.getId(Declarer.blackstone_furnace),tempID),//items
                         Lists.newArrayList(false,true),//type
                         Lists.newArrayList(" 1 ","101"," 1 "),//pattern
                         Registry.ITEM.getId(Declarer.blackstone_smoker),
                         1
                 );
                 Declarer.BASALT_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.basalt_furnace),new Identifier("minecraft","logs")),//items
+                        Lists.newArrayList(Registry.ITEM.getId(Declarer.basalt_furnace),tempID),//items
                         Lists.newArrayList(false,true),//type
                         Lists.newArrayList(" 1 ","101"," 1 "),//pattern
                         Registry.ITEM.getId(Declarer.basalt_smoker),
+                        1
+                );
+                Declarer.DEEPSLATE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Declarer.deepslate_furnace),tempID),//items
+                        Lists.newArrayList(false,true),//type
+                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
+                        Registry.ITEM.getId(Declarer.deepslate_smoker),
                         1
                 );
             }

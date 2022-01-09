@@ -405,10 +405,27 @@ public class Declarer {
     public static JsonObject BLAZEROD = null;
     public static JsonObject BROWN_MUSHROOM = null;
     public static JsonObject RED_MUSHROOM = null;
+    public static JsonObject CHARCOAL_BLOCK = null;
+    public static JsonObject CHARCOAL_BLOCK_U = null;
+    public static JsonObject CHARCOAL_NUGGET = null;
+    public static JsonObject CHARCOAL_NUGGET_U = null;
+    public static JsonObject CHESTS = null;
+    public static JsonObject QUARTZ_PILLAR_CHISELED = null;
+    public static JsonObject CHUNKLOADER = null;
+    public static JsonObject CLAY = null;
+    public static JsonObject COAL_NUGGET = null;
+    public static JsonObject COAL_NUGGET_U = null;
+
+    public static JsonObject HORSE_DIAMOND = null;
+
     public static JsonObject CHAINBOOT = null;
     public static JsonObject CHAINPANT = null;
     public static JsonObject CHAINCHEST = null;
     public static JsonObject CHAINHELM = null;
+    public static JsonObject COPPERBOOT = null;
+    public static JsonObject COPPERPANT = null;
+    public static JsonObject COPPERCHEST = null;
+    public static JsonObject COPPERHELM = null;
 
     public static JsonObject ANDESITE_FURNACE = null;
     public static JsonObject ANDESITE_BLAST = null;
@@ -419,4 +436,7 @@ public class Declarer {
     public static JsonObject BASALT_FURNACE = null;
     public static JsonObject BASALT_BLAST = null;
     public static JsonObject BASALT_SMOKER = null;
+    public static JsonObject DEEPSLATE_FURNACE = null;
+    public static JsonObject DEEPSLATE_BLAST = null;
+    public static JsonObject DEEPSLATE_SMOKER = null;
 }
