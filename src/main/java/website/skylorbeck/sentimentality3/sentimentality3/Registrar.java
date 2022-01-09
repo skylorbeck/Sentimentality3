@@ -988,7 +988,6 @@ public class Registrar {
             //tools
             if (Ref.allTools) {
                 if (Ref.graniteTools) {
-
                 }
                 if (Ref.dioriteTools) {
                 }

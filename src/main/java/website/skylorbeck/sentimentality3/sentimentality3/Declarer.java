@@ -673,4 +673,136 @@ public class Declarer {
     public static JsonObject SAND_8XU = null;
     public static JsonObject SAND_9X = null;
     public static JsonObject SAND_9XU = null;
+    
+    public static JsonObject AMETHYST_AXE = null;
+    public static JsonObject AMETHYST_HOE = null;
+    public static JsonObject AMETHYST_PICKAXE = null;
+    public static JsonObject AMETHYST_SHOVEL = null;
+    public static JsonObject AMETHYST_SWORD = null;
+    
+    public static JsonObject ANDESITE_AXE = null;
+    public static JsonObject ANDESITE_HOE = null;
+    public static JsonObject ANDESITE_PICKAXE = null;
+    public static JsonObject ANDESITE_SHOVEL = null;
+    public static JsonObject ANDESITE_SWORD = null;
+    
+    public static JsonObject BASALT_AXE = null;
+    public static JsonObject BASALT_HOE = null;
+    public static JsonObject BASALT_PICKAXE = null;
+    public static JsonObject BASALT_SHOVEL = null;
+    public static JsonObject BASALT_SWORD = null;
+
+    public static JsonObject BLACKSTONE_AXE = null;
+    public static JsonObject BLACKSTONE_HOE = null;
+    public static JsonObject BLACKSTONE_PICKAXE = null;
+    public static JsonObject BLACKSTONE_SHOVEL = null;
+    public static JsonObject BLACKSTONE_SWORD = null;
+
+    public static JsonObject COPPER_AXE = null;
+    public static JsonObject COPPER_HOE = null;
+    public static JsonObject COPPER_PICKAXE = null;
+    public static JsonObject COPPER_SHOVEL = null;
+    public static JsonObject COPPER_SWORD = null;
+
+    public static JsonObject CRIMSON_AXE = null;
+    public static JsonObject CRIMSON_HOE = null;
+    public static JsonObject CRIMSON_PICKAXE = null;
+    public static JsonObject CRIMSON_SHOVEL = null;
+    public static JsonObject CRIMSON_SWORD = null;
+
+    public static JsonObject DEEPSLATE_AXE = null;
+    public static JsonObject DEEPSLATE_HOE = null;
+    public static JsonObject DEEPSLATE_PICKAXE = null;
+    public static JsonObject DEEPSLATE_SHOVEL = null;
+    public static JsonObject DEEPSLATE_SWORD = null;
+
+    public static JsonObject DIORITE_AXE = null;
+    public static JsonObject DIORITE_HOE = null;
+    public static JsonObject DIORITE_PICKAXE = null;
+    public static JsonObject DIORITE_SHOVEL = null;
+    public static JsonObject DIORITE_SWORD = null;
+
+    public static JsonObject EMERALD_AXE = null;
+    public static JsonObject EMERALD_HOE = null;
+    public static JsonObject EMERALD_PICKAXE = null;
+    public static JsonObject EMERALD_SHOVEL = null;
+    public static JsonObject EMERALD_SWORD = null;
+
+    public static JsonObject ENDSTONE_AXE = null;
+    public static JsonObject ENDSTONE_HOE = null;
+    public static JsonObject ENDSTONE_PICKAXE = null;
+    public static JsonObject ENDSTONE_SHOVEL = null;
+    public static JsonObject ENDSTONE_SWORD = null;
+
+    public static JsonObject FLINT_AXE = null;
+    public static JsonObject FLINT_HOE = null;
+    public static JsonObject FLINT_PICKAXE = null;
+    public static JsonObject FLINT_SHOVEL = null;
+    public static JsonObject FLINT_SWORD = null;
+
+    public static JsonObject GRANITE_AXE = null;
+    public static JsonObject GRANITE_HOE = null;
+    public static JsonObject GRANITE_PICKAXE = null;
+    public static JsonObject GRANITE_SHOVEL = null;
+    public static JsonObject GRANITE_SWORD = null;
+
+    public static JsonObject LAPIS_AXE = null;
+    public static JsonObject LAPIS_HOE = null;
+    public static JsonObject LAPIS_PICKAXE = null;
+    public static JsonObject LAPIS_SHOVEL = null;
+    public static JsonObject LAPIS_SWORD = null;
+
+    public static JsonObject NETHERBRICK_AXE = null;
+    public static JsonObject NETHERBRICK_HOE = null;
+    public static JsonObject NETHERBRICK_PICKAXE = null;
+    public static JsonObject NETHERBRICK_SHOVEL = null;
+    public static JsonObject NETHERBRICK_SWORD = null;
+
+    public static JsonObject RED_NETHERBRICK_AXE = null;
+    public static JsonObject RED_NETHERBRICK_HOE = null;
+    public static JsonObject RED_NETHERBRICK_PICKAXE = null;
+    public static JsonObject RED_NETHERBRICK_SHOVEL = null;
+    public static JsonObject RED_NETHERBRICK_SWORD = null;
+
+    public static JsonObject NETHERRACK_AXE = null;
+    public static JsonObject NETHERRACK_HOE = null;
+    public static JsonObject NETHERRACK_PICKAXE = null;
+    public static JsonObject NETHERRACK_SHOVEL = null;
+    public static JsonObject NETHERRACK_SWORD = null;
+
+    public static JsonObject QUARTZ_AXE = null;
+    public static JsonObject QUARTZ_HOE = null;
+    public static JsonObject QUARTZ_PICKAXE = null;
+    public static JsonObject QUARTZ_SHOVEL = null;
+    public static JsonObject QUARTZ_SWORD = null;
+
+    public static JsonObject SANDSTONE_AXE = null;
+    public static JsonObject SANDSTONE_HOE = null;
+    public static JsonObject SANDSTONE_PICKAXE = null;
+    public static JsonObject SANDSTONE_SHOVEL = null;
+    public static JsonObject SANDSTONE_SWORD = null;
+
+    public static JsonObject RED_SANDSTONE_AXE = null;
+    public static JsonObject RED_SANDSTONE_HOE = null;
+    public static JsonObject RED_SANDSTONE_PICKAXE = null;
+    public static JsonObject RED_SANDSTONE_SHOVEL = null;
+    public static JsonObject RED_SANDSTONE_SWORD = null;
+
+    public static JsonObject REDSTONE_AXE = null;
+    public static JsonObject REDSTONE_HOE = null;
+    public static JsonObject REDSTONE_PICKAXE = null;
+    public static JsonObject REDSTONE_SHOVEL = null;
+    public static JsonObject REDSTONE_SWORD = null;
+
+    public static JsonObject STONE_AXE = null;
+    public static JsonObject STONE_HOE = null;
+    public static JsonObject STONE_PICKAXE = null;
+    public static JsonObject STONE_SHOVEL = null;
+    public static JsonObject STONE_SWORD = null;
+
+    public static JsonObject WARPED_AXE = null;
+    public static JsonObject WARPED_HOE = null;
+    public static JsonObject WARPED_PICKAXE = null;
+    public static JsonObject WARPED_SHOVEL = null;
+    public static JsonObject WARPED_SWORD = null;
 }

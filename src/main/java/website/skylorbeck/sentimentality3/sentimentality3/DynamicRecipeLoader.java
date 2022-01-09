@@ -173,4 +173,28 @@ public class DynamicRecipeLoader {
                 9
         );
     }
+    public enum ToolTypes{
+        Pickaxe,
+        Axe,
+        Sword,
+        Shovel,
+        Hoe,
+    }
+    public static JsonObject createTool(Item material, ToolTypes toolType, Item expectedItem){
+        ArrayList<String> pattern = new ArrayList<>();
+        switch (toolType){
+            case Pickaxe -> pattern = Lists.newArrayList("111"," 0 "," 0 ");
+            case Axe -> pattern = Lists.newArrayList("11","10"," 0");
+            case Sword -> pattern = Lists.newArrayList("1","1","0");
+            case Shovel -> pattern = Lists.newArrayList("1","0","0");
+            case Hoe -> pattern = Lists.newArrayList("11"," 0"," 0");
+        }
+        return createShapedRecipeJson(
+                Lists.newArrayList(Registry.ITEM.getId(Items.STICK),Registry.ITEM.getId(material)),//items
+                Lists.newArrayList(false, false),//type
+                pattern,//pattern
+                Registry.ITEM.getId(expectedItem),
+                1
+        );
+    }
 }

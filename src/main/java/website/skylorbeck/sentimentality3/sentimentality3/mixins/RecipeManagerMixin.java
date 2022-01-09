@@ -52,7 +52,6 @@ public class RecipeManagerMixin {
         if (Declarer.CHAINHELM != null) {
             map.put(new Identifier(Ref.MODID,"chainhelm"), Declarer.CHAINHELM);
         }
-
         if (Declarer.ANDESITE_BLAST != null) {
             map.put(new Identifier(Ref.MODID,"andesite_blast"), Declarer.ANDESITE_BLAST);
         }
