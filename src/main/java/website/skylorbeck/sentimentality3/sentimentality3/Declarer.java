@@ -415,8 +415,18 @@ public class Declarer {
     public static JsonObject CLAY = null;
     public static JsonObject COAL_NUGGET = null;
     public static JsonObject COAL_NUGGET_U = null;
+    public static JsonObject DIORITE = null;
+    public static JsonObject FEATHER = null;
+    public static JsonObject FEATHER_U = null;
+    public static JsonObject FLEATHER = null;
+    public static JsonObject FLINT = null;
+    public static JsonObject FURNACE = null;
+    public static JsonObject GLOWSTONE = null;
+    public static JsonObject GRANITE = null;
 
     public static JsonObject HORSE_DIAMOND = null;
+    public static JsonObject HORSE_GOLD = null;
+    public static JsonObject HORSE_IRON = null;
 
     public static JsonObject CHAINBOOT = null;
     public static JsonObject CHAINPANT = null;
@@ -439,4 +449,14 @@ public class Declarer {
     public static JsonObject DEEPSLATE_FURNACE = null;
     public static JsonObject DEEPSLATE_BLAST = null;
     public static JsonObject DEEPSLATE_SMOKER = null;
+    public static JsonObject DIORITE_FURNACE = null;
+    public static JsonObject DIORITE_BLAST = null;
+    public static JsonObject DIORITE_SMOKER = null;
+    public static JsonObject ENDSTONE_FURNACE = null;
+    public static JsonObject ENDSTONE_BLAST = null;
+    public static JsonObject ENDSTONE_SMOKER = null;
+    public static JsonObject GRANITE_FURNACE = null;
+    public static JsonObject GRANITE_BLAST = null;
+    public static JsonObject GRANITE_SMOKER = null;
+    
 }
