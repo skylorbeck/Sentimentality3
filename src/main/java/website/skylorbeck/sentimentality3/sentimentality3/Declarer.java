@@ -411,6 +411,8 @@ public class Declarer {
     public static JsonObject CHARCOAL_NUGGET_U = null;
     public static JsonObject CHESTS = null;
     public static JsonObject QUARTZ_PILLAR_CHISELED = null;
+    public static JsonObject QUARTZ_CHISELED = null;
+    public static JsonObject QUARTZ = null;
     public static JsonObject CHUNKLOADER = null;
     public static JsonObject CLAY = null;
     public static JsonObject COAL_NUGGET = null;
@@ -431,7 +433,15 @@ public class Declarer {
     public static JsonObject MOSSY_COBBLESTONE = null;
     public static JsonObject NAMETAG = null;
     public static JsonObject NOTCH_APPLE = null;
+    public static JsonObject PAPER = null;
+    public static JsonObject PDD = null;
+    public static JsonObject SHULKERBOX = null;
+    public static JsonObject SLIMEBALL = null;
+    public static JsonObject SCL = null;
+    public static JsonObject STRING = null;
+    public static JsonObject TRIDENT = null;
 
+    public static JsonObject SADDLE = null;
     public static JsonObject HORSE_DIAMOND = null;
     public static JsonObject HORSE_GOLD = null;
     public static JsonObject HORSE_IRON = null;
@@ -469,4 +479,10 @@ public class Declarer {
     public static JsonObject NETHERRACK_FURNACE = null;
     public static JsonObject NETHERRACK_BLAST = null;
     public static JsonObject NETHERRACK_SMOKER = null;
+    public static JsonObject SANDSTONE_FURNACE = null;
+    public static JsonObject SANDSTONE_BLAST = null;
+    public static JsonObject SANDSTONE_SMOKER = null;
+    public static JsonObject RED_SANDSTONE_FURNACE = null;
+    public static JsonObject RED_SANDSTONE_BLAST = null;
+    public static JsonObject RED_SANDSTONE_SMOKER = null;
 }
