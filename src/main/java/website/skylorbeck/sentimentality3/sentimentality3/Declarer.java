@@ -219,7 +219,7 @@ public class Declarer {
     public static final Block nonuple_compressed_cobbled_deepslate_block = new CompressedBlock(FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).requiresTool(), 9);
     public static final BlockItem nonuple_compressed_cobbled_deepslate = new BlockItem(nonuple_compressed_cobbled_deepslate_block, new FabricItemSettings().group(sentimentality3));
     //furnaces
-    public static final Block sandstone_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).requiresTool(),0);
+    public static final Block sandstone_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).requiresTool(), 0);
     public static final BlockItem sandstone_furnace = new BlockItem(sandstone_furnaceblock, new FabricItemSettings().group(sentimentality3));
     public static final Block red_sandstone_furnaceblock = new ExtraFurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).requiresTool(), 0);
     public static final BlockItem red_sandstone_furnace = new BlockItem(red_sandstone_furnaceblock, new FabricItemSettings().group(sentimentality3));
@@ -423,6 +423,14 @@ public class Declarer {
     public static JsonObject FURNACE = null;
     public static JsonObject GLOWSTONE = null;
     public static JsonObject GRANITE = null;
+    public static JsonObject STICK_BUNDLE_L = null;
+    public static JsonObject STICK_BUNDLE_L_U = null;
+    public static JsonObject STICK_BUNDLE_S = null;
+    public static JsonObject STICK_BUNDLE_S_U = null;
+    public static JsonObject TORCH = null;
+    public static JsonObject MOSSY_COBBLESTONE = null;
+    public static JsonObject NAMETAG = null;
+    public static JsonObject NOTCH_APPLE = null;
 
     public static JsonObject HORSE_DIAMOND = null;
     public static JsonObject HORSE_GOLD = null;
@@ -458,5 +466,7 @@ public class Declarer {
     public static JsonObject GRANITE_FURNACE = null;
     public static JsonObject GRANITE_BLAST = null;
     public static JsonObject GRANITE_SMOKER = null;
-    
+    public static JsonObject NETHERRACK_FURNACE = null;
+    public static JsonObject NETHERRACK_BLAST = null;
+    public static JsonObject NETHERRACK_SMOKER = null;
 }
