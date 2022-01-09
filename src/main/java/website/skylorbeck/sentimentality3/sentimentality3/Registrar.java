@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 import static website.skylorbeck.sentimentality3.sentimentality3.DynamicRecipeLoader.*;
+import static website.skylorbeck.sentimentality3.sentimentality3.DynamicRecipeLoader.createUncompressedBlock;
 
 @SuppressWarnings("unchecked cast")
 public class Registrar {
@@ -519,7 +520,7 @@ public class Registrar {
                     8
             );
             Declarer.GILDED_BLACKSTONE = createShapedRecipeJson(
-                    Lists.newArrayList( Registry.ITEM.getId(Items.GOLD_NUGGET),Registry.ITEM.getId(Items.BLACKSTONE)),
+                    Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_NUGGET), Registry.ITEM.getId(Items.BLACKSTONE)),
                     Lists.newArrayList(false, false),
                     Lists.newArrayList("000", "010", "000"),
                     Registry.ITEM.getId(Items.GILDED_BLACKSTONE),
@@ -819,13 +820,14 @@ public class Registrar {
                     Registry.ITEM.getId(Declarer.wool_helmet),
                     1
             );
-            Declarer.FLEATHERCOOK = createSmeltingRecipeJson(Declarer.fleather,Items.LEATHER,0.1f,200,furnaceTypes.smoking);
-            Declarer.COPPER_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK,Items.COPPER_BLOCK,7f,1600,furnaceTypes.smelting);
-            Declarer.COPPER_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK,Items.COPPER_BLOCK,7f,1600,furnaceTypes.blasting);;
-            Declarer.GOLD_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK,Items.GOLD_BLOCK,7f,1600,furnaceTypes.smelting);
-            Declarer.GOLD_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK,Items.GOLD_BLOCK,7f,1600,furnaceTypes.blasting);
-            Declarer.IRON_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK,Items.IRON_BLOCK,7f,1600,furnaceTypes.smelting);
-            Declarer.IRON_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK,Items.IRON_BLOCK,7f,1600,furnaceTypes.blasting);
+            Declarer.FLEATHERCOOK = createSmeltingRecipeJson(Declarer.fleather, Items.LEATHER, 0.1f, 200, furnaceTypes.smoking);
+            Declarer.COPPER_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.smelting);
+            Declarer.COPPER_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.blasting);
+            ;
+            Declarer.GOLD_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.smelting);
+            Declarer.GOLD_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.blasting);
+            Declarer.IRON_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.smelting);
+            Declarer.IRON_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.blasting);
             Declarer.RECLAIM_IRON = createSmeltingRecipeJsonComplex(new Item[]{
                             Items.IRON_PICKAXE,
                             Items.IRON_SHOVEL,
@@ -838,7 +840,7 @@ public class Registrar {
                             Items.IRON_BOOTS,
                             Items.IRON_HORSE_ARMOR
                     },
-                    Items.IRON_INGOT,0.1f,200,furnaceTypes.blasting);
+                    Items.IRON_INGOT, 0.1f, 200, furnaceTypes.blasting);
             Declarer.RECLAIM_GOLD = createSmeltingRecipeJsonComplex(new Item[]{
                             Items.GOLDEN_PICKAXE,
                             Items.GOLDEN_SHOVEL,
@@ -851,7 +853,7 @@ public class Registrar {
                             Items.GOLDEN_BOOTS,
                             Items.GOLDEN_HORSE_ARMOR
                     },
-                    Items.GOLD_INGOT,0.1f,200,furnaceTypes.blasting);
+                    Items.GOLD_INGOT, 0.1f, 200, furnaceTypes.blasting);
             Declarer.RECLAIM_DIAMOND = createSmeltingRecipeJsonComplex(new Item[]{
                             Items.DIAMOND_PICKAXE,
                             Items.DIAMOND_SHOVEL,
@@ -864,8 +866,7 @@ public class Registrar {
                             Items.DIAMOND_BOOTS,
                             Items.DIAMOND_HORSE_ARMOR
                     },
-                    Items.DIAMOND,0.1f,200,furnaceTypes.blasting);
-
+                    Items.DIAMOND, 0.1f, 200, furnaceTypes.blasting);
 
 
             //personal items
@@ -1034,27 +1035,184 @@ public class Registrar {
             //compressed cobble
             if (Ref.allCompressedBlocks) {
                 if (Ref.cobble) {
+                    Declarer.COBBLESTONE_1X = createCompressedBlock(Items.COBBLESTONE,Declarer.monuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_1XU = createUncompressedBlock(Declarer.monuple_compressed_cobblestone,Items.COBBLESTONE);
+                    Declarer.COBBLESTONE_2X = createCompressedBlock(Declarer.monuple_compressed_cobblestone,Declarer.couple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_2XU = createUncompressedBlock(Declarer.couple_compressed_cobblestone,Declarer.monuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_3X = createCompressedBlock(Declarer.couple_compressed_cobblestone,Declarer.triple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_3XU =  createUncompressedBlock(Declarer.triple_compressed_cobblestone,Declarer.couple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_4X = createCompressedBlock(Declarer.triple_compressed_cobblestone,Declarer.quadruple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_cobblestone,Declarer.triple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_5X = createCompressedBlock(Declarer.quadruple_compressed_cobblestone,Declarer.quintuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_cobblestone,Declarer.quadruple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_6X = createCompressedBlock(Declarer.quintuple_compressed_cobblestone,Declarer.sextuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_cobblestone,Declarer.quintuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_7X = createCompressedBlock(Declarer.sextuple_compressed_cobblestone,Declarer.septuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_7XU = createUncompressedBlock(Declarer.septuple_compressed_cobblestone,Declarer.sextuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_8X = createCompressedBlock(Declarer.septuple_compressed_cobblestone,Declarer.octuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_8XU =  createUncompressedBlock(Declarer.octuple_compressed_cobblestone,Declarer.septuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_9X = createCompressedBlock(Declarer.octuple_compressed_cobblestone,Declarer.nonuple_compressed_cobblestone);
+                    Declarer.COBBLESTONE_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_cobblestone,Declarer.octuple_compressed_cobblestone);
                 }
-                //compressed dirt
                 if (Ref.dirt) {
+                    Declarer.DIRT_1X = createCompressedBlock(Items.DIRT,Declarer.monuple_compressed_dirt);
+                    Declarer.DIRT_1XU = createUncompressedBlock(Declarer.monuple_compressed_dirt,Items.DIRT);
+                    Declarer.DIRT_2X = createCompressedBlock(Declarer.monuple_compressed_dirt,Declarer.couple_compressed_dirt);
+                    Declarer.DIRT_2XU = createUncompressedBlock(Declarer.couple_compressed_dirt,Declarer.monuple_compressed_dirt);
+                    Declarer.DIRT_3X = createCompressedBlock(Declarer.couple_compressed_dirt,Declarer.triple_compressed_dirt);
+                    Declarer.DIRT_3XU =  createUncompressedBlock(Declarer.triple_compressed_dirt,Declarer.couple_compressed_dirt);
+                    Declarer.DIRT_4X = createCompressedBlock(Declarer.triple_compressed_dirt,Declarer.quadruple_compressed_dirt);
+                    Declarer.DIRT_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_dirt,Declarer.triple_compressed_dirt);
+                    Declarer.DIRT_5X = createCompressedBlock(Declarer.quadruple_compressed_dirt,Declarer.quintuple_compressed_dirt);
+                    Declarer.DIRT_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_dirt,Declarer.quadruple_compressed_dirt);
+                    Declarer.DIRT_6X = createCompressedBlock(Declarer.quintuple_compressed_dirt,Declarer.sextuple_compressed_dirt);
+                    Declarer.DIRT_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_dirt,Declarer.quintuple_compressed_dirt);
+                    Declarer.DIRT_7X = createCompressedBlock(Declarer.sextuple_compressed_dirt,Declarer.septuple_compressed_dirt);
+                    Declarer.DIRT_7XU = createUncompressedBlock(Declarer.septuple_compressed_dirt,Declarer.sextuple_compressed_dirt);
+                    Declarer.DIRT_8X = createCompressedBlock(Declarer.septuple_compressed_dirt,Declarer.octuple_compressed_dirt);
+                    Declarer.DIRT_8XU =  createUncompressedBlock(Declarer.octuple_compressed_dirt,Declarer.septuple_compressed_dirt);
+                    Declarer.DIRT_9X = createCompressedBlock(Declarer.octuple_compressed_dirt,Declarer.nonuple_compressed_dirt);
+                    Declarer.DIRT_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_dirt,Declarer.octuple_compressed_dirt);
                 }
-                //compressed diorite
                 if (Ref.diorite) {
+                    Declarer.DIORITE_1X = createCompressedBlock(Items.DIORITE,Declarer.monuple_compressed_diorite);
+                    Declarer.DIORITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_diorite,Items.DIORITE);
+                    Declarer.DIORITE_2X = createCompressedBlock(Declarer.monuple_compressed_diorite,Declarer.couple_compressed_diorite);
+                    Declarer.DIORITE_2XU = createUncompressedBlock(Declarer.couple_compressed_diorite,Declarer.monuple_compressed_diorite);
+                    Declarer.DIORITE_3X = createCompressedBlock(Declarer.couple_compressed_diorite,Declarer.triple_compressed_diorite);
+                    Declarer.DIORITE_3XU =  createUncompressedBlock(Declarer.triple_compressed_diorite,Declarer.couple_compressed_diorite);
+                    Declarer.DIORITE_4X = createCompressedBlock(Declarer.triple_compressed_diorite,Declarer.quadruple_compressed_diorite);
+                    Declarer.DIORITE_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_diorite,Declarer.triple_compressed_diorite);
+                    Declarer.DIORITE_5X = createCompressedBlock(Declarer.quadruple_compressed_diorite,Declarer.quintuple_compressed_diorite);
+                    Declarer.DIORITE_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_diorite,Declarer.quadruple_compressed_diorite);
+                    Declarer.DIORITE_6X = createCompressedBlock(Declarer.quintuple_compressed_diorite,Declarer.sextuple_compressed_diorite);
+                    Declarer.DIORITE_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_diorite,Declarer.quintuple_compressed_diorite);
+                    Declarer.DIORITE_7X = createCompressedBlock(Declarer.sextuple_compressed_diorite,Declarer.septuple_compressed_diorite);
+                    Declarer.DIORITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_diorite,Declarer.sextuple_compressed_diorite);
+                    Declarer.DIORITE_8X = createCompressedBlock(Declarer.septuple_compressed_diorite,Declarer.octuple_compressed_diorite);
+                    Declarer.DIORITE_8XU =  createUncompressedBlock(Declarer.octuple_compressed_diorite,Declarer.septuple_compressed_diorite);
+                    Declarer.DIORITE_9X = createCompressedBlock(Declarer.octuple_compressed_diorite,Declarer.nonuple_compressed_diorite);
+                    Declarer.DIORITE_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_diorite,Declarer.octuple_compressed_diorite);
                 }
-                //compressed granite
                 if (Ref.granite) {
+                    Declarer.GRANITE_1X = createCompressedBlock(Items.GRANITE,Declarer.monuple_compressed_granite);
+                    Declarer.GRANITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_granite,Items.GRANITE);
+                    Declarer.GRANITE_2X = createCompressedBlock(Declarer.monuple_compressed_granite,Declarer.couple_compressed_granite);
+                    Declarer.GRANITE_2XU = createUncompressedBlock(Declarer.couple_compressed_granite,Declarer.monuple_compressed_granite);
+                    Declarer.GRANITE_3X = createCompressedBlock(Declarer.couple_compressed_granite,Declarer.triple_compressed_granite);
+                    Declarer.GRANITE_3XU =  createUncompressedBlock(Declarer.triple_compressed_granite,Declarer.couple_compressed_granite);
+                    Declarer.GRANITE_4X = createCompressedBlock(Declarer.triple_compressed_granite,Declarer.quadruple_compressed_granite);
+                    Declarer.GRANITE_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_granite,Declarer.triple_compressed_granite);
+                    Declarer.GRANITE_5X = createCompressedBlock(Declarer.quadruple_compressed_granite,Declarer.quintuple_compressed_granite);
+                    Declarer.GRANITE_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_granite,Declarer.quadruple_compressed_granite);
+                    Declarer.GRANITE_6X = createCompressedBlock(Declarer.quintuple_compressed_granite,Declarer.sextuple_compressed_granite);
+                    Declarer.GRANITE_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_granite,Declarer.quintuple_compressed_granite);
+                    Declarer.GRANITE_7X = createCompressedBlock(Declarer.sextuple_compressed_granite,Declarer.septuple_compressed_granite);
+                    Declarer.GRANITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_granite,Declarer.sextuple_compressed_granite);
+                    Declarer.GRANITE_8X = createCompressedBlock(Declarer.septuple_compressed_granite,Declarer.octuple_compressed_granite);
+                    Declarer.GRANITE_8XU =  createUncompressedBlock(Declarer.octuple_compressed_granite,Declarer.septuple_compressed_granite);
+                    Declarer.GRANITE_9X = createCompressedBlock(Declarer.octuple_compressed_granite,Declarer.nonuple_compressed_granite);
+                    Declarer.GRANITE_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_granite,Declarer.octuple_compressed_granite);
                 }
-                //compressed andesite
                 if (Ref.andesite) {
+                    Declarer.ANDESITE_1X = createCompressedBlock(Items.ANDESITE,Declarer.monuple_compressed_andesite);
+                    Declarer.ANDESITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_andesite,Items.ANDESITE);
+                    Declarer.ANDESITE_2X = createCompressedBlock(Declarer.monuple_compressed_andesite,Declarer.couple_compressed_andesite);
+                    Declarer.ANDESITE_2XU = createUncompressedBlock(Declarer.couple_compressed_andesite,Declarer.monuple_compressed_andesite);
+                    Declarer.ANDESITE_3X = createCompressedBlock(Declarer.couple_compressed_andesite,Declarer.triple_compressed_andesite);
+                    Declarer.ANDESITE_3XU =  createUncompressedBlock(Declarer.triple_compressed_andesite,Declarer.couple_compressed_andesite);
+                    Declarer.ANDESITE_4X = createCompressedBlock(Declarer.triple_compressed_andesite,Declarer.quadruple_compressed_andesite);
+                    Declarer.ANDESITE_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_andesite,Declarer.triple_compressed_andesite);
+                    Declarer.ANDESITE_5X = createCompressedBlock(Declarer.quadruple_compressed_andesite,Declarer.quintuple_compressed_andesite);
+                    Declarer.ANDESITE_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_andesite,Declarer.quadruple_compressed_andesite);
+                    Declarer.ANDESITE_6X = createCompressedBlock(Declarer.quintuple_compressed_andesite,Declarer.sextuple_compressed_andesite);
+                    Declarer.ANDESITE_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_andesite,Declarer.quintuple_compressed_andesite);
+                    Declarer.ANDESITE_7X = createCompressedBlock(Declarer.sextuple_compressed_andesite,Declarer.septuple_compressed_andesite);
+                    Declarer.ANDESITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_andesite,Declarer.sextuple_compressed_andesite);
+                    Declarer.ANDESITE_8X = createCompressedBlock(Declarer.septuple_compressed_andesite,Declarer.octuple_compressed_andesite);
+                    Declarer.ANDESITE_8XU =  createUncompressedBlock(Declarer.octuple_compressed_andesite,Declarer.septuple_compressed_andesite);
+                    Declarer.ANDESITE_9X = createCompressedBlock(Declarer.octuple_compressed_andesite,Declarer.nonuple_compressed_andesite);
+                    Declarer.ANDESITE_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_andesite,Declarer.octuple_compressed_andesite);
                 }
-                //compressed netherrack
                 if (Ref.netherrack) {
+                    Declarer.NETHERRACK_1X = createCompressedBlock(Items.NETHERRACK,Declarer.monuple_compressed_netherrack);
+                    Declarer.NETHERRACK_1XU = createUncompressedBlock(Declarer.monuple_compressed_netherrack,Items.NETHERRACK);
+                    Declarer.NETHERRACK_2X = createCompressedBlock(Declarer.monuple_compressed_netherrack,Declarer.couple_compressed_netherrack);
+                    Declarer.NETHERRACK_2XU = createUncompressedBlock(Declarer.couple_compressed_netherrack,Declarer.monuple_compressed_netherrack);
+                    Declarer.NETHERRACK_3X = createCompressedBlock(Declarer.couple_compressed_netherrack,Declarer.triple_compressed_netherrack);
+                    Declarer.NETHERRACK_3XU =  createUncompressedBlock(Declarer.triple_compressed_netherrack,Declarer.couple_compressed_netherrack);
+                    Declarer.NETHERRACK_4X = createCompressedBlock(Declarer.triple_compressed_netherrack,Declarer.quadruple_compressed_netherrack);
+                    Declarer.NETHERRACK_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_netherrack,Declarer.triple_compressed_netherrack);
+                    Declarer.NETHERRACK_5X = createCompressedBlock(Declarer.quadruple_compressed_netherrack,Declarer.quintuple_compressed_netherrack);
+                    Declarer.NETHERRACK_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_netherrack,Declarer.quadruple_compressed_netherrack);
+                    Declarer.NETHERRACK_6X = createCompressedBlock(Declarer.quintuple_compressed_netherrack,Declarer.sextuple_compressed_netherrack);
+                    Declarer.NETHERRACK_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_netherrack,Declarer.quintuple_compressed_netherrack);
+                    Declarer.NETHERRACK_7X = createCompressedBlock(Declarer.sextuple_compressed_netherrack,Declarer.septuple_compressed_netherrack);
+                    Declarer.NETHERRACK_7XU = createUncompressedBlock(Declarer.septuple_compressed_netherrack,Declarer.sextuple_compressed_netherrack);
+                    Declarer.NETHERRACK_8X = createCompressedBlock(Declarer.septuple_compressed_netherrack,Declarer.octuple_compressed_netherrack);
+                    Declarer.NETHERRACK_8XU =  createUncompressedBlock(Declarer.octuple_compressed_netherrack,Declarer.septuple_compressed_netherrack);
+                    Declarer.NETHERRACK_9X = createCompressedBlock(Declarer.octuple_compressed_netherrack,Declarer.nonuple_compressed_netherrack);
+                    Declarer.NETHERRACK_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_netherrack,Declarer.octuple_compressed_netherrack);
                 }
                 if (Ref.sand) {
+                    Declarer.SAND_1X = createCompressedBlock(Items.SAND,Declarer.monuple_compressed_sand);
+                    Declarer.SAND_1XU = createUncompressedBlock(Declarer.monuple_compressed_sand,Items.SAND);
+                    Declarer.SAND_2X = createCompressedBlock(Declarer.monuple_compressed_sand,Declarer.couple_compressed_sand);
+                    Declarer.SAND_2XU = createUncompressedBlock(Declarer.couple_compressed_sand,Declarer.monuple_compressed_sand);
+                    Declarer.SAND_3X = createCompressedBlock(Declarer.couple_compressed_sand,Declarer.triple_compressed_sand);
+                    Declarer.SAND_3XU =  createUncompressedBlock(Declarer.triple_compressed_sand,Declarer.couple_compressed_sand);
+                    Declarer.SAND_4X = createCompressedBlock(Declarer.triple_compressed_sand,Declarer.quadruple_compressed_sand);
+                    Declarer.SAND_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_sand,Declarer.triple_compressed_sand);
+                    Declarer.SAND_5X = createCompressedBlock(Declarer.quadruple_compressed_sand,Declarer.quintuple_compressed_sand);
+                    Declarer.SAND_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_sand,Declarer.quadruple_compressed_sand);
+                    Declarer.SAND_6X = createCompressedBlock(Declarer.quintuple_compressed_sand,Declarer.sextuple_compressed_sand);
+                    Declarer.SAND_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_sand,Declarer.quintuple_compressed_sand);
+                    Declarer.SAND_7X = createCompressedBlock(Declarer.sextuple_compressed_sand,Declarer.septuple_compressed_sand);
+                    Declarer.SAND_7XU = createUncompressedBlock(Declarer.septuple_compressed_sand,Declarer.sextuple_compressed_sand);
+                    Declarer.SAND_8X = createCompressedBlock(Declarer.septuple_compressed_sand,Declarer.octuple_compressed_sand);
+                    Declarer.SAND_8XU =  createUncompressedBlock(Declarer.octuple_compressed_sand,Declarer.septuple_compressed_sand);
+                    Declarer.SAND_9X = createCompressedBlock(Declarer.octuple_compressed_sand,Declarer.nonuple_compressed_sand);
+                    Declarer.SAND_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_sand,Declarer.octuple_compressed_sand);
                 }
                 if (Ref.gravel) {
+                    Declarer.GRAVEL_1X = createCompressedBlock(Items.GRAVEL,Declarer.monuple_compressed_gravel);
+                    Declarer.GRAVEL_1XU = createUncompressedBlock(Declarer.monuple_compressed_gravel,Items.GRAVEL);
+                    Declarer.GRAVEL_2X = createCompressedBlock(Declarer.monuple_compressed_gravel,Declarer.couple_compressed_gravel);
+                    Declarer.GRAVEL_2XU = createUncompressedBlock(Declarer.couple_compressed_gravel,Declarer.monuple_compressed_gravel);
+                    Declarer.GRAVEL_3X = createCompressedBlock(Declarer.couple_compressed_gravel,Declarer.triple_compressed_gravel);
+                    Declarer.GRAVEL_3XU =  createUncompressedBlock(Declarer.triple_compressed_gravel,Declarer.couple_compressed_gravel);
+                    Declarer.GRAVEL_4X = createCompressedBlock(Declarer.triple_compressed_gravel,Declarer.quadruple_compressed_gravel);
+                    Declarer.GRAVEL_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_gravel,Declarer.triple_compressed_gravel);
+                    Declarer.GRAVEL_5X = createCompressedBlock(Declarer.quadruple_compressed_gravel,Declarer.quintuple_compressed_gravel);
+                    Declarer.GRAVEL_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_gravel,Declarer.quadruple_compressed_gravel);
+                    Declarer.GRAVEL_6X = createCompressedBlock(Declarer.quintuple_compressed_gravel,Declarer.sextuple_compressed_gravel);
+                    Declarer.GRAVEL_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_gravel,Declarer.quintuple_compressed_gravel);
+                    Declarer.GRAVEL_7X = createCompressedBlock(Declarer.sextuple_compressed_gravel,Declarer.septuple_compressed_gravel);
+                    Declarer.GRAVEL_7XU = createUncompressedBlock(Declarer.septuple_compressed_gravel,Declarer.sextuple_compressed_gravel);
+                    Declarer.GRAVEL_8X = createCompressedBlock(Declarer.septuple_compressed_gravel,Declarer.octuple_compressed_gravel);
+                    Declarer.GRAVEL_8XU =  createUncompressedBlock(Declarer.octuple_compressed_gravel,Declarer.septuple_compressed_gravel);
+                    Declarer.GRAVEL_9X = createCompressedBlock(Declarer.octuple_compressed_gravel,Declarer.nonuple_compressed_gravel);
+                    Declarer.GRAVEL_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_gravel,Declarer.octuple_compressed_gravel);
                 }
                 if (Ref.deepslate) {
+                    Declarer.COBBLED_DEEPSLATE_1X = createCompressedBlock(Items.COBBLED_DEEPSLATE,Declarer.monuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_1XU = createUncompressedBlock(Declarer.monuple_compressed_cobbled_deepslate,Items.COBBLED_DEEPSLATE);
+                    Declarer.COBBLED_DEEPSLATE_2X = createCompressedBlock(Declarer.monuple_compressed_cobbled_deepslate,Declarer.couple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_2XU = createUncompressedBlock(Declarer.couple_compressed_cobbled_deepslate,Declarer.monuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_3X = createCompressedBlock(Declarer.couple_compressed_cobbled_deepslate,Declarer.triple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_3XU =  createUncompressedBlock(Declarer.triple_compressed_cobbled_deepslate,Declarer.couple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_4X = createCompressedBlock(Declarer.triple_compressed_cobbled_deepslate,Declarer.quadruple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_4XU =  createUncompressedBlock(Declarer.quadruple_compressed_cobbled_deepslate,Declarer.triple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_5X = createCompressedBlock(Declarer.quadruple_compressed_cobbled_deepslate,Declarer.quintuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_5XU =  createUncompressedBlock(Declarer.quintuple_compressed_cobbled_deepslate,Declarer.quadruple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_6X = createCompressedBlock(Declarer.quintuple_compressed_cobbled_deepslate,Declarer.sextuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_6XU =  createUncompressedBlock(Declarer.sextuple_compressed_cobbled_deepslate,Declarer.quintuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_7X = createCompressedBlock(Declarer.sextuple_compressed_cobbled_deepslate,Declarer.septuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_7XU = createUncompressedBlock(Declarer.septuple_compressed_cobbled_deepslate,Declarer.sextuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_8X = createCompressedBlock(Declarer.septuple_compressed_cobbled_deepslate,Declarer.octuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_8XU =  createUncompressedBlock(Declarer.octuple_compressed_cobbled_deepslate,Declarer.septuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_9X = createCompressedBlock(Declarer.octuple_compressed_cobbled_deepslate,Declarer.nonuple_compressed_cobbled_deepslate);
+                    Declarer.COBBLED_DEEPSLATE_9XU =  createUncompressedBlock(Declarer.nonuple_compressed_cobbled_deepslate,Declarer.octuple_compressed_cobbled_deepslate);
                 }
             }
         }

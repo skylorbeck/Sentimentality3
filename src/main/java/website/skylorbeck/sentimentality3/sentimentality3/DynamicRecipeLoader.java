@@ -155,4 +155,22 @@ public class DynamicRecipeLoader {
                 1
         );
     }
+    public static JsonObject createCompressedBlock(Item uncompressed, Item compressed){
+        Identifier id = Registry.ITEM.getId(uncompressed);
+        return createShapelessRecipeJson(
+                Lists.newArrayList(id,id,id,id,id,id,id,id,id),
+                Lists.newArrayList(false,false,false,false,false,false,false,false,false),
+                Registry.ITEM.getId(compressed),
+                1
+        );
+    }
+    public static JsonObject createUncompressedBlock(Item compressed, Item uncompressed){
+        Identifier id = Registry.ITEM.getId(compressed);
+        return createShapelessRecipeJson(
+                Lists.newArrayList(id,id,id,id,id,id,id,id,id),
+                Lists.newArrayList(false,false,false,false,false,false,false,false,false),
+                Registry.ITEM.getId(uncompressed),
+                9
+        );
+    }
 }
