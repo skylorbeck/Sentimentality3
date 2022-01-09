@@ -35,6 +35,43 @@ public class DynamicRecipeLoader {
         return json;
     }
 
+    public enum furnaceTypes{
+        smelting,
+        smoking,
+        blasting
+    }
+    public static JsonObject createSmeltingRecipeJson(Item item, Item output,float experience, int cookTime,furnaceTypes furnaceType) {
+        JsonObject json = new JsonObject();
+        json.addProperty("type", "minecraft:"+furnaceType);
+        JsonObject individualKey;
+        individualKey = new JsonObject();
+        individualKey.addProperty( "item",Registry.ITEM.getId(item).toString());
+        json.add("ingredient", individualKey);
+        json.addProperty("result", Registry.ITEM.getId(output).toString());
+        json.addProperty("experience",experience);
+        json.addProperty("cookingtime",furnaceType.equals(furnaceTypes.smelting)?cookTime:cookTime/2);
+        Logger.getAnonymousLogger().log(Level.SEVERE, json.toString());
+        return json;
+    }
+
+    public static JsonObject createSmeltingRecipeJsonComplex(Item[] items, Item output,float experience, int cookTime,furnaceTypes furnaceType) {
+        JsonObject json = new JsonObject();
+        json.addProperty("type", "minecraft:"+furnaceType);
+        JsonObject individualKey;
+        JsonArray itemArray = new JsonArray();
+        for (Item item : items) {
+            individualKey = new JsonObject();
+            individualKey.addProperty("item", Registry.ITEM.getId(item).toString());
+            itemArray.add(individualKey);
+        }
+        json.add("ingredient", itemArray);
+        json.addProperty("result", Registry.ITEM.getId(output).toString());
+        json.addProperty("experience",experience);
+        json.addProperty("cookingtime",furnaceType.equals(furnaceTypes.smelting)?cookTime:cookTime/2);
+        Logger.getAnonymousLogger().log(Level.SEVERE, json.toString());
+        return json;
+    }
+
     public static JsonObject createShapedRecipeJson(ArrayList<Identifier> items, ArrayList<Boolean> type, ArrayList<String> pattern, Identifier output, int outputCount) {
         JsonObject json = new JsonObject();
         json.addProperty("type", "minecraft:crafting_shaped");

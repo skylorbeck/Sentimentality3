@@ -518,6 +518,13 @@ public class Registrar {
                     Registry.ITEM.getId(Items.GRANITE),
                     8
             );
+            Declarer.GILDED_BLACKSTONE = createShapedRecipeJson(
+                    Lists.newArrayList( Registry.ITEM.getId(Items.GOLD_NUGGET),Registry.ITEM.getId(Items.BLACKSTONE)),
+                    Lists.newArrayList(false, false),
+                    Lists.newArrayList("000", "010", "000"),
+                    Registry.ITEM.getId(Items.GILDED_BLACKSTONE),
+                    1
+            );
             Declarer.AMETHYST = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.AMETHYST_BLOCK)),
                     Lists.newArrayList(false),
@@ -812,6 +819,55 @@ public class Registrar {
                     Registry.ITEM.getId(Declarer.wool_helmet),
                     1
             );
+            Declarer.FLEATHERCOOK = createSmeltingRecipeJson(Declarer.fleather,Items.LEATHER,0.1f,200,furnaceTypes.smoking);
+            Declarer.COPPER_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK,Items.COPPER_BLOCK,7f,1600,furnaceTypes.smelting);
+            Declarer.COPPER_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK,Items.COPPER_BLOCK,7f,1600,furnaceTypes.blasting);;
+            Declarer.GOLD_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK,Items.GOLD_BLOCK,7f,1600,furnaceTypes.smelting);
+            Declarer.GOLD_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK,Items.GOLD_BLOCK,7f,1600,furnaceTypes.blasting);
+            Declarer.IRON_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK,Items.IRON_BLOCK,7f,1600,furnaceTypes.smelting);
+            Declarer.IRON_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK,Items.IRON_BLOCK,7f,1600,furnaceTypes.blasting);
+            Declarer.RECLAIM_IRON = createSmeltingRecipeJsonComplex(new Item[]{
+                            Items.IRON_PICKAXE,
+                            Items.IRON_SHOVEL,
+                            Items.IRON_AXE,
+                            Items.IRON_HOE,
+                            Items.IRON_SWORD,
+                            Items.IRON_HELMET,
+                            Items.IRON_CHESTPLATE,
+                            Items.IRON_LEGGINGS,
+                            Items.IRON_BOOTS,
+                            Items.IRON_HORSE_ARMOR
+                    },
+                    Items.IRON_INGOT,0.1f,200,furnaceTypes.blasting);
+            Declarer.RECLAIM_GOLD = createSmeltingRecipeJsonComplex(new Item[]{
+                            Items.GOLDEN_PICKAXE,
+                            Items.GOLDEN_SHOVEL,
+                            Items.GOLDEN_AXE,
+                            Items.GOLDEN_HOE,
+                            Items.GOLDEN_SWORD,
+                            Items.GOLDEN_HELMET,
+                            Items.GOLDEN_CHESTPLATE,
+                            Items.GOLDEN_LEGGINGS,
+                            Items.GOLDEN_BOOTS,
+                            Items.GOLDEN_HORSE_ARMOR
+                    },
+                    Items.GOLD_INGOT,0.1f,200,furnaceTypes.blasting);
+            Declarer.RECLAIM_DIAMOND = createSmeltingRecipeJsonComplex(new Item[]{
+                            Items.DIAMOND_PICKAXE,
+                            Items.DIAMOND_SHOVEL,
+                            Items.DIAMOND_AXE,
+                            Items.DIAMOND_HOE,
+                            Items.DIAMOND_SWORD,
+                            Items.DIAMOND_HELMET,
+                            Items.DIAMOND_CHESTPLATE,
+                            Items.DIAMOND_LEGGINGS,
+                            Items.DIAMOND_BOOTS,
+                            Items.DIAMOND_HORSE_ARMOR
+                    },
+                    Items.DIAMOND,0.1f,200,furnaceTypes.blasting);
+
+
+
             //personal items
             if (Ref.daylighter) {
             }
