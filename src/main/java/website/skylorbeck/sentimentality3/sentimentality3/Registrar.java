@@ -746,7 +746,7 @@ public class Registrar {
                     1
             );
             tempID = Registry.ITEM.getId(Items.SHULKER_SHELL);
-            Declarer.PAPER = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.SHULKERBOX = DynamicRecipeLoader.createShapelessRecipeJson(
                     Lists.newArrayList(tempID,tempID,Registry.ITEM.getId(Items.CHEST)),
                     Lists.newArrayList(false,false,false),
                     Registry.ITEM.getId(Items.SHULKER_BOX),
