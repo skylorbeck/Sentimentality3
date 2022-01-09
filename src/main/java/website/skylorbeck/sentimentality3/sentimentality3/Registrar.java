@@ -18,8 +18,12 @@ import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraBlastFurnaceBlockEnt
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraFurnaceBlockEntity;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraSmokerBlockEntity;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
+import static website.skylorbeck.sentimentality3.sentimentality3.DynamicRecipeLoader.*;
+
+@SuppressWarnings("unchecked cast")
 public class Registrar {
     //todo COMPRESSED TUFF
     //todo compressed calcite
@@ -480,330 +484,331 @@ public class Registrar {
 
         if (Ref.recipes) {
             Identifier tempID;
+            ArrayList<?> tempAL;
             //todo individual groups
-            Declarer.ARROW = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.FLINT),Registry.ITEM.getId(Items.STICK),Registry.ITEM.getId(Items.FEATHER)),
-                    Lists.newArrayList(false,false,false),
+            Declarer.ARROW = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.FLINT), Registry.ITEM.getId(Items.STICK), Registry.ITEM.getId(Items.FEATHER)),
+                    Lists.newArrayList(false, false, false),
                     Registry.ITEM.getId(Items.ARROW),
                     4);
             tempID = Registry.ITEM.getId(Items.WHEAT);
-            Declarer.BREAD = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID,tempID),
-                    Lists.newArrayList(false,false,false),
+            Declarer.BREAD = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false),
                     Registry.ITEM.getId(Items.BREAD),
                     1);
             Declarer.BLACKSTONE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
-                    Lists.newArrayList(new String[]{Ref.MODID+":stone","minecraft:stone_bricks","minecraft:stone_crafting_materials","minecraft:stone"},new String[]{"minecraft:coals"}),
-                    Lists.newArrayList(Lists.newArrayList(true,true,true,false),Lists.newArrayList(true)),
-                    Lists.newArrayList("000","010","000"),
+                    Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:coals"}),
+                    Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(true)),
+                    Lists.newArrayList("000", "010", "000"),
                     Registry.ITEM.getId(Items.BLACKSTONE),
                     8
             );
             Declarer.DIORITE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
-                    Lists.newArrayList(new String[]{Ref.MODID+":stone","minecraft:stone_bricks","minecraft:stone_crafting_materials","minecraft:stone"},new String[]{"minecraft:quartz"}),
-                    Lists.newArrayList(Lists.newArrayList(true,true,true,false),Lists.newArrayList(false)),
-                    Lists.newArrayList("000","010","000"),
+                    Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:quartz"}),
+                    Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(false)),
+                    Lists.newArrayList("000", "010", "000"),
                     Registry.ITEM.getId(Items.DIORITE),
                     8
             );
-            Declarer.GRANITE = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier(Ref.MODID,"diorite"),Registry.ITEM.getId(Items.RED_DYE)),
-                    Lists.newArrayList(true,false),
-                    Lists.newArrayList("000","010","000"),
+            Declarer.GRANITE = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.RED_DYE)),
+                    Lists.newArrayList(true, false),
+                    Lists.newArrayList("000", "010", "000"),
                     Registry.ITEM.getId(Items.GRANITE),
                     8
             );
-            Declarer.AMETHYST = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.AMETHYST = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.AMETHYST_BLOCK)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.AMETHYST_SHARD),
                     4);
-            tempID= Registry.ITEM.getId(Items.BLAZE_POWDER);
-            Declarer.BLAZEROD = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID),
-                    Lists.newArrayList(false,false),
+            tempID = Registry.ITEM.getId(Items.BLAZE_POWDER);
+            Declarer.BLAZEROD = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID),
+                    Lists.newArrayList(false, false),
                     Registry.ITEM.getId(Items.BLAZE_ROD),
                     2);
             tempID = Registry.ITEM.getId(Items.BROWN_MUSHROOM);
-            Declarer.BROWN_MUSHROOM = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID),
-                    Lists.newArrayList(false,false),
+            Declarer.BROWN_MUSHROOM = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID),
+                    Lists.newArrayList(false, false),
                     Registry.ITEM.getId(Items.BROWN_MUSHROOM_BLOCK),
                     1);
             tempID = Registry.ITEM.getId(Items.RED_MUSHROOM);
-            Declarer.RED_MUSHROOM = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID),
-                    Lists.newArrayList(false,false),
+            Declarer.RED_MUSHROOM = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID),
+                    Lists.newArrayList(false, false),
                     Registry.ITEM.getId(Items.RED_MUSHROOM_BLOCK),
                     1);
-            Declarer.CHAINBOOT = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET),Registry.ITEM.getId(Items.IRON_INGOT)),//items
-                    Lists.newArrayList(false,false),//type
-                    Lists.newArrayList("0 0","1 1"),//pattern
+            Declarer.CHAINBOOT = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList("0 0", "1 1"),//pattern
                     Registry.ITEM.getId(Items.CHAINMAIL_BOOTS),
                     1
             );
-            Declarer.CHAINCHEST = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET),Registry.ITEM.getId(Items.IRON_INGOT)),//items
-                    Lists.newArrayList(false,false),//type
-                    Lists.newArrayList("0 0","111","000"),//pattern
+            Declarer.CHAINCHEST = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList("0 0", "111", "000"),//pattern
                     Registry.ITEM.getId(Items.CHAINMAIL_CHESTPLATE),
                     1
             );
-            Declarer.CHAINPANT = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET),Registry.ITEM.getId(Items.IRON_INGOT)),//items
-                    Lists.newArrayList(false,false),//type
-                    Lists.newArrayList("0 0","1 1","0 0"),//pattern
+            Declarer.CHAINPANT = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList("0 0", "1 1", "0 0"),//pattern
                     Registry.ITEM.getId(Items.CHAINMAIL_LEGGINGS),
                     1
             );
-            Declarer.CHAINHELM = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET),Registry.ITEM.getId(Items.IRON_INGOT)),//items
-                    Lists.newArrayList(false,false),//type
-                    Lists.newArrayList("010","1 1"),//pattern
+            Declarer.CHAINHELM = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList("010", "1 1"),//pattern
                     Registry.ITEM.getId(Items.CHAINMAIL_HELMET),
                     1
             );
-            Declarer.CHESTS = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","logs")),//items
+            Declarer.CHESTS = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "logs")),//items
                     Lists.newArrayList(true),//type
-                    Lists.newArrayList("000","0 0","000"),//pattern
+                    Lists.newArrayList("000", "0 0", "000"),//pattern
                     Registry.ITEM.getId(Items.CHEST),
                     4
             );
-            Declarer.CLAY = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.CLAY = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.CLAY)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.CLAY_BALL),
                     4);
-            Declarer.CHUNKLOADER = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.DIAMOND),Registry.ITEM.getId(Items.GOLD_INGOT),Registry.ITEM.getId(Items.ENDER_PEARL)),//items
-                    Lists.newArrayList(false,false,false),//type
-                    Lists.newArrayList("010","121","010"),//pattern
+            Declarer.CHUNKLOADER = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.DIAMOND), Registry.ITEM.getId(Items.GOLD_INGOT), Registry.ITEM.getId(Items.ENDER_PEARL)),//items
+                    Lists.newArrayList(false, false, false),//type
+                    Lists.newArrayList("010", "121", "010"),//pattern
                     Registry.ITEM.getId(Declarer.chunk_loader),
                     1
             );
-            Declarer.QUARTZ_PILLAR_CHISELED = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.QUARTZ_PILLAR_CHISELED = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_PILLAR)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.CHISELED_QUARTZ_BLOCK),
                     1);
-            Declarer.QUARTZ_CHISELED = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.QUARTZ_CHISELED = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.CHISELED_QUARTZ_BLOCK)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.QUARTZ_BLOCK),
                     1);
-            Declarer.QUARTZ = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.QUARTZ = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_BLOCK)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.QUARTZ),
                     4);
-            Declarer.COPPERBOOT = DynamicRecipeLoader.createShapedRecipeJson(
+            Declarer.COPPERBOOT = createShapedRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.COPPER_INGOT)),//items
                     Lists.newArrayList(false),//type
-                    Lists.newArrayList("0 0","0 0"),//pattern
+                    Lists.newArrayList("0 0", "0 0"),//pattern
                     Registry.ITEM.getId(Declarer.copper_boots),
                     1
             );
-            Declarer.COPPERCHEST = DynamicRecipeLoader.createShapedRecipeJson(
+            Declarer.COPPERCHEST = createShapedRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.COPPER_INGOT)),//items
                     Lists.newArrayList(false),//type
-                    Lists.newArrayList("0 0","000","000"),//pattern
+                    Lists.newArrayList("0 0", "000", "000"),//pattern
                     Registry.ITEM.getId(Declarer.copper_chestplate),
                     1
             );
-            Declarer.COPPERPANT = DynamicRecipeLoader.createShapedRecipeJson(
+            Declarer.COPPERPANT = createShapedRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.COPPER_INGOT)),//items
                     Lists.newArrayList(false),//type
-                    Lists.newArrayList("0 0","0 0","0 0"),//pattern
+                    Lists.newArrayList("0 0", "0 0", "0 0"),//pattern
                     Registry.ITEM.getId(Declarer.copper_leggings),
                     1
             );
-            Declarer.COPPERHELM = DynamicRecipeLoader.createShapedRecipeJson(
+            Declarer.COPPERHELM = createShapedRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.COPPER_INGOT)),//items
                     Lists.newArrayList(false),//type
-                    Lists.newArrayList("000","0 0"),//pattern
+                    Lists.newArrayList("000", "0 0"),//pattern
                     Registry.ITEM.getId(Declarer.copper_helmet),
                     1
             );
-            Declarer.HORSE_DIAMOND = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","wool"),Registry.ITEM.getId(Items.DIAMOND),Registry.ITEM.getId(Items.DIAMOND_LEGGINGS),Registry.ITEM.getId(Items.DIAMOND_HELMET)),//items
-                    Lists.newArrayList(true,false,false,false),//type
-                    Lists.newArrayList("  3","101","2 2"),//pattern
+            Declarer.HORSE_DIAMOND = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.DIAMOND), Registry.ITEM.getId(Items.DIAMOND_LEGGINGS), Registry.ITEM.getId(Items.DIAMOND_HELMET)),//items
+                    Lists.newArrayList(true, false, false, false),//type
+                    Lists.newArrayList("  3", "101", "2 2"),//pattern
                     Registry.ITEM.getId(Items.DIAMOND_HORSE_ARMOR),
                     1
             );
-            Declarer.HORSE_GOLD = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","wool"),Registry.ITEM.getId(Items.GOLD_INGOT),Registry.ITEM.getId(Items.GOLDEN_LEGGINGS),Registry.ITEM.getId(Items.GOLDEN_HELMET)),//items
-                    Lists.newArrayList(true,false,false,false),//type
-                    Lists.newArrayList("  3","101","2 2"),//pattern
+            Declarer.HORSE_GOLD = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.GOLD_INGOT), Registry.ITEM.getId(Items.GOLDEN_LEGGINGS), Registry.ITEM.getId(Items.GOLDEN_HELMET)),//items
+                    Lists.newArrayList(true, false, false, false),//type
+                    Lists.newArrayList("  3", "101", "2 2"),//pattern
                     Registry.ITEM.getId(Items.GOLDEN_HORSE_ARMOR),
                     1
             );
-            Declarer.HORSE_IRON = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","wool"),Registry.ITEM.getId(Items.IRON_INGOT),Registry.ITEM.getId(Items.IRON_LEGGINGS),Registry.ITEM.getId(Items.IRON_HELMET)),//items
-                    Lists.newArrayList(true,false,false,false),//type
-                    Lists.newArrayList("  3","101","2 2"),//pattern
+            Declarer.HORSE_IRON = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.IRON_LEGGINGS), Registry.ITEM.getId(Items.IRON_HELMET)),//items
+                    Lists.newArrayList(true, false, false, false),//type
+                    Lists.newArrayList("  3", "101", "2 2"),//pattern
                     Registry.ITEM.getId(Items.IRON_HORSE_ARMOR),
                     1
             );
             tempID = Registry.ITEM.getId(Items.FEATHER);
-            Declarer.FEATHER = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID),
-                    Lists.newArrayList(false,false,false,false,false,false,false,false,false),
+            Declarer.FEATHER = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false, false, false, false, false, false),
                     Registry.ITEM.getId(Declarer.feather_block),
                     1);
-            Declarer.FEATHER_U = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.FEATHER_U = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Declarer.feather_block)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.FEATHER),
                     9);
             tempID = Registry.ITEM.getId(Items.ROTTEN_FLESH);
-            Declarer.FLEATHER = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID,tempID,tempID),
-                    Lists.newArrayList(false,false,false,false),
+            Declarer.FLEATHER = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false),
                     Registry.ITEM.getId(Declarer.fleather),
                     1);
-            Declarer.FLINT = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.FLINT = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.GRAVEL)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.FLINT),
                     1);
-            Declarer.FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
+            Declarer.FURNACE = createShapedRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE)),
                     Lists.newArrayList(false),
-                    Lists.newArrayList("000","0 0","000"),
+                    Lists.newArrayList("000", "0 0", "000"),
                     Registry.ITEM.getId(Items.FURNACE),
                     1);
-            Declarer.GLOWSTONE = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.GLOWSTONE = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.GLOWSTONE)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.GLOWSTONE_DUST),
                     4);
             tempID = Registry.ITEM.getId(Items.STICK);
-            Declarer.STICK_BUNDLE_S = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID,tempID,tempID),
-                    Lists.newArrayList(false,false,false,false),
+            Declarer.STICK_BUNDLE_S = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false),
                     Registry.ITEM.getId(Declarer.small_stick_bundle),
                     1);
-            Declarer.STICK_BUNDLE_S_U = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.STICK_BUNDLE_S_U = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Declarer.small_stick_bundle)),
                     Lists.newArrayList(false),
                     tempID,
                     4);
             tempID = Registry.ITEM.getId(Declarer.small_stick_bundle);
-            Declarer.STICK_BUNDLE_L = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID,tempID,tempID),
-                    Lists.newArrayList(false,false,false,false),
+            Declarer.STICK_BUNDLE_L = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false),
                     Registry.ITEM.getId(Declarer.large_stick_bundle),
                     1);
-            Declarer.STICK_BUNDLE_L_U = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.STICK_BUNDLE_L_U = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Declarer.large_stick_bundle)),
                     Lists.newArrayList(false),
                     tempID,
                     4);
-            Declarer.TORCH = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(new Identifier(Ref.MODID,"coalblocks"),Registry.ITEM.getId(Declarer.large_stick_bundle)),
-                    Lists.newArrayList(true,false),
+            Declarer.TORCH = createShapelessRecipeJson(
+                    Lists.newArrayList(new Identifier(Ref.MODID, "coalblocks"), Registry.ITEM.getId(Declarer.large_stick_bundle)),
+                    Lists.newArrayList(true, false),
                     Registry.ITEM.getId(Items.TORCH),
                     64);
-            Declarer.MOSSY_COBBLESTONE = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE),Registry.ITEM.getId(Items.WATER_BUCKET)),
-                    Lists.newArrayList(false,false),
-                    Lists.newArrayList("000","010","000"),
+            Declarer.MOSSY_COBBLESTONE = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE), Registry.ITEM.getId(Items.WATER_BUCKET)),
+                    Lists.newArrayList(false, false),
+                    Lists.newArrayList("000", "010", "000"),
                     Registry.ITEM.getId(Items.FURNACE),
                     8);
             tempID = Registry.ITEM.getId(Items.PAPER);
-            Declarer.NAMETAG = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID,Registry.ITEM.getId(Items.STRING),Registry.ITEM.getId(Items.SLIME_BALL)),
-                    Lists.newArrayList(false,false,false,false),
+            Declarer.NAMETAG = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.STRING), Registry.ITEM.getId(Items.SLIME_BALL)),
+                    Lists.newArrayList(false, false, false, false),
                     Registry.ITEM.getId(Items.NAME_TAG),
                     1);
-            Declarer.NOTCH_APPLE = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_BLOCK),Registry.ITEM.getId(Items.APPLE)),
-                    Lists.newArrayList(false,false),
-                    Lists.newArrayList("000","010","000"),
+            Declarer.NOTCH_APPLE = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_BLOCK), Registry.ITEM.getId(Items.APPLE)),
+                    Lists.newArrayList(false, false),
+                    Lists.newArrayList("000", "010", "000"),
                     Registry.ITEM.getId(Items.ENCHANTED_GOLDEN_APPLE),
                     1);
             tempID = Registry.ITEM.getId(Items.SUGAR_CANE);
-            Declarer.PAPER = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID,tempID),
-                    Lists.newArrayList(false,false,false),
+            Declarer.PAPER = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false),
                     Registry.ITEM.getId(Items.PAPER),
                     3);
-            Declarer.PDD = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.DAYLIGHT_DETECTOR),Registry.ITEM.getId(Items.GOLD_INGOT)),//items
-                    Lists.newArrayList(false,false),//type
-                    Lists.newArrayList(" 1 ","101"," 1 "),//pattern
+            Declarer.PDD = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.DAYLIGHT_DETECTOR), Registry.ITEM.getId(Items.GOLD_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList(" 1 ", "101", " 1 "),//pattern
                     Registry.ITEM.getId(Declarer.personal_daylight_detector),
                     1
             );
-            Declarer.SADDLE = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.LEATHER),Registry.ITEM.getId(Items.TRIPWIRE_HOOK),Registry.ITEM.getId(Items.STRING)),//items
-                    Lists.newArrayList(false,false,false),//type
-                    Lists.newArrayList("000","2 2","1 1"),//pattern
+            Declarer.SADDLE = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.LEATHER), Registry.ITEM.getId(Items.TRIPWIRE_HOOK), Registry.ITEM.getId(Items.STRING)),//items
+                    Lists.newArrayList(false, false, false),//type
+                    Lists.newArrayList("000", "2 2", "1 1"),//pattern
                     Registry.ITEM.getId(Items.SADDLE),
                     1
             );
             tempID = Registry.ITEM.getId(Items.SHULKER_SHELL);
-            Declarer.SHULKERBOX = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(tempID,tempID,Registry.ITEM.getId(Items.CHEST)),
-                    Lists.newArrayList(false,false,false),
+            Declarer.SHULKERBOX = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.CHEST)),
+                    Lists.newArrayList(false, false, false),
                     Registry.ITEM.getId(Items.SHULKER_BOX),
                     1);
-            Declarer.SLIMEBALL = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.HONEY_BOTTLE),Registry.ITEM.getId(Items.LIME_DYE)),
-                    Lists.newArrayList(false,false),
+            Declarer.SLIMEBALL = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.HONEY_BOTTLE), Registry.ITEM.getId(Items.LIME_DYE)),
+                    Lists.newArrayList(false, false),
                     Registry.ITEM.getId(Items.SLIME_BALL),
                     1);
-            Declarer.SCL = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT),Registry.ITEM.getId(Items.SLIME_BALL),Registry.ITEM.getId(Items.REDSTONE_BLOCK)),
-                    Lists.newArrayList(false,false,false),
+            Declarer.SCL = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.SLIME_BALL), Registry.ITEM.getId(Items.REDSTONE_BLOCK)),
+                    Lists.newArrayList(false, false, false),
                     Registry.ITEM.getId(Declarer.slime_chunk_locator),
                     1);
-            Declarer.STRING = DynamicRecipeLoader.createShapelessRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","wool")),
+            Declarer.STRING = createShapelessRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "wool")),
                     Lists.newArrayList(true),
                     Registry.ITEM.getId(Items.STRING),
                     4);
-            Declarer.TRIDENT = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT),Registry.ITEM.getId(Items.STICK)),//items
-                    Lists.newArrayList(false,false),//type
-                    Lists.newArrayList(" 00"," 10","1  "),//pattern
+            Declarer.TRIDENT = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.STICK)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList(" 00", " 10", "1  "),//pattern
                     Registry.ITEM.getId(Items.TRIDENT),
                     1
             );
-            Declarer.WART = DynamicRecipeLoader.createShapelessRecipeJson(
+            Declarer.WART = createShapelessRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.NETHER_WART_BLOCK)),
                     Lists.newArrayList(false),
                     Registry.ITEM.getId(Items.NETHER_WART),
                     9);
 
-            Declarer.WOOLBOOT = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","wool")),//items
+            Declarer.WOOLBOOT = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "wool")),//items
                     Lists.newArrayList(true),//type
-                    Lists.newArrayList("0 0","0 0"),//pattern
+                    Lists.newArrayList("0 0", "0 0"),//pattern
                     Registry.ITEM.getId(Declarer.wool_boots),
                     1
             );
-            Declarer.WOOLCHEST = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","wool")),//items
+            Declarer.WOOLCHEST = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "wool")),//items
                     Lists.newArrayList(true),//type
-                    Lists.newArrayList("0 0","000","000"),//pattern
+                    Lists.newArrayList("0 0", "000", "000"),//pattern
                     Registry.ITEM.getId(Declarer.wool_chestplate),
                     1
             );
-            Declarer.WOOLPANT = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","wool")),//items
+            Declarer.WOOLPANT = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "wool")),//items
                     Lists.newArrayList(true),//type
-                    Lists.newArrayList("0 0","0 0","0 0"),//pattern
+                    Lists.newArrayList("0 0", "0 0", "0 0"),//pattern
                     Registry.ITEM.getId(Declarer.wool_leggings),
                     1
             );
-            Declarer.WOOLHELM = DynamicRecipeLoader.createShapedRecipeJson(
-                    Lists.newArrayList(new Identifier("minecraft","wool")),//items
+            Declarer.WOOLHELM = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "wool")),//items
                     Lists.newArrayList(true),//type
-                    Lists.newArrayList("000","0 0"),//pattern
+                    Lists.newArrayList("000", "0 0"),//pattern
                     Registry.ITEM.getId(Declarer.wool_helmet),
                     1
             );
@@ -819,12 +824,12 @@ public class Registrar {
             }
             if (Ref.charcoal) {
                 tempID = Registry.ITEM.getId(Items.CHARCOAL);
-                Declarer.CHARCOAL_BLOCK = DynamicRecipeLoader.createShapelessRecipeJson(
-                        Lists.newArrayList(tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID),
-                        Lists.newArrayList(false,false,false,false,false,false,false,false,false),
+                Declarer.CHARCOAL_BLOCK = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
+                        Lists.newArrayList(false, false, false, false, false, false, false, false, false),
                         Registry.ITEM.getId(Declarer.charcoal_block),
                         1);
-                Declarer.CHARCOAL_BLOCK_U = DynamicRecipeLoader.createShapelessRecipeJson(
+                Declarer.CHARCOAL_BLOCK_U = createShapelessRecipeJson(
                         Lists.newArrayList(Registry.ITEM.getId(Declarer.charcoal_block)),
                         Lists.newArrayList(false),
                         Registry.ITEM.getId(Items.CHARCOAL),
@@ -837,261 +842,85 @@ public class Registrar {
             }
             if (Ref.coalChunks) {
                 tempID = Registry.ITEM.getId(Declarer.charcoal_nugget);
-                Declarer.CHARCOAL_NUGGET_U = DynamicRecipeLoader.createShapelessRecipeJson(
-                        Lists.newArrayList(tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID),
-                        Lists.newArrayList(false,false,false,false,false,false,false,false),
+                Declarer.CHARCOAL_NUGGET_U = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
+                        Lists.newArrayList(false, false, false, false, false, false, false, false),
                         Registry.ITEM.getId(Items.CHARCOAL),
                         1);
-                Declarer.CHARCOAL_NUGGET = DynamicRecipeLoader.createShapelessRecipeJson(
+                Declarer.CHARCOAL_NUGGET = createShapelessRecipeJson(
                         Lists.newArrayList(Registry.ITEM.getId(Items.CHARCOAL)),
                         Lists.newArrayList(false),
                         Registry.ITEM.getId(Declarer.charcoal_nugget),
                         8);
                 tempID = Registry.ITEM.getId(Declarer.coal_nugget);
-                Declarer.COAL_NUGGET_U = DynamicRecipeLoader.createShapelessRecipeJson(
-                        Lists.newArrayList(tempID,tempID,tempID,tempID,tempID,tempID,tempID,tempID),
-                        Lists.newArrayList(false,false,false,false,false,false,false,false),
+                Declarer.COAL_NUGGET_U = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
+                        Lists.newArrayList(false, false, false, false, false, false, false, false),
                         Registry.ITEM.getId(Items.COAL),
                         1);
-                Declarer.COAL_NUGGET = DynamicRecipeLoader.createShapelessRecipeJson(
+                Declarer.COAL_NUGGET = createShapelessRecipeJson(
                         Lists.newArrayList(Registry.ITEM.getId(Items.COAL)),
                         Lists.newArrayList(false),
                         Registry.ITEM.getId(Declarer.coal_nugget),
                         8);
             }
 
-
-            //block entities
-            //furnace entity
+            //furnace
             if (Ref.furnaces) {
-                Declarer.ANDESITE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"andesite")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.andesite_furnace),
-                        1
-                );
-                Declarer.BLACKSTONE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"blackstone")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.blackstone_furnace),
-                        1
-                );
-                Declarer.BASALT_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"basalt")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.basalt_furnace),
-                        1
-                );
-                Declarer.DEEPSLATE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"deepslate")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.deepslate_furnace),
-                        1
-                );
-                Declarer.DIORITE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"diorite")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.diorite_furnace),
-                        1
-                );
-                Declarer.ENDSTONE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"endstone")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.endstone_furnace),
-                        1
-                );
-                Declarer.GRANITE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"granite")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.granite_furnace),
-                        1
-                );
-                Declarer.NETHERRACK_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
+                Declarer.ANDESITE_FURNACE = createFurnace("andesite", Declarer.andesite_furnace);
+                Declarer.BLACKSTONE_FURNACE = createFurnace("blackstone", Declarer.blackstone_furnace);
+                Declarer.BASALT_FURNACE = createFurnace("basalt", Declarer.basalt_furnace);
+                Declarer.DEEPSLATE_FURNACE = createFurnace("deepslate", Declarer.deepslate_furnace);
+                Declarer.DIORITE_FURNACE = createFurnace("diorite", Declarer.diorite_furnace);
+                Declarer.ENDSTONE_FURNACE = createFurnace("endstone", Declarer.endstone_furnace);
+                Declarer.GRANITE_FURNACE = createFurnace("granite", Declarer.granite_furnace);
+                Declarer.SANDSTONE_FURNACE = createFurnace("sandstone", Declarer.sandstone_furnace);
+                Declarer.RED_SANDSTONE_FURNACE = createFurnace("redsandstone", Declarer.red_sandstone_furnace);
+                Declarer.NETHERRACK_FURNACE = createShapedRecipeJson(
                         Lists.newArrayList(Registry.ITEM.getId(Items.NETHERRACK)),//items
                         Lists.newArrayList(false),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
+                        Lists.newArrayList("000", "0 0", "000"),//pattern
                         Registry.ITEM.getId(Declarer.netherrack_furnace),
                         1
                 );
-                Declarer.SANDSTONE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"sandstone")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.sandstone_furnace),
-                        1
-                );
-                Declarer.RED_SANDSTONE_FURNACE = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID,"redsandstone")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000","0 0","000"),//pattern
-                        Registry.ITEM.getId(Declarer.red_sandstone_furnace),
-                        1
-                );
             }
-            //blast furnace entity
+            //blast
             if (Ref.blasts) {
-                tempID = Registry.ITEM.getId(Items.IRON_INGOT);
-                Declarer.ANDESITE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.andesite_furnace),new Identifier(Ref.MODID,"andesite")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.andesite_blast_furnace),
-                        1
-                );
-                Declarer.BLACKSTONE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.blackstone_furnace),new Identifier(Ref.MODID,"blackstone")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.blackstone_blast_furnace),
-                        1
-                );
-                Declarer.BASALT_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.basalt_furnace),new Identifier(Ref.MODID,"basalt")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.basalt_blast_furnace),
-                        1
-                );
-                Declarer.DEEPSLATE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.deepslate_furnace),new Identifier(Ref.MODID,"deepslate")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.deepslate_blast_furnace),
-                        1
-                );
-                Declarer.DIORITE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.diorite_furnace),new Identifier(Ref.MODID,"diorite")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.diorite_blast_furnace),
-                        1
-                );
-                Declarer.ENDSTONE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.endstone_furnace),new Identifier(Ref.MODID,"endstone")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.endstone_blast_furnace),
-                        1
-                );
-                Declarer.GRANITE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.granite_furnace),new Identifier(Ref.MODID,"granite")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.granite_blast_furnace),
-                        1
-                );
-                Declarer.NETHERRACK_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.netherrack_furnace),Registry.ITEM.getId(Items.NETHER_BRICK)),//items
-                        Lists.newArrayList(false,false,false),//type
-                        Lists.newArrayList("000","010","222"),//pattern
+                Declarer.ANDESITE_BLAST = createBlast("andesite", Declarer.andesite_furnace, Declarer.andesite_blast_furnace);
+                Declarer.BLACKSTONE_BLAST = createBlast("blackstone", Declarer.blackstone_furnace, Declarer.blackstone_blast_furnace);
+                Declarer.BASALT_BLAST = createBlast("basalt", Declarer.basalt_furnace, Declarer.basalt_blast_furnace);
+                Declarer.DEEPSLATE_BLAST = createBlast("deepslate", Declarer.deepslate_furnace, Declarer.deepslate_blast_furnace);
+                Declarer.DIORITE_BLAST = createBlast("diorite", Declarer.diorite_furnace, Declarer.diorite_blast_furnace);
+                Declarer.ENDSTONE_BLAST = createBlast("endstone", Declarer.endstone_furnace, Declarer.endstone_blast_furnace);
+                Declarer.GRANITE_BLAST = createBlast("granite", Declarer.granite_furnace, Declarer.granite_blast_furnace);
+                Declarer.SANDSTONE_BLAST = createBlast("sandstone", Declarer.sandstone_furnace, Declarer.sandstone_blast_furnace);
+                Declarer.RED_SANDSTONE_BLAST = createBlast("redsandstone", Declarer.red_sandstone_furnace, Declarer.red_sandstone_blast_furnace);
+                Declarer.NETHERRACK_BLAST = createShapedRecipeJson(
+                        Lists.newArrayList(tempID, Registry.ITEM.getId(Declarer.netherrack_furnace), Registry.ITEM.getId(Items.NETHER_BRICK)),//items
+                        Lists.newArrayList(false, false, false),//type
+                        Lists.newArrayList("000", "010", "222"),//pattern
                         Registry.ITEM.getId(Declarer.netherrack_blast_furnace),
                         1
                 );
-                Declarer.SANDSTONE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.sandstone_furnace),new Identifier(Ref.MODID,"sandstone")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.sandstone_blast_furnace),
-                        1
-                );
-                Declarer.RED_SANDSTONE_BLAST = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(tempID,Registry.ITEM.getId(Declarer.sandstone_furnace),new Identifier(Ref.MODID,"redsandstone")),//items
-                        Lists.newArrayList(false,false,true),//type
-                        Lists.newArrayList("000","010","222"),//pattern
-                        Registry.ITEM.getId(Declarer.red_sandstone_blast_furnace),
-                        1
-                );
             }
-            //smoker entity
+            //smoker
             if (Ref.smokers) {
-                tempID = new Identifier("minecraft","logs");
-                Declarer.ANDESITE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.andesite_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.andesite_smoker),
-                        1
-                );
-                Declarer.BLACKSTONE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.blackstone_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.blackstone_smoker),
-                        1
-                );
-                Declarer.BASALT_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.basalt_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.basalt_smoker),
-                        1
-                );
-                Declarer.DEEPSLATE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.deepslate_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.deepslate_smoker),
-                        1
-                );
-                Declarer.DIORITE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.diorite_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.diorite_smoker),
-                        1
-                );
-                Declarer.ENDSTONE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.endstone_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.endstone_smoker),
-                        1
-                );
-                Declarer.GRANITE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.granite_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.granite_smoker),
-                        1
-                );
-                Declarer.NETHERRACK_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.netherrack_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
+                Declarer.ANDESITE_SMOKER = createSmoker(Declarer.andesite_furnace, Declarer.andesite_smoker);
+                Declarer.BLACKSTONE_SMOKER = createSmoker(Declarer.blackstone_furnace, Declarer.blackstone_smoker);
+                Declarer.BASALT_SMOKER = createSmoker(Declarer.basalt_furnace, Declarer.basalt_smoker);
+                Declarer.DEEPSLATE_SMOKER = createSmoker(Declarer.deepslate_furnace, Declarer.deepslate_smoker);
+                Declarer.DIORITE_SMOKER = createSmoker(Declarer.diorite_furnace, Declarer.diorite_smoker);
+                Declarer.ENDSTONE_SMOKER = createSmoker(Declarer.endstone_furnace, Declarer.endstone_smoker);
+                Declarer.GRANITE_SMOKER = createSmoker(Declarer.granite_furnace, Declarer.granite_smoker);
+                Declarer.SANDSTONE_SMOKER = createSmoker(Declarer.sandstone_furnace, Declarer.sandstone_smoker);
+                Declarer.RED_SANDSTONE_SMOKER = createSmoker(Declarer.red_sandstone_furnace, Declarer.red_sandstone_smoker);
+                Declarer.NETHERRACK_SMOKER = createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Declarer.netherrack_furnace), tempID),//items
+                        Lists.newArrayList(false, true),//type
+                        Lists.newArrayList(" 1 ", "101", " 1 "),//pattern
                         Registry.ITEM.getId(Declarer.netherrack_smoker),
                         1
                 );
-                Declarer.SANDSTONE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.sandstone_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.sandstone_smoker),
-                        1
-                );
-                Declarer.RED_SANDSTONE_SMOKER = DynamicRecipeLoader.createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.sandstone_furnace),tempID),//items
-                        Lists.newArrayList(false,true),//type
-                        Lists.newArrayList(" 1 ","101"," 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.red_sandstone_smoker),
-                        1
-                );
-            }
-            //furnaces
-            if (Ref.furnaces) {
-
-            }
-            //blast furnaces
-            if (Ref.blasts) {
-            }
-            //smokers
-            if (Ref.smokers) {
             }
             //wool armor
             if (Ref.woolArmor) {
