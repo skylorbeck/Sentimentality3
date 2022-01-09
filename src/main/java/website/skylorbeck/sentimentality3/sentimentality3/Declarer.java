@@ -440,6 +440,7 @@ public class Declarer {
     public static JsonObject SCL = null;
     public static JsonObject STRING = null;
     public static JsonObject TRIDENT = null;
+    public static JsonObject WART = null;
 
     public static JsonObject SADDLE = null;
     public static JsonObject HORSE_DIAMOND = null;
@@ -454,6 +455,10 @@ public class Declarer {
     public static JsonObject COPPERPANT = null;
     public static JsonObject COPPERCHEST = null;
     public static JsonObject COPPERHELM = null;
+    public static JsonObject WOOLBOOT = null;
+    public static JsonObject WOOLPANT = null;
+    public static JsonObject WOOLCHEST = null;
+    public static JsonObject WOOLHELM = null;
 
     public static JsonObject ANDESITE_FURNACE = null;
     public static JsonObject ANDESITE_BLAST = null;

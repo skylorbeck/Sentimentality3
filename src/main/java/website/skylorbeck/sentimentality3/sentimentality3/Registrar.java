@@ -773,6 +773,40 @@ public class Registrar {
                     Registry.ITEM.getId(Items.TRIDENT),
                     1
             );
+            Declarer.WART = DynamicRecipeLoader.createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.NETHER_WART_BLOCK)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Items.NETHER_WART),
+                    9);
+
+            Declarer.WOOLBOOT = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft","wool")),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("0 0","0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.wool_boots),
+                    1
+            );
+            Declarer.WOOLCHEST = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft","wool")),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("0 0","000","000"),//pattern
+                    Registry.ITEM.getId(Declarer.wool_chestplate),
+                    1
+            );
+            Declarer.WOOLPANT = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft","wool")),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("0 0","0 0","0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.wool_leggings),
+                    1
+            );
+            Declarer.WOOLHELM = DynamicRecipeLoader.createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft","wool")),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("000","0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.wool_helmet),
+                    1
+            );
             //personal items
             if (Ref.daylighter) {
             }
