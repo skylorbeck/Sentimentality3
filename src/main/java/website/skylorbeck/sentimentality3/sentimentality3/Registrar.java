@@ -823,7 +823,6 @@ public class Registrar {
             Declarer.FLEATHERCOOK = createSmeltingRecipeJson(Declarer.fleather, Items.LEATHER, 0.1f, 200, furnaceTypes.smoking);
             Declarer.COPPER_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.smelting);
             Declarer.COPPER_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.blasting);
-            ;
             Declarer.GOLD_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.smelting);
             Declarer.GOLD_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.blasting);
             Declarer.IRON_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.smelting);
@@ -988,46 +987,160 @@ public class Registrar {
             //tools
             if (Ref.allTools) {
                 if (Ref.graniteTools) {
+                    tempID = new Identifier(Ref.MODID,"granite");
+                    Declarer.GRANITE_AXE = createTool(tempID,ToolTypes.Axe,Declarer.granite_axe);
+                    Declarer.GRANITE_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.granite_pick);
+                    Declarer.GRANITE_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.granite_sword);
+                    Declarer.GRANITE_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.granite_shovel);
+                    Declarer.GRANITE_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.granite_hoe);
                 }
                 if (Ref.dioriteTools) {
+                    tempID = new Identifier(Ref.MODID,"diorite");
+                    Declarer.DIORITE_AXE = createTool(tempID,ToolTypes.Axe,Declarer.diorite_axe);
+                    Declarer.DIORITE_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.diorite_pick);
+                    Declarer.DIORITE_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.diorite_sword);
+                    Declarer.DIORITE_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.diorite_shovel);
+                    Declarer.DIORITE_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.diorite_hoe);
                 }
                 if (Ref.andesiteTools) {
+                    tempID = new Identifier(Ref.MODID,"andesite");
+                    Declarer.ANDESITE_AXE = createTool(tempID,ToolTypes.Axe,Declarer.andesite_axe);
+                    Declarer.ANDESITE_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.andesite_pick);
+                    Declarer.ANDESITE_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.andesite_sword);
+                    Declarer.ANDESITE_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.andesite_shovel);
+                    Declarer.ANDESITE_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.andesite_hoe);
                 }
                 if (Ref.quartzTools) {
+                    Declarer.QUARTZ_AXE = createTool(Items.QUARTZ,ToolTypes.Axe,Declarer.quartz_axe);
+                    Declarer.QUARTZ_PICKAXE = createTool(Items.QUARTZ,ToolTypes.Pickaxe,Declarer.quartz_pick);
+                    Declarer.QUARTZ_SWORD = createTool(Items.QUARTZ,ToolTypes.Sword,Declarer.quartz_sword);
+                    Declarer.QUARTZ_SHOVEL = createTool(Items.QUARTZ,ToolTypes.Shovel,Declarer.quartz_shovel);
+                    Declarer.QUARTZ_HOE = createTool(Items.QUARTZ,ToolTypes.Hoe,Declarer.quartz_hoe);
                 }
                 if (Ref.netherrackTools) {
+                    Declarer.NETHERRACK_AXE = createTool(Items.NETHERRACK,ToolTypes.Axe,Declarer.netherrack_axe);
+                    Declarer.NETHERRACK_PICKAXE = createTool(Items.NETHERRACK,ToolTypes.Pickaxe,Declarer.netherrack_pick);
+                    Declarer.NETHERRACK_SWORD = createTool(Items.NETHERRACK,ToolTypes.Sword,Declarer.netherrack_sword);
+                    Declarer.NETHERRACK_SHOVEL = createTool(Items.NETHERRACK,ToolTypes.Shovel,Declarer.netherrack_shovel);
+                    Declarer.NETHERRACK_HOE = createTool(Items.NETHERRACK,ToolTypes.Hoe,Declarer.netherrack_hoe);
                 }
                 if (Ref.netherbrickTools) {
+                    Declarer.NETHERBRICK_AXE = createTool(Items.NETHER_BRICK,ToolTypes.Axe,Declarer.netherbrick_axe);
+                    Declarer.NETHERBRICK_PICKAXE = createTool(Items.NETHER_BRICK,ToolTypes.Pickaxe,Declarer.netherbrick_pick);
+                    Declarer.NETHERBRICK_SWORD = createTool(Items.NETHER_BRICK,ToolTypes.Sword,Declarer.netherbrick_sword);
+                    Declarer.NETHERBRICK_SHOVEL = createTool(Items.NETHER_BRICK,ToolTypes.Shovel,Declarer.netherbrick_shovel);
+                    Declarer.NETHERBRICK_HOE = createTool(Items.NETHER_BRICK,ToolTypes.Hoe,Declarer.netherbrick_hoe);
                 }
                 if (Ref.redNetherbrickTools) {
+                    Declarer.RED_NETHERBRICK_AXE = createTool(Items.RED_NETHER_BRICKS,ToolTypes.Axe,Declarer.rednetherbrick_axe);
+                    Declarer.RED_NETHERBRICK_PICKAXE = createTool(Items.RED_NETHER_BRICKS,ToolTypes.Pickaxe,Declarer.rednetherbrick_pick);
+                    Declarer.RED_NETHERBRICK_SWORD = createTool(Items.RED_NETHER_BRICKS,ToolTypes.Sword,Declarer.rednetherbrick_sword);
+                    Declarer.RED_NETHERBRICK_SHOVEL = createTool(Items.RED_NETHER_BRICKS,ToolTypes.Shovel,Declarer.rednetherbrick_shovel);
+                    Declarer.RED_NETHERBRICK_HOE = createTool(Items.RED_NETHER_BRICKS,ToolTypes.Hoe,Declarer.rednetherbrick_hoe);
                 }
                 if (Ref.sandstoneTools) {
+                    tempID = new Identifier(Ref.MODID,"sandstone");
+                    Declarer.SANDSTONE_AXE = createTool(tempID,ToolTypes.Axe,Declarer.sandstone_axe);
+                    Declarer.SANDSTONE_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.sandstone_pick);
+                    Declarer.SANDSTONE_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.sandstone_sword);
+                    Declarer.SANDSTONE_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.sandstone_shovel);
+                    Declarer.SANDSTONE_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.sandstone_hoe);
                 }
                 if (Ref.redSandstoneTools) {
+                    tempID = new Identifier(Ref.MODID,"redsandstone");
+                    Declarer.RED_SANDSTONE_AXE = createTool(tempID,ToolTypes.Axe,Declarer.redsandstone_axe);
+                    Declarer.RED_SANDSTONE_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.redsandstone_pick);
+                    Declarer.RED_SANDSTONE_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.redsandstone_sword);
+                    Declarer.RED_SANDSTONE_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.redsandstone_shovel);
+                    Declarer.RED_SANDSTONE_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.redsandstone_hoe);
                 }
                 if (Ref.lapisTools) {
+                    Declarer.LAPIS_AXE = createTool(Items.LAPIS_BLOCK,ToolTypes.Axe,Declarer.lapis_axe);
+                    Declarer.LAPIS_PICKAXE = createTool(Items.LAPIS_BLOCK,ToolTypes.Pickaxe,Declarer.lapis_pick);
+                    Declarer.LAPIS_SWORD = createTool(Items.LAPIS_BLOCK,ToolTypes.Sword,Declarer.lapis_sword);
+                    Declarer.LAPIS_SHOVEL = createTool(Items.LAPIS_BLOCK,ToolTypes.Shovel,Declarer.lapis_shovel);
+                    Declarer.LAPIS_HOE = createTool(Items.LAPIS_BLOCK,ToolTypes.Hoe,Declarer.lapis_hoe);
                 }
                 if (Ref.emeraldTools) {
+                    Declarer.EMERALD_AXE = createTool(Items.EMERALD_BLOCK,ToolTypes.Axe,Declarer.emerald_axe);
+                    Declarer.EMERALD_PICKAXE = createTool(Items.EMERALD_BLOCK,ToolTypes.Pickaxe,Declarer.emerald_pick);
+                    Declarer.EMERALD_SWORD = createTool(Items.EMERALD_BLOCK,ToolTypes.Sword,Declarer.emerald_sword);
+                    Declarer.EMERALD_SHOVEL = createTool(Items.EMERALD_BLOCK,ToolTypes.Shovel,Declarer.emerald_shovel);
+                    Declarer.EMERALD_HOE = createTool(Items.EMERALD_BLOCK,ToolTypes.Hoe,Declarer.emerald_hoe);
                 }
                 if (Ref.flintTools) {
+                    Declarer.FLINT_AXE = createTool(Items.FLINT,ToolTypes.Axe,Declarer.flint_axe);
+                    Declarer.FLINT_PICKAXE = createTool(Items.FLINT,ToolTypes.Pickaxe,Declarer.flint_pick);
+                    Declarer.FLINT_SWORD = createTool(Items.FLINT,ToolTypes.Sword,Declarer.flint_sword);
+                    Declarer.FLINT_SHOVEL = createTool(Items.FLINT,ToolTypes.Shovel,Declarer.flint_shovel);
+                    Declarer.FLINT_HOE = createTool(Items.FLINT,ToolTypes.Hoe,Declarer.flint_hoe);
                 }
                 if (Ref.redstoneTools) {
+                    Declarer.REDSTONE_AXE = createTool(Items.REDSTONE_BLOCK,ToolTypes.Axe,Declarer.redstone_axe);
+                    Declarer.REDSTONE_PICKAXE = createTool(Items.REDSTONE_BLOCK,ToolTypes.Pickaxe,Declarer.redstone_pick);
+                    Declarer.REDSTONE_SWORD = createTool(Items.REDSTONE_BLOCK,ToolTypes.Sword,Declarer.redstone_sword);
+                    Declarer.REDSTONE_SHOVEL = createTool(Items.REDSTONE_BLOCK,ToolTypes.Shovel,Declarer.redstone_shovel);
+                    Declarer.REDSTONE_HOE = createTool(Items.REDSTONE_BLOCK,ToolTypes.Hoe,Declarer.redstone_hoe);
                 }
                 if (Ref.blackstoneTools) {
+                    tempID = new Identifier(Ref.MODID,"blackstone");
+                    Declarer.BLACKSTONE_AXE = createTool(tempID,ToolTypes.Axe,Declarer.blackstone_axe);
+                    Declarer.BLACKSTONE_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.blackstone_pick);
+                    Declarer.BLACKSTONE_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.blackstone_sword);
+                    Declarer.BLACKSTONE_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.blackstone_shovel);
+                    Declarer.BLACKSTONE_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.blackstone_hoe);
                 }
                 if (Ref.basaltTools) {
+                    tempID = new Identifier(Ref.MODID,"basalt");
+                    Declarer.BASALT_AXE = createTool(tempID,ToolTypes.Axe,Declarer.basalt_axe);
+                    Declarer.BASALT_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.basalt_pick);
+                    Declarer.BASALT_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.basalt_sword);
+                    Declarer.BASALT_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.basalt_shovel);
+                    Declarer.BASALT_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.basalt_hoe);
                 }
                 if (Ref.endstoneTools) {
+                    tempID = new Identifier(Ref.MODID,"endstone");
+                    Declarer.ENDSTONE_AXE = createTool(tempID,ToolTypes.Axe,Declarer.endstone_axe);
+                    Declarer.ENDSTONE_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.endstone_pick);
+                    Declarer.ENDSTONE_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.endstone_sword);
+                    Declarer.ENDSTONE_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.endstone_shovel);
+                    Declarer.ENDSTONE_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.endstone_hoe);
                 }
                 if (Ref.warpedTools) {
+                    Declarer.WARPED_AXE = createTool(Items.WARPED_PLANKS,ToolTypes.Axe,Declarer.warped_axe);
+                    Declarer.WARPED_PICKAXE = createTool(Items.WARPED_PLANKS,ToolTypes.Pickaxe,Declarer.warped_pick);
+                    Declarer.WARPED_SWORD = createTool(Items.WARPED_PLANKS,ToolTypes.Sword,Declarer.warped_sword);
+                    Declarer.WARPED_SHOVEL = createTool(Items.WARPED_PLANKS,ToolTypes.Shovel,Declarer.warped_shovel);
+                    Declarer.WARPED_HOE = createTool(Items.WARPED_PLANKS,ToolTypes.Hoe,Declarer.warped_hoe);
                 }
                 if (Ref.crimsonTools) {
+                    Declarer.CRIMSON_AXE = createTool(Items.CRIMSON_PLANKS,ToolTypes.Axe,Declarer.crimson_axe);
+                    Declarer.CRIMSON_PICKAXE = createTool(Items.CRIMSON_PLANKS,ToolTypes.Pickaxe,Declarer.crimson_pick);
+                    Declarer.CRIMSON_SWORD = createTool(Items.CRIMSON_PLANKS,ToolTypes.Sword,Declarer.crimson_sword);
+                    Declarer.CRIMSON_SHOVEL = createTool(Items.CRIMSON_PLANKS,ToolTypes.Shovel,Declarer.crimson_shovel);
+                    Declarer.CRIMSON_HOE = createTool(Items.CRIMSON_PLANKS,ToolTypes.Hoe,Declarer.crimson_hoe);
                 }
                 if (Ref.amethystTools) {
+                    Declarer.AMETHYST_AXE = createTool(Items.AMETHYST_BLOCK,ToolTypes.Axe,Declarer.amethyst_axe);
+                    Declarer.AMETHYST_PICKAXE = createTool(Items.AMETHYST_BLOCK,ToolTypes.Pickaxe,Declarer.amethyst_pick);
+                    Declarer.AMETHYST_SWORD = createTool(Items.AMETHYST_BLOCK,ToolTypes.Sword,Declarer.amethyst_sword);
+                    Declarer.AMETHYST_SHOVEL = createTool(Items.AMETHYST_BLOCK,ToolTypes.Shovel,Declarer.amethyst_shovel);
+                    Declarer.AMETHYST_HOE = createTool(Items.AMETHYST_BLOCK,ToolTypes.Hoe,Declarer.amethyst_hoe);
                 }
                 if (Ref.copperTools) {
+                    Declarer.COPPER_AXE = createTool(Items.COPPER_INGOT,ToolTypes.Axe,Declarer.copper_axe);
+                    Declarer.COPPER_PICKAXE = createTool(Items.COPPER_INGOT,ToolTypes.Pickaxe,Declarer.copper_pick);
+                    Declarer.COPPER_SWORD = createTool(Items.COPPER_INGOT,ToolTypes.Sword,Declarer.copper_sword);
+                    Declarer.COPPER_SHOVEL = createTool(Items.COPPER_INGOT,ToolTypes.Shovel,Declarer.copper_shovel);
+                    Declarer.COPPER_HOE = createTool(Items.COPPER_INGOT,ToolTypes.Hoe,Declarer.copper_hoe);
                 }
                 if (Ref.deepslateTools) {
+                    tempID = new Identifier(Ref.MODID,"deepslate");
+                    Declarer.DEEPSLATE_AXE = createTool(tempID,ToolTypes.Axe,Declarer.deepslate_axe);
+                    Declarer.DEEPSLATE_PICKAXE = createTool(tempID,ToolTypes.Pickaxe,Declarer.deepslate_pick);
+                    Declarer.DEEPSLATE_SWORD = createTool(tempID,ToolTypes.Sword,Declarer.deepslate_sword);
+                    Declarer.DEEPSLATE_SHOVEL = createTool(tempID,ToolTypes.Shovel,Declarer.deepslate_shovel);
+                    Declarer.DEEPSLATE_HOE = createTool(tempID,ToolTypes.Hoe,Declarer.deepslate_hoe);
                 }
             }
 
