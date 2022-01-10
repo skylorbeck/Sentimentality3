@@ -548,7 +548,7 @@ public class Registrar {
                         Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.COBBLESTONE)),
                         Lists.newArrayList(true, false),
                         Lists.newArrayList("000", "010", "000"),
-                        Registry.ITEM.getId(Items.GRANITE),
+                        Registry.ITEM.getId(Items.ANDESITE),
                         8
                 );
             }
@@ -566,7 +566,7 @@ public class Registrar {
                         Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE), Registry.ITEM.getId(Items.WATER_BUCKET)),
                         Lists.newArrayList(false, false),
                         Lists.newArrayList("000", "010", "000"),
-                        Registry.ITEM.getId(Items.FURNACE),
+                        Registry.ITEM.getId(Items.MOSSY_COBBLESTONE),
                         8);
             }
         }
@@ -615,16 +615,16 @@ public class Registrar {
             if (Ref.unpack_brown_mushroom) {
                 tempID = Registry.ITEM.getId(Items.BROWN_MUSHROOM);
                 Declarer.BROWN_MUSHROOM = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID),
-                        Lists.newArrayList(false, false),
+                        Lists.newArrayList(tempID, tempID, tempID, tempID),
+                        Lists.newArrayList(false, false, false, false),
                         Registry.ITEM.getId(Items.BROWN_MUSHROOM_BLOCK),
                         1);
             }
             if (Ref.unpack_red_mushroom) {
                 tempID = Registry.ITEM.getId(Items.RED_MUSHROOM);
                 Declarer.RED_MUSHROOM = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID),
-                        Lists.newArrayList(false, false),
+                        Lists.newArrayList(tempID, tempID, tempID, tempID),
+                        Lists.newArrayList(false, false, false, false),
                         Registry.ITEM.getId(Items.RED_MUSHROOM_BLOCK),
                         1);
             }

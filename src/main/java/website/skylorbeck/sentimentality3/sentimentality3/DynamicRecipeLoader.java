@@ -165,8 +165,8 @@ public class DynamicRecipeLoader {
     public static JsonObject createUncompressedBlock(Item compressed, Item uncompressed){
         Identifier id = Registry.ITEM.getId(compressed);
         return createShapelessRecipeJson(
-                Lists.newArrayList(id,id,id,id,id,id,id,id,id),
-                Lists.newArrayList(false,false,false,false,false,false,false,false,false),
+                Lists.newArrayList(id),
+                Lists.newArrayList(false),
                 Registry.ITEM.getId(uncompressed),
                 9
         );
