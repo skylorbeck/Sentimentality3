@@ -3,9 +3,7 @@ package website.skylorbeck.sentimentality3.sentimentality3;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
 import net.minecraft.tag.BlockTags;
-import net.minecraft.tag.Tag;
 
 public class DataGenerator implements DataGeneratorEntrypoint {
     @Override

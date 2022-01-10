@@ -1,8 +1,6 @@
 package website.skylorbeck.sentimentality3.sentimentality3;
 
 import com.google.common.collect.Lists;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -18,11 +16,9 @@ import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraBlastFurnaceBlockEnt
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraFurnaceBlockEntity;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraSmokerBlockEntity;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 import static website.skylorbeck.sentimentality3.sentimentality3.DynamicRecipeLoader.*;
-import static website.skylorbeck.sentimentality3.sentimentality3.DynamicRecipeLoader.createUncompressedBlock;
 
 @SuppressWarnings("unchecked cast")
 public class Registrar {

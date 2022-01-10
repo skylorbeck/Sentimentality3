@@ -21,8 +21,6 @@ import website.skylorbeck.minecraft.skylorlib.tools.ExtraHoeItem;
 import website.skylorbeck.minecraft.skylorlib.tools.ExtraPickaxeItem;
 import website.skylorbeck.minecraft.skylorlib.tools.ExtraToolMaterials;
 
-import java.util.logging.Level;
-
 public class Declarer {
     public static final Logger logger = new Logger(Logger.Level.ERROR);
 
