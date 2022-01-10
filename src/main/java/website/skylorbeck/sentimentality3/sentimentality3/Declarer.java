@@ -425,6 +425,7 @@ public class Declarer {
     public static JsonObject FURNACE = null;
     public static JsonObject GLOWSTONE = null;
     public static JsonObject GRANITE = null;
+    public static JsonObject ANDESITE = null;
     public static JsonObject STICK_BUNDLE_L = null;
     public static JsonObject STICK_BUNDLE_L_U = null;
     public static JsonObject STICK_BUNDLE_S = null;

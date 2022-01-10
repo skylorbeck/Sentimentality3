@@ -488,65 +488,92 @@ public class Registrar {
 
             Identifier tempID;
             if (Ref.shapeless) {
-                Declarer.ARROW = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.FLINT), Registry.ITEM.getId(Items.STICK), Registry.ITEM.getId(Items.FEATHER)),
-                        Lists.newArrayList(false, false, false),
-                        Registry.ITEM.getId(Items.ARROW),
-                        4);
-                tempID = Registry.ITEM.getId(Items.WHEAT);
-                Declarer.BREAD = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false),
-                        Registry.ITEM.getId(Items.BREAD),
-                        1);
-                tempID = Registry.ITEM.getId(Items.SUGAR_CANE);
-                Declarer.PAPER = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false),
-                        Registry.ITEM.getId(Items.PAPER),
-                        3);
-                tempID = Registry.ITEM.getId(Items.SHULKER_SHELL);
-                Declarer.SHULKERBOX = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.CHEST)),
-                        Lists.newArrayList(false, false, false),
-                        Registry.ITEM.getId(Items.SHULKER_BOX),
-                        1);
+                if (Ref.shapeless_arrow) {
+                    Declarer.ARROW = createShapelessRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.FLINT), Registry.ITEM.getId(Items.STICK), Registry.ITEM.getId(Items.FEATHER)),
+                            Lists.newArrayList(false, false, false),
+                            Registry.ITEM.getId(Items.ARROW),
+                            4);
+                }
+                if (Ref.shapeless_bread) {
+                    tempID = Registry.ITEM.getId(Items.WHEAT);
+                    Declarer.BREAD = createShapelessRecipeJson(
+                            Lists.newArrayList(tempID, tempID, tempID),
+                            Lists.newArrayList(false, false, false),
+                            Registry.ITEM.getId(Items.BREAD),
+                            1);
+                }
+                if (Ref.shapeless_paper) {
+                    tempID = Registry.ITEM.getId(Items.SUGAR_CANE);
+                    Declarer.PAPER = createShapelessRecipeJson(
+                            Lists.newArrayList(tempID, tempID, tempID),
+                            Lists.newArrayList(false, false, false),
+                            Registry.ITEM.getId(Items.PAPER),
+                            3);
+                }
+                if (Ref.shapeless_shulker) {
+                    tempID = Registry.ITEM.getId(Items.SHULKER_SHELL);
+                    Declarer.SHULKERBOX = createShapelessRecipeJson(
+                            Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.CHEST)),
+                            Lists.newArrayList(false, false, false),
+                            Registry.ITEM.getId(Items.SHULKER_BOX),
+                            1);
+                }
             }
             if (Ref.convertStone) {
-                Declarer.BLACKSTONE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
-                        Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:coals"}),
-                        Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(true)),
-                        Lists.newArrayList("000", "010", "000"),
-                        Registry.ITEM.getId(Items.BLACKSTONE),
-                        8
-                );
-                Declarer.DIORITE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
-                        Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:quartz"}),
-                        Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(false)),
-                        Lists.newArrayList("000", "010", "000"),
-                        Registry.ITEM.getId(Items.DIORITE),
-                        8
-                );
-                Declarer.GRANITE = createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.RED_DYE)),
-                        Lists.newArrayList(true, false),
-                        Lists.newArrayList("000", "010", "000"),
-                        Registry.ITEM.getId(Items.GRANITE),
-                        8
-                );
-                Declarer.GILDED_BLACKSTONE = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_NUGGET), Registry.ITEM.getId(Items.BLACKSTONE)),
-                        Lists.newArrayList(false, false),
-                        Lists.newArrayList("000", "010", "000"),
-                        Registry.ITEM.getId(Items.GILDED_BLACKSTONE),
-                        1
-                );
-                Declarer.MOSSY_COBBLESTONE = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE), Registry.ITEM.getId(Items.WATER_BUCKET)),
-                        Lists.newArrayList(false, false),
-                        Lists.newArrayList("000", "010", "000"),
-                        Registry.ITEM.getId(Items.FURNACE),
-                        8);
+                if (Ref.convertStone_blackstone) {
+                    Declarer.BLACKSTONE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
+                            Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:coals"}),
+                            Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(true)),
+                            Lists.newArrayList("000", "010", "000"),
+                            Registry.ITEM.getId(Items.BLACKSTONE),
+                            8
+                    );
+                }
+                if (Ref.convertStone_diorite) {
+                    Declarer.DIORITE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
+                            Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:quartz"}),
+                            Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(false)),
+                            Lists.newArrayList("000", "010", "000"),
+                            Registry.ITEM.getId(Items.DIORITE),
+                            8
+                    );
+                }
+                if (Ref.convertStone_granite) {
+                    Declarer.GRANITE = createShapedRecipeJson(
+                            Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.RED_DYE)),
+                            Lists.newArrayList(true, false),
+                            Lists.newArrayList("000", "010", "000"),
+                            Registry.ITEM.getId(Items.GRANITE),
+                            8
+                    );
+                }
+                if (Ref.convertStone_andesite) {
+                    Declarer.ANDESITE = createShapedRecipeJson(
+                            Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.COBBLESTONE)),
+                            Lists.newArrayList(true, false),
+                            Lists.newArrayList("000", "010", "000"),
+                            Registry.ITEM.getId(Items.GRANITE),
+                            8
+                    );
+                }
+                if (Ref.convertStone_gilded_blackstone) {
+                    Declarer.GILDED_BLACKSTONE = createShapedRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_NUGGET), Registry.ITEM.getId(Items.BLACKSTONE)),
+                            Lists.newArrayList(false, false),
+                            Lists.newArrayList("000", "010", "000"),
+                            Registry.ITEM.getId(Items.GILDED_BLACKSTONE),
+                            1
+                    );
+                }
+                if (Ref.convertStone_mossy_cobblestone) {
+                    Declarer.MOSSY_COBBLESTONE = createShapedRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE), Registry.ITEM.getId(Items.WATER_BUCKET)),
+                            Lists.newArrayList(false, false),
+                            Lists.newArrayList("000", "010", "000"),
+                            Registry.ITEM.getId(Items.FURNACE),
+                            8);
+                }
             }
             if (Ref.quartz) {
                 Declarer.QUARTZ_PILLAR_CHISELED = createShapelessRecipeJson(
@@ -559,61 +586,81 @@ public class Registrar {
                         Lists.newArrayList(false),
                         Registry.ITEM.getId(Items.QUARTZ_BLOCK),
                         1);
-                Declarer.QUARTZ = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_BLOCK)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.QUARTZ),
-                        4);
             }
             if (Ref.unpack) {
-                Declarer.CLAY = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.CLAY)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.CLAY_BALL),
-                        4);
-                Declarer.FLINT = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.GRAVEL)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.FLINT),
-                        1);
-                Declarer.AMETHYST = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.AMETHYST_BLOCK)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.AMETHYST_SHARD),
-                        4);
-                tempID = Registry.ITEM.getId(Items.BLAZE_POWDER);
-                Declarer.BLAZEROD = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID),
-                        Lists.newArrayList(false, false),
-                        Registry.ITEM.getId(Items.BLAZE_ROD),
-                        2);
-                tempID = Registry.ITEM.getId(Items.BROWN_MUSHROOM);
-                Declarer.BROWN_MUSHROOM = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID),
-                        Lists.newArrayList(false, false),
-                        Registry.ITEM.getId(Items.BROWN_MUSHROOM_BLOCK),
-                        1);
-                tempID = Registry.ITEM.getId(Items.RED_MUSHROOM);
-                Declarer.RED_MUSHROOM = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID),
-                        Lists.newArrayList(false, false),
-                        Registry.ITEM.getId(Items.RED_MUSHROOM_BLOCK),
-                        1);
-                Declarer.WART = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.NETHER_WART_BLOCK)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.NETHER_WART),
-                        9);
-                Declarer.GLOWSTONE = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.GLOWSTONE)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.GLOWSTONE_DUST),
-                        4);
-                Declarer.STRING = createShapelessRecipeJson(
-                        Lists.newArrayList(new Identifier("minecraft", "wool")),
-                        Lists.newArrayList(true),
-                        Registry.ITEM.getId(Items.STRING),
-                        4);
+                if (Ref.unpack_clay) {
+                    Declarer.CLAY = createShapelessRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.CLAY)),
+                            Lists.newArrayList(false),
+                            Registry.ITEM.getId(Items.CLAY_BALL),
+                            4);
+                }
+                if (Ref.unpack_flint) {
+                    Declarer.FLINT = createShapelessRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.GRAVEL)),
+                            Lists.newArrayList(false),
+                            Registry.ITEM.getId(Items.FLINT),
+                            1);
+                }
+                if (Ref.unpack_amethyst) {
+                    Declarer.AMETHYST = createShapelessRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.AMETHYST_BLOCK)),
+                            Lists.newArrayList(false),
+                            Registry.ITEM.getId(Items.AMETHYST_SHARD),
+                            4);
+                }
+                if (Ref.unpack_blazerod) {
+                    tempID = Registry.ITEM.getId(Items.BLAZE_POWDER);
+                    Declarer.BLAZEROD = createShapelessRecipeJson(
+                            Lists.newArrayList(tempID, tempID),
+                            Lists.newArrayList(false, false),
+                            Registry.ITEM.getId(Items.BLAZE_ROD),
+                            1);
+                }
+                if (Ref.unpack_brown_mushroom) {
+                    tempID = Registry.ITEM.getId(Items.BROWN_MUSHROOM);
+                    Declarer.BROWN_MUSHROOM = createShapelessRecipeJson(
+                            Lists.newArrayList(tempID, tempID),
+                            Lists.newArrayList(false, false),
+                            Registry.ITEM.getId(Items.BROWN_MUSHROOM_BLOCK),
+                            1);
+                }
+                if (Ref.unpack_red_mushroom) {
+                    tempID = Registry.ITEM.getId(Items.RED_MUSHROOM);
+                    Declarer.RED_MUSHROOM = createShapelessRecipeJson(
+                            Lists.newArrayList(tempID, tempID),
+                            Lists.newArrayList(false, false),
+                            Registry.ITEM.getId(Items.RED_MUSHROOM_BLOCK),
+                            1);
+                }
+                if (Ref.unpack_wart) {
+                    Declarer.WART = createShapelessRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.NETHER_WART_BLOCK)),
+                            Lists.newArrayList(false),
+                            Registry.ITEM.getId(Items.NETHER_WART),
+                            9);
+                }
+                if (Ref.unpack_glowstone) {
+                    Declarer.GLOWSTONE = createShapelessRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.GLOWSTONE)),
+                            Lists.newArrayList(false),
+                            Registry.ITEM.getId(Items.GLOWSTONE_DUST),
+                            4);
+                }
+                if (Ref.unpack_string) {
+                    Declarer.STRING = createShapelessRecipeJson(
+                            Lists.newArrayList(new Identifier("minecraft", "wool")),
+                            Lists.newArrayList(true),
+                            Registry.ITEM.getId(Items.STRING),
+                            4);
+                }
+                if (Ref.unpack_quartz) {
+                    Declarer.QUARTZ = createShapelessRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_BLOCK)),
+                            Lists.newArrayList(false),
+                            Registry.ITEM.getId(Items.QUARTZ),
+                            4);
+                }
             }
             if (Ref.chests) {
                 Declarer.CHESTS = createShapedRecipeJson(
@@ -625,27 +672,33 @@ public class Registrar {
                 );
             }
             if (Ref.horseArmor) {
-                Declarer.HORSE_DIAMOND = createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.DIAMOND), Registry.ITEM.getId(Items.DIAMOND_LEGGINGS), Registry.ITEM.getId(Items.DIAMOND_HELMET)),//items
-                        Lists.newArrayList(true, false, false, false),//type
-                        Lists.newArrayList("  3", "101", "2 2"),//pattern
-                        Registry.ITEM.getId(Items.DIAMOND_HORSE_ARMOR),
-                        1
-                );
-                Declarer.HORSE_GOLD = createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.GOLD_INGOT), Registry.ITEM.getId(Items.GOLDEN_LEGGINGS), Registry.ITEM.getId(Items.GOLDEN_HELMET)),//items
-                        Lists.newArrayList(true, false, false, false),//type
-                        Lists.newArrayList("  3", "101", "2 2"),//pattern
-                        Registry.ITEM.getId(Items.GOLDEN_HORSE_ARMOR),
-                        1
-                );
-                Declarer.HORSE_IRON = createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.IRON_LEGGINGS), Registry.ITEM.getId(Items.IRON_HELMET)),//items
-                        Lists.newArrayList(true, false, false, false),//type
-                        Lists.newArrayList("  3", "101", "2 2"),//pattern
-                        Registry.ITEM.getId(Items.IRON_HORSE_ARMOR),
-                        1
-                );
+                if (Ref.horseArmor_diamond) {
+                    Declarer.HORSE_DIAMOND = createShapedRecipeJson(
+                            Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.DIAMOND), Registry.ITEM.getId(Items.DIAMOND_LEGGINGS), Registry.ITEM.getId(Items.DIAMOND_HELMET)),//items
+                            Lists.newArrayList(true, false, false, false),//type
+                            Lists.newArrayList("  3", "101", "2 2"),//pattern
+                            Registry.ITEM.getId(Items.DIAMOND_HORSE_ARMOR),
+                            1
+                    );
+                }
+                if (Ref.horseArmor_gold) {
+                    Declarer.HORSE_GOLD = createShapedRecipeJson(
+                            Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.GOLD_INGOT), Registry.ITEM.getId(Items.GOLDEN_LEGGINGS), Registry.ITEM.getId(Items.GOLDEN_HELMET)),//items
+                            Lists.newArrayList(true, false, false, false),//type
+                            Lists.newArrayList("  3", "101", "2 2"),//pattern
+                            Registry.ITEM.getId(Items.GOLDEN_HORSE_ARMOR),
+                            1
+                    );
+                }
+                if (Ref.horseArmor_iron) {
+                    Declarer.HORSE_IRON = createShapedRecipeJson(
+                            Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.IRON_LEGGINGS), Registry.ITEM.getId(Items.IRON_HELMET)),//items
+                            Lists.newArrayList(true, false, false, false),//type
+                            Lists.newArrayList("  3", "101", "2 2"),//pattern
+                            Registry.ITEM.getId(Items.IRON_HORSE_ARMOR),
+                            1
+                    );
+                }
             }
             if (Ref.massTorch) {
                 Declarer.TORCH = createShapelessRecipeJson(
@@ -655,86 +708,108 @@ public class Registrar {
                         64);
             }
             if (Ref.overpowered) {
-                Declarer.SLIMEBALL = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.HONEY_BOTTLE), Registry.ITEM.getId(Items.LIME_DYE)),
-                        Lists.newArrayList(false, false),
-                        Registry.ITEM.getId(Items.SLIME_BALL),
-                        1);
-                Declarer.TRIDENT = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.STICK)),//items
-                        Lists.newArrayList(false, false),//type
-                        Lists.newArrayList(" 00", " 10", "1  "),//pattern
-                        Registry.ITEM.getId(Items.TRIDENT),
-                        1
-                );
-                tempID = Registry.ITEM.getId(Items.PAPER);
-                Declarer.NAMETAG = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.STRING), Registry.ITEM.getId(Items.SLIME_BALL)),
-                        Lists.newArrayList(false, false, false, false),
-                        Registry.ITEM.getId(Items.NAME_TAG),
-                        1);
-                Declarer.NOTCH_APPLE = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_BLOCK), Registry.ITEM.getId(Items.APPLE)),
-                        Lists.newArrayList(false, false),
-                        Lists.newArrayList("000", "010", "000"),
-                        Registry.ITEM.getId(Items.ENCHANTED_GOLDEN_APPLE),
-                        1);
-                Declarer.SADDLE = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.LEATHER), Registry.ITEM.getId(Items.TRIPWIRE_HOOK), Registry.ITEM.getId(Items.STRING)),//items
-                        Lists.newArrayList(false, false, false),//type
-                        Lists.newArrayList("000", "2 2", "1 1"),//pattern
-                        Registry.ITEM.getId(Items.SADDLE),
-                        1
-                );
+                if (Ref.overpowered_slime) {
+                    Declarer.SLIMEBALL = createShapelessRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.HONEY_BOTTLE), Registry.ITEM.getId(Items.LIME_DYE)),
+                            Lists.newArrayList(false, false),
+                            Registry.ITEM.getId(Items.SLIME_BALL),
+                            1);
+                }
+                if (Ref.overpowered_trident) {
+                    Declarer.TRIDENT = createShapedRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.STICK)),//items
+                            Lists.newArrayList(false, false),//type
+                            Lists.newArrayList(" 00", " 10", "1  "),//pattern
+                            Registry.ITEM.getId(Items.TRIDENT),
+                            1
+                    );
+                }
+                if (Ref.overpowered_nametag) {
+                    tempID = Registry.ITEM.getId(Items.PAPER);
+                    Declarer.NAMETAG = createShapelessRecipeJson(
+                            Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.STRING), Registry.ITEM.getId(Items.SLIME_BALL)),
+                            Lists.newArrayList(false, false, false, false),
+                            Registry.ITEM.getId(Items.NAME_TAG),
+                            1);
+                }
+                if (Ref.overpowered_notchapple) {
+                    Declarer.NOTCH_APPLE = createShapedRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_BLOCK), Registry.ITEM.getId(Items.APPLE)),
+                            Lists.newArrayList(false, false),
+                            Lists.newArrayList("000", "010", "000"),
+                            Registry.ITEM.getId(Items.ENCHANTED_GOLDEN_APPLE),
+                            1);
+                }
+                if (Ref.overpowered_saddle) {
+                    Declarer.SADDLE = createShapedRecipeJson(
+                            Lists.newArrayList(Registry.ITEM.getId(Items.LEATHER), Registry.ITEM.getId(Items.TRIPWIRE_HOOK), Registry.ITEM.getId(Items.STRING)),//items
+                            Lists.newArrayList(false, false, false),//type
+                            Lists.newArrayList("000", "2 2", "1 1"),//pattern
+                            Registry.ITEM.getId(Items.SADDLE),
+                            1
+                    );
+                }
             }
             if (Ref.rawBlockSmelt) {
-                Declarer.COPPER_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.smelting);
-                Declarer.COPPER_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.blasting);
-                Declarer.GOLD_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.smelting);
-                Declarer.GOLD_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.blasting);
-                Declarer.IRON_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.smelting);
-                Declarer.IRON_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.blasting);
+                if (Ref.rawBlockSmelt_copper) {
+                    Declarer.COPPER_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.smelting);
+                    Declarer.COPPER_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.blasting);
+                }
+                if (Ref.rawBlockSmelt_iron) {
+                    Declarer.IRON_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.smelting);
+                    Declarer.IRON_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.blasting);
+                }
+                if (Ref.rawBlockSmelt_gold) {
+                    Declarer.GOLD_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.smelting);
+                    Declarer.GOLD_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.blasting);
+                }
             }
             if (Ref.reclaim) {
-                Declarer.RECLAIM_IRON = createSmeltingRecipeJsonComplex(new Item[]{
-                                Items.IRON_PICKAXE,
-                                Items.IRON_SHOVEL,
-                                Items.IRON_AXE,
-                                Items.IRON_HOE,
-                                Items.IRON_SWORD,
-                                Items.IRON_HELMET,
-                                Items.IRON_CHESTPLATE,
-                                Items.IRON_LEGGINGS,
-                                Items.IRON_BOOTS,
-                                Items.IRON_HORSE_ARMOR
-                        },
-                        Items.IRON_INGOT, 0.1f, 200, furnaceTypes.blasting);
-                Declarer.RECLAIM_GOLD = createSmeltingRecipeJsonComplex(new Item[]{
-                                Items.GOLDEN_PICKAXE,
-                                Items.GOLDEN_SHOVEL,
-                                Items.GOLDEN_AXE,
-                                Items.GOLDEN_HOE,
-                                Items.GOLDEN_SWORD,
-                                Items.GOLDEN_HELMET,
-                                Items.GOLDEN_CHESTPLATE,
-                                Items.GOLDEN_LEGGINGS,
-                                Items.GOLDEN_BOOTS,
-                                Items.GOLDEN_HORSE_ARMOR
-                        },
-                        Items.GOLD_INGOT, 0.1f, 200, furnaceTypes.blasting);
-                Declarer.RECLAIM_DIAMOND = createSmeltingRecipeJsonComplex(new Item[]{
-                                Items.DIAMOND_PICKAXE,
-                                Items.DIAMOND_SHOVEL,
-                                Items.DIAMOND_AXE,
-                                Items.DIAMOND_HOE,
-                                Items.DIAMOND_SWORD,
-                                Items.DIAMOND_HELMET,
-                                Items.DIAMOND_CHESTPLATE,
-                                Items.DIAMOND_LEGGINGS,
-                                Items.DIAMOND_BOOTS,
-                                Items.DIAMOND_HORSE_ARMOR
-                        },
-                        Items.DIAMOND, 0.1f, 200, furnaceTypes.blasting);
+                if (Ref.reclaim_iron) {
+                    Declarer.RECLAIM_IRON = createSmeltingRecipeJsonComplex(new Item[]{
+                                    Items.IRON_PICKAXE,
+                                    Items.IRON_SHOVEL,
+                                    Items.IRON_AXE,
+                                    Items.IRON_HOE,
+                                    Items.IRON_SWORD,
+                                    Items.IRON_HELMET,
+                                    Items.IRON_CHESTPLATE,
+                                    Items.IRON_LEGGINGS,
+                                    Items.IRON_BOOTS,
+                                    Items.IRON_HORSE_ARMOR
+                            },
+                            Items.IRON_INGOT, 0.1f, 200, furnaceTypes.blasting);
+                }
+                if (Ref.reclaim_gold) {
+                    Declarer.RECLAIM_GOLD = createSmeltingRecipeJsonComplex(new Item[]{
+                                    Items.GOLDEN_PICKAXE,
+                                    Items.GOLDEN_SHOVEL,
+                                    Items.GOLDEN_AXE,
+                                    Items.GOLDEN_HOE,
+                                    Items.GOLDEN_SWORD,
+                                    Items.GOLDEN_HELMET,
+                                    Items.GOLDEN_CHESTPLATE,
+                                    Items.GOLDEN_LEGGINGS,
+                                    Items.GOLDEN_BOOTS,
+                                    Items.GOLDEN_HORSE_ARMOR
+                            },
+                            Items.GOLD_INGOT, 0.1f, 200, furnaceTypes.blasting);
+                }
+                if (Ref.reclaim_diamond) {
+                    Declarer.RECLAIM_DIAMOND = createSmeltingRecipeJsonComplex(new Item[]{
+                                    Items.DIAMOND_PICKAXE,
+                                    Items.DIAMOND_SHOVEL,
+                                    Items.DIAMOND_AXE,
+                                    Items.DIAMOND_HOE,
+                                    Items.DIAMOND_SWORD,
+                                    Items.DIAMOND_HELMET,
+                                    Items.DIAMOND_CHESTPLATE,
+                                    Items.DIAMOND_LEGGINGS,
+                                    Items.DIAMOND_BOOTS,
+                                    Items.DIAMOND_HORSE_ARMOR
+                            },
+                            Items.DIAMOND, 0.1f, 200, furnaceTypes.blasting);
+                }
             }
             if (Ref.daylighter) {
                 Declarer.PDD = createShapedRecipeJson(
