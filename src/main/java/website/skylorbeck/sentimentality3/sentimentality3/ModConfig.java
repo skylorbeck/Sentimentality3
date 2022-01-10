@@ -42,9 +42,7 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject()
     toggles toggles = new toggles();
 
-    @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.Gui.CollapsibleObject()
-    RecipeStuff recipeStuff = new RecipeStuff();
+
 
 
     static class toggles {
@@ -64,11 +62,6 @@ public class ModConfig implements ConfigData {
         boolean sticks = true;
         @ConfigEntry.Gui.RequiresRestart
         boolean featherBlock = true;
-
-        @ConfigEntry.Gui.RequiresRestart
-        @ConfigEntry.Gui.Excluded
-        boolean gliders = false;
-
         @ConfigEntry.Gui.RequiresRestart
         boolean furnaces = true;
         @ConfigEntry.Gui.RequiresRestart
@@ -79,6 +72,41 @@ public class ModConfig implements ConfigData {
         boolean woolArmor = true;
         @ConfigEntry.Gui.RequiresRestart
         boolean copperArmor = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean chainArmor = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean chests = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean massTorch = true;
+
+        @ConfigEntry.Gui.RequiresRestart
+        boolean allShapeless = true;
+        @ConfigEntry.Gui.CollapsibleObject()
+        Shapeless shapeless = new Shapeless();
+        @ConfigEntry.Gui.RequiresRestart
+        boolean allConvertStone = true;
+        @ConfigEntry.Gui.CollapsibleObject()
+        ConvertStone convertStone = new ConvertStone();
+        @ConfigEntry.Gui.RequiresRestart
+        boolean allUnpack = true;
+        @ConfigEntry.Gui.CollapsibleObject()
+        Unpack unpack = new Unpack();
+        @ConfigEntry.Gui.RequiresRestart
+        boolean allHorseArmor = true;
+        @ConfigEntry.Gui.CollapsibleObject()
+        HorseArmor horseArmor = new HorseArmor();
+        @ConfigEntry.Gui.RequiresRestart
+        boolean allOverPower = true;
+        @ConfigEntry.Gui.CollapsibleObject()
+        OverPowered overPowered = new OverPowered();
+        @ConfigEntry.Gui.RequiresRestart
+        boolean allRawSmelt = true;
+        @ConfigEntry.Gui.CollapsibleObject()
+        RawSmelt rawSmelt = new RawSmelt();
+        @ConfigEntry.Gui.RequiresRestart
+        boolean allReclaim = true;
+        @ConfigEntry.Gui.CollapsibleObject()
+        Reclaim reclaim = new Reclaim();
 
         @ConfigEntry.Gui.RequiresRestart
         boolean allTools = true;
@@ -91,18 +119,56 @@ public class ModConfig implements ConfigData {
         @ConfigEntry.Gui.CollapsibleObject()
         compressedBlocks compressedBlocks = new compressedBlocks();
     }
-    /*public static class durabilityStuff {
-        public boolean durabilityWarn = true;
-        @ConfigEntry.Gui.Excluded
-        @ConfigEntry.BoundedDiscrete(min=10,max = 30)
-        public int durabilityThreshold1 = 10;
-        @ConfigEntry.Gui.Excluded
-        @ConfigEntry.BoundedDiscrete(min=1,max = 15)
-        public int durabilityThreshold2 = 5;
-    }*/
 
-    public static class RecipeStuff {
-        public boolean allRecipes = true;
+    public static class Shapeless {
+        public boolean bread = true;
+        public boolean arrow = true;
+        public boolean paper = true;
+        public boolean shulker = true;
+    }
+    public static class ConvertStone{
+        public boolean blackstone = true;
+        public boolean gilded_blackstone = true;
+        public boolean diorite = true;
+        public boolean granite = true;
+        public boolean andesite = true;
+        public boolean mossy_cobble = true;
+        public boolean quartz = true;
+    }
+    public static class Unpack{
+        public boolean clay = true;
+        public boolean flint = true;
+        public boolean amethyst = true;
+        public boolean blazerod = true;
+        public boolean brown_mushroom = true;
+        public boolean red_mushroom = true;
+        public boolean wart = true;
+        public boolean glowstone = true;
+        public boolean string = true;
+        public boolean quartz = true;
+    }
+    public static class HorseArmor{
+        public boolean iron = true;
+        public boolean gold = true;
+        public boolean diamond = true;
+    }
+    public static class OverPowered{
+        public boolean slime = true;
+        public boolean trident = true;
+        public boolean nametag = true;
+        public boolean notchapple = true;
+        public boolean saddle = true;
+    }
+    public static class RawSmelt{
+        public boolean copper = true;
+        public boolean iron = true;
+        public boolean gold = true;
+    }
+    public static class Reclaim{
+        public boolean copper = true;
+        public boolean iron = true;
+        public boolean gold = true;
+        public boolean diamond = true;
     }
 
     public static class CropStuff {

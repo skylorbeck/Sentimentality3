@@ -483,933 +483,945 @@ public class Registrar {
         regItem("nonuple_compressed_cobbled_deepslate", Declarer.nonuple_compressed_cobbled_deepslate);
         regBlock("nonuple_compressed_cobbled_deepslate_block", Declarer.nonuple_compressed_cobbled_deepslate_block);
 
-        if (Ref.recipes) {
-            Declarer.FLEATHERCOOK = createSmeltingRecipeJson(Declarer.fleather, Items.LEATHER, 0.1f, 200, furnaceTypes.smoking);//always load this, even if you can't craft the fleather
+        Declarer.FLEATHERCOOK = createSmeltingRecipeJson(Declarer.fleather, Items.LEATHER, 0.1f, 200, furnaceTypes.smoking);//always load this, even if you can't craft the fleather
 
-            Identifier tempID;
-            if (Ref.shapeless) {
-                if (Ref.shapeless_arrow) {
-                    Declarer.ARROW = createShapelessRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.FLINT), Registry.ITEM.getId(Items.STICK), Registry.ITEM.getId(Items.FEATHER)),
-                            Lists.newArrayList(false, false, false),
-                            Registry.ITEM.getId(Items.ARROW),
-                            4);
-                }
-                if (Ref.shapeless_bread) {
-                    tempID = Registry.ITEM.getId(Items.WHEAT);
-                    Declarer.BREAD = createShapelessRecipeJson(
-                            Lists.newArrayList(tempID, tempID, tempID),
-                            Lists.newArrayList(false, false, false),
-                            Registry.ITEM.getId(Items.BREAD),
-                            1);
-                }
-                if (Ref.shapeless_paper) {
-                    tempID = Registry.ITEM.getId(Items.SUGAR_CANE);
-                    Declarer.PAPER = createShapelessRecipeJson(
-                            Lists.newArrayList(tempID, tempID, tempID),
-                            Lists.newArrayList(false, false, false),
-                            Registry.ITEM.getId(Items.PAPER),
-                            3);
-                }
-                if (Ref.shapeless_shulker) {
-                    tempID = Registry.ITEM.getId(Items.SHULKER_SHELL);
-                    Declarer.SHULKERBOX = createShapelessRecipeJson(
-                            Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.CHEST)),
-                            Lists.newArrayList(false, false, false),
-                            Registry.ITEM.getId(Items.SHULKER_BOX),
-                            1);
-                }
-            }
-            if (Ref.convertStone) {
-                if (Ref.convertStone_blackstone) {
-                    Declarer.BLACKSTONE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
-                            Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:coals"}),
-                            Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(true)),
-                            Lists.newArrayList("000", "010", "000"),
-                            Registry.ITEM.getId(Items.BLACKSTONE),
-                            8
-                    );
-                }
-                if (Ref.convertStone_diorite) {
-                    Declarer.DIORITE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
-                            Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:quartz"}),
-                            Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(false)),
-                            Lists.newArrayList("000", "010", "000"),
-                            Registry.ITEM.getId(Items.DIORITE),
-                            8
-                    );
-                }
-                if (Ref.convertStone_granite) {
-                    Declarer.GRANITE = createShapedRecipeJson(
-                            Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.RED_DYE)),
-                            Lists.newArrayList(true, false),
-                            Lists.newArrayList("000", "010", "000"),
-                            Registry.ITEM.getId(Items.GRANITE),
-                            8
-                    );
-                }
-                if (Ref.convertStone_andesite) {
-                    Declarer.ANDESITE = createShapedRecipeJson(
-                            Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.COBBLESTONE)),
-                            Lists.newArrayList(true, false),
-                            Lists.newArrayList("000", "010", "000"),
-                            Registry.ITEM.getId(Items.GRANITE),
-                            8
-                    );
-                }
-                if (Ref.convertStone_gilded_blackstone) {
-                    Declarer.GILDED_BLACKSTONE = createShapedRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_NUGGET), Registry.ITEM.getId(Items.BLACKSTONE)),
-                            Lists.newArrayList(false, false),
-                            Lists.newArrayList("000", "010", "000"),
-                            Registry.ITEM.getId(Items.GILDED_BLACKSTONE),
-                            1
-                    );
-                }
-                if (Ref.convertStone_mossy_cobblestone) {
-                    Declarer.MOSSY_COBBLESTONE = createShapedRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE), Registry.ITEM.getId(Items.WATER_BUCKET)),
-                            Lists.newArrayList(false, false),
-                            Lists.newArrayList("000", "010", "000"),
-                            Registry.ITEM.getId(Items.FURNACE),
-                            8);
-                }
-            }
-            if (Ref.quartz) {
-                Declarer.QUARTZ_PILLAR_CHISELED = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_PILLAR)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.CHISELED_QUARTZ_BLOCK),
-                        1);
-                Declarer.QUARTZ_CHISELED = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.CHISELED_QUARTZ_BLOCK)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.QUARTZ_BLOCK),
-                        1);
-            }
-            if (Ref.unpack) {
-                if (Ref.unpack_clay) {
-                    Declarer.CLAY = createShapelessRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.CLAY)),
-                            Lists.newArrayList(false),
-                            Registry.ITEM.getId(Items.CLAY_BALL),
-                            4);
-                }
-                if (Ref.unpack_flint) {
-                    Declarer.FLINT = createShapelessRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.GRAVEL)),
-                            Lists.newArrayList(false),
-                            Registry.ITEM.getId(Items.FLINT),
-                            1);
-                }
-                if (Ref.unpack_amethyst) {
-                    Declarer.AMETHYST = createShapelessRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.AMETHYST_BLOCK)),
-                            Lists.newArrayList(false),
-                            Registry.ITEM.getId(Items.AMETHYST_SHARD),
-                            4);
-                }
-                if (Ref.unpack_blazerod) {
-                    tempID = Registry.ITEM.getId(Items.BLAZE_POWDER);
-                    Declarer.BLAZEROD = createShapelessRecipeJson(
-                            Lists.newArrayList(tempID, tempID),
-                            Lists.newArrayList(false, false),
-                            Registry.ITEM.getId(Items.BLAZE_ROD),
-                            1);
-                }
-                if (Ref.unpack_brown_mushroom) {
-                    tempID = Registry.ITEM.getId(Items.BROWN_MUSHROOM);
-                    Declarer.BROWN_MUSHROOM = createShapelessRecipeJson(
-                            Lists.newArrayList(tempID, tempID),
-                            Lists.newArrayList(false, false),
-                            Registry.ITEM.getId(Items.BROWN_MUSHROOM_BLOCK),
-                            1);
-                }
-                if (Ref.unpack_red_mushroom) {
-                    tempID = Registry.ITEM.getId(Items.RED_MUSHROOM);
-                    Declarer.RED_MUSHROOM = createShapelessRecipeJson(
-                            Lists.newArrayList(tempID, tempID),
-                            Lists.newArrayList(false, false),
-                            Registry.ITEM.getId(Items.RED_MUSHROOM_BLOCK),
-                            1);
-                }
-                if (Ref.unpack_wart) {
-                    Declarer.WART = createShapelessRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.NETHER_WART_BLOCK)),
-                            Lists.newArrayList(false),
-                            Registry.ITEM.getId(Items.NETHER_WART),
-                            9);
-                }
-                if (Ref.unpack_glowstone) {
-                    Declarer.GLOWSTONE = createShapelessRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.GLOWSTONE)),
-                            Lists.newArrayList(false),
-                            Registry.ITEM.getId(Items.GLOWSTONE_DUST),
-                            4);
-                }
-                if (Ref.unpack_string) {
-                    Declarer.STRING = createShapelessRecipeJson(
-                            Lists.newArrayList(new Identifier("minecraft", "wool")),
-                            Lists.newArrayList(true),
-                            Registry.ITEM.getId(Items.STRING),
-                            4);
-                }
-                if (Ref.unpack_quartz) {
-                    Declarer.QUARTZ = createShapelessRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_BLOCK)),
-                            Lists.newArrayList(false),
-                            Registry.ITEM.getId(Items.QUARTZ),
-                            4);
-                }
-            }
-            if (Ref.chests) {
-                Declarer.CHESTS = createShapedRecipeJson(
-                        Lists.newArrayList(new Identifier("minecraft", "logs")),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000", "0 0", "000"),//pattern
-                        Registry.ITEM.getId(Items.CHEST),
-                        4
-                );
-            }
-            if (Ref.horseArmor) {
-                if (Ref.horseArmor_diamond) {
-                    Declarer.HORSE_DIAMOND = createShapedRecipeJson(
-                            Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.DIAMOND), Registry.ITEM.getId(Items.DIAMOND_LEGGINGS), Registry.ITEM.getId(Items.DIAMOND_HELMET)),//items
-                            Lists.newArrayList(true, false, false, false),//type
-                            Lists.newArrayList("  3", "101", "2 2"),//pattern
-                            Registry.ITEM.getId(Items.DIAMOND_HORSE_ARMOR),
-                            1
-                    );
-                }
-                if (Ref.horseArmor_gold) {
-                    Declarer.HORSE_GOLD = createShapedRecipeJson(
-                            Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.GOLD_INGOT), Registry.ITEM.getId(Items.GOLDEN_LEGGINGS), Registry.ITEM.getId(Items.GOLDEN_HELMET)),//items
-                            Lists.newArrayList(true, false, false, false),//type
-                            Lists.newArrayList("  3", "101", "2 2"),//pattern
-                            Registry.ITEM.getId(Items.GOLDEN_HORSE_ARMOR),
-                            1
-                    );
-                }
-                if (Ref.horseArmor_iron) {
-                    Declarer.HORSE_IRON = createShapedRecipeJson(
-                            Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.IRON_LEGGINGS), Registry.ITEM.getId(Items.IRON_HELMET)),//items
-                            Lists.newArrayList(true, false, false, false),//type
-                            Lists.newArrayList("  3", "101", "2 2"),//pattern
-                            Registry.ITEM.getId(Items.IRON_HORSE_ARMOR),
-                            1
-                    );
-                }
-            }
-            if (Ref.massTorch) {
-                Declarer.TORCH = createShapelessRecipeJson(
-                        Lists.newArrayList(new Identifier(Ref.MODID, "coalblocks"), Registry.ITEM.getId(Declarer.large_stick_bundle)),
-                        Lists.newArrayList(true, false),
-                        Registry.ITEM.getId(Items.TORCH),
-                        64);
-            }
-            if (Ref.overpowered) {
-                if (Ref.overpowered_slime) {
-                    Declarer.SLIMEBALL = createShapelessRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.HONEY_BOTTLE), Registry.ITEM.getId(Items.LIME_DYE)),
-                            Lists.newArrayList(false, false),
-                            Registry.ITEM.getId(Items.SLIME_BALL),
-                            1);
-                }
-                if (Ref.overpowered_trident) {
-                    Declarer.TRIDENT = createShapedRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.STICK)),//items
-                            Lists.newArrayList(false, false),//type
-                            Lists.newArrayList(" 00", " 10", "1  "),//pattern
-                            Registry.ITEM.getId(Items.TRIDENT),
-                            1
-                    );
-                }
-                if (Ref.overpowered_nametag) {
-                    tempID = Registry.ITEM.getId(Items.PAPER);
-                    Declarer.NAMETAG = createShapelessRecipeJson(
-                            Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.STRING), Registry.ITEM.getId(Items.SLIME_BALL)),
-                            Lists.newArrayList(false, false, false, false),
-                            Registry.ITEM.getId(Items.NAME_TAG),
-                            1);
-                }
-                if (Ref.overpowered_notchapple) {
-                    Declarer.NOTCH_APPLE = createShapedRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_BLOCK), Registry.ITEM.getId(Items.APPLE)),
-                            Lists.newArrayList(false, false),
-                            Lists.newArrayList("000", "010", "000"),
-                            Registry.ITEM.getId(Items.ENCHANTED_GOLDEN_APPLE),
-                            1);
-                }
-                if (Ref.overpowered_saddle) {
-                    Declarer.SADDLE = createShapedRecipeJson(
-                            Lists.newArrayList(Registry.ITEM.getId(Items.LEATHER), Registry.ITEM.getId(Items.TRIPWIRE_HOOK), Registry.ITEM.getId(Items.STRING)),//items
-                            Lists.newArrayList(false, false, false),//type
-                            Lists.newArrayList("000", "2 2", "1 1"),//pattern
-                            Registry.ITEM.getId(Items.SADDLE),
-                            1
-                    );
-                }
-            }
-            if (Ref.rawBlockSmelt) {
-                if (Ref.rawBlockSmelt_copper) {
-                    Declarer.COPPER_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.smelting);
-                    Declarer.COPPER_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.blasting);
-                }
-                if (Ref.rawBlockSmelt_iron) {
-                    Declarer.IRON_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.smelting);
-                    Declarer.IRON_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.blasting);
-                }
-                if (Ref.rawBlockSmelt_gold) {
-                    Declarer.GOLD_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.smelting);
-                    Declarer.GOLD_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.blasting);
-                }
-            }
-            if (Ref.reclaim) {
-                if (Ref.reclaim_iron) {
-                    Declarer.RECLAIM_IRON = createSmeltingRecipeJsonComplex(new Item[]{
-                                    Items.IRON_PICKAXE,
-                                    Items.IRON_SHOVEL,
-                                    Items.IRON_AXE,
-                                    Items.IRON_HOE,
-                                    Items.IRON_SWORD,
-                                    Items.IRON_HELMET,
-                                    Items.IRON_CHESTPLATE,
-                                    Items.IRON_LEGGINGS,
-                                    Items.IRON_BOOTS,
-                                    Items.IRON_HORSE_ARMOR
-                            },
-                            Items.IRON_INGOT, 0.1f, 200, furnaceTypes.blasting);
-                }
-                if (Ref.reclaim_gold) {
-                    Declarer.RECLAIM_GOLD = createSmeltingRecipeJsonComplex(new Item[]{
-                                    Items.GOLDEN_PICKAXE,
-                                    Items.GOLDEN_SHOVEL,
-                                    Items.GOLDEN_AXE,
-                                    Items.GOLDEN_HOE,
-                                    Items.GOLDEN_SWORD,
-                                    Items.GOLDEN_HELMET,
-                                    Items.GOLDEN_CHESTPLATE,
-                                    Items.GOLDEN_LEGGINGS,
-                                    Items.GOLDEN_BOOTS,
-                                    Items.GOLDEN_HORSE_ARMOR
-                            },
-                            Items.GOLD_INGOT, 0.1f, 200, furnaceTypes.blasting);
-                }
-                if (Ref.reclaim_diamond) {
-                    Declarer.RECLAIM_DIAMOND = createSmeltingRecipeJsonComplex(new Item[]{
-                                    Items.DIAMOND_PICKAXE,
-                                    Items.DIAMOND_SHOVEL,
-                                    Items.DIAMOND_AXE,
-                                    Items.DIAMOND_HOE,
-                                    Items.DIAMOND_SWORD,
-                                    Items.DIAMOND_HELMET,
-                                    Items.DIAMOND_CHESTPLATE,
-                                    Items.DIAMOND_LEGGINGS,
-                                    Items.DIAMOND_BOOTS,
-                                    Items.DIAMOND_HORSE_ARMOR
-                            },
-                            Items.DIAMOND, 0.1f, 200, furnaceTypes.blasting);
-                }
-            }
-            if (Ref.daylighter) {
-                Declarer.PDD = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.DAYLIGHT_DETECTOR), Registry.ITEM.getId(Items.GOLD_INGOT)),//items
-                        Lists.newArrayList(false, false),//type
-                        Lists.newArrayList(" 1 ", "101", " 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.personal_daylight_detector),
-                        1
-                );
-            }
-            if (Ref.slimer) {
-                Declarer.SCL = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.SLIME_BALL), Registry.ITEM.getId(Items.REDSTONE_BLOCK)),
+        Identifier tempID;
+        if (Ref.shapeless) {
+            if (Ref.shapeless_arrow) {
+                Declarer.ARROW = createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.FLINT), Registry.ITEM.getId(Items.STICK), Registry.ITEM.getId(Items.FEATHER)),
                         Lists.newArrayList(false, false, false),
-                        Registry.ITEM.getId(Declarer.slime_chunk_locator),
+                        Registry.ITEM.getId(Items.ARROW),
+                        4);
+            }
+            if (Ref.shapeless_bread) {
+                tempID = Registry.ITEM.getId(Items.WHEAT);
+                Declarer.BREAD = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID, tempID),
+                        Lists.newArrayList(false, false, false),
+                        Registry.ITEM.getId(Items.BREAD),
                         1);
             }
-            if (Ref.chunker) {
-                Declarer.CHUNKLOADER = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.DIAMOND), Registry.ITEM.getId(Items.GOLD_INGOT), Registry.ITEM.getId(Items.ENDER_PEARL)),//items
-                        Lists.newArrayList(false, false, false),//type
-                        Lists.newArrayList("010", "121", "010"),//pattern
-                        Registry.ITEM.getId(Declarer.chunk_loader),
+            if (Ref.shapeless_paper) {
+                tempID = Registry.ITEM.getId(Items.SUGAR_CANE);
+                Declarer.PAPER = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID, tempID),
+                        Lists.newArrayList(false, false, false),
+                        Registry.ITEM.getId(Items.PAPER),
+                        3);
+            }
+            if (Ref.shapeless_shulker) {
+                tempID = Registry.ITEM.getId(Items.SHULKER_SHELL);
+                Declarer.SHULKERBOX = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.CHEST)),
+                        Lists.newArrayList(false, false, false),
+                        Registry.ITEM.getId(Items.SHULKER_BOX),
+                        1);
+            }
+        }
+        if (Ref.convertStone) {
+            if (Ref.convertStone_blackstone) {
+                Declarer.BLACKSTONE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
+                        Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:coals"}),
+                        Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(true)),
+                        Lists.newArrayList("000", "010", "000"),
+                        Registry.ITEM.getId(Items.BLACKSTONE),
+                        8
+                );
+            }
+            if (Ref.convertStone_diorite) {
+                Declarer.DIORITE = DynamicRecipeLoader.createShapedRecipeJsonComplex(
+                        Lists.newArrayList(new String[]{Ref.MODID + ":stone", "minecraft:stone_bricks", "minecraft:stone_crafting_materials", "minecraft:stone"}, new String[]{"minecraft:quartz"}),
+                        Lists.newArrayList(Lists.newArrayList(true, true, true, false), Lists.newArrayList(false)),
+                        Lists.newArrayList("000", "010", "000"),
+                        Registry.ITEM.getId(Items.DIORITE),
+                        8
+                );
+            }
+            if (Ref.convertStone_granite) {
+                Declarer.GRANITE = createShapedRecipeJson(
+                        Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.RED_DYE)),
+                        Lists.newArrayList(true, false),
+                        Lists.newArrayList("000", "010", "000"),
+                        Registry.ITEM.getId(Items.GRANITE),
+                        8
+                );
+            }
+            if (Ref.convertStone_andesite) {
+                Declarer.ANDESITE = createShapedRecipeJson(
+                        Lists.newArrayList(new Identifier(Ref.MODID, "diorite"), Registry.ITEM.getId(Items.COBBLESTONE)),
+                        Lists.newArrayList(true, false),
+                        Lists.newArrayList("000", "010", "000"),
+                        Registry.ITEM.getId(Items.GRANITE),
+                        8
+                );
+            }
+            if (Ref.convertStone_gilded_blackstone) {
+                Declarer.GILDED_BLACKSTONE = createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_NUGGET), Registry.ITEM.getId(Items.BLACKSTONE)),
+                        Lists.newArrayList(false, false),
+                        Lists.newArrayList("000", "010", "000"),
+                        Registry.ITEM.getId(Items.GILDED_BLACKSTONE),
                         1
                 );
             }
-            if (Ref.fleather) {
-                tempID = Registry.ITEM.getId(Items.ROTTEN_FLESH);
-                Declarer.FLEATHER = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false, false),
-                        Registry.ITEM.getId(Declarer.fleather),
-                        1);
-            }
-            if (Ref.charcoal) {
-                tempID = Registry.ITEM.getId(Items.CHARCOAL);
-                Declarer.CHARCOAL_BLOCK = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false, false, false, false, false, false, false),
-                        Registry.ITEM.getId(Declarer.charcoal_block),
-                        1);
-                Declarer.CHARCOAL_BLOCK_U = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.charcoal_block)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.CHARCOAL),
-                        9);
-            }
-            if (Ref.sticks) {
-                tempID = Registry.ITEM.getId(Items.STICK);
-                Declarer.STICK_BUNDLE_S = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false, false),
-                        Registry.ITEM.getId(Declarer.small_stick_bundle),
-                        1);
-                Declarer.STICK_BUNDLE_S_U = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.small_stick_bundle)),
-                        Lists.newArrayList(false),
-                        tempID,
-                        4);
-                tempID = Registry.ITEM.getId(Declarer.small_stick_bundle);
-                Declarer.STICK_BUNDLE_L = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false, false),
-                        Registry.ITEM.getId(Declarer.large_stick_bundle),
-                        1);
-                Declarer.STICK_BUNDLE_L_U = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.large_stick_bundle)),
-                        Lists.newArrayList(false),
-                        tempID,
-                        4);
-            }
-            if (Ref.featherBlock) {
-                tempID = Registry.ITEM.getId(Items.FEATHER);
-                Declarer.FEATHER = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false, false, false, false, false, false, false),
-                        Registry.ITEM.getId(Declarer.feather_block),
-                        1);
-                Declarer.FEATHER_U = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.feather_block)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Items.FEATHER),
-                        9);
-            }
-            if (Ref.coalChunks) {
-                tempID = Registry.ITEM.getId(Declarer.charcoal_nugget);
-                Declarer.CHARCOAL_NUGGET_U = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false, false, false, false, false, false),
-                        Registry.ITEM.getId(Items.CHARCOAL),
-                        1);
-                Declarer.CHARCOAL_NUGGET = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.CHARCOAL)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Declarer.charcoal_nugget),
-                        8);
-                tempID = Registry.ITEM.getId(Declarer.coal_nugget);
-                Declarer.COAL_NUGGET_U = createShapelessRecipeJson(
-                        Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
-                        Lists.newArrayList(false, false, false, false, false, false, false, false),
-                        Registry.ITEM.getId(Items.COAL),
-                        1);
-                Declarer.COAL_NUGGET = createShapelessRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.COAL)),
-                        Lists.newArrayList(false),
-                        Registry.ITEM.getId(Declarer.coal_nugget),
-                        8);
-            }
-            if (Ref.furnaces) {
-                Declarer.FURNACE = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE)),
-                        Lists.newArrayList(false),
-                        Lists.newArrayList("000", "0 0", "000"),
+            if (Ref.convertStone_mossy_cobblestone) {
+                Declarer.MOSSY_COBBLESTONE = createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE), Registry.ITEM.getId(Items.WATER_BUCKET)),
+                        Lists.newArrayList(false, false),
+                        Lists.newArrayList("000", "010", "000"),
                         Registry.ITEM.getId(Items.FURNACE),
-                        1);//changing the vanilla recipe is a must if you want to be able to craft the below
-
-                Declarer.ANDESITE_FURNACE = createFurnace("andesite", Declarer.andesite_furnace);
-                Declarer.BLACKSTONE_FURNACE = createFurnace("blackstone", Declarer.blackstone_furnace);
-                Declarer.BASALT_FURNACE = createFurnace("basalt", Declarer.basalt_furnace);
-                Declarer.DEEPSLATE_FURNACE = createFurnace("deepslate", Declarer.deepslate_furnace);
-                Declarer.DIORITE_FURNACE = createFurnace("diorite", Declarer.diorite_furnace);
-                Declarer.ENDSTONE_FURNACE = createFurnace("endstone", Declarer.endstone_furnace);
-                Declarer.GRANITE_FURNACE = createFurnace("granite", Declarer.granite_furnace);
-                Declarer.SANDSTONE_FURNACE = createFurnace("sandstone", Declarer.sandstone_furnace);
-                Declarer.RED_SANDSTONE_FURNACE = createFurnace("redsandstone", Declarer.red_sandstone_furnace);
-                Declarer.NETHERRACK_FURNACE = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.NETHERRACK)),//items
-                        Lists.newArrayList(false),//type
-                        Lists.newArrayList("000", "0 0", "000"),//pattern
-                        Registry.ITEM.getId(Declarer.netherrack_furnace),
+                        8);
+            }
+        }
+        if (Ref.quartz) {
+            Declarer.QUARTZ_PILLAR_CHISELED = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_PILLAR)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Items.CHISELED_QUARTZ_BLOCK),
+                    1);
+            Declarer.QUARTZ_CHISELED = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.CHISELED_QUARTZ_BLOCK)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Items.QUARTZ_BLOCK),
+                    1);
+        }
+        if (Ref.unpack) {
+            if (Ref.unpack_clay) {
+                Declarer.CLAY = createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.CLAY)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Items.CLAY_BALL),
+                        4);
+            }
+            if (Ref.unpack_flint) {
+                Declarer.FLINT = createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.GRAVEL)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Items.FLINT),
+                        1);
+            }
+            if (Ref.unpack_amethyst) {
+                Declarer.AMETHYST = createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.AMETHYST_BLOCK)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Items.AMETHYST_SHARD),
+                        4);
+            }
+            if (Ref.unpack_blazerod) {
+                tempID = Registry.ITEM.getId(Items.BLAZE_POWDER);
+                Declarer.BLAZEROD = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID),
+                        Lists.newArrayList(false, false),
+                        Registry.ITEM.getId(Items.BLAZE_ROD),
+                        1);
+            }
+            if (Ref.unpack_brown_mushroom) {
+                tempID = Registry.ITEM.getId(Items.BROWN_MUSHROOM);
+                Declarer.BROWN_MUSHROOM = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID),
+                        Lists.newArrayList(false, false),
+                        Registry.ITEM.getId(Items.BROWN_MUSHROOM_BLOCK),
+                        1);
+            }
+            if (Ref.unpack_red_mushroom) {
+                tempID = Registry.ITEM.getId(Items.RED_MUSHROOM);
+                Declarer.RED_MUSHROOM = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID),
+                        Lists.newArrayList(false, false),
+                        Registry.ITEM.getId(Items.RED_MUSHROOM_BLOCK),
+                        1);
+            }
+            if (Ref.unpack_wart) {
+                Declarer.WART = createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.NETHER_WART_BLOCK)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Items.NETHER_WART),
+                        9);
+            }
+            if (Ref.unpack_glowstone) {
+                Declarer.GLOWSTONE = createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.GLOWSTONE)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Items.GLOWSTONE_DUST),
+                        4);
+            }
+            if (Ref.unpack_string) {
+                Declarer.STRING = createShapelessRecipeJson(
+                        Lists.newArrayList(new Identifier("minecraft", "wool")),
+                        Lists.newArrayList(true),
+                        Registry.ITEM.getId(Items.STRING),
+                        4);
+            }
+            if (Ref.unpack_quartz) {
+                Declarer.QUARTZ = createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.QUARTZ_BLOCK)),
+                        Lists.newArrayList(false),
+                        Registry.ITEM.getId(Items.QUARTZ),
+                        4);
+            }
+        }
+        if (Ref.chests) {
+            Declarer.CHESTS = createShapedRecipeJson(
+                    Lists.newArrayList(new Identifier("minecraft", "logs")),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("000", "0 0", "000"),//pattern
+                    Registry.ITEM.getId(Items.CHEST),
+                    4
+            );
+        }
+        if (Ref.horseArmor) {
+            if (Ref.horseArmor_diamond) {
+                Declarer.HORSE_DIAMOND = createShapedRecipeJson(
+                        Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.DIAMOND), Registry.ITEM.getId(Items.DIAMOND_LEGGINGS), Registry.ITEM.getId(Items.DIAMOND_HELMET)),//items
+                        Lists.newArrayList(true, false, false, false),//type
+                        Lists.newArrayList("  3", "101", "2 2"),//pattern
+                        Registry.ITEM.getId(Items.DIAMOND_HORSE_ARMOR),
                         1
                 );
             }
-            if (Ref.blasts) {
-                Declarer.ANDESITE_BLAST = createBlast("andesite", Declarer.andesite_furnace, Declarer.andesite_blast_furnace);
-                Declarer.BLACKSTONE_BLAST = createBlast("blackstone", Declarer.blackstone_furnace, Declarer.blackstone_blast_furnace);
-                Declarer.BASALT_BLAST = createBlast("basalt", Declarer.basalt_furnace, Declarer.basalt_blast_furnace);
-                Declarer.DEEPSLATE_BLAST = createBlast("deepslate", Declarer.deepslate_furnace, Declarer.deepslate_blast_furnace);
-                Declarer.DIORITE_BLAST = createBlast("diorite", Declarer.diorite_furnace, Declarer.diorite_blast_furnace);
-                Declarer.ENDSTONE_BLAST = createBlast("endstone", Declarer.endstone_furnace, Declarer.endstone_blast_furnace);
-                Declarer.GRANITE_BLAST = createBlast("granite", Declarer.granite_furnace, Declarer.granite_blast_furnace);
-                Declarer.SANDSTONE_BLAST = createBlast("sandstone", Declarer.sandstone_furnace, Declarer.sandstone_blast_furnace);
-                Declarer.RED_SANDSTONE_BLAST = createBlast("redsandstone", Declarer.red_sandstone_furnace, Declarer.red_sandstone_blast_furnace);
-                Declarer.NETHERRACK_BLAST = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Declarer.netherrack_furnace), Registry.ITEM.getId(Items.NETHER_BRICK)),//items
+            if (Ref.horseArmor_gold) {
+                Declarer.HORSE_GOLD = createShapedRecipeJson(
+                        Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.GOLD_INGOT), Registry.ITEM.getId(Items.GOLDEN_LEGGINGS), Registry.ITEM.getId(Items.GOLDEN_HELMET)),//items
+                        Lists.newArrayList(true, false, false, false),//type
+                        Lists.newArrayList("  3", "101", "2 2"),//pattern
+                        Registry.ITEM.getId(Items.GOLDEN_HORSE_ARMOR),
+                        1
+                );
+            }
+            if (Ref.horseArmor_iron) {
+                Declarer.HORSE_IRON = createShapedRecipeJson(
+                        Lists.newArrayList(new Identifier("minecraft", "wool"), Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.IRON_LEGGINGS), Registry.ITEM.getId(Items.IRON_HELMET)),//items
+                        Lists.newArrayList(true, false, false, false),//type
+                        Lists.newArrayList("  3", "101", "2 2"),//pattern
+                        Registry.ITEM.getId(Items.IRON_HORSE_ARMOR),
+                        1
+                );
+            }
+        }
+        if (Ref.massTorch) {
+            Declarer.TORCH = createShapelessRecipeJson(
+                    Lists.newArrayList(new Identifier(Ref.MODID, "coalblocks"), Registry.ITEM.getId(Declarer.large_stick_bundle)),
+                    Lists.newArrayList(true, false),
+                    Registry.ITEM.getId(Items.TORCH),
+                    64);
+        }
+        if (Ref.overpowered) {
+            if (Ref.overpowered_slime) {
+                Declarer.SLIMEBALL = createShapelessRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.HONEY_BOTTLE), Registry.ITEM.getId(Items.LIME_DYE)),
+                        Lists.newArrayList(false, false),
+                        Registry.ITEM.getId(Items.SLIME_BALL),
+                        1);
+            }
+            if (Ref.overpowered_trident) {
+                Declarer.TRIDENT = createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.STICK)),//items
+                        Lists.newArrayList(false, false),//type
+                        Lists.newArrayList(" 00", " 10", "1  "),//pattern
+                        Registry.ITEM.getId(Items.TRIDENT),
+                        1
+                );
+            }
+            if (Ref.overpowered_nametag) {
+                tempID = Registry.ITEM.getId(Items.PAPER);
+                Declarer.NAMETAG = createShapelessRecipeJson(
+                        Lists.newArrayList(tempID, tempID, Registry.ITEM.getId(Items.STRING), Registry.ITEM.getId(Items.SLIME_BALL)),
+                        Lists.newArrayList(false, false, false, false),
+                        Registry.ITEM.getId(Items.NAME_TAG),
+                        1);
+            }
+            if (Ref.overpowered_notchapple) {
+                Declarer.NOTCH_APPLE = createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.GOLD_BLOCK), Registry.ITEM.getId(Items.APPLE)),
+                        Lists.newArrayList(false, false),
+                        Lists.newArrayList("000", "010", "000"),
+                        Registry.ITEM.getId(Items.ENCHANTED_GOLDEN_APPLE),
+                        1);
+            }
+            if (Ref.overpowered_saddle) {
+                Declarer.SADDLE = createShapedRecipeJson(
+                        Lists.newArrayList(Registry.ITEM.getId(Items.LEATHER), Registry.ITEM.getId(Items.TRIPWIRE_HOOK), Registry.ITEM.getId(Items.STRING)),//items
                         Lists.newArrayList(false, false, false),//type
-                        Lists.newArrayList("000", "010", "222"),//pattern
-                        Registry.ITEM.getId(Declarer.netherrack_blast_furnace),
+                        Lists.newArrayList("000", "2 2", "1 1"),//pattern
+                        Registry.ITEM.getId(Items.SADDLE),
                         1
                 );
             }
-            if (Ref.smokers) {
-                Declarer.ANDESITE_SMOKER = createSmoker(Declarer.andesite_furnace, Declarer.andesite_smoker);
-                Declarer.BLACKSTONE_SMOKER = createSmoker(Declarer.blackstone_furnace, Declarer.blackstone_smoker);
-                Declarer.BASALT_SMOKER = createSmoker(Declarer.basalt_furnace, Declarer.basalt_smoker);
-                Declarer.DEEPSLATE_SMOKER = createSmoker(Declarer.deepslate_furnace, Declarer.deepslate_smoker);
-                Declarer.DIORITE_SMOKER = createSmoker(Declarer.diorite_furnace, Declarer.diorite_smoker);
-                Declarer.ENDSTONE_SMOKER = createSmoker(Declarer.endstone_furnace, Declarer.endstone_smoker);
-                Declarer.GRANITE_SMOKER = createSmoker(Declarer.granite_furnace, Declarer.granite_smoker);
-                Declarer.SANDSTONE_SMOKER = createSmoker(Declarer.sandstone_furnace, Declarer.sandstone_smoker);
-                Declarer.RED_SANDSTONE_SMOKER = createSmoker(Declarer.red_sandstone_furnace, Declarer.red_sandstone_smoker);
-                Declarer.NETHERRACK_SMOKER = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Declarer.netherrack_furnace), new Identifier("minecraft", "logs")),//items
-                        Lists.newArrayList(false, true),//type
-                        Lists.newArrayList(" 1 ", "101", " 1 "),//pattern
-                        Registry.ITEM.getId(Declarer.netherrack_smoker),
-                        1
-                );
+        }
+        if (Ref.rawBlockSmelt) {
+            if (Ref.rawBlockSmelt_copper) {
+                Declarer.COPPER_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.smelting);
+                Declarer.COPPER_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_COPPER_BLOCK, Items.COPPER_BLOCK, 7f, 1600, furnaceTypes.blasting);
             }
-            if (Ref.chainArmor) {
-                Declarer.CHAINBOOT = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
-                        Lists.newArrayList(false, false),//type
-                        Lists.newArrayList("0 0", "1 1"),//pattern
-                        Registry.ITEM.getId(Items.CHAINMAIL_BOOTS),
-                        1
-                );
-                Declarer.CHAINCHEST = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
-                        Lists.newArrayList(false, false),//type
-                        Lists.newArrayList("0 0", "111", "000"),//pattern
-                        Registry.ITEM.getId(Items.CHAINMAIL_CHESTPLATE),
-                        1
-                );
-                Declarer.CHAINPANT = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
-                        Lists.newArrayList(false, false),//type
-                        Lists.newArrayList("0 0", "1 1", "0 0"),//pattern
-                        Registry.ITEM.getId(Items.CHAINMAIL_LEGGINGS),
-                        1
-                );
-                Declarer.CHAINHELM = createShapedRecipeJson(
-                        Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
-                        Lists.newArrayList(false, false),//type
-                        Lists.newArrayList("010", "1 1"),//pattern
-                        Registry.ITEM.getId(Items.CHAINMAIL_HELMET),
-                        1
-                );
+            if (Ref.rawBlockSmelt_iron) {
+                Declarer.IRON_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.smelting);
+                Declarer.IRON_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_IRON_BLOCK, Items.IRON_BLOCK, 7f, 1600, furnaceTypes.blasting);
             }
-            if (Ref.woolArmor) {
-                tempID = new Identifier("minecraft", "wool");
-                Declarer.WOOLBOOT = createShapedRecipeJson(
-                        Lists.newArrayList(tempID),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("0 0", "0 0"),//pattern
-                        Registry.ITEM.getId(Declarer.wool_boots),
-                        1
-                );
-                Declarer.WOOLCHEST = createShapedRecipeJson(
-                        Lists.newArrayList(tempID),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("0 0", "000", "000"),//pattern
-                        Registry.ITEM.getId(Declarer.wool_chestplate),
-                        1
-                );
-                Declarer.WOOLPANT = createShapedRecipeJson(
-                        Lists.newArrayList(tempID),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("0 0", "0 0", "0 0"),//pattern
-                        Registry.ITEM.getId(Declarer.wool_leggings),
-                        1
-                );
-                Declarer.WOOLHELM = createShapedRecipeJson(
-                        Lists.newArrayList(tempID),//items
-                        Lists.newArrayList(true),//type
-                        Lists.newArrayList("000", "0 0"),//pattern
-                        Registry.ITEM.getId(Declarer.wool_helmet),
-                        1
-                );
+            if (Ref.rawBlockSmelt_gold) {
+                Declarer.GOLD_BLOCK_FURNACE = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.smelting);
+                Declarer.GOLD_BLOCK_BLAST = createSmeltingRecipeJson(Items.RAW_GOLD_BLOCK, Items.GOLD_BLOCK, 7f, 1600, furnaceTypes.blasting);
             }
-            if (Ref.copperArmor) {
-                tempID = Registry.ITEM.getId(Items.COPPER_INGOT);
-                Declarer.COPPERBOOT = createShapedRecipeJson(
-                        Lists.newArrayList(tempID),//items
-                        Lists.newArrayList(false),//type
-                        Lists.newArrayList("0 0", "0 0"),//pattern
-                        Registry.ITEM.getId(Declarer.copper_boots),
-                        1
-                );
-                Declarer.COPPERCHEST = createShapedRecipeJson(
-                        Lists.newArrayList(tempID),//items
-                        Lists.newArrayList(false),//type
-                        Lists.newArrayList("0 0", "000", "000"),//pattern
-                        Registry.ITEM.getId(Declarer.copper_chestplate),
-                        1
-                );
-                Declarer.COPPERPANT = createShapedRecipeJson(
-                        Lists.newArrayList(tempID),//items
-                        Lists.newArrayList(false),//type
-                        Lists.newArrayList("0 0", "0 0", "0 0"),//pattern
-                        Registry.ITEM.getId(Declarer.copper_leggings),
-                        1
-                );
-                Declarer.COPPERHELM = createShapedRecipeJson(
-                        Lists.newArrayList(tempID),//items
-                        Lists.newArrayList(false),//type
-                        Lists.newArrayList("000", "0 0"),//pattern
-                        Registry.ITEM.getId(Declarer.copper_helmet),
-                        1
-                );
+        }
+        if (Ref.reclaim) {
+            if (Ref.reclaim_copper) {
+                Declarer.RECLAIM_COPPER = createSmeltingRecipeJsonComplex(new Item[]{
+                                Declarer.copper_pick,
+                                Declarer.copper_shovel,
+                                Declarer.copper_axe,
+                                Declarer.copper_hoe,
+                                Declarer.copper_sword,
+                                Declarer.copper_helmet,
+                                Declarer.copper_chestplate,
+                                Declarer.copper_leggings,
+                                Declarer.copper_boots
+                        },
+                        Items.COPPER_INGOT, 0.1f, 200, furnaceTypes.blasting);
             }
-            if (Ref.allTools) {
-                if (Ref.graniteTools) {
-                    tempID = new Identifier(Ref.MODID, "granite");
-                    Declarer.GRANITE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.granite_axe);
-                    Declarer.GRANITE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.granite_pick);
-                    Declarer.GRANITE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.granite_sword);
-                    Declarer.GRANITE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.granite_shovel);
-                    Declarer.GRANITE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.granite_hoe);
-                }
-                if (Ref.dioriteTools) {
-                    tempID = new Identifier(Ref.MODID, "diorite");
-                    Declarer.DIORITE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.diorite_axe);
-                    Declarer.DIORITE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.diorite_pick);
-                    Declarer.DIORITE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.diorite_sword);
-                    Declarer.DIORITE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.diorite_shovel);
-                    Declarer.DIORITE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.diorite_hoe);
-                }
-                if (Ref.andesiteTools) {
-                    tempID = new Identifier(Ref.MODID, "andesite");
-                    Declarer.ANDESITE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.andesite_axe);
-                    Declarer.ANDESITE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.andesite_pick);
-                    Declarer.ANDESITE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.andesite_sword);
-                    Declarer.ANDESITE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.andesite_shovel);
-                    Declarer.ANDESITE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.andesite_hoe);
-                }
-                if (Ref.quartzTools) {
-                    Declarer.QUARTZ_AXE = createTool(Items.QUARTZ, ToolTypes.Axe, Declarer.quartz_axe);
-                    Declarer.QUARTZ_PICKAXE = createTool(Items.QUARTZ, ToolTypes.Pickaxe, Declarer.quartz_pick);
-                    Declarer.QUARTZ_SWORD = createTool(Items.QUARTZ, ToolTypes.Sword, Declarer.quartz_sword);
-                    Declarer.QUARTZ_SHOVEL = createTool(Items.QUARTZ, ToolTypes.Shovel, Declarer.quartz_shovel);
-                    Declarer.QUARTZ_HOE = createTool(Items.QUARTZ, ToolTypes.Hoe, Declarer.quartz_hoe);
-                }
-                if (Ref.netherrackTools) {
-                    Declarer.NETHERRACK_AXE = createTool(Items.NETHERRACK, ToolTypes.Axe, Declarer.netherrack_axe);
-                    Declarer.NETHERRACK_PICKAXE = createTool(Items.NETHERRACK, ToolTypes.Pickaxe, Declarer.netherrack_pick);
-                    Declarer.NETHERRACK_SWORD = createTool(Items.NETHERRACK, ToolTypes.Sword, Declarer.netherrack_sword);
-                    Declarer.NETHERRACK_SHOVEL = createTool(Items.NETHERRACK, ToolTypes.Shovel, Declarer.netherrack_shovel);
-                    Declarer.NETHERRACK_HOE = createTool(Items.NETHERRACK, ToolTypes.Hoe, Declarer.netherrack_hoe);
-                }
-                if (Ref.netherbrickTools) {
-                    Declarer.NETHERBRICK_AXE = createTool(Items.NETHER_BRICK, ToolTypes.Axe, Declarer.netherbrick_axe);
-                    Declarer.NETHERBRICK_PICKAXE = createTool(Items.NETHER_BRICK, ToolTypes.Pickaxe, Declarer.netherbrick_pick);
-                    Declarer.NETHERBRICK_SWORD = createTool(Items.NETHER_BRICK, ToolTypes.Sword, Declarer.netherbrick_sword);
-                    Declarer.NETHERBRICK_SHOVEL = createTool(Items.NETHER_BRICK, ToolTypes.Shovel, Declarer.netherbrick_shovel);
-                    Declarer.NETHERBRICK_HOE = createTool(Items.NETHER_BRICK, ToolTypes.Hoe, Declarer.netherbrick_hoe);
-                }
-                if (Ref.redNetherbrickTools) {
-                    Declarer.RED_NETHERBRICK_AXE = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Axe, Declarer.rednetherbrick_axe);
-                    Declarer.RED_NETHERBRICK_PICKAXE = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Pickaxe, Declarer.rednetherbrick_pick);
-                    Declarer.RED_NETHERBRICK_SWORD = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Sword, Declarer.rednetherbrick_sword);
-                    Declarer.RED_NETHERBRICK_SHOVEL = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Shovel, Declarer.rednetherbrick_shovel);
-                    Declarer.RED_NETHERBRICK_HOE = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Hoe, Declarer.rednetherbrick_hoe);
-                }
-                if (Ref.sandstoneTools) {
-                    tempID = new Identifier(Ref.MODID, "sandstone");
-                    Declarer.SANDSTONE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.sandstone_axe);
-                    Declarer.SANDSTONE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.sandstone_pick);
-                    Declarer.SANDSTONE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.sandstone_sword);
-                    Declarer.SANDSTONE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.sandstone_shovel);
-                    Declarer.SANDSTONE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.sandstone_hoe);
-                }
-                if (Ref.redSandstoneTools) {
-                    tempID = new Identifier(Ref.MODID, "redsandstone");
-                    Declarer.RED_SANDSTONE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.redsandstone_axe);
-                    Declarer.RED_SANDSTONE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.redsandstone_pick);
-                    Declarer.RED_SANDSTONE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.redsandstone_sword);
-                    Declarer.RED_SANDSTONE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.redsandstone_shovel);
-                    Declarer.RED_SANDSTONE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.redsandstone_hoe);
-                }
-                if (Ref.lapisTools) {
-                    Declarer.LAPIS_AXE = createTool(Items.LAPIS_BLOCK, ToolTypes.Axe, Declarer.lapis_axe);
-                    Declarer.LAPIS_PICKAXE = createTool(Items.LAPIS_BLOCK, ToolTypes.Pickaxe, Declarer.lapis_pick);
-                    Declarer.LAPIS_SWORD = createTool(Items.LAPIS_BLOCK, ToolTypes.Sword, Declarer.lapis_sword);
-                    Declarer.LAPIS_SHOVEL = createTool(Items.LAPIS_BLOCK, ToolTypes.Shovel, Declarer.lapis_shovel);
-                    Declarer.LAPIS_HOE = createTool(Items.LAPIS_BLOCK, ToolTypes.Hoe, Declarer.lapis_hoe);
-                }
-                if (Ref.emeraldTools) {
-                    Declarer.EMERALD_AXE = createTool(Items.EMERALD_BLOCK, ToolTypes.Axe, Declarer.emerald_axe);
-                    Declarer.EMERALD_PICKAXE = createTool(Items.EMERALD_BLOCK, ToolTypes.Pickaxe, Declarer.emerald_pick);
-                    Declarer.EMERALD_SWORD = createTool(Items.EMERALD_BLOCK, ToolTypes.Sword, Declarer.emerald_sword);
-                    Declarer.EMERALD_SHOVEL = createTool(Items.EMERALD_BLOCK, ToolTypes.Shovel, Declarer.emerald_shovel);
-                    Declarer.EMERALD_HOE = createTool(Items.EMERALD_BLOCK, ToolTypes.Hoe, Declarer.emerald_hoe);
-                }
-                if (Ref.flintTools) {
-                    Declarer.FLINT_AXE = createTool(Items.FLINT, ToolTypes.Axe, Declarer.flint_axe);
-                    Declarer.FLINT_PICKAXE = createTool(Items.FLINT, ToolTypes.Pickaxe, Declarer.flint_pick);
-                    Declarer.FLINT_SWORD = createTool(Items.FLINT, ToolTypes.Sword, Declarer.flint_sword);
-                    Declarer.FLINT_SHOVEL = createTool(Items.FLINT, ToolTypes.Shovel, Declarer.flint_shovel);
-                    Declarer.FLINT_HOE = createTool(Items.FLINT, ToolTypes.Hoe, Declarer.flint_hoe);
-                }
-                if (Ref.redstoneTools) {
-                    Declarer.REDSTONE_AXE = createTool(Items.REDSTONE_BLOCK, ToolTypes.Axe, Declarer.redstone_axe);
-                    Declarer.REDSTONE_PICKAXE = createTool(Items.REDSTONE_BLOCK, ToolTypes.Pickaxe, Declarer.redstone_pick);
-                    Declarer.REDSTONE_SWORD = createTool(Items.REDSTONE_BLOCK, ToolTypes.Sword, Declarer.redstone_sword);
-                    Declarer.REDSTONE_SHOVEL = createTool(Items.REDSTONE_BLOCK, ToolTypes.Shovel, Declarer.redstone_shovel);
-                    Declarer.REDSTONE_HOE = createTool(Items.REDSTONE_BLOCK, ToolTypes.Hoe, Declarer.redstone_hoe);
-                }
-                if (Ref.blackstoneTools) {
-                    tempID = new Identifier(Ref.MODID, "blackstone");
-                    Declarer.BLACKSTONE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.blackstone_axe);
-                    Declarer.BLACKSTONE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.blackstone_pick);
-                    Declarer.BLACKSTONE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.blackstone_sword);
-                    Declarer.BLACKSTONE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.blackstone_shovel);
-                    Declarer.BLACKSTONE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.blackstone_hoe);
-                }
-                if (Ref.basaltTools) {
-                    tempID = new Identifier(Ref.MODID, "basalt");
-                    Declarer.BASALT_AXE = createTool(tempID, ToolTypes.Axe, Declarer.basalt_axe);
-                    Declarer.BASALT_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.basalt_pick);
-                    Declarer.BASALT_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.basalt_sword);
-                    Declarer.BASALT_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.basalt_shovel);
-                    Declarer.BASALT_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.basalt_hoe);
-                }
-                if (Ref.endstoneTools) {
-                    tempID = new Identifier(Ref.MODID, "endstone");
-                    Declarer.ENDSTONE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.endstone_axe);
-                    Declarer.ENDSTONE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.endstone_pick);
-                    Declarer.ENDSTONE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.endstone_sword);
-                    Declarer.ENDSTONE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.endstone_shovel);
-                    Declarer.ENDSTONE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.endstone_hoe);
-                }
-                if (Ref.warpedTools) {
-                    Declarer.WARPED_AXE = createTool(Items.WARPED_PLANKS, ToolTypes.Axe, Declarer.warped_axe);
-                    Declarer.WARPED_PICKAXE = createTool(Items.WARPED_PLANKS, ToolTypes.Pickaxe, Declarer.warped_pick);
-                    Declarer.WARPED_SWORD = createTool(Items.WARPED_PLANKS, ToolTypes.Sword, Declarer.warped_sword);
-                    Declarer.WARPED_SHOVEL = createTool(Items.WARPED_PLANKS, ToolTypes.Shovel, Declarer.warped_shovel);
-                    Declarer.WARPED_HOE = createTool(Items.WARPED_PLANKS, ToolTypes.Hoe, Declarer.warped_hoe);
-                }
-                if (Ref.crimsonTools) {
-                    Declarer.CRIMSON_AXE = createTool(Items.CRIMSON_PLANKS, ToolTypes.Axe, Declarer.crimson_axe);
-                    Declarer.CRIMSON_PICKAXE = createTool(Items.CRIMSON_PLANKS, ToolTypes.Pickaxe, Declarer.crimson_pick);
-                    Declarer.CRIMSON_SWORD = createTool(Items.CRIMSON_PLANKS, ToolTypes.Sword, Declarer.crimson_sword);
-                    Declarer.CRIMSON_SHOVEL = createTool(Items.CRIMSON_PLANKS, ToolTypes.Shovel, Declarer.crimson_shovel);
-                    Declarer.CRIMSON_HOE = createTool(Items.CRIMSON_PLANKS, ToolTypes.Hoe, Declarer.crimson_hoe);
-                }
-                if (Ref.amethystTools) {
-                    Declarer.AMETHYST_AXE = createTool(Items.AMETHYST_BLOCK, ToolTypes.Axe, Declarer.amethyst_axe);
-                    Declarer.AMETHYST_PICKAXE = createTool(Items.AMETHYST_BLOCK, ToolTypes.Pickaxe, Declarer.amethyst_pick);
-                    Declarer.AMETHYST_SWORD = createTool(Items.AMETHYST_BLOCK, ToolTypes.Sword, Declarer.amethyst_sword);
-                    Declarer.AMETHYST_SHOVEL = createTool(Items.AMETHYST_BLOCK, ToolTypes.Shovel, Declarer.amethyst_shovel);
-                    Declarer.AMETHYST_HOE = createTool(Items.AMETHYST_BLOCK, ToolTypes.Hoe, Declarer.amethyst_hoe);
-                }
-                if (Ref.copperTools) {
-                    Declarer.COPPER_AXE = createTool(Items.COPPER_INGOT, ToolTypes.Axe, Declarer.copper_axe);
-                    Declarer.COPPER_PICKAXE = createTool(Items.COPPER_INGOT, ToolTypes.Pickaxe, Declarer.copper_pick);
-                    Declarer.COPPER_SWORD = createTool(Items.COPPER_INGOT, ToolTypes.Sword, Declarer.copper_sword);
-                    Declarer.COPPER_SHOVEL = createTool(Items.COPPER_INGOT, ToolTypes.Shovel, Declarer.copper_shovel);
-                    Declarer.COPPER_HOE = createTool(Items.COPPER_INGOT, ToolTypes.Hoe, Declarer.copper_hoe);
-                }
-                if (Ref.deepslateTools) {
-                    tempID = new Identifier(Ref.MODID, "deepslate");
-                    Declarer.DEEPSLATE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.deepslate_axe);
-                    Declarer.DEEPSLATE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.deepslate_pick);
-                    Declarer.DEEPSLATE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.deepslate_sword);
-                    Declarer.DEEPSLATE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.deepslate_shovel);
-                    Declarer.DEEPSLATE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.deepslate_hoe);
-                }
+            if (Ref.reclaim_iron) {
+                Declarer.RECLAIM_IRON = createSmeltingRecipeJsonComplex(new Item[]{
+                                Items.IRON_PICKAXE,
+                                Items.IRON_SHOVEL,
+                                Items.IRON_AXE,
+                                Items.IRON_HOE,
+                                Items.IRON_SWORD,
+                                Items.IRON_HELMET,
+                                Items.IRON_CHESTPLATE,
+                                Items.IRON_LEGGINGS,
+                                Items.IRON_BOOTS,
+                                Items.IRON_HORSE_ARMOR
+                        },
+                        Items.IRON_INGOT, 0.1f, 200, furnaceTypes.blasting);
             }
-            if (Ref.allCompressedBlocks) {
-                if (Ref.cobble) {
-                    Declarer.COBBLESTONE_1X = createCompressedBlock(Items.COBBLESTONE, Declarer.monuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_1XU = createUncompressedBlock(Declarer.monuple_compressed_cobblestone, Items.COBBLESTONE);
-                    Declarer.COBBLESTONE_2X = createCompressedBlock(Declarer.monuple_compressed_cobblestone, Declarer.couple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_2XU = createUncompressedBlock(Declarer.couple_compressed_cobblestone, Declarer.monuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_3X = createCompressedBlock(Declarer.couple_compressed_cobblestone, Declarer.triple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_3XU = createUncompressedBlock(Declarer.triple_compressed_cobblestone, Declarer.couple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_4X = createCompressedBlock(Declarer.triple_compressed_cobblestone, Declarer.quadruple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_cobblestone, Declarer.triple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_5X = createCompressedBlock(Declarer.quadruple_compressed_cobblestone, Declarer.quintuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_cobblestone, Declarer.quadruple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_6X = createCompressedBlock(Declarer.quintuple_compressed_cobblestone, Declarer.sextuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_cobblestone, Declarer.quintuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_7X = createCompressedBlock(Declarer.sextuple_compressed_cobblestone, Declarer.septuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_7XU = createUncompressedBlock(Declarer.septuple_compressed_cobblestone, Declarer.sextuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_8X = createCompressedBlock(Declarer.septuple_compressed_cobblestone, Declarer.octuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_8XU = createUncompressedBlock(Declarer.octuple_compressed_cobblestone, Declarer.septuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_9X = createCompressedBlock(Declarer.octuple_compressed_cobblestone, Declarer.nonuple_compressed_cobblestone);
-                    Declarer.COBBLESTONE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_cobblestone, Declarer.octuple_compressed_cobblestone);
-                }
-                if (Ref.dirt) {
-                    Declarer.DIRT_1X = createCompressedBlock(Items.DIRT, Declarer.monuple_compressed_dirt);
-                    Declarer.DIRT_1XU = createUncompressedBlock(Declarer.monuple_compressed_dirt, Items.DIRT);
-                    Declarer.DIRT_2X = createCompressedBlock(Declarer.monuple_compressed_dirt, Declarer.couple_compressed_dirt);
-                    Declarer.DIRT_2XU = createUncompressedBlock(Declarer.couple_compressed_dirt, Declarer.monuple_compressed_dirt);
-                    Declarer.DIRT_3X = createCompressedBlock(Declarer.couple_compressed_dirt, Declarer.triple_compressed_dirt);
-                    Declarer.DIRT_3XU = createUncompressedBlock(Declarer.triple_compressed_dirt, Declarer.couple_compressed_dirt);
-                    Declarer.DIRT_4X = createCompressedBlock(Declarer.triple_compressed_dirt, Declarer.quadruple_compressed_dirt);
-                    Declarer.DIRT_4XU = createUncompressedBlock(Declarer.quadruple_compressed_dirt, Declarer.triple_compressed_dirt);
-                    Declarer.DIRT_5X = createCompressedBlock(Declarer.quadruple_compressed_dirt, Declarer.quintuple_compressed_dirt);
-                    Declarer.DIRT_5XU = createUncompressedBlock(Declarer.quintuple_compressed_dirt, Declarer.quadruple_compressed_dirt);
-                    Declarer.DIRT_6X = createCompressedBlock(Declarer.quintuple_compressed_dirt, Declarer.sextuple_compressed_dirt);
-                    Declarer.DIRT_6XU = createUncompressedBlock(Declarer.sextuple_compressed_dirt, Declarer.quintuple_compressed_dirt);
-                    Declarer.DIRT_7X = createCompressedBlock(Declarer.sextuple_compressed_dirt, Declarer.septuple_compressed_dirt);
-                    Declarer.DIRT_7XU = createUncompressedBlock(Declarer.septuple_compressed_dirt, Declarer.sextuple_compressed_dirt);
-                    Declarer.DIRT_8X = createCompressedBlock(Declarer.septuple_compressed_dirt, Declarer.octuple_compressed_dirt);
-                    Declarer.DIRT_8XU = createUncompressedBlock(Declarer.octuple_compressed_dirt, Declarer.septuple_compressed_dirt);
-                    Declarer.DIRT_9X = createCompressedBlock(Declarer.octuple_compressed_dirt, Declarer.nonuple_compressed_dirt);
-                    Declarer.DIRT_9XU = createUncompressedBlock(Declarer.nonuple_compressed_dirt, Declarer.octuple_compressed_dirt);
-                }
-                if (Ref.diorite) {
-                    Declarer.DIORITE_1X = createCompressedBlock(Items.DIORITE, Declarer.monuple_compressed_diorite);
-                    Declarer.DIORITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_diorite, Items.DIORITE);
-                    Declarer.DIORITE_2X = createCompressedBlock(Declarer.monuple_compressed_diorite, Declarer.couple_compressed_diorite);
-                    Declarer.DIORITE_2XU = createUncompressedBlock(Declarer.couple_compressed_diorite, Declarer.monuple_compressed_diorite);
-                    Declarer.DIORITE_3X = createCompressedBlock(Declarer.couple_compressed_diorite, Declarer.triple_compressed_diorite);
-                    Declarer.DIORITE_3XU = createUncompressedBlock(Declarer.triple_compressed_diorite, Declarer.couple_compressed_diorite);
-                    Declarer.DIORITE_4X = createCompressedBlock(Declarer.triple_compressed_diorite, Declarer.quadruple_compressed_diorite);
-                    Declarer.DIORITE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_diorite, Declarer.triple_compressed_diorite);
-                    Declarer.DIORITE_5X = createCompressedBlock(Declarer.quadruple_compressed_diorite, Declarer.quintuple_compressed_diorite);
-                    Declarer.DIORITE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_diorite, Declarer.quadruple_compressed_diorite);
-                    Declarer.DIORITE_6X = createCompressedBlock(Declarer.quintuple_compressed_diorite, Declarer.sextuple_compressed_diorite);
-                    Declarer.DIORITE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_diorite, Declarer.quintuple_compressed_diorite);
-                    Declarer.DIORITE_7X = createCompressedBlock(Declarer.sextuple_compressed_diorite, Declarer.septuple_compressed_diorite);
-                    Declarer.DIORITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_diorite, Declarer.sextuple_compressed_diorite);
-                    Declarer.DIORITE_8X = createCompressedBlock(Declarer.septuple_compressed_diorite, Declarer.octuple_compressed_diorite);
-                    Declarer.DIORITE_8XU = createUncompressedBlock(Declarer.octuple_compressed_diorite, Declarer.septuple_compressed_diorite);
-                    Declarer.DIORITE_9X = createCompressedBlock(Declarer.octuple_compressed_diorite, Declarer.nonuple_compressed_diorite);
-                    Declarer.DIORITE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_diorite, Declarer.octuple_compressed_diorite);
-                }
-                if (Ref.granite) {
-                    Declarer.GRANITE_1X = createCompressedBlock(Items.GRANITE, Declarer.monuple_compressed_granite);
-                    Declarer.GRANITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_granite, Items.GRANITE);
-                    Declarer.GRANITE_2X = createCompressedBlock(Declarer.monuple_compressed_granite, Declarer.couple_compressed_granite);
-                    Declarer.GRANITE_2XU = createUncompressedBlock(Declarer.couple_compressed_granite, Declarer.monuple_compressed_granite);
-                    Declarer.GRANITE_3X = createCompressedBlock(Declarer.couple_compressed_granite, Declarer.triple_compressed_granite);
-                    Declarer.GRANITE_3XU = createUncompressedBlock(Declarer.triple_compressed_granite, Declarer.couple_compressed_granite);
-                    Declarer.GRANITE_4X = createCompressedBlock(Declarer.triple_compressed_granite, Declarer.quadruple_compressed_granite);
-                    Declarer.GRANITE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_granite, Declarer.triple_compressed_granite);
-                    Declarer.GRANITE_5X = createCompressedBlock(Declarer.quadruple_compressed_granite, Declarer.quintuple_compressed_granite);
-                    Declarer.GRANITE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_granite, Declarer.quadruple_compressed_granite);
-                    Declarer.GRANITE_6X = createCompressedBlock(Declarer.quintuple_compressed_granite, Declarer.sextuple_compressed_granite);
-                    Declarer.GRANITE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_granite, Declarer.quintuple_compressed_granite);
-                    Declarer.GRANITE_7X = createCompressedBlock(Declarer.sextuple_compressed_granite, Declarer.septuple_compressed_granite);
-                    Declarer.GRANITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_granite, Declarer.sextuple_compressed_granite);
-                    Declarer.GRANITE_8X = createCompressedBlock(Declarer.septuple_compressed_granite, Declarer.octuple_compressed_granite);
-                    Declarer.GRANITE_8XU = createUncompressedBlock(Declarer.octuple_compressed_granite, Declarer.septuple_compressed_granite);
-                    Declarer.GRANITE_9X = createCompressedBlock(Declarer.octuple_compressed_granite, Declarer.nonuple_compressed_granite);
-                    Declarer.GRANITE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_granite, Declarer.octuple_compressed_granite);
-                }
-                if (Ref.andesite) {
-                    Declarer.ANDESITE_1X = createCompressedBlock(Items.ANDESITE, Declarer.monuple_compressed_andesite);
-                    Declarer.ANDESITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_andesite, Items.ANDESITE);
-                    Declarer.ANDESITE_2X = createCompressedBlock(Declarer.monuple_compressed_andesite, Declarer.couple_compressed_andesite);
-                    Declarer.ANDESITE_2XU = createUncompressedBlock(Declarer.couple_compressed_andesite, Declarer.monuple_compressed_andesite);
-                    Declarer.ANDESITE_3X = createCompressedBlock(Declarer.couple_compressed_andesite, Declarer.triple_compressed_andesite);
-                    Declarer.ANDESITE_3XU = createUncompressedBlock(Declarer.triple_compressed_andesite, Declarer.couple_compressed_andesite);
-                    Declarer.ANDESITE_4X = createCompressedBlock(Declarer.triple_compressed_andesite, Declarer.quadruple_compressed_andesite);
-                    Declarer.ANDESITE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_andesite, Declarer.triple_compressed_andesite);
-                    Declarer.ANDESITE_5X = createCompressedBlock(Declarer.quadruple_compressed_andesite, Declarer.quintuple_compressed_andesite);
-                    Declarer.ANDESITE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_andesite, Declarer.quadruple_compressed_andesite);
-                    Declarer.ANDESITE_6X = createCompressedBlock(Declarer.quintuple_compressed_andesite, Declarer.sextuple_compressed_andesite);
-                    Declarer.ANDESITE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_andesite, Declarer.quintuple_compressed_andesite);
-                    Declarer.ANDESITE_7X = createCompressedBlock(Declarer.sextuple_compressed_andesite, Declarer.septuple_compressed_andesite);
-                    Declarer.ANDESITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_andesite, Declarer.sextuple_compressed_andesite);
-                    Declarer.ANDESITE_8X = createCompressedBlock(Declarer.septuple_compressed_andesite, Declarer.octuple_compressed_andesite);
-                    Declarer.ANDESITE_8XU = createUncompressedBlock(Declarer.octuple_compressed_andesite, Declarer.septuple_compressed_andesite);
-                    Declarer.ANDESITE_9X = createCompressedBlock(Declarer.octuple_compressed_andesite, Declarer.nonuple_compressed_andesite);
-                    Declarer.ANDESITE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_andesite, Declarer.octuple_compressed_andesite);
-                }
-                if (Ref.netherrack) {
-                    Declarer.NETHERRACK_1X = createCompressedBlock(Items.NETHERRACK, Declarer.monuple_compressed_netherrack);
-                    Declarer.NETHERRACK_1XU = createUncompressedBlock(Declarer.monuple_compressed_netherrack, Items.NETHERRACK);
-                    Declarer.NETHERRACK_2X = createCompressedBlock(Declarer.monuple_compressed_netherrack, Declarer.couple_compressed_netherrack);
-                    Declarer.NETHERRACK_2XU = createUncompressedBlock(Declarer.couple_compressed_netherrack, Declarer.monuple_compressed_netherrack);
-                    Declarer.NETHERRACK_3X = createCompressedBlock(Declarer.couple_compressed_netherrack, Declarer.triple_compressed_netherrack);
-                    Declarer.NETHERRACK_3XU = createUncompressedBlock(Declarer.triple_compressed_netherrack, Declarer.couple_compressed_netherrack);
-                    Declarer.NETHERRACK_4X = createCompressedBlock(Declarer.triple_compressed_netherrack, Declarer.quadruple_compressed_netherrack);
-                    Declarer.NETHERRACK_4XU = createUncompressedBlock(Declarer.quadruple_compressed_netherrack, Declarer.triple_compressed_netherrack);
-                    Declarer.NETHERRACK_5X = createCompressedBlock(Declarer.quadruple_compressed_netherrack, Declarer.quintuple_compressed_netherrack);
-                    Declarer.NETHERRACK_5XU = createUncompressedBlock(Declarer.quintuple_compressed_netherrack, Declarer.quadruple_compressed_netherrack);
-                    Declarer.NETHERRACK_6X = createCompressedBlock(Declarer.quintuple_compressed_netherrack, Declarer.sextuple_compressed_netherrack);
-                    Declarer.NETHERRACK_6XU = createUncompressedBlock(Declarer.sextuple_compressed_netherrack, Declarer.quintuple_compressed_netherrack);
-                    Declarer.NETHERRACK_7X = createCompressedBlock(Declarer.sextuple_compressed_netherrack, Declarer.septuple_compressed_netherrack);
-                    Declarer.NETHERRACK_7XU = createUncompressedBlock(Declarer.septuple_compressed_netherrack, Declarer.sextuple_compressed_netherrack);
-                    Declarer.NETHERRACK_8X = createCompressedBlock(Declarer.septuple_compressed_netherrack, Declarer.octuple_compressed_netherrack);
-                    Declarer.NETHERRACK_8XU = createUncompressedBlock(Declarer.octuple_compressed_netherrack, Declarer.septuple_compressed_netherrack);
-                    Declarer.NETHERRACK_9X = createCompressedBlock(Declarer.octuple_compressed_netherrack, Declarer.nonuple_compressed_netherrack);
-                    Declarer.NETHERRACK_9XU = createUncompressedBlock(Declarer.nonuple_compressed_netherrack, Declarer.octuple_compressed_netherrack);
-                }
-                if (Ref.sand) {
-                    Declarer.SAND_1X = createCompressedBlock(Items.SAND, Declarer.monuple_compressed_sand);
-                    Declarer.SAND_1XU = createUncompressedBlock(Declarer.monuple_compressed_sand, Items.SAND);
-                    Declarer.SAND_2X = createCompressedBlock(Declarer.monuple_compressed_sand, Declarer.couple_compressed_sand);
-                    Declarer.SAND_2XU = createUncompressedBlock(Declarer.couple_compressed_sand, Declarer.monuple_compressed_sand);
-                    Declarer.SAND_3X = createCompressedBlock(Declarer.couple_compressed_sand, Declarer.triple_compressed_sand);
-                    Declarer.SAND_3XU = createUncompressedBlock(Declarer.triple_compressed_sand, Declarer.couple_compressed_sand);
-                    Declarer.SAND_4X = createCompressedBlock(Declarer.triple_compressed_sand, Declarer.quadruple_compressed_sand);
-                    Declarer.SAND_4XU = createUncompressedBlock(Declarer.quadruple_compressed_sand, Declarer.triple_compressed_sand);
-                    Declarer.SAND_5X = createCompressedBlock(Declarer.quadruple_compressed_sand, Declarer.quintuple_compressed_sand);
-                    Declarer.SAND_5XU = createUncompressedBlock(Declarer.quintuple_compressed_sand, Declarer.quadruple_compressed_sand);
-                    Declarer.SAND_6X = createCompressedBlock(Declarer.quintuple_compressed_sand, Declarer.sextuple_compressed_sand);
-                    Declarer.SAND_6XU = createUncompressedBlock(Declarer.sextuple_compressed_sand, Declarer.quintuple_compressed_sand);
-                    Declarer.SAND_7X = createCompressedBlock(Declarer.sextuple_compressed_sand, Declarer.septuple_compressed_sand);
-                    Declarer.SAND_7XU = createUncompressedBlock(Declarer.septuple_compressed_sand, Declarer.sextuple_compressed_sand);
-                    Declarer.SAND_8X = createCompressedBlock(Declarer.septuple_compressed_sand, Declarer.octuple_compressed_sand);
-                    Declarer.SAND_8XU = createUncompressedBlock(Declarer.octuple_compressed_sand, Declarer.septuple_compressed_sand);
-                    Declarer.SAND_9X = createCompressedBlock(Declarer.octuple_compressed_sand, Declarer.nonuple_compressed_sand);
-                    Declarer.SAND_9XU = createUncompressedBlock(Declarer.nonuple_compressed_sand, Declarer.octuple_compressed_sand);
-                }
-                if (Ref.gravel) {
-                    Declarer.GRAVEL_1X = createCompressedBlock(Items.GRAVEL, Declarer.monuple_compressed_gravel);
-                    Declarer.GRAVEL_1XU = createUncompressedBlock(Declarer.monuple_compressed_gravel, Items.GRAVEL);
-                    Declarer.GRAVEL_2X = createCompressedBlock(Declarer.monuple_compressed_gravel, Declarer.couple_compressed_gravel);
-                    Declarer.GRAVEL_2XU = createUncompressedBlock(Declarer.couple_compressed_gravel, Declarer.monuple_compressed_gravel);
-                    Declarer.GRAVEL_3X = createCompressedBlock(Declarer.couple_compressed_gravel, Declarer.triple_compressed_gravel);
-                    Declarer.GRAVEL_3XU = createUncompressedBlock(Declarer.triple_compressed_gravel, Declarer.couple_compressed_gravel);
-                    Declarer.GRAVEL_4X = createCompressedBlock(Declarer.triple_compressed_gravel, Declarer.quadruple_compressed_gravel);
-                    Declarer.GRAVEL_4XU = createUncompressedBlock(Declarer.quadruple_compressed_gravel, Declarer.triple_compressed_gravel);
-                    Declarer.GRAVEL_5X = createCompressedBlock(Declarer.quadruple_compressed_gravel, Declarer.quintuple_compressed_gravel);
-                    Declarer.GRAVEL_5XU = createUncompressedBlock(Declarer.quintuple_compressed_gravel, Declarer.quadruple_compressed_gravel);
-                    Declarer.GRAVEL_6X = createCompressedBlock(Declarer.quintuple_compressed_gravel, Declarer.sextuple_compressed_gravel);
-                    Declarer.GRAVEL_6XU = createUncompressedBlock(Declarer.sextuple_compressed_gravel, Declarer.quintuple_compressed_gravel);
-                    Declarer.GRAVEL_7X = createCompressedBlock(Declarer.sextuple_compressed_gravel, Declarer.septuple_compressed_gravel);
-                    Declarer.GRAVEL_7XU = createUncompressedBlock(Declarer.septuple_compressed_gravel, Declarer.sextuple_compressed_gravel);
-                    Declarer.GRAVEL_8X = createCompressedBlock(Declarer.septuple_compressed_gravel, Declarer.octuple_compressed_gravel);
-                    Declarer.GRAVEL_8XU = createUncompressedBlock(Declarer.octuple_compressed_gravel, Declarer.septuple_compressed_gravel);
-                    Declarer.GRAVEL_9X = createCompressedBlock(Declarer.octuple_compressed_gravel, Declarer.nonuple_compressed_gravel);
-                    Declarer.GRAVEL_9XU = createUncompressedBlock(Declarer.nonuple_compressed_gravel, Declarer.octuple_compressed_gravel);
-                }
-                if (Ref.deepslate) {
-                    Declarer.COBBLED_DEEPSLATE_1X = createCompressedBlock(Items.COBBLED_DEEPSLATE, Declarer.monuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_1XU = createUncompressedBlock(Declarer.monuple_compressed_cobbled_deepslate, Items.COBBLED_DEEPSLATE);
-                    Declarer.COBBLED_DEEPSLATE_2X = createCompressedBlock(Declarer.monuple_compressed_cobbled_deepslate, Declarer.couple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_2XU = createUncompressedBlock(Declarer.couple_compressed_cobbled_deepslate, Declarer.monuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_3X = createCompressedBlock(Declarer.couple_compressed_cobbled_deepslate, Declarer.triple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_3XU = createUncompressedBlock(Declarer.triple_compressed_cobbled_deepslate, Declarer.couple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_4X = createCompressedBlock(Declarer.triple_compressed_cobbled_deepslate, Declarer.quadruple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_cobbled_deepslate, Declarer.triple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_5X = createCompressedBlock(Declarer.quadruple_compressed_cobbled_deepslate, Declarer.quintuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_cobbled_deepslate, Declarer.quadruple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_6X = createCompressedBlock(Declarer.quintuple_compressed_cobbled_deepslate, Declarer.sextuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_cobbled_deepslate, Declarer.quintuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_7X = createCompressedBlock(Declarer.sextuple_compressed_cobbled_deepslate, Declarer.septuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_7XU = createUncompressedBlock(Declarer.septuple_compressed_cobbled_deepslate, Declarer.sextuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_8X = createCompressedBlock(Declarer.septuple_compressed_cobbled_deepslate, Declarer.octuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_8XU = createUncompressedBlock(Declarer.octuple_compressed_cobbled_deepslate, Declarer.septuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_9X = createCompressedBlock(Declarer.octuple_compressed_cobbled_deepslate, Declarer.nonuple_compressed_cobbled_deepslate);
-                    Declarer.COBBLED_DEEPSLATE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_cobbled_deepslate, Declarer.octuple_compressed_cobbled_deepslate);
-                }
+            if (Ref.reclaim_gold) {
+                Declarer.RECLAIM_GOLD = createSmeltingRecipeJsonComplex(new Item[]{
+                                Items.GOLDEN_PICKAXE,
+                                Items.GOLDEN_SHOVEL,
+                                Items.GOLDEN_AXE,
+                                Items.GOLDEN_HOE,
+                                Items.GOLDEN_SWORD,
+                                Items.GOLDEN_HELMET,
+                                Items.GOLDEN_CHESTPLATE,
+                                Items.GOLDEN_LEGGINGS,
+                                Items.GOLDEN_BOOTS,
+                                Items.GOLDEN_HORSE_ARMOR
+                        },
+                        Items.GOLD_INGOT, 0.1f, 200, furnaceTypes.blasting);
+            }
+            if (Ref.reclaim_diamond) {
+                Declarer.RECLAIM_DIAMOND = createSmeltingRecipeJsonComplex(new Item[]{
+                                Items.DIAMOND_PICKAXE,
+                                Items.DIAMOND_SHOVEL,
+                                Items.DIAMOND_AXE,
+                                Items.DIAMOND_HOE,
+                                Items.DIAMOND_SWORD,
+                                Items.DIAMOND_HELMET,
+                                Items.DIAMOND_CHESTPLATE,
+                                Items.DIAMOND_LEGGINGS,
+                                Items.DIAMOND_BOOTS,
+                                Items.DIAMOND_HORSE_ARMOR
+                        },
+                        Items.DIAMOND, 0.1f, 200, furnaceTypes.blasting);
+            }
+        }
+        if (Ref.daylighter) {
+            Declarer.PDD = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.DAYLIGHT_DETECTOR), Registry.ITEM.getId(Items.GOLD_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList(" 1 ", "101", " 1 "),//pattern
+                    Registry.ITEM.getId(Declarer.personal_daylight_detector),
+                    1
+            );
+        }
+        if (Ref.slimer) {
+            Declarer.SCL = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Items.SLIME_BALL), Registry.ITEM.getId(Items.REDSTONE_BLOCK)),
+                    Lists.newArrayList(false, false, false),
+                    Registry.ITEM.getId(Declarer.slime_chunk_locator),
+                    1);
+        }
+        if (Ref.chunker) {
+            Declarer.CHUNKLOADER = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.DIAMOND), Registry.ITEM.getId(Items.GOLD_INGOT), Registry.ITEM.getId(Items.ENDER_PEARL)),//items
+                    Lists.newArrayList(false, false, false),//type
+                    Lists.newArrayList("010", "121", "010"),//pattern
+                    Registry.ITEM.getId(Declarer.chunk_loader),
+                    1
+            );
+        }
+        if (Ref.fleather) {
+            tempID = Registry.ITEM.getId(Items.ROTTEN_FLESH);
+            Declarer.FLEATHER = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false),
+                    Registry.ITEM.getId(Declarer.fleather),
+                    1);
+        }
+        if (Ref.charcoal) {
+            tempID = Registry.ITEM.getId(Items.CHARCOAL);
+            Declarer.CHARCOAL_BLOCK = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false, false, false, false, false, false),
+                    Registry.ITEM.getId(Declarer.charcoal_block),
+                    1);
+            Declarer.CHARCOAL_BLOCK_U = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Declarer.charcoal_block)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Items.CHARCOAL),
+                    9);
+        }
+        if (Ref.sticks) {
+            tempID = Registry.ITEM.getId(Items.STICK);
+            Declarer.STICK_BUNDLE_S = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false),
+                    Registry.ITEM.getId(Declarer.small_stick_bundle),
+                    1);
+            Declarer.STICK_BUNDLE_S_U = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Declarer.small_stick_bundle)),
+                    Lists.newArrayList(false),
+                    tempID,
+                    4);
+            tempID = Registry.ITEM.getId(Declarer.small_stick_bundle);
+            Declarer.STICK_BUNDLE_L = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false),
+                    Registry.ITEM.getId(Declarer.large_stick_bundle),
+                    1);
+            Declarer.STICK_BUNDLE_L_U = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Declarer.large_stick_bundle)),
+                    Lists.newArrayList(false),
+                    tempID,
+                    4);
+        }
+        if (Ref.featherBlock) {
+            tempID = Registry.ITEM.getId(Items.FEATHER);
+            Declarer.FEATHER = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false, false, false, false, false, false),
+                    Registry.ITEM.getId(Declarer.feather_block),
+                    1);
+            Declarer.FEATHER_U = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Declarer.feather_block)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Items.FEATHER),
+                    9);
+        }
+        if (Ref.coalChunks) {
+            tempID = Registry.ITEM.getId(Declarer.charcoal_nugget);
+            Declarer.CHARCOAL_NUGGET_U = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false, false, false, false, false),
+                    Registry.ITEM.getId(Items.CHARCOAL),
+                    1);
+            Declarer.CHARCOAL_NUGGET = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.CHARCOAL)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Declarer.charcoal_nugget),
+                    8);
+            tempID = Registry.ITEM.getId(Declarer.coal_nugget);
+            Declarer.COAL_NUGGET_U = createShapelessRecipeJson(
+                    Lists.newArrayList(tempID, tempID, tempID, tempID, tempID, tempID, tempID, tempID),
+                    Lists.newArrayList(false, false, false, false, false, false, false, false),
+                    Registry.ITEM.getId(Items.COAL),
+                    1);
+            Declarer.COAL_NUGGET = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.COAL)),
+                    Lists.newArrayList(false),
+                    Registry.ITEM.getId(Declarer.coal_nugget),
+                    8);
+        }
+        if (Ref.furnaces) {
+            Declarer.FURNACE = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.COBBLESTONE)),
+                    Lists.newArrayList(false),
+                    Lists.newArrayList("000", "0 0", "000"),
+                    Registry.ITEM.getId(Items.FURNACE),
+                    1);//changing the vanilla recipe is a must if you want to be able to craft the below
+
+            Declarer.ANDESITE_FURNACE = createFurnace("andesite", Declarer.andesite_furnace);
+            Declarer.BLACKSTONE_FURNACE = createFurnace("blackstone", Declarer.blackstone_furnace);
+            Declarer.BASALT_FURNACE = createFurnace("basalt", Declarer.basalt_furnace);
+            Declarer.DEEPSLATE_FURNACE = createFurnace("deepslate", Declarer.deepslate_furnace);
+            Declarer.DIORITE_FURNACE = createFurnace("diorite", Declarer.diorite_furnace);
+            Declarer.ENDSTONE_FURNACE = createFurnace("endstone", Declarer.endstone_furnace);
+            Declarer.GRANITE_FURNACE = createFurnace("granite", Declarer.granite_furnace);
+            Declarer.SANDSTONE_FURNACE = createFurnace("sandstone", Declarer.sandstone_furnace);
+            Declarer.RED_SANDSTONE_FURNACE = createFurnace("redsandstone", Declarer.red_sandstone_furnace);
+            Declarer.NETHERRACK_FURNACE = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.NETHERRACK)),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("000", "0 0", "000"),//pattern
+                    Registry.ITEM.getId(Declarer.netherrack_furnace),
+                    1
+            );
+        }
+        if (Ref.blasts) {
+            Declarer.ANDESITE_BLAST = createBlast("andesite", Declarer.andesite_furnace, Declarer.andesite_blast_furnace);
+            Declarer.BLACKSTONE_BLAST = createBlast("blackstone", Declarer.blackstone_furnace, Declarer.blackstone_blast_furnace);
+            Declarer.BASALT_BLAST = createBlast("basalt", Declarer.basalt_furnace, Declarer.basalt_blast_furnace);
+            Declarer.DEEPSLATE_BLAST = createBlast("deepslate", Declarer.deepslate_furnace, Declarer.deepslate_blast_furnace);
+            Declarer.DIORITE_BLAST = createBlast("diorite", Declarer.diorite_furnace, Declarer.diorite_blast_furnace);
+            Declarer.ENDSTONE_BLAST = createBlast("endstone", Declarer.endstone_furnace, Declarer.endstone_blast_furnace);
+            Declarer.GRANITE_BLAST = createBlast("granite", Declarer.granite_furnace, Declarer.granite_blast_furnace);
+            Declarer.SANDSTONE_BLAST = createBlast("sandstone", Declarer.sandstone_furnace, Declarer.sandstone_blast_furnace);
+            Declarer.RED_SANDSTONE_BLAST = createBlast("redsandstone", Declarer.red_sandstone_furnace, Declarer.red_sandstone_blast_furnace);
+            Declarer.NETHERRACK_BLAST = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Declarer.netherrack_furnace), Registry.ITEM.getId(Items.NETHER_BRICK)),//items
+                    Lists.newArrayList(false, false, false),//type
+                    Lists.newArrayList("000", "010", "222"),//pattern
+                    Registry.ITEM.getId(Declarer.netherrack_blast_furnace),
+                    1
+            );
+        }
+        if (Ref.smokers) {
+            Declarer.ANDESITE_SMOKER = createSmoker(Declarer.andesite_furnace, Declarer.andesite_smoker);
+            Declarer.BLACKSTONE_SMOKER = createSmoker(Declarer.blackstone_furnace, Declarer.blackstone_smoker);
+            Declarer.BASALT_SMOKER = createSmoker(Declarer.basalt_furnace, Declarer.basalt_smoker);
+            Declarer.DEEPSLATE_SMOKER = createSmoker(Declarer.deepslate_furnace, Declarer.deepslate_smoker);
+            Declarer.DIORITE_SMOKER = createSmoker(Declarer.diorite_furnace, Declarer.diorite_smoker);
+            Declarer.ENDSTONE_SMOKER = createSmoker(Declarer.endstone_furnace, Declarer.endstone_smoker);
+            Declarer.GRANITE_SMOKER = createSmoker(Declarer.granite_furnace, Declarer.granite_smoker);
+            Declarer.SANDSTONE_SMOKER = createSmoker(Declarer.sandstone_furnace, Declarer.sandstone_smoker);
+            Declarer.RED_SANDSTONE_SMOKER = createSmoker(Declarer.red_sandstone_furnace, Declarer.red_sandstone_smoker);
+            Declarer.NETHERRACK_SMOKER = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Declarer.netherrack_furnace), new Identifier("minecraft", "logs")),//items
+                    Lists.newArrayList(false, true),//type
+                    Lists.newArrayList(" 1 ", "101", " 1 "),//pattern
+                    Registry.ITEM.getId(Declarer.netherrack_smoker),
+                    1
+            );
+        }
+        if (Ref.chainArmor) {
+            Declarer.CHAINBOOT = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList("0 0", "1 1"),//pattern
+                    Registry.ITEM.getId(Items.CHAINMAIL_BOOTS),
+                    1
+            );
+            Declarer.CHAINCHEST = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList("0 0", "111", "000"),//pattern
+                    Registry.ITEM.getId(Items.CHAINMAIL_CHESTPLATE),
+                    1
+            );
+            Declarer.CHAINPANT = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList("0 0", "1 1", "0 0"),//pattern
+                    Registry.ITEM.getId(Items.CHAINMAIL_LEGGINGS),
+                    1
+            );
+            Declarer.CHAINHELM = createShapedRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
+                    Lists.newArrayList(false, false),//type
+                    Lists.newArrayList("010", "1 1"),//pattern
+                    Registry.ITEM.getId(Items.CHAINMAIL_HELMET),
+                    1
+            );
+        }
+        if (Ref.woolArmor) {
+            tempID = new Identifier("minecraft", "wool");
+            Declarer.WOOLBOOT = createShapedRecipeJson(
+                    Lists.newArrayList(tempID),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("0 0", "0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.wool_boots),
+                    1
+            );
+            Declarer.WOOLCHEST = createShapedRecipeJson(
+                    Lists.newArrayList(tempID),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("0 0", "000", "000"),//pattern
+                    Registry.ITEM.getId(Declarer.wool_chestplate),
+                    1
+            );
+            Declarer.WOOLPANT = createShapedRecipeJson(
+                    Lists.newArrayList(tempID),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("0 0", "0 0", "0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.wool_leggings),
+                    1
+            );
+            Declarer.WOOLHELM = createShapedRecipeJson(
+                    Lists.newArrayList(tempID),//items
+                    Lists.newArrayList(true),//type
+                    Lists.newArrayList("000", "0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.wool_helmet),
+                    1
+            );
+        }
+        if (Ref.copperArmor) {
+            tempID = Registry.ITEM.getId(Items.COPPER_INGOT);
+            Declarer.COPPERBOOT = createShapedRecipeJson(
+                    Lists.newArrayList(tempID),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("0 0", "0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.copper_boots),
+                    1
+            );
+            Declarer.COPPERCHEST = createShapedRecipeJson(
+                    Lists.newArrayList(tempID),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("0 0", "000", "000"),//pattern
+                    Registry.ITEM.getId(Declarer.copper_chestplate),
+                    1
+            );
+            Declarer.COPPERPANT = createShapedRecipeJson(
+                    Lists.newArrayList(tempID),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("0 0", "0 0", "0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.copper_leggings),
+                    1
+            );
+            Declarer.COPPERHELM = createShapedRecipeJson(
+                    Lists.newArrayList(tempID),//items
+                    Lists.newArrayList(false),//type
+                    Lists.newArrayList("000", "0 0"),//pattern
+                    Registry.ITEM.getId(Declarer.copper_helmet),
+                    1
+            );
+        }
+        if (Ref.allTools) {
+            if (Ref.graniteTools) {
+                tempID = new Identifier(Ref.MODID, "granite");
+                Declarer.GRANITE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.granite_axe);
+                Declarer.GRANITE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.granite_pick);
+                Declarer.GRANITE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.granite_sword);
+                Declarer.GRANITE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.granite_shovel);
+                Declarer.GRANITE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.granite_hoe);
+            }
+            if (Ref.dioriteTools) {
+                tempID = new Identifier(Ref.MODID, "diorite");
+                Declarer.DIORITE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.diorite_axe);
+                Declarer.DIORITE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.diorite_pick);
+                Declarer.DIORITE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.diorite_sword);
+                Declarer.DIORITE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.diorite_shovel);
+                Declarer.DIORITE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.diorite_hoe);
+            }
+            if (Ref.andesiteTools) {
+                tempID = new Identifier(Ref.MODID, "andesite");
+                Declarer.ANDESITE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.andesite_axe);
+                Declarer.ANDESITE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.andesite_pick);
+                Declarer.ANDESITE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.andesite_sword);
+                Declarer.ANDESITE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.andesite_shovel);
+                Declarer.ANDESITE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.andesite_hoe);
+            }
+            if (Ref.quartzTools) {
+                Declarer.QUARTZ_AXE = createTool(Items.QUARTZ, ToolTypes.Axe, Declarer.quartz_axe);
+                Declarer.QUARTZ_PICKAXE = createTool(Items.QUARTZ, ToolTypes.Pickaxe, Declarer.quartz_pick);
+                Declarer.QUARTZ_SWORD = createTool(Items.QUARTZ, ToolTypes.Sword, Declarer.quartz_sword);
+                Declarer.QUARTZ_SHOVEL = createTool(Items.QUARTZ, ToolTypes.Shovel, Declarer.quartz_shovel);
+                Declarer.QUARTZ_HOE = createTool(Items.QUARTZ, ToolTypes.Hoe, Declarer.quartz_hoe);
+            }
+            if (Ref.netherrackTools) {
+                Declarer.NETHERRACK_AXE = createTool(Items.NETHERRACK, ToolTypes.Axe, Declarer.netherrack_axe);
+                Declarer.NETHERRACK_PICKAXE = createTool(Items.NETHERRACK, ToolTypes.Pickaxe, Declarer.netherrack_pick);
+                Declarer.NETHERRACK_SWORD = createTool(Items.NETHERRACK, ToolTypes.Sword, Declarer.netherrack_sword);
+                Declarer.NETHERRACK_SHOVEL = createTool(Items.NETHERRACK, ToolTypes.Shovel, Declarer.netherrack_shovel);
+                Declarer.NETHERRACK_HOE = createTool(Items.NETHERRACK, ToolTypes.Hoe, Declarer.netherrack_hoe);
+            }
+            if (Ref.netherbrickTools) {
+                Declarer.NETHERBRICK_AXE = createTool(Items.NETHER_BRICK, ToolTypes.Axe, Declarer.netherbrick_axe);
+                Declarer.NETHERBRICK_PICKAXE = createTool(Items.NETHER_BRICK, ToolTypes.Pickaxe, Declarer.netherbrick_pick);
+                Declarer.NETHERBRICK_SWORD = createTool(Items.NETHER_BRICK, ToolTypes.Sword, Declarer.netherbrick_sword);
+                Declarer.NETHERBRICK_SHOVEL = createTool(Items.NETHER_BRICK, ToolTypes.Shovel, Declarer.netherbrick_shovel);
+                Declarer.NETHERBRICK_HOE = createTool(Items.NETHER_BRICK, ToolTypes.Hoe, Declarer.netherbrick_hoe);
+            }
+            if (Ref.redNetherbrickTools) {
+                Declarer.RED_NETHERBRICK_AXE = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Axe, Declarer.rednetherbrick_axe);
+                Declarer.RED_NETHERBRICK_PICKAXE = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Pickaxe, Declarer.rednetherbrick_pick);
+                Declarer.RED_NETHERBRICK_SWORD = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Sword, Declarer.rednetherbrick_sword);
+                Declarer.RED_NETHERBRICK_SHOVEL = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Shovel, Declarer.rednetherbrick_shovel);
+                Declarer.RED_NETHERBRICK_HOE = createTool(Items.RED_NETHER_BRICKS, ToolTypes.Hoe, Declarer.rednetherbrick_hoe);
+            }
+            if (Ref.sandstoneTools) {
+                tempID = new Identifier(Ref.MODID, "sandstone");
+                Declarer.SANDSTONE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.sandstone_axe);
+                Declarer.SANDSTONE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.sandstone_pick);
+                Declarer.SANDSTONE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.sandstone_sword);
+                Declarer.SANDSTONE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.sandstone_shovel);
+                Declarer.SANDSTONE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.sandstone_hoe);
+            }
+            if (Ref.redSandstoneTools) {
+                tempID = new Identifier(Ref.MODID, "redsandstone");
+                Declarer.RED_SANDSTONE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.redsandstone_axe);
+                Declarer.RED_SANDSTONE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.redsandstone_pick);
+                Declarer.RED_SANDSTONE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.redsandstone_sword);
+                Declarer.RED_SANDSTONE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.redsandstone_shovel);
+                Declarer.RED_SANDSTONE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.redsandstone_hoe);
+            }
+            if (Ref.lapisTools) {
+                Declarer.LAPIS_AXE = createTool(Items.LAPIS_BLOCK, ToolTypes.Axe, Declarer.lapis_axe);
+                Declarer.LAPIS_PICKAXE = createTool(Items.LAPIS_BLOCK, ToolTypes.Pickaxe, Declarer.lapis_pick);
+                Declarer.LAPIS_SWORD = createTool(Items.LAPIS_BLOCK, ToolTypes.Sword, Declarer.lapis_sword);
+                Declarer.LAPIS_SHOVEL = createTool(Items.LAPIS_BLOCK, ToolTypes.Shovel, Declarer.lapis_shovel);
+                Declarer.LAPIS_HOE = createTool(Items.LAPIS_BLOCK, ToolTypes.Hoe, Declarer.lapis_hoe);
+            }
+            if (Ref.emeraldTools) {
+                Declarer.EMERALD_AXE = createTool(Items.EMERALD_BLOCK, ToolTypes.Axe, Declarer.emerald_axe);
+                Declarer.EMERALD_PICKAXE = createTool(Items.EMERALD_BLOCK, ToolTypes.Pickaxe, Declarer.emerald_pick);
+                Declarer.EMERALD_SWORD = createTool(Items.EMERALD_BLOCK, ToolTypes.Sword, Declarer.emerald_sword);
+                Declarer.EMERALD_SHOVEL = createTool(Items.EMERALD_BLOCK, ToolTypes.Shovel, Declarer.emerald_shovel);
+                Declarer.EMERALD_HOE = createTool(Items.EMERALD_BLOCK, ToolTypes.Hoe, Declarer.emerald_hoe);
+            }
+            if (Ref.flintTools) {
+                Declarer.FLINT_AXE = createTool(Items.FLINT, ToolTypes.Axe, Declarer.flint_axe);
+                Declarer.FLINT_PICKAXE = createTool(Items.FLINT, ToolTypes.Pickaxe, Declarer.flint_pick);
+                Declarer.FLINT_SWORD = createTool(Items.FLINT, ToolTypes.Sword, Declarer.flint_sword);
+                Declarer.FLINT_SHOVEL = createTool(Items.FLINT, ToolTypes.Shovel, Declarer.flint_shovel);
+                Declarer.FLINT_HOE = createTool(Items.FLINT, ToolTypes.Hoe, Declarer.flint_hoe);
+            }
+            if (Ref.redstoneTools) {
+                Declarer.REDSTONE_AXE = createTool(Items.REDSTONE_BLOCK, ToolTypes.Axe, Declarer.redstone_axe);
+                Declarer.REDSTONE_PICKAXE = createTool(Items.REDSTONE_BLOCK, ToolTypes.Pickaxe, Declarer.redstone_pick);
+                Declarer.REDSTONE_SWORD = createTool(Items.REDSTONE_BLOCK, ToolTypes.Sword, Declarer.redstone_sword);
+                Declarer.REDSTONE_SHOVEL = createTool(Items.REDSTONE_BLOCK, ToolTypes.Shovel, Declarer.redstone_shovel);
+                Declarer.REDSTONE_HOE = createTool(Items.REDSTONE_BLOCK, ToolTypes.Hoe, Declarer.redstone_hoe);
+            }
+            if (Ref.blackstoneTools) {
+                tempID = new Identifier(Ref.MODID, "blackstone");
+                Declarer.BLACKSTONE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.blackstone_axe);
+                Declarer.BLACKSTONE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.blackstone_pick);
+                Declarer.BLACKSTONE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.blackstone_sword);
+                Declarer.BLACKSTONE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.blackstone_shovel);
+                Declarer.BLACKSTONE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.blackstone_hoe);
+            }
+            if (Ref.basaltTools) {
+                tempID = new Identifier(Ref.MODID, "basalt");
+                Declarer.BASALT_AXE = createTool(tempID, ToolTypes.Axe, Declarer.basalt_axe);
+                Declarer.BASALT_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.basalt_pick);
+                Declarer.BASALT_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.basalt_sword);
+                Declarer.BASALT_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.basalt_shovel);
+                Declarer.BASALT_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.basalt_hoe);
+            }
+            if (Ref.endstoneTools) {
+                tempID = new Identifier(Ref.MODID, "endstone");
+                Declarer.ENDSTONE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.endstone_axe);
+                Declarer.ENDSTONE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.endstone_pick);
+                Declarer.ENDSTONE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.endstone_sword);
+                Declarer.ENDSTONE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.endstone_shovel);
+                Declarer.ENDSTONE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.endstone_hoe);
+            }
+            if (Ref.warpedTools) {
+                Declarer.WARPED_AXE = createTool(Items.WARPED_PLANKS, ToolTypes.Axe, Declarer.warped_axe);
+                Declarer.WARPED_PICKAXE = createTool(Items.WARPED_PLANKS, ToolTypes.Pickaxe, Declarer.warped_pick);
+                Declarer.WARPED_SWORD = createTool(Items.WARPED_PLANKS, ToolTypes.Sword, Declarer.warped_sword);
+                Declarer.WARPED_SHOVEL = createTool(Items.WARPED_PLANKS, ToolTypes.Shovel, Declarer.warped_shovel);
+                Declarer.WARPED_HOE = createTool(Items.WARPED_PLANKS, ToolTypes.Hoe, Declarer.warped_hoe);
+            }
+            if (Ref.crimsonTools) {
+                Declarer.CRIMSON_AXE = createTool(Items.CRIMSON_PLANKS, ToolTypes.Axe, Declarer.crimson_axe);
+                Declarer.CRIMSON_PICKAXE = createTool(Items.CRIMSON_PLANKS, ToolTypes.Pickaxe, Declarer.crimson_pick);
+                Declarer.CRIMSON_SWORD = createTool(Items.CRIMSON_PLANKS, ToolTypes.Sword, Declarer.crimson_sword);
+                Declarer.CRIMSON_SHOVEL = createTool(Items.CRIMSON_PLANKS, ToolTypes.Shovel, Declarer.crimson_shovel);
+                Declarer.CRIMSON_HOE = createTool(Items.CRIMSON_PLANKS, ToolTypes.Hoe, Declarer.crimson_hoe);
+            }
+            if (Ref.amethystTools) {
+                Declarer.AMETHYST_AXE = createTool(Items.AMETHYST_BLOCK, ToolTypes.Axe, Declarer.amethyst_axe);
+                Declarer.AMETHYST_PICKAXE = createTool(Items.AMETHYST_BLOCK, ToolTypes.Pickaxe, Declarer.amethyst_pick);
+                Declarer.AMETHYST_SWORD = createTool(Items.AMETHYST_BLOCK, ToolTypes.Sword, Declarer.amethyst_sword);
+                Declarer.AMETHYST_SHOVEL = createTool(Items.AMETHYST_BLOCK, ToolTypes.Shovel, Declarer.amethyst_shovel);
+                Declarer.AMETHYST_HOE = createTool(Items.AMETHYST_BLOCK, ToolTypes.Hoe, Declarer.amethyst_hoe);
+            }
+            if (Ref.copperTools) {
+                Declarer.COPPER_AXE = createTool(Items.COPPER_INGOT, ToolTypes.Axe, Declarer.copper_axe);
+                Declarer.COPPER_PICKAXE = createTool(Items.COPPER_INGOT, ToolTypes.Pickaxe, Declarer.copper_pick);
+                Declarer.COPPER_SWORD = createTool(Items.COPPER_INGOT, ToolTypes.Sword, Declarer.copper_sword);
+                Declarer.COPPER_SHOVEL = createTool(Items.COPPER_INGOT, ToolTypes.Shovel, Declarer.copper_shovel);
+                Declarer.COPPER_HOE = createTool(Items.COPPER_INGOT, ToolTypes.Hoe, Declarer.copper_hoe);
+            }
+            if (Ref.deepslateTools) {
+                tempID = new Identifier(Ref.MODID, "deepslate");
+                Declarer.DEEPSLATE_AXE = createTool(tempID, ToolTypes.Axe, Declarer.deepslate_axe);
+                Declarer.DEEPSLATE_PICKAXE = createTool(tempID, ToolTypes.Pickaxe, Declarer.deepslate_pick);
+                Declarer.DEEPSLATE_SWORD = createTool(tempID, ToolTypes.Sword, Declarer.deepslate_sword);
+                Declarer.DEEPSLATE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.deepslate_shovel);
+                Declarer.DEEPSLATE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.deepslate_hoe);
+            }
+        }
+        if (Ref.allCompressedBlocks) {
+            if (Ref.cobble) {
+                Declarer.COBBLESTONE_1X = createCompressedBlock(Items.COBBLESTONE, Declarer.monuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_1XU = createUncompressedBlock(Declarer.monuple_compressed_cobblestone, Items.COBBLESTONE);
+                Declarer.COBBLESTONE_2X = createCompressedBlock(Declarer.monuple_compressed_cobblestone, Declarer.couple_compressed_cobblestone);
+                Declarer.COBBLESTONE_2XU = createUncompressedBlock(Declarer.couple_compressed_cobblestone, Declarer.monuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_3X = createCompressedBlock(Declarer.couple_compressed_cobblestone, Declarer.triple_compressed_cobblestone);
+                Declarer.COBBLESTONE_3XU = createUncompressedBlock(Declarer.triple_compressed_cobblestone, Declarer.couple_compressed_cobblestone);
+                Declarer.COBBLESTONE_4X = createCompressedBlock(Declarer.triple_compressed_cobblestone, Declarer.quadruple_compressed_cobblestone);
+                Declarer.COBBLESTONE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_cobblestone, Declarer.triple_compressed_cobblestone);
+                Declarer.COBBLESTONE_5X = createCompressedBlock(Declarer.quadruple_compressed_cobblestone, Declarer.quintuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_cobblestone, Declarer.quadruple_compressed_cobblestone);
+                Declarer.COBBLESTONE_6X = createCompressedBlock(Declarer.quintuple_compressed_cobblestone, Declarer.sextuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_cobblestone, Declarer.quintuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_7X = createCompressedBlock(Declarer.sextuple_compressed_cobblestone, Declarer.septuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_7XU = createUncompressedBlock(Declarer.septuple_compressed_cobblestone, Declarer.sextuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_8X = createCompressedBlock(Declarer.septuple_compressed_cobblestone, Declarer.octuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_8XU = createUncompressedBlock(Declarer.octuple_compressed_cobblestone, Declarer.septuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_9X = createCompressedBlock(Declarer.octuple_compressed_cobblestone, Declarer.nonuple_compressed_cobblestone);
+                Declarer.COBBLESTONE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_cobblestone, Declarer.octuple_compressed_cobblestone);
+            }
+            if (Ref.dirt) {
+                Declarer.DIRT_1X = createCompressedBlock(Items.DIRT, Declarer.monuple_compressed_dirt);
+                Declarer.DIRT_1XU = createUncompressedBlock(Declarer.monuple_compressed_dirt, Items.DIRT);
+                Declarer.DIRT_2X = createCompressedBlock(Declarer.monuple_compressed_dirt, Declarer.couple_compressed_dirt);
+                Declarer.DIRT_2XU = createUncompressedBlock(Declarer.couple_compressed_dirt, Declarer.monuple_compressed_dirt);
+                Declarer.DIRT_3X = createCompressedBlock(Declarer.couple_compressed_dirt, Declarer.triple_compressed_dirt);
+                Declarer.DIRT_3XU = createUncompressedBlock(Declarer.triple_compressed_dirt, Declarer.couple_compressed_dirt);
+                Declarer.DIRT_4X = createCompressedBlock(Declarer.triple_compressed_dirt, Declarer.quadruple_compressed_dirt);
+                Declarer.DIRT_4XU = createUncompressedBlock(Declarer.quadruple_compressed_dirt, Declarer.triple_compressed_dirt);
+                Declarer.DIRT_5X = createCompressedBlock(Declarer.quadruple_compressed_dirt, Declarer.quintuple_compressed_dirt);
+                Declarer.DIRT_5XU = createUncompressedBlock(Declarer.quintuple_compressed_dirt, Declarer.quadruple_compressed_dirt);
+                Declarer.DIRT_6X = createCompressedBlock(Declarer.quintuple_compressed_dirt, Declarer.sextuple_compressed_dirt);
+                Declarer.DIRT_6XU = createUncompressedBlock(Declarer.sextuple_compressed_dirt, Declarer.quintuple_compressed_dirt);
+                Declarer.DIRT_7X = createCompressedBlock(Declarer.sextuple_compressed_dirt, Declarer.septuple_compressed_dirt);
+                Declarer.DIRT_7XU = createUncompressedBlock(Declarer.septuple_compressed_dirt, Declarer.sextuple_compressed_dirt);
+                Declarer.DIRT_8X = createCompressedBlock(Declarer.septuple_compressed_dirt, Declarer.octuple_compressed_dirt);
+                Declarer.DIRT_8XU = createUncompressedBlock(Declarer.octuple_compressed_dirt, Declarer.septuple_compressed_dirt);
+                Declarer.DIRT_9X = createCompressedBlock(Declarer.octuple_compressed_dirt, Declarer.nonuple_compressed_dirt);
+                Declarer.DIRT_9XU = createUncompressedBlock(Declarer.nonuple_compressed_dirt, Declarer.octuple_compressed_dirt);
+            }
+            if (Ref.diorite) {
+                Declarer.DIORITE_1X = createCompressedBlock(Items.DIORITE, Declarer.monuple_compressed_diorite);
+                Declarer.DIORITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_diorite, Items.DIORITE);
+                Declarer.DIORITE_2X = createCompressedBlock(Declarer.monuple_compressed_diorite, Declarer.couple_compressed_diorite);
+                Declarer.DIORITE_2XU = createUncompressedBlock(Declarer.couple_compressed_diorite, Declarer.monuple_compressed_diorite);
+                Declarer.DIORITE_3X = createCompressedBlock(Declarer.couple_compressed_diorite, Declarer.triple_compressed_diorite);
+                Declarer.DIORITE_3XU = createUncompressedBlock(Declarer.triple_compressed_diorite, Declarer.couple_compressed_diorite);
+                Declarer.DIORITE_4X = createCompressedBlock(Declarer.triple_compressed_diorite, Declarer.quadruple_compressed_diorite);
+                Declarer.DIORITE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_diorite, Declarer.triple_compressed_diorite);
+                Declarer.DIORITE_5X = createCompressedBlock(Declarer.quadruple_compressed_diorite, Declarer.quintuple_compressed_diorite);
+                Declarer.DIORITE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_diorite, Declarer.quadruple_compressed_diorite);
+                Declarer.DIORITE_6X = createCompressedBlock(Declarer.quintuple_compressed_diorite, Declarer.sextuple_compressed_diorite);
+                Declarer.DIORITE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_diorite, Declarer.quintuple_compressed_diorite);
+                Declarer.DIORITE_7X = createCompressedBlock(Declarer.sextuple_compressed_diorite, Declarer.septuple_compressed_diorite);
+                Declarer.DIORITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_diorite, Declarer.sextuple_compressed_diorite);
+                Declarer.DIORITE_8X = createCompressedBlock(Declarer.septuple_compressed_diorite, Declarer.octuple_compressed_diorite);
+                Declarer.DIORITE_8XU = createUncompressedBlock(Declarer.octuple_compressed_diorite, Declarer.septuple_compressed_diorite);
+                Declarer.DIORITE_9X = createCompressedBlock(Declarer.octuple_compressed_diorite, Declarer.nonuple_compressed_diorite);
+                Declarer.DIORITE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_diorite, Declarer.octuple_compressed_diorite);
+            }
+            if (Ref.granite) {
+                Declarer.GRANITE_1X = createCompressedBlock(Items.GRANITE, Declarer.monuple_compressed_granite);
+                Declarer.GRANITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_granite, Items.GRANITE);
+                Declarer.GRANITE_2X = createCompressedBlock(Declarer.monuple_compressed_granite, Declarer.couple_compressed_granite);
+                Declarer.GRANITE_2XU = createUncompressedBlock(Declarer.couple_compressed_granite, Declarer.monuple_compressed_granite);
+                Declarer.GRANITE_3X = createCompressedBlock(Declarer.couple_compressed_granite, Declarer.triple_compressed_granite);
+                Declarer.GRANITE_3XU = createUncompressedBlock(Declarer.triple_compressed_granite, Declarer.couple_compressed_granite);
+                Declarer.GRANITE_4X = createCompressedBlock(Declarer.triple_compressed_granite, Declarer.quadruple_compressed_granite);
+                Declarer.GRANITE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_granite, Declarer.triple_compressed_granite);
+                Declarer.GRANITE_5X = createCompressedBlock(Declarer.quadruple_compressed_granite, Declarer.quintuple_compressed_granite);
+                Declarer.GRANITE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_granite, Declarer.quadruple_compressed_granite);
+                Declarer.GRANITE_6X = createCompressedBlock(Declarer.quintuple_compressed_granite, Declarer.sextuple_compressed_granite);
+                Declarer.GRANITE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_granite, Declarer.quintuple_compressed_granite);
+                Declarer.GRANITE_7X = createCompressedBlock(Declarer.sextuple_compressed_granite, Declarer.septuple_compressed_granite);
+                Declarer.GRANITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_granite, Declarer.sextuple_compressed_granite);
+                Declarer.GRANITE_8X = createCompressedBlock(Declarer.septuple_compressed_granite, Declarer.octuple_compressed_granite);
+                Declarer.GRANITE_8XU = createUncompressedBlock(Declarer.octuple_compressed_granite, Declarer.septuple_compressed_granite);
+                Declarer.GRANITE_9X = createCompressedBlock(Declarer.octuple_compressed_granite, Declarer.nonuple_compressed_granite);
+                Declarer.GRANITE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_granite, Declarer.octuple_compressed_granite);
+            }
+            if (Ref.andesite) {
+                Declarer.ANDESITE_1X = createCompressedBlock(Items.ANDESITE, Declarer.monuple_compressed_andesite);
+                Declarer.ANDESITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_andesite, Items.ANDESITE);
+                Declarer.ANDESITE_2X = createCompressedBlock(Declarer.monuple_compressed_andesite, Declarer.couple_compressed_andesite);
+                Declarer.ANDESITE_2XU = createUncompressedBlock(Declarer.couple_compressed_andesite, Declarer.monuple_compressed_andesite);
+                Declarer.ANDESITE_3X = createCompressedBlock(Declarer.couple_compressed_andesite, Declarer.triple_compressed_andesite);
+                Declarer.ANDESITE_3XU = createUncompressedBlock(Declarer.triple_compressed_andesite, Declarer.couple_compressed_andesite);
+                Declarer.ANDESITE_4X = createCompressedBlock(Declarer.triple_compressed_andesite, Declarer.quadruple_compressed_andesite);
+                Declarer.ANDESITE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_andesite, Declarer.triple_compressed_andesite);
+                Declarer.ANDESITE_5X = createCompressedBlock(Declarer.quadruple_compressed_andesite, Declarer.quintuple_compressed_andesite);
+                Declarer.ANDESITE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_andesite, Declarer.quadruple_compressed_andesite);
+                Declarer.ANDESITE_6X = createCompressedBlock(Declarer.quintuple_compressed_andesite, Declarer.sextuple_compressed_andesite);
+                Declarer.ANDESITE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_andesite, Declarer.quintuple_compressed_andesite);
+                Declarer.ANDESITE_7X = createCompressedBlock(Declarer.sextuple_compressed_andesite, Declarer.septuple_compressed_andesite);
+                Declarer.ANDESITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_andesite, Declarer.sextuple_compressed_andesite);
+                Declarer.ANDESITE_8X = createCompressedBlock(Declarer.septuple_compressed_andesite, Declarer.octuple_compressed_andesite);
+                Declarer.ANDESITE_8XU = createUncompressedBlock(Declarer.octuple_compressed_andesite, Declarer.septuple_compressed_andesite);
+                Declarer.ANDESITE_9X = createCompressedBlock(Declarer.octuple_compressed_andesite, Declarer.nonuple_compressed_andesite);
+                Declarer.ANDESITE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_andesite, Declarer.octuple_compressed_andesite);
+            }
+            if (Ref.netherrack) {
+                Declarer.NETHERRACK_1X = createCompressedBlock(Items.NETHERRACK, Declarer.monuple_compressed_netherrack);
+                Declarer.NETHERRACK_1XU = createUncompressedBlock(Declarer.monuple_compressed_netherrack, Items.NETHERRACK);
+                Declarer.NETHERRACK_2X = createCompressedBlock(Declarer.monuple_compressed_netherrack, Declarer.couple_compressed_netherrack);
+                Declarer.NETHERRACK_2XU = createUncompressedBlock(Declarer.couple_compressed_netherrack, Declarer.monuple_compressed_netherrack);
+                Declarer.NETHERRACK_3X = createCompressedBlock(Declarer.couple_compressed_netherrack, Declarer.triple_compressed_netherrack);
+                Declarer.NETHERRACK_3XU = createUncompressedBlock(Declarer.triple_compressed_netherrack, Declarer.couple_compressed_netherrack);
+                Declarer.NETHERRACK_4X = createCompressedBlock(Declarer.triple_compressed_netherrack, Declarer.quadruple_compressed_netherrack);
+                Declarer.NETHERRACK_4XU = createUncompressedBlock(Declarer.quadruple_compressed_netherrack, Declarer.triple_compressed_netherrack);
+                Declarer.NETHERRACK_5X = createCompressedBlock(Declarer.quadruple_compressed_netherrack, Declarer.quintuple_compressed_netherrack);
+                Declarer.NETHERRACK_5XU = createUncompressedBlock(Declarer.quintuple_compressed_netherrack, Declarer.quadruple_compressed_netherrack);
+                Declarer.NETHERRACK_6X = createCompressedBlock(Declarer.quintuple_compressed_netherrack, Declarer.sextuple_compressed_netherrack);
+                Declarer.NETHERRACK_6XU = createUncompressedBlock(Declarer.sextuple_compressed_netherrack, Declarer.quintuple_compressed_netherrack);
+                Declarer.NETHERRACK_7X = createCompressedBlock(Declarer.sextuple_compressed_netherrack, Declarer.septuple_compressed_netherrack);
+                Declarer.NETHERRACK_7XU = createUncompressedBlock(Declarer.septuple_compressed_netherrack, Declarer.sextuple_compressed_netherrack);
+                Declarer.NETHERRACK_8X = createCompressedBlock(Declarer.septuple_compressed_netherrack, Declarer.octuple_compressed_netherrack);
+                Declarer.NETHERRACK_8XU = createUncompressedBlock(Declarer.octuple_compressed_netherrack, Declarer.septuple_compressed_netherrack);
+                Declarer.NETHERRACK_9X = createCompressedBlock(Declarer.octuple_compressed_netherrack, Declarer.nonuple_compressed_netherrack);
+                Declarer.NETHERRACK_9XU = createUncompressedBlock(Declarer.nonuple_compressed_netherrack, Declarer.octuple_compressed_netherrack);
+            }
+            if (Ref.sand) {
+                Declarer.SAND_1X = createCompressedBlock(Items.SAND, Declarer.monuple_compressed_sand);
+                Declarer.SAND_1XU = createUncompressedBlock(Declarer.monuple_compressed_sand, Items.SAND);
+                Declarer.SAND_2X = createCompressedBlock(Declarer.monuple_compressed_sand, Declarer.couple_compressed_sand);
+                Declarer.SAND_2XU = createUncompressedBlock(Declarer.couple_compressed_sand, Declarer.monuple_compressed_sand);
+                Declarer.SAND_3X = createCompressedBlock(Declarer.couple_compressed_sand, Declarer.triple_compressed_sand);
+                Declarer.SAND_3XU = createUncompressedBlock(Declarer.triple_compressed_sand, Declarer.couple_compressed_sand);
+                Declarer.SAND_4X = createCompressedBlock(Declarer.triple_compressed_sand, Declarer.quadruple_compressed_sand);
+                Declarer.SAND_4XU = createUncompressedBlock(Declarer.quadruple_compressed_sand, Declarer.triple_compressed_sand);
+                Declarer.SAND_5X = createCompressedBlock(Declarer.quadruple_compressed_sand, Declarer.quintuple_compressed_sand);
+                Declarer.SAND_5XU = createUncompressedBlock(Declarer.quintuple_compressed_sand, Declarer.quadruple_compressed_sand);
+                Declarer.SAND_6X = createCompressedBlock(Declarer.quintuple_compressed_sand, Declarer.sextuple_compressed_sand);
+                Declarer.SAND_6XU = createUncompressedBlock(Declarer.sextuple_compressed_sand, Declarer.quintuple_compressed_sand);
+                Declarer.SAND_7X = createCompressedBlock(Declarer.sextuple_compressed_sand, Declarer.septuple_compressed_sand);
+                Declarer.SAND_7XU = createUncompressedBlock(Declarer.septuple_compressed_sand, Declarer.sextuple_compressed_sand);
+                Declarer.SAND_8X = createCompressedBlock(Declarer.septuple_compressed_sand, Declarer.octuple_compressed_sand);
+                Declarer.SAND_8XU = createUncompressedBlock(Declarer.octuple_compressed_sand, Declarer.septuple_compressed_sand);
+                Declarer.SAND_9X = createCompressedBlock(Declarer.octuple_compressed_sand, Declarer.nonuple_compressed_sand);
+                Declarer.SAND_9XU = createUncompressedBlock(Declarer.nonuple_compressed_sand, Declarer.octuple_compressed_sand);
+            }
+            if (Ref.gravel) {
+                Declarer.GRAVEL_1X = createCompressedBlock(Items.GRAVEL, Declarer.monuple_compressed_gravel);
+                Declarer.GRAVEL_1XU = createUncompressedBlock(Declarer.monuple_compressed_gravel, Items.GRAVEL);
+                Declarer.GRAVEL_2X = createCompressedBlock(Declarer.monuple_compressed_gravel, Declarer.couple_compressed_gravel);
+                Declarer.GRAVEL_2XU = createUncompressedBlock(Declarer.couple_compressed_gravel, Declarer.monuple_compressed_gravel);
+                Declarer.GRAVEL_3X = createCompressedBlock(Declarer.couple_compressed_gravel, Declarer.triple_compressed_gravel);
+                Declarer.GRAVEL_3XU = createUncompressedBlock(Declarer.triple_compressed_gravel, Declarer.couple_compressed_gravel);
+                Declarer.GRAVEL_4X = createCompressedBlock(Declarer.triple_compressed_gravel, Declarer.quadruple_compressed_gravel);
+                Declarer.GRAVEL_4XU = createUncompressedBlock(Declarer.quadruple_compressed_gravel, Declarer.triple_compressed_gravel);
+                Declarer.GRAVEL_5X = createCompressedBlock(Declarer.quadruple_compressed_gravel, Declarer.quintuple_compressed_gravel);
+                Declarer.GRAVEL_5XU = createUncompressedBlock(Declarer.quintuple_compressed_gravel, Declarer.quadruple_compressed_gravel);
+                Declarer.GRAVEL_6X = createCompressedBlock(Declarer.quintuple_compressed_gravel, Declarer.sextuple_compressed_gravel);
+                Declarer.GRAVEL_6XU = createUncompressedBlock(Declarer.sextuple_compressed_gravel, Declarer.quintuple_compressed_gravel);
+                Declarer.GRAVEL_7X = createCompressedBlock(Declarer.sextuple_compressed_gravel, Declarer.septuple_compressed_gravel);
+                Declarer.GRAVEL_7XU = createUncompressedBlock(Declarer.septuple_compressed_gravel, Declarer.sextuple_compressed_gravel);
+                Declarer.GRAVEL_8X = createCompressedBlock(Declarer.septuple_compressed_gravel, Declarer.octuple_compressed_gravel);
+                Declarer.GRAVEL_8XU = createUncompressedBlock(Declarer.octuple_compressed_gravel, Declarer.septuple_compressed_gravel);
+                Declarer.GRAVEL_9X = createCompressedBlock(Declarer.octuple_compressed_gravel, Declarer.nonuple_compressed_gravel);
+                Declarer.GRAVEL_9XU = createUncompressedBlock(Declarer.nonuple_compressed_gravel, Declarer.octuple_compressed_gravel);
+            }
+            if (Ref.deepslate) {
+                Declarer.COBBLED_DEEPSLATE_1X = createCompressedBlock(Items.COBBLED_DEEPSLATE, Declarer.monuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_1XU = createUncompressedBlock(Declarer.monuple_compressed_cobbled_deepslate, Items.COBBLED_DEEPSLATE);
+                Declarer.COBBLED_DEEPSLATE_2X = createCompressedBlock(Declarer.monuple_compressed_cobbled_deepslate, Declarer.couple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_2XU = createUncompressedBlock(Declarer.couple_compressed_cobbled_deepslate, Declarer.monuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_3X = createCompressedBlock(Declarer.couple_compressed_cobbled_deepslate, Declarer.triple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_3XU = createUncompressedBlock(Declarer.triple_compressed_cobbled_deepslate, Declarer.couple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_4X = createCompressedBlock(Declarer.triple_compressed_cobbled_deepslate, Declarer.quadruple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_cobbled_deepslate, Declarer.triple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_5X = createCompressedBlock(Declarer.quadruple_compressed_cobbled_deepslate, Declarer.quintuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_cobbled_deepslate, Declarer.quadruple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_6X = createCompressedBlock(Declarer.quintuple_compressed_cobbled_deepslate, Declarer.sextuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_cobbled_deepslate, Declarer.quintuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_7X = createCompressedBlock(Declarer.sextuple_compressed_cobbled_deepslate, Declarer.septuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_7XU = createUncompressedBlock(Declarer.septuple_compressed_cobbled_deepslate, Declarer.sextuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_8X = createCompressedBlock(Declarer.septuple_compressed_cobbled_deepslate, Declarer.octuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_8XU = createUncompressedBlock(Declarer.octuple_compressed_cobbled_deepslate, Declarer.septuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_9X = createCompressedBlock(Declarer.octuple_compressed_cobbled_deepslate, Declarer.nonuple_compressed_cobbled_deepslate);
+                Declarer.COBBLED_DEEPSLATE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_cobbled_deepslate, Declarer.octuple_compressed_cobbled_deepslate);
             }
         }
     }

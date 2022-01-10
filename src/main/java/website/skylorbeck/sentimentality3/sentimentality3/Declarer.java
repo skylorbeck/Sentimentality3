@@ -451,8 +451,9 @@ public class Declarer {
     public static JsonObject IRON_BLOCK_BLAST = null;
     public static JsonObject GOLD_BLOCK_FURNACE = null;
     public static JsonObject GOLD_BLOCK_BLAST = null;
-    public static JsonObject RECLAIM_GOLD = null;
+    public static JsonObject RECLAIM_COPPER = null;
     public static JsonObject RECLAIM_IRON = null;
+    public static JsonObject RECLAIM_GOLD = null;
     public static JsonObject RECLAIM_DIAMOND = null;
 
     public static JsonObject SADDLE = null;

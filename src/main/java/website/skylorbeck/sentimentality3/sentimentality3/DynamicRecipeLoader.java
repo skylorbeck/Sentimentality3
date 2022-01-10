@@ -68,7 +68,7 @@ public class DynamicRecipeLoader {
         json.addProperty("result", Registry.ITEM.getId(output).toString());
         json.addProperty("experience",experience);
         json.addProperty("cookingtime",furnaceType.equals(furnaceTypes.smelting)?cookTime:cookTime/2);
-        Logger.getAnonymousLogger().log(Level.SEVERE, json.toString());
+//        Logger.getAnonymousLogger().log(Level.SEVERE, json.toString());
         return json;
     }
 
