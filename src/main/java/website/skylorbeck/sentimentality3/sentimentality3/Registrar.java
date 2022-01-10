@@ -12,13 +12,15 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import website.skylorbeck.minecraft.skylorlib.DynamicRecipeLoader;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraBlastFurnaceBlockEntity;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraFurnaceBlockEntity;
 import website.skylorbeck.minecraft.skylorlib.furnaces.ExtraSmokerBlockEntity;
 
 import java.util.Objects;
 
-import static website.skylorbeck.sentimentality3.sentimentality3.DynamicRecipeLoader.*;
+import static website.skylorbeck.minecraft.skylorlib.DynamicRecipeLoader.*;
+
 
 @SuppressWarnings("unchecked cast")
 public class Registrar {
@@ -935,15 +937,15 @@ public class Registrar {
                     Registry.ITEM.getId(Items.FURNACE),
                     1);//changing the vanilla recipe is a must if you want to be able to craft the below
 
-            Declarer.ANDESITE_FURNACE = createFurnace("andesite", Declarer.andesite_furnace);
-            Declarer.BLACKSTONE_FURNACE = createFurnace("blackstone", Declarer.blackstone_furnace);
-            Declarer.BASALT_FURNACE = createFurnace("basalt", Declarer.basalt_furnace);
-            Declarer.DEEPSLATE_FURNACE = createFurnace("deepslate", Declarer.deepslate_furnace);
-            Declarer.DIORITE_FURNACE = createFurnace("diorite", Declarer.diorite_furnace);
-            Declarer.ENDSTONE_FURNACE = createFurnace("endstone", Declarer.endstone_furnace);
-            Declarer.GRANITE_FURNACE = createFurnace("granite", Declarer.granite_furnace);
-            Declarer.SANDSTONE_FURNACE = createFurnace("sandstone", Declarer.sandstone_furnace);
-            Declarer.RED_SANDSTONE_FURNACE = createFurnace("redsandstone", Declarer.red_sandstone_furnace);
+            Declarer.ANDESITE_FURNACE = createFurnace(new Identifier(Ref.MODID,"andesite"), Declarer.andesite_furnace);
+            Declarer.BLACKSTONE_FURNACE = createFurnace(new Identifier(Ref.MODID,"blackstone"), Declarer.blackstone_furnace);
+            Declarer.BASALT_FURNACE = createFurnace(new Identifier(Ref.MODID,"basalt"), Declarer.basalt_furnace);
+            Declarer.DEEPSLATE_FURNACE = createFurnace(new Identifier(Ref.MODID,"deepslate"), Declarer.deepslate_furnace);
+            Declarer.DIORITE_FURNACE = createFurnace(new Identifier(Ref.MODID,"diorite"), Declarer.diorite_furnace);
+            Declarer.ENDSTONE_FURNACE = createFurnace(new Identifier(Ref.MODID,"endstone"), Declarer.endstone_furnace);
+            Declarer.GRANITE_FURNACE = createFurnace(new Identifier(Ref.MODID,"granite"), Declarer.granite_furnace);
+            Declarer.SANDSTONE_FURNACE = createFurnace(new Identifier(Ref.MODID,"sandstone"), Declarer.sandstone_furnace);
+            Declarer.RED_SANDSTONE_FURNACE = createFurnace(new Identifier(Ref.MODID,"redsandstone"), Declarer.red_sandstone_furnace);
             Declarer.NETHERRACK_FURNACE = createShapedRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.NETHERRACK)),//items
                     Lists.newArrayList(false),//type
@@ -953,15 +955,15 @@ public class Registrar {
             );
         }
         if (Ref.blasts) {
-            Declarer.ANDESITE_BLAST = createBlast("andesite", Declarer.andesite_furnace, Declarer.andesite_blast_furnace);
-            Declarer.BLACKSTONE_BLAST = createBlast("blackstone", Declarer.blackstone_furnace, Declarer.blackstone_blast_furnace);
-            Declarer.BASALT_BLAST = createBlast("basalt", Declarer.basalt_furnace, Declarer.basalt_blast_furnace);
-            Declarer.DEEPSLATE_BLAST = createBlast("deepslate", Declarer.deepslate_furnace, Declarer.deepslate_blast_furnace);
-            Declarer.DIORITE_BLAST = createBlast("diorite", Declarer.diorite_furnace, Declarer.diorite_blast_furnace);
-            Declarer.ENDSTONE_BLAST = createBlast("endstone", Declarer.endstone_furnace, Declarer.endstone_blast_furnace);
-            Declarer.GRANITE_BLAST = createBlast("granite", Declarer.granite_furnace, Declarer.granite_blast_furnace);
-            Declarer.SANDSTONE_BLAST = createBlast("sandstone", Declarer.sandstone_furnace, Declarer.sandstone_blast_furnace);
-            Declarer.RED_SANDSTONE_BLAST = createBlast("redsandstone", Declarer.red_sandstone_furnace, Declarer.red_sandstone_blast_furnace);
+            Declarer.ANDESITE_BLAST = createBlast(new Identifier(Ref.MODID,"andesite"), Declarer.andesite_furnace, Declarer.andesite_blast_furnace);
+            Declarer.BLACKSTONE_BLAST = createBlast(new Identifier(Ref.MODID,"blackstone"), Declarer.blackstone_furnace, Declarer.blackstone_blast_furnace);
+            Declarer.BASALT_BLAST = createBlast(new Identifier(Ref.MODID,"basalt"), Declarer.basalt_furnace, Declarer.basalt_blast_furnace);
+            Declarer.DEEPSLATE_BLAST = createBlast(new Identifier(Ref.MODID,"deepslate"), Declarer.deepslate_furnace, Declarer.deepslate_blast_furnace);
+            Declarer.DIORITE_BLAST = createBlast(new Identifier(Ref.MODID,"diorite"), Declarer.diorite_furnace, Declarer.diorite_blast_furnace);
+            Declarer.ENDSTONE_BLAST = createBlast(new Identifier(Ref.MODID,"endstone"), Declarer.endstone_furnace, Declarer.endstone_blast_furnace);
+            Declarer.GRANITE_BLAST = createBlast(new Identifier(Ref.MODID,"granite"), Declarer.granite_furnace, Declarer.granite_blast_furnace);
+            Declarer.SANDSTONE_BLAST = createBlast(new Identifier(Ref.MODID,"sandstone"), Declarer.sandstone_furnace, Declarer.sandstone_blast_furnace);
+            Declarer.RED_SANDSTONE_BLAST = createBlast(new Identifier(Ref.MODID,"redsandstone"), Declarer.red_sandstone_furnace, Declarer.red_sandstone_blast_furnace);
             Declarer.NETHERRACK_BLAST = createShapedRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.IRON_INGOT), Registry.ITEM.getId(Declarer.netherrack_furnace), Registry.ITEM.getId(Items.NETHER_BRICK)),//items
                     Lists.newArrayList(false, false, false),//type
