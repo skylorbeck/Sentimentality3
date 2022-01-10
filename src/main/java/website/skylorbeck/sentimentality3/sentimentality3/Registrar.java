@@ -28,7 +28,7 @@ import static website.skylorbeck.sentimentality3.sentimentality3.DynamicRecipeLo
 public class Registrar {
     //todo COMPRESSED TUFF
     //todo compressed calcite
-
+    //todo copper nugget
     public static void clientRegister() {//separated because servers don't like when they have this stuff registered on them
         //particles
         Declarer.END_FIRE_FLAME = Registry.register(Registry.PARTICLE_TYPE, new Identifier(Ref.MODID, "end_fire_flame"), FabricParticleTypes.simple());

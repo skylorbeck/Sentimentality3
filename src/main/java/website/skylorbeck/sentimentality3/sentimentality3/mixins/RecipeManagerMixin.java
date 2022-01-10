@@ -1,6 +1,7 @@
 package website.skylorbeck.sentimentality3.sentimentality3.mixins;
 
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
@@ -14,71 +15,385 @@ import website.skylorbeck.sentimentality3.sentimentality3.Declarer;
 import website.skylorbeck.sentimentality3.sentimentality3.Ref;
 
 import java.util.Map;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 @Mixin(RecipeManager.class)
 public class RecipeManagerMixin {
     @Inject(method = "apply", at = @At("HEAD"))
     public void interceptApply(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo info) {
-        if (Declarer.ARROW != null) {
-            map.put(new Identifier(Ref.MODID,"arrow"), Declarer.ARROW);
-        }
-        if (Declarer.BREAD != null) {
-            map.put(new Identifier(Ref.MODID,"bread"), Declarer.BREAD);
-        }
-        if (Declarer.BLACKSTONE != null) {
-            map.put(new Identifier(Ref.MODID,"blackstone"), Declarer.BLACKSTONE);
-        }
-        if (Declarer.AMETHYST != null) {
-            map.put(new Identifier(Ref.MODID,"amethyst"), Declarer.AMETHYST);
-        }
-        if (Declarer.BLAZEROD != null) {
-            map.put(new Identifier(Ref.MODID,"blazerod"), Declarer.BLAZEROD);
-        }
-        if (Declarer.BROWN_MUSHROOM != null) {
-            map.put(new Identifier(Ref.MODID,"brown_mushroom"), Declarer.BROWN_MUSHROOM);
-        }
-        if (Declarer.RED_MUSHROOM != null) {
-            map.put(new Identifier(Ref.MODID,"red_mushroom"), Declarer.RED_MUSHROOM);
-        }
-        if (Declarer.CHAINBOOT != null) {
-            map.put(new Identifier(Ref.MODID,"chainboot"), Declarer.CHAINBOOT);
-        }
-        if (Declarer.CHAINPANT != null) {
-            map.put(new Identifier(Ref.MODID,"chainpant"), Declarer.CHAINPANT);
-        }
-        if (Declarer.CHAINCHEST != null) {
-            map.put(new Identifier(Ref.MODID,"chainchest"), Declarer.CHAINCHEST);
-        }
-        if (Declarer.CHAINHELM != null) {
-            map.put(new Identifier(Ref.MODID,"chainhelm"), Declarer.CHAINHELM);
-        }
-        if (Declarer.ANDESITE_BLAST != null) {
-            map.put(new Identifier(Ref.MODID,"andesite_blast"), Declarer.ANDESITE_BLAST);
-        }
-        if (Declarer.ANDESITE_FURNACE != null) {
-            map.put(new Identifier(Ref.MODID,"andesite_furnace"), Declarer.ANDESITE_FURNACE);
-        }
-        if (Declarer.ANDESITE_SMOKER != null) {
-            map.put(new Identifier(Ref.MODID,"andesite_smoker"), Declarer.ANDESITE_SMOKER);
-        }
-        if (Declarer.BLACKSTONE_BLAST != null) {
-            map.put(new Identifier(Ref.MODID,"blackstone_blast"), Declarer.BLACKSTONE_BLAST);
-        }
-        if (Declarer.BLACKSTONE_FURNACE != null) {
-            map.put(new Identifier(Ref.MODID,"blackstone_furnace"), Declarer.BLACKSTONE_FURNACE);
-        }
-        if (Declarer.BLACKSTONE_SMOKER != null) {
-            map.put(new Identifier(Ref.MODID,"blackstone_smoker"), Declarer.BLACKSTONE_SMOKER);
-        }
-        if (Declarer.BASALT_BLAST != null) {
-            map.put(new Identifier(Ref.MODID,"basalt_blast"), Declarer.BASALT_BLAST);
-        }
-        if (Declarer.BASALT_FURNACE != null) {
-            map.put(new Identifier(Ref.MODID,"basalt_furnace"), Declarer.BASALT_FURNACE);
-        }
-        if (Declarer.BASALT_SMOKER != null) {
-            map.put(new Identifier(Ref.MODID,"basalt_smoker"), Declarer.BASALT_SMOKER);
-        }
+        BiFunction<JsonObject, String, ?> createMap = (json, id) -> {
+            if (json != null) {
+                map.put(new Identifier(Ref.MODID, id), json);
+                return true;
+            }
+            return false;
+        };
+        createMap.apply(Declarer.ARROW,"arrow");
+        createMap.apply(Declarer.BREAD,"bread");
+        createMap.apply(Declarer.PAPER,"paper");
+        createMap.apply(Declarer.SHULKERBOX,"shulkerbox");
+        createMap.apply(Declarer.BLACKSTONE,"blackstone");
+        createMap.apply(Declarer.DIORITE,"diorite");
+        createMap.apply(Declarer.GRANITE,"granite");
+        createMap.apply(Declarer.ANDESITE,"andesite");
+        createMap.apply(Declarer.GILDED_BLACKSTONE,"gilded_blackstone");
+        createMap.apply(Declarer.MOSSY_COBBLESTONE,"mossy_cobblestone");
+        createMap.apply(Declarer.QUARTZ_PILLAR_CHISELED,"quartz_pillar_chiseled");
+        createMap.apply(Declarer.QUARTZ_CHISELED,"quartz_chiseled");
+        createMap.apply(Declarer.CLAY,"clay");
+        createMap.apply(Declarer.FLINT,"flint");
+        createMap.apply(Declarer.AMETHYST,"amethyst");
+        createMap.apply(Declarer.BLAZEROD,"blazerod");
+        createMap.apply(Declarer.BROWN_MUSHROOM,"brown_mushroom");
+        createMap.apply(Declarer.RED_MUSHROOM,"red_mushroom");
+        createMap.apply(Declarer.WART,"wart");
+        createMap.apply(Declarer.GLOWSTONE,"glowstone");
+        createMap.apply(Declarer.STRING,"string");
+        createMap.apply(Declarer.QUARTZ,"quartz");
+        createMap.apply(Declarer.CHESTS,"chests");
+        createMap.apply(Declarer.HORSE_IRON,"horse_iron");
+        createMap.apply(Declarer.HORSE_GOLD,"horse_gold");
+        createMap.apply(Declarer.HORSE_DIAMOND,"horse_diamond");
+        createMap.apply(Declarer.TORCH,"torch");
+        createMap.apply(Declarer.SLIMEBALL,"slimeball");
+        createMap.apply(Declarer.TRIDENT,"trident");
+        createMap.apply(Declarer.NAMETAG,"nametag");
+        createMap.apply(Declarer.NOTCH_APPLE,"notch_apple");
+        createMap.apply(Declarer.SADDLE,"saddle");
+        createMap.apply(Declarer.COPPER_BLOCK_FURNACE,"copper_block_furnace");
+        createMap.apply(Declarer.COPPER_BLOCK_BLAST,"copper_block_blast");
+        createMap.apply(Declarer.IRON_BLOCK_FURNACE,"iron_block_furnace");
+        createMap.apply(Declarer.IRON_BLOCK_BLAST,"iron_block_blast");
+        createMap.apply(Declarer.GOLD_BLOCK_FURNACE,"gold_block_furnace");
+        createMap.apply(Declarer.GOLD_BLOCK_BLAST,"gold_block_blast");
+        createMap.apply(Declarer.RECLAIM_COPPER,"reclaim_copper");
+        createMap.apply(Declarer.RECLAIM_IRON,"reclaim_iron");
+        createMap.apply(Declarer.RECLAIM_GOLD,"reclaim_gold");
+        createMap.apply(Declarer.RECLAIM_DIAMOND,"reclaim_diamond");
+        createMap.apply(Declarer.PDD,"pdd");
+        createMap.apply(Declarer.SCL,"scl");
+        createMap.apply(Declarer.CHUNKLOADER,"chunkloader");
+        createMap.apply(Declarer.FLEATHER,"fleather");
+        createMap.apply(Declarer.CHARCOAL_BLOCK,"charcoal_block");
+        createMap.apply(Declarer.CHARCOAL_BLOCK_U,"charcoal_block_u");
+        createMap.apply(Declarer.STICK_BUNDLE_S,"stick_bundle_s");
+        createMap.apply(Declarer.STICK_BUNDLE_S_U,"stick_bundle_s_u");
+        createMap.apply(Declarer.STICK_BUNDLE_L,"stick_bundle_l");
+        createMap.apply(Declarer.STICK_BUNDLE_L_U,"stick_bundle_l_u");
+        createMap.apply(Declarer.FEATHER,"feather");
+        createMap.apply(Declarer.FEATHER_U,"feather_u");
+        createMap.apply(Declarer.CHARCOAL_NUGGET,"charcoal_nugget");
+        createMap.apply(Declarer.CHARCOAL_NUGGET_U,"charcoal_nugget_u");
+        createMap.apply(Declarer.COAL_NUGGET,"coal_nugget");
+        createMap.apply(Declarer.COAL_NUGGET_U,"coal_nugget_u");
+        createMap.apply(Declarer.FURNACE,"furnace");
+        createMap.apply(Declarer.ANDESITE_FURNACE,"andesite_furnace");
+        createMap.apply(Declarer.BLACKSTONE_FURNACE,"blackstone_furnace");
+        createMap.apply(Declarer.BASALT_FURNACE,"basalt_furnace");
+        createMap.apply(Declarer.DEEPSLATE_FURNACE,"deepslate_furnace");
+        createMap.apply(Declarer.DIORITE_FURNACE,"diorite_furnace");
+        createMap.apply(Declarer.ENDSTONE_FURNACE,"endstone_furnace");
+        createMap.apply(Declarer.GRANITE_FURNACE,"granite_furnace");
+        createMap.apply(Declarer.SANDSTONE_FURNACE,"sandstone_furnace");
+        createMap.apply(Declarer.RED_SANDSTONE_FURNACE,"red_sandstone_furnace");
+        createMap.apply(Declarer.NETHERRACK_FURNACE,"netherrack_furnace");
+        createMap.apply(Declarer.ANDESITE_BLAST,"andesite_blast");
+        createMap.apply(Declarer.BLACKSTONE_BLAST,"blackstone_blast");
+        createMap.apply(Declarer.BASALT_BLAST,"basalt_blast");
+        createMap.apply(Declarer.DEEPSLATE_BLAST,"deepslate_blast");
+        createMap.apply(Declarer.DIORITE_BLAST,"diorite_blast");
+        createMap.apply(Declarer.ENDSTONE_BLAST,"endstone_blast");
+        createMap.apply(Declarer.GRANITE_BLAST,"granite_blast");
+        createMap.apply(Declarer.SANDSTONE_BLAST,"sandstone_blast");
+        createMap.apply(Declarer.RED_SANDSTONE_BLAST,"red_sandstone_blast");
+        createMap.apply(Declarer.NETHERRACK_BLAST,"netherrack_blast");
+        createMap.apply(Declarer.ANDESITE_SMOKER,"andesite_smoker");
+        createMap.apply(Declarer.BLACKSTONE_SMOKER,"blackstone_smoker");
+        createMap.apply(Declarer.BASALT_SMOKER,"basalt_smoker");
+        createMap.apply(Declarer.DEEPSLATE_SMOKER,"deepslate_smoker");
+        createMap.apply(Declarer.DIORITE_SMOKER,"diorite_smoker");
+        createMap.apply(Declarer.ENDSTONE_SMOKER,"endstone_smoker");
+        createMap.apply(Declarer.GRANITE_SMOKER,"granite_smoker");
+        createMap.apply(Declarer.SANDSTONE_SMOKER,"sandstone_smoker");
+        createMap.apply(Declarer.RED_SANDSTONE_SMOKER,"red_sandstone_smoker");
+        createMap.apply(Declarer.NETHERRACK_SMOKER,"netherrack_smoker");
+        createMap.apply(Declarer.CHAINBOOT,"chainboot");
+        createMap.apply(Declarer.CHAINCHEST,"chainchest");
+        createMap.apply(Declarer.CHAINPANT,"chainpant");
+        createMap.apply(Declarer.CHAINHELM,"chainhelm");
+        createMap.apply(Declarer.WOOLBOOT,"woolboot");
+        createMap.apply(Declarer.WOOLCHEST,"woolchest");
+        createMap.apply(Declarer.WOOLPANT,"woolpant");
+        createMap.apply(Declarer.WOOLHELM,"woolhelm");
+        createMap.apply(Declarer.COPPERBOOT,"copperboot");
+        createMap.apply(Declarer.COPPERCHEST,"copperchest");
+        createMap.apply(Declarer.COPPERPANT,"copperpant");
+        createMap.apply(Declarer.COPPERHELM,"copperhelm");
+        createMap.apply(Declarer.GRANITE_AXE,"granite_axe");
+        createMap.apply(Declarer.GRANITE_PICKAXE,"granite_pickaxe");
+        createMap.apply(Declarer.GRANITE_SWORD,"granite_sword");
+        createMap.apply(Declarer.GRANITE_SHOVEL,"granite_shovel");
+        createMap.apply(Declarer.GRANITE_HOE,"granite_hoe");
+        createMap.apply(Declarer.DIORITE_AXE,"diorite_axe");
+        createMap.apply(Declarer.DIORITE_PICKAXE,"diorite_pickaxe");
+        createMap.apply(Declarer.DIORITE_SWORD,"diorite_sword");
+        createMap.apply(Declarer.DIORITE_SHOVEL,"diorite_shovel");
+        createMap.apply(Declarer.DIORITE_HOE,"diorite_hoe");
+        createMap.apply(Declarer.ANDESITE_AXE,"andesite_axe");
+        createMap.apply(Declarer.ANDESITE_PICKAXE,"andesite_pickaxe");
+        createMap.apply(Declarer.ANDESITE_SWORD,"andesite_sword");
+        createMap.apply(Declarer.ANDESITE_SHOVEL,"andesite_shovel");
+        createMap.apply(Declarer.ANDESITE_HOE,"andesite_hoe");
+        createMap.apply(Declarer.QUARTZ_AXE,"quartz_axe");
+        createMap.apply(Declarer.QUARTZ_PICKAXE,"quartz_pickaxe");
+        createMap.apply(Declarer.QUARTZ_SWORD,"quartz_sword");
+        createMap.apply(Declarer.QUARTZ_SHOVEL,"quartz_shovel");
+        createMap.apply(Declarer.QUARTZ_HOE,"quartz_hoe");
+        createMap.apply(Declarer.NETHERRACK_AXE,"netherrack_axe");
+        createMap.apply(Declarer.NETHERRACK_PICKAXE,"netherrack_pickaxe");
+        createMap.apply(Declarer.NETHERRACK_SWORD,"netherrack_sword");
+        createMap.apply(Declarer.NETHERRACK_SHOVEL,"netherrack_shovel");
+        createMap.apply(Declarer.NETHERRACK_HOE,"netherrack_hoe");
+        createMap.apply(Declarer.NETHERBRICK_AXE,"netherbrick_axe");
+        createMap.apply(Declarer.NETHERBRICK_PICKAXE,"netherbrick_pickaxe");
+        createMap.apply(Declarer.NETHERBRICK_SWORD,"netherbrick_sword");
+        createMap.apply(Declarer.NETHERBRICK_SHOVEL,"netherbrick_shovel");
+        createMap.apply(Declarer.NETHERBRICK_HOE,"netherbrick_hoe");
+        createMap.apply(Declarer.RED_NETHERBRICK_AXE,"red_netherbrick_axe");
+        createMap.apply(Declarer.RED_NETHERBRICK_PICKAXE,"red_netherbrick_pickaxe");
+        createMap.apply(Declarer.RED_NETHERBRICK_SWORD,"red_netherbrick_sword");
+        createMap.apply(Declarer.RED_NETHERBRICK_SHOVEL,"red_netherbrick_shovel");
+        createMap.apply(Declarer.RED_NETHERBRICK_HOE,"red_netherbrick_hoe");
+        createMap.apply(Declarer.SANDSTONE_AXE,"sandstone_axe");
+        createMap.apply(Declarer.SANDSTONE_PICKAXE,"sandstone_pickaxe");
+        createMap.apply(Declarer.SANDSTONE_SWORD,"sandstone_sword");
+        createMap.apply(Declarer.SANDSTONE_SHOVEL,"sandstone_shovel");
+        createMap.apply(Declarer.SANDSTONE_HOE,"sandstone_hoe");
+        createMap.apply(Declarer.RED_SANDSTONE_AXE,"red_sandstone_axe");
+        createMap.apply(Declarer.RED_SANDSTONE_PICKAXE,"red_sandstone_pickaxe");
+        createMap.apply(Declarer.RED_SANDSTONE_SWORD,"red_sandstone_sword");
+        createMap.apply(Declarer.RED_SANDSTONE_SHOVEL,"red_sandstone_shovel");
+        createMap.apply(Declarer.RED_SANDSTONE_HOE,"red_sandstone_hoe");
+        createMap.apply(Declarer.LAPIS_AXE,"lapis_axe");
+        createMap.apply(Declarer.LAPIS_PICKAXE,"lapis_pickaxe");
+        createMap.apply(Declarer.LAPIS_SWORD,"lapis_sword");
+        createMap.apply(Declarer.LAPIS_SHOVEL,"lapis_shovel");
+        createMap.apply(Declarer.EMERALD_AXE,"emerald_axe");
+        createMap.apply(Declarer.EMERALD_PICKAXE,"emerald_pickaxe");
+        createMap.apply(Declarer.EMERALD_SWORD,"emerald_sword");
+        createMap.apply(Declarer.EMERALD_SHOVEL,"emerald_shovel");
+        createMap.apply(Declarer.EMERALD_HOE,"emerald_hoe");
+        createMap.apply(Declarer.FLINT_AXE,"flint_axe");
+        createMap.apply(Declarer.FLINT_PICKAXE,"flint_pickaxe");
+        createMap.apply(Declarer.FLINT_SWORD,"flint_sword");
+        createMap.apply(Declarer.FLINT_SHOVEL,"flint_shovel");
+        createMap.apply(Declarer.FLINT_HOE,"flint_hoe");
+        createMap.apply(Declarer.REDSTONE_AXE,"redstone_axe");
+        createMap.apply(Declarer.REDSTONE_PICKAXE,"redstone_pickaxe");
+        createMap.apply(Declarer.REDSTONE_SWORD,"redstone_sword");
+        createMap.apply(Declarer.REDSTONE_SHOVEL,"redstone_shovel");
+        createMap.apply(Declarer.REDSTONE_HOE,"redstone_hoe");
+        createMap.apply(Declarer.BLACKSTONE_AXE,"blackstone_axe");
+        createMap.apply(Declarer.BLACKSTONE_PICKAXE,"blackstone_pickaxe");
+        createMap.apply(Declarer.BLACKSTONE_SWORD,"blackstone_sword");
+        createMap.apply(Declarer.BLACKSTONE_SHOVEL,"blackstone_shovel");
+        createMap.apply(Declarer.BLACKSTONE_HOE,"blackstone_hoe");
+        createMap.apply(Declarer.BASALT_AXE,"basalt_axe");
+        createMap.apply(Declarer.BASALT_PICKAXE,"basalt_pickaxe");
+        createMap.apply(Declarer.BASALT_SWORD,"basalt_sword");
+        createMap.apply(Declarer.BASALT_SHOVEL,"basalt_shovel");
+        createMap.apply(Declarer.BASALT_HOE,"basalt_hoe");
+        createMap.apply(Declarer.ENDSTONE_AXE,"endstone_axe");
+        createMap.apply(Declarer.ENDSTONE_PICKAXE,"endstone_pickaxe");
+        createMap.apply(Declarer.ENDSTONE_SWORD,"endstone_sword");
+        createMap.apply(Declarer.ENDSTONE_SHOVEL,"endstone_shovel");
+        createMap.apply(Declarer.ENDSTONE_HOE,"endstone_hoe");
+        createMap.apply(Declarer.WARPED_AXE,"warped_axe");
+        createMap.apply(Declarer.WARPED_PICKAXE,"warped_pickaxe");
+        createMap.apply(Declarer.WARPED_SWORD,"warped_sword");
+        createMap.apply(Declarer.WARPED_SHOVEL,"warped_shovel");
+        createMap.apply(Declarer.WARPED_HOE,"warped_hoe");
+        createMap.apply(Declarer.CRIMSON_AXE,"crimson_axe");
+        createMap.apply(Declarer.CRIMSON_PICKAXE,"crimson_pickaxe");
+        createMap.apply(Declarer.CRIMSON_SWORD,"crimson_sword");
+        createMap.apply(Declarer.CRIMSON_SHOVEL,"crimson_shovel");
+        createMap.apply(Declarer.CRIMSON_HOE,"crimson_hoe");
+        createMap.apply(Declarer.AMETHYST_AXE,"amethyst_axe");
+        createMap.apply(Declarer.AMETHYST_PICKAXE,"amethyst_pickaxe");
+        createMap.apply(Declarer.AMETHYST_SWORD,"amethyst_sword");
+        createMap.apply(Declarer.AMETHYST_SHOVEL,"amethyst_shovel");
+        createMap.apply(Declarer.COPPER_AXE,"copper_axe");
+        createMap.apply(Declarer.COPPER_PICKAXE,"copper_pickaxe");
+        createMap.apply(Declarer.COPPER_SWORD,"copper_sword");
+        createMap.apply(Declarer.COPPER_SHOVEL,"copper_shovel");
+        createMap.apply(Declarer.COPPER_HOE,"copper_hoe");
+        createMap.apply(Declarer.DEEPSLATE_AXE,"deepslate_axe");
+        createMap.apply(Declarer.DEEPSLATE_PICKAXE,"deepslate_pickaxe");
+        createMap.apply(Declarer.DEEPSLATE_SWORD,"deepslate_sword");
+        createMap.apply(Declarer.DEEPSLATE_SHOVEL,"deepslate_shovel");
+        createMap.apply(Declarer.DEEPSLATE_HOE,"deepslate_hoe");
+        createMap.apply(Declarer.COBBLESTONE_1X,"cobblestone_1x");
+        createMap.apply(Declarer.COBBLESTONE_2X,"cobblestone_2x");
+        createMap.apply(Declarer.COBBLESTONE_3X,"cobblestone_3x");
+        createMap.apply(Declarer.COBBLESTONE_4X,"cobblestone_4x");
+        createMap.apply(Declarer.COBBLESTONE_5X,"cobblestone_5x");
+        createMap.apply(Declarer.COBBLESTONE_6X,"cobblestone_6x");
+        createMap.apply(Declarer.COBBLESTONE_7X,"cobblestone_7x");
+        createMap.apply(Declarer.COBBLESTONE_8X,"cobblestone_8x");
+        createMap.apply(Declarer.COBBLESTONE_9X,"cobblestone_9x");
+        createMap.apply(Declarer.COBBLESTONE_1XU,"cobblestone_1xu");
+        createMap.apply(Declarer.COBBLESTONE_2XU,"cobblestone_2xu");
+        createMap.apply(Declarer.COBBLESTONE_3XU,"cobblestone_3xu");
+        createMap.apply(Declarer.COBBLESTONE_4XU,"cobblestone_4xu");
+        createMap.apply(Declarer.COBBLESTONE_5XU,"cobblestone_5xu");
+        createMap.apply(Declarer.COBBLESTONE_6XU,"cobblestone_6xu");
+        createMap.apply(Declarer.COBBLESTONE_7XU,"cobblestone_7xu");
+        createMap.apply(Declarer.COBBLESTONE_8XU,"cobblestone_8xu");
+        createMap.apply(Declarer.COBBLESTONE_9XU,"cobblestone_9xu");
+        createMap.apply(Declarer.DIRT_1X,"dirt_1x");
+        createMap.apply(Declarer.DIRT_2X,"dirt_2x");
+        createMap.apply(Declarer.DIRT_3X,"dirt_3x");
+        createMap.apply(Declarer.DIRT_4X,"dirt_4x");
+        createMap.apply(Declarer.DIRT_5X,"dirt_5x");
+        createMap.apply(Declarer.DIRT_6X,"dirt_6x");
+        createMap.apply(Declarer.DIRT_7X,"dirt_7x");
+        createMap.apply(Declarer.DIRT_8X,"dirt_8x");
+        createMap.apply(Declarer.DIRT_9X,"dirt_9x");
+        createMap.apply(Declarer.DIRT_1XU,"dirt_1xu");
+        createMap.apply(Declarer.DIRT_2XU,"dirt_2xu");
+        createMap.apply(Declarer.DIRT_3XU,"dirt_3xu");
+        createMap.apply(Declarer.DIRT_4XU,"dirt_4xu");
+        createMap.apply(Declarer.DIRT_5XU,"dirt_5xu");
+        createMap.apply(Declarer.DIRT_6XU,"dirt_6xu");
+        createMap.apply(Declarer.DIRT_7XU,"dirt_7xu");
+        createMap.apply(Declarer.DIRT_8XU,"dirt_8xu");
+        createMap.apply(Declarer.DIRT_9XU,"dirt_9xu");
+        createMap.apply(Declarer.DIORITE_1X,"diorite_1x");
+        createMap.apply(Declarer.DIORITE_2X,"diorite_2x");
+        createMap.apply(Declarer.DIORITE_3X,"diorite_3x");
+        createMap.apply(Declarer.DIORITE_4X,"diorite_4x");
+        createMap.apply(Declarer.DIORITE_5X,"diorite_5x");
+        createMap.apply(Declarer.DIORITE_6X,"diorite_6x");
+        createMap.apply(Declarer.DIORITE_7X,"diorite_7x");
+        createMap.apply(Declarer.DIORITE_8X,"diorite_8x");
+        createMap.apply(Declarer.DIORITE_9X,"diorite_9x");
+        createMap.apply(Declarer.DIORITE_1XU,"diorite_1xu");
+        createMap.apply(Declarer.DIORITE_2XU,"diorite_2xu");
+        createMap.apply(Declarer.DIORITE_3XU,"diorite_3xu");
+        createMap.apply(Declarer.DIORITE_4XU,"diorite_4xu");
+        createMap.apply(Declarer.DIORITE_5XU,"diorite_5xu");
+        createMap.apply(Declarer.DIORITE_6XU,"diorite_6xu");
+        createMap.apply(Declarer.DIORITE_7XU,"diorite_7xu");
+        createMap.apply(Declarer.DIORITE_8XU,"diorite_8xu");
+        createMap.apply(Declarer.DIORITE_9XU,"diorite_9xu");
+        createMap.apply(Declarer.GRANITE_1X,"granite_1x");
+        createMap.apply(Declarer.GRANITE_2X,"granite_2x");
+        createMap.apply(Declarer.GRANITE_3X,"granite_3x");
+        createMap.apply(Declarer.GRANITE_4X,"granite_4x");
+        createMap.apply(Declarer.GRANITE_5X,"granite_5x");
+        createMap.apply(Declarer.GRANITE_6X,"granite_6x");
+        createMap.apply(Declarer.GRANITE_7X,"granite_7x");
+        createMap.apply(Declarer.GRANITE_8X,"granite_8x");
+        createMap.apply(Declarer.GRANITE_9X,"granite_9x");
+        createMap.apply(Declarer.GRANITE_1XU,"granite_1xu");
+        createMap.apply(Declarer.GRANITE_2XU,"granite_2xu");
+        createMap.apply(Declarer.GRANITE_3XU,"granite_3xu");
+        createMap.apply(Declarer.GRANITE_4XU,"granite_4xu");
+        createMap.apply(Declarer.GRANITE_5XU,"granite_5xu");
+        createMap.apply(Declarer.GRANITE_6XU,"granite_6xu");
+        createMap.apply(Declarer.GRANITE_7XU,"granite_7xu");
+        createMap.apply(Declarer.GRANITE_8XU,"granite_8xu");
+        createMap.apply(Declarer.GRANITE_9XU,"granite_9xu");
+        createMap.apply(Declarer.ANDESITE_1X,"andesite_1x");
+        createMap.apply(Declarer.ANDESITE_2X,"andesite_2x");
+        createMap.apply(Declarer.ANDESITE_3X,"andesite_3x");
+        createMap.apply(Declarer.ANDESITE_4X,"andesite_4x");
+        createMap.apply(Declarer.ANDESITE_5X,"andesite_5x");
+        createMap.apply(Declarer.ANDESITE_6X,"andesite_6x");
+        createMap.apply(Declarer.ANDESITE_7X,"andesite_7x");
+        createMap.apply(Declarer.ANDESITE_8X,"andesite_8x");
+        createMap.apply(Declarer.ANDESITE_9X,"andesite_9x");
+        createMap.apply(Declarer.ANDESITE_1XU,"andesite_1xu");
+        createMap.apply(Declarer.ANDESITE_2XU,"andesite_2xu");
+        createMap.apply(Declarer.ANDESITE_3XU,"andesite_3xu");
+        createMap.apply(Declarer.ANDESITE_4XU,"andesite_4xu");
+        createMap.apply(Declarer.ANDESITE_5XU,"andesite_5xu");
+        createMap.apply(Declarer.ANDESITE_6XU,"andesite_6xu");
+        createMap.apply(Declarer.ANDESITE_7XU,"andesite_7xu");
+        createMap.apply(Declarer.ANDESITE_8XU,"andesite_8xu");
+        createMap.apply(Declarer.ANDESITE_9XU,"andesite_9xu");
+        createMap.apply(Declarer.NETHERRACK_1X,"netherrack_1x");
+        createMap.apply(Declarer.NETHERRACK_2X,"netherrack_2x");
+        createMap.apply(Declarer.NETHERRACK_3X,"netherrack_3x");
+        createMap.apply(Declarer.NETHERRACK_4X,"netherrack_4x");
+        createMap.apply(Declarer.NETHERRACK_5X,"netherrack_5x");
+        createMap.apply(Declarer.NETHERRACK_6X,"netherrack_6x");
+        createMap.apply(Declarer.NETHERRACK_7X,"netherrack_7x");
+        createMap.apply(Declarer.NETHERRACK_8X,"netherrack_8x");
+        createMap.apply(Declarer.NETHERRACK_9X,"netherrack_9x");
+        createMap.apply(Declarer.NETHERRACK_1XU,"netherrack_1xu");
+        createMap.apply(Declarer.NETHERRACK_2XU,"netherrack_2xu");
+        createMap.apply(Declarer.NETHERRACK_3XU,"netherrack_3xu");
+        createMap.apply(Declarer.NETHERRACK_4XU,"netherrack_4xu");
+        createMap.apply(Declarer.NETHERRACK_5XU,"netherrack_5xu");
+        createMap.apply(Declarer.NETHERRACK_6XU,"netherrack_6xu");
+        createMap.apply(Declarer.NETHERRACK_7XU,"netherrack_7xu");
+        createMap.apply(Declarer.NETHERRACK_8XU,"netherrack_8xu");
+        createMap.apply(Declarer.NETHERRACK_9XU,"netherrack_9xu");
+        createMap.apply(Declarer.SAND_1X,"sand_1x");
+        createMap.apply(Declarer.SAND_2X,"sand_2x");
+        createMap.apply(Declarer.SAND_3X,"sand_3x");
+        createMap.apply(Declarer.SAND_4X,"sand_4x");
+        createMap.apply(Declarer.SAND_5X,"sand_5x");
+        createMap.apply(Declarer.SAND_6X,"sand_6x");
+        createMap.apply(Declarer.SAND_7X,"sand_7x");
+        createMap.apply(Declarer.SAND_8X,"sand_8x");
+        createMap.apply(Declarer.SAND_9X,"sand_9x");
+        createMap.apply(Declarer.SAND_1XU,"sand_1xu");
+        createMap.apply(Declarer.SAND_2XU,"sand_2xu");
+        createMap.apply(Declarer.SAND_3XU,"sand_3xu");
+        createMap.apply(Declarer.SAND_4XU,"sand_4xu");
+        createMap.apply(Declarer.SAND_5XU,"sand_5xu");
+        createMap.apply(Declarer.SAND_6XU,"sand_6xu");
+        createMap.apply(Declarer.SAND_7XU,"sand_7xu");
+        createMap.apply(Declarer.SAND_8XU,"sand_8xu");
+        createMap.apply(Declarer.SAND_9XU,"sand_9xu");
+        createMap.apply(Declarer.GRAVEL_1X,"gravel_1x");
+        createMap.apply(Declarer.GRAVEL_2X,"gravel_2x");
+        createMap.apply(Declarer.GRAVEL_3X,"gravel_3x");
+        createMap.apply(Declarer.GRAVEL_4X,"gravel_4x");
+        createMap.apply(Declarer.GRAVEL_5X,"gravel_5x");
+        createMap.apply(Declarer.GRAVEL_6X,"gravel_6x");
+        createMap.apply(Declarer.GRAVEL_7X,"gravel_7x");
+        createMap.apply(Declarer.GRAVEL_8X,"gravel_8x");
+        createMap.apply(Declarer.GRAVEL_9X,"gravel_9x");
+        createMap.apply(Declarer.GRAVEL_1XU,"gravel_1xu");
+        createMap.apply(Declarer.GRAVEL_2XU,"gravel_2xu");
+        createMap.apply(Declarer.GRAVEL_3XU,"gravel_3xu");
+        createMap.apply(Declarer.GRAVEL_4XU,"gravel_4xu");
+        createMap.apply(Declarer.GRAVEL_5XU,"gravel_5xu");
+        createMap.apply(Declarer.GRAVEL_6XU,"gravel_6xu");
+        createMap.apply(Declarer.GRAVEL_7XU,"gravel_7xu");
+        createMap.apply(Declarer.GRAVEL_8XU,"gravel_8xu");
+        createMap.apply(Declarer.GRAVEL_9XU,"gravel_9xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_1X,"cobbled_deepslate_1x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_2X,"cobbled_deepslate_2x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_3X,"cobbled_deepslate_3x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_4X,"cobbled_deepslate_4x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_5X,"cobbled_deepslate_5x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_6X,"cobbled_deepslate_6x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_7X,"cobbled_deepslate_7x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_8X,"cobbled_deepslate_8x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_9X,"cobbled_deepslate_9x");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_1XU,"cobbled_deepslate_1xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_2XU,"cobbled_deepslate_2xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_3XU,"cobbled_deepslate_3xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_4XU,"cobbled_deepslate_4xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_5XU,"cobbled_deepslate_5xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_6XU,"cobbled_deepslate_6xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_7XU,"cobbled_deepslate_7xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_8XU,"cobbled_deepslate_8xu");
+        createMap.apply(Declarer.COBBLED_DEEPSLATE_9XU,"cobbled_deepslate_9xu");
     }
-
 }
