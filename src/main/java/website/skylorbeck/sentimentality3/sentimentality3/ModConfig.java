@@ -81,33 +81,39 @@ public class ModConfig implements ConfigData {
 
         @ConfigEntry.Gui.RequiresRestart
         boolean allShapeless = true;
+        @ConfigEntry.Gui.Tooltip(count = 2)
         @ConfigEntry.Gui.CollapsibleObject()
         Shapeless shapeless = new Shapeless();
         @ConfigEntry.Gui.RequiresRestart
         boolean allConvertStone = true;
+        @ConfigEntry.Gui.Tooltip(count = 2)
         @ConfigEntry.Gui.CollapsibleObject()
         ConvertStone convertStone = new ConvertStone();
         @ConfigEntry.Gui.RequiresRestart
         boolean allUnpack = true;
+        @ConfigEntry.Gui.Tooltip(count = 2)
         @ConfigEntry.Gui.CollapsibleObject()
         Unpack unpack = new Unpack();
         @ConfigEntry.Gui.RequiresRestart
         boolean allHorseArmor = true;
+        @ConfigEntry.Gui.Tooltip(count = 2)
         @ConfigEntry.Gui.CollapsibleObject()
         HorseArmor horseArmor = new HorseArmor();
         @ConfigEntry.Gui.RequiresRestart
         boolean allOverPower = true;
+        @ConfigEntry.Gui.Tooltip(count = 2)
         @ConfigEntry.Gui.CollapsibleObject()
         OverPowered overPowered = new OverPowered();
         @ConfigEntry.Gui.RequiresRestart
         boolean allRawSmelt = true;
+        @ConfigEntry.Gui.Tooltip(count = 2)
         @ConfigEntry.Gui.CollapsibleObject()
         RawSmelt rawSmelt = new RawSmelt();
         @ConfigEntry.Gui.RequiresRestart
         boolean allReclaim = true;
+        @ConfigEntry.Gui.Tooltip(count = 2)
         @ConfigEntry.Gui.CollapsibleObject()
         Reclaim reclaim = new Reclaim();
-
         @ConfigEntry.Gui.RequiresRestart
         boolean allTools = true;
         @ConfigEntry.Gui.Tooltip(count = 2)
