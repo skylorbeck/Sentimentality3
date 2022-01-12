@@ -1159,11 +1159,11 @@ public class Registrar {
                 Declarer.LAPIS_HOE = createTool(Items.LAPIS_BLOCK, ToolTypes.Hoe, Declarer.lapis_hoe);
             }
             if (Ref.emeraldTools) {
-                Declarer.EMERALD_AXE = createTool(Items.EMERALD_BLOCK, ToolTypes.Axe, Declarer.emerald_axe);
-                Declarer.EMERALD_PICKAXE = createTool(Items.EMERALD_BLOCK, ToolTypes.Pickaxe, Declarer.emerald_pick);
-                Declarer.EMERALD_SWORD = createTool(Items.EMERALD_BLOCK, ToolTypes.Sword, Declarer.emerald_sword);
-                Declarer.EMERALD_SHOVEL = createTool(Items.EMERALD_BLOCK, ToolTypes.Shovel, Declarer.emerald_shovel);
-                Declarer.EMERALD_HOE = createTool(Items.EMERALD_BLOCK, ToolTypes.Hoe, Declarer.emerald_hoe);
+                Declarer.EMERALD_AXE = createTool(Items.EMERALD, ToolTypes.Axe, Declarer.emerald_axe);
+                Declarer.EMERALD_PICKAXE = createTool(Items.EMERALD, ToolTypes.Pickaxe, Declarer.emerald_pick);
+                Declarer.EMERALD_SWORD = createTool(Items.EMERALD, ToolTypes.Sword, Declarer.emerald_sword);
+                Declarer.EMERALD_SHOVEL = createTool(Items.EMERALD, ToolTypes.Shovel, Declarer.emerald_shovel);
+                Declarer.EMERALD_HOE = createTool(Items.EMERALD, ToolTypes.Hoe, Declarer.emerald_hoe);
             }
             if (Ref.flintTools) {
                 Declarer.FLINT_AXE = createTool(Items.FLINT, ToolTypes.Axe, Declarer.flint_axe);
