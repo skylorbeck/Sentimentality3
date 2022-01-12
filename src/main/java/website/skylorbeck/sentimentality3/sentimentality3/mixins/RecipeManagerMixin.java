@@ -73,6 +73,7 @@ public class RecipeManagerMixin {
         createMap.apply(Declarer.SCL,"scl");
         createMap.apply(Declarer.CHUNKLOADER,"chunkloader");
         createMap.apply(Declarer.FLEATHER,"fleather");
+        createMap.apply(Declarer.FLEATHERCOOK,"fleathercook");
         createMap.apply(Declarer.CHARCOAL_BLOCK,"charcoal_block");
         createMap.apply(Declarer.CHARCOAL_BLOCK_U,"charcoal_block_u");
         createMap.apply(Declarer.STICK_BUNDLE_S,"stick_bundle_s");
