@@ -1008,7 +1008,7 @@ public class Registrar {
             Declarer.CHAINPANT = createShapedRecipeJson(
                     Lists.newArrayList(Registry.ITEM.getId(Items.IRON_NUGGET), Registry.ITEM.getId(Items.IRON_INGOT)),//items
                     Lists.newArrayList(false, false),//type
-                    Lists.newArrayList("0 0", "1 1", "0 0"),//pattern
+                    Lists.newArrayList("0 0", "101", "0 0"),//pattern
                     Registry.ITEM.getId(Items.CHAINMAIL_LEGGINGS),
                     1
             );
@@ -1039,7 +1039,7 @@ public class Registrar {
             Declarer.WOOLPANT = createShapedRecipeJson(
                     Lists.newArrayList(tempID),//items
                     Lists.newArrayList(true),//type
-                    Lists.newArrayList("0 0", "0 0", "0 0"),//pattern
+                    Lists.newArrayList("0 0", "000", "0 0"),//pattern
                     Registry.ITEM.getId(Declarer.wool_leggings),
                     1
             );
@@ -1070,7 +1070,7 @@ public class Registrar {
             Declarer.COPPERPANT = createShapedRecipeJson(
                     Lists.newArrayList(tempID),//items
                     Lists.newArrayList(false),//type
-                    Lists.newArrayList("0 0", "0 0", "0 0"),//pattern
+                    Lists.newArrayList("0 0", "000", "0 0"),//pattern
                     Registry.ITEM.getId(Declarer.copper_leggings),
                     1
             );

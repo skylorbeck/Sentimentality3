@@ -106,7 +106,6 @@ public class ExtraHUD {
             case 0 -> {//top left
                 clockPosX = 1;
                 clockPosY = 1;
-                clockAdj = 0;
             }
             case 1 -> {//top right
                 clockPosX = scaledWidth - 38;
@@ -116,7 +115,6 @@ public class ExtraHUD {
             case 2 -> {//bottom left
                 clockPosX = 1;
                 clockPosY = scaledHeight - 8;
-                clockAdj = 0;
             }
             case 3 -> {//bottom right
                 clockPosX = scaledWidth - 38;
