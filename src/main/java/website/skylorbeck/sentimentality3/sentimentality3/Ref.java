@@ -116,6 +116,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean reclaim_gold = true;
     public static boolean reclaim_diamond = true;
     public static boolean chainArmor = true;
+    public static int maxSugarCaneHeight = 5;
 
     public static void getSettings() {
         chunker = config.toggles.chunker;
@@ -210,7 +211,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
         reclaim_gold = config.toggles.reclaim.gold;
         reclaim_diamond = config.toggles.reclaim.diamond;
         getSomeSettings();
-
     }
 
     public static void getSomeSettings() {
@@ -229,5 +229,6 @@ public class Ref {//hardcoded references for use in registration and otherwise
         clockCorner = config.clockStuff.clockCorner;
         clockMilitary = config.clockStuff.clockMilitary;
         clockAmPm = config.clockStuff.clockAmPm;
+        maxSugarCaneHeight = config.cropStuff.sugarCaneHeight;
     }
 }

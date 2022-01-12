@@ -12,6 +12,7 @@
     "PingIndicator",
     "RecipeManagerMixin",
     "repairCostMixin",
+    "SugarCaneBlockMixin",
     "durability.DurabilityWarningMixinBowItem",
     "durability.DurabilityWarningMixinCrossbowItem",
     "durability.DurabilityWarningMixinFlintAndSteel",

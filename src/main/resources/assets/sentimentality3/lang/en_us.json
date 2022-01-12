@@ -139,6 +139,7 @@
   "text.autoconfig.sentimentality3.option.toggles.gold": "Gold Tools/Armor",
   "text.autoconfig.sentimentality3.option.toggles.diamond": "Diamond Tools/Armor",
   "text.autoconfig.sentimentality3.option.cropStuff": "Crops",
+  "text.autoconfig.sentimentality3.option.cropStuff.sugarCaneHeight": "Max Sugar Cane Height",
   "text.autoconfig.sentimentality3.option.cropStuff.cropSparkle": "Sparkle",
   "text.autoconfig.sentimentality3.option.cropStuff.sparkleType": "Sparkle Particle",
   "text.autoconfig.sentimentality3.option.cropStuff.sparkleCount": "Particle Count",

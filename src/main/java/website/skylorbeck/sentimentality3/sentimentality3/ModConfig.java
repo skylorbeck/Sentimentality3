@@ -38,6 +38,7 @@ public class ModConfig implements ConfigData {
     public boolean showSleepCount = true;
 
 
+
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Gui.CollapsibleObject()
     toggles toggles = new toggles();
@@ -178,6 +179,7 @@ public class ModConfig implements ConfigData {
     }
 
     public static class CropStuff {
+        public int sugarCaneHeight = 5;
         public boolean cropSparkle = true;
         public enum SparkleType {
             DRAGON_BREATH,
