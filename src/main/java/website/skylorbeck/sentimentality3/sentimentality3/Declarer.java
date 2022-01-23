@@ -805,4 +805,6 @@ public class Declarer {
     public static JsonObject WARPED_PICKAXE = null;
     public static JsonObject WARPED_SHOVEL = null;
     public static JsonObject WARPED_SWORD = null;
+
+    public static JsonObject MASS_ARROW = null;
 }

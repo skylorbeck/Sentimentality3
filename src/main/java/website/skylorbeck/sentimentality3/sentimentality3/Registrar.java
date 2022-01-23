@@ -24,9 +24,6 @@ import static website.skylorbeck.minecraft.skylorlib.DynamicRecipeLoader.*;
 
 @SuppressWarnings("unchecked cast")
 public class Registrar {
-    //todo COMPRESSED TUFF
-    //todo compressed calcite
-    //todo copper nugget
     public static void clientRegister() {//separated because servers don't like when they have this stuff registered on them
         //particles
         Declarer.END_FIRE_FLAME = Registry.register(Registry.PARTICLE_TYPE, new Identifier(Ref.MODID, "end_fire_flame"), FabricParticleTypes.simple());
@@ -837,6 +834,13 @@ public class Registrar {
                     Lists.newArrayList(false, false, false),
                     Registry.ITEM.getId(Declarer.slime_chunk_locator),
                     1);
+        }
+        if (Ref.massArrow) {
+            Declarer.MASS_ARROW = createShapelessRecipeJson(
+                    Lists.newArrayList(Registry.ITEM.getId(Declarer.feather_block), Registry.ITEM.getId(Declarer.large_stick_bundle), Registry.ITEM.getId(Items.OBSIDIAN)),
+                    Lists.newArrayList(false, false, false),
+                    Registry.ITEM.getId(Items.ARROW),
+                    64);
         }
         if (Ref.chunker) {
             Declarer.CHUNKLOADER = createShapedRecipeJson(

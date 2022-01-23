@@ -29,9 +29,9 @@ public class SugarCaneBlockMixin {
                 int j = state.get(AGE);
                 if (j == 15) {
                     world.setBlockState(pos.up(), ((SugarCaneBlock)(Object)this).getDefaultState());
-                    world.setBlockState(pos, (BlockState)state.with(AGE, 0), Block.NO_REDRAW);
+                    world.setBlockState(pos, state.with(AGE, 0), Block.NO_REDRAW);
                 } else {
-                    world.setBlockState(pos, (BlockState)state.with(AGE, j + 1), Block.NO_REDRAW);
+                    world.setBlockState(pos, state.with(AGE, j + 1), Block.NO_REDRAW);
                 }
             }
         }

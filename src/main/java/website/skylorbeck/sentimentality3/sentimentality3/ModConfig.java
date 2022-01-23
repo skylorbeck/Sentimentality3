@@ -79,6 +79,8 @@ public class ModConfig implements ConfigData {
         boolean chests = true;
         @ConfigEntry.Gui.RequiresRestart
         boolean massTorch = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean massArrow = true;
 
         @ConfigEntry.Gui.RequiresRestart
         boolean allShapeless = true;

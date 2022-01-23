@@ -18,6 +18,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean durabilityWarn = true;
     public static boolean chunker = true;
     public static boolean slimer = true;
+    public static boolean massArrow = true;
     public static boolean daylighter = true;
     public static boolean fleather = true;
     public static boolean charcoal = true;
@@ -210,6 +211,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         reclaim_iron = config.toggles.reclaim.iron;
         reclaim_gold = config.toggles.reclaim.gold;
         reclaim_diamond = config.toggles.reclaim.diamond;
+        massArrow = config.toggles.massArrow;
         getSomeSettings();
     }
 
