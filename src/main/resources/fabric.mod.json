@@ -23,9 +23,6 @@
     "main": [
       "website.skylorbeck.sentimentality3.sentimentality3.Sentimentality3"
     ],
-    "fabric-datagen": [
-      "website.skylorbeck.sentimentality3.sentimentality3.DataGenerator"
-    ],
     "modmenu": [
       "website.skylorbeck.sentimentality3.sentimentality3.ModImpl"
     ]
@@ -34,9 +31,9 @@
     "sentimentality3.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.11.6",
+    "fabricloader": ">=0.13.3",
     "fabric": "*",
-    "minecraft": "1.18.1",
-    "skylorlib": ">=1.1.0"
+    "minecraft": "1.18.2",
+    "skylorlib": ">=1.2.2"
   }
 }
