@@ -31,7 +31,7 @@ public class BeehiveMixin {
                     beeCount = beehiveBlockEntity.getBeeCount();
                 }
                 String text = "This hive contains " + beeCount + (beeCount == 1 ? " bee" : " bees");
-                ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, (new TitleS2CPacket(Text.of(text))));//send packet to client to display bee count as brief message on action bar
+                player.sendMessage(Text.of(text),false);
             }
         }
     }
