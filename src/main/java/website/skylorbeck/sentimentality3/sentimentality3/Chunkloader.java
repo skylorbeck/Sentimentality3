@@ -30,9 +30,7 @@ public class Chunkloader extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(world.isClient) {return TypedActionResult.pass(user.getStackInHand(hand));}
         ItemStack itemStack = user.getStackInHand(hand);
-        BlockPos blockPos = user.getBlockPos();
-        Chunk chunk = world.getChunk(blockPos);
-        ChunkPos chunkPos = chunk.getPos();
+        ChunkPos chunkPos = world.getChunk(user.getBlockPos()).getPos();
         MinecraftServer server = world.getServer();
         if (server != null) {
             ServerWorld serverWorld = (ServerWorld) world;
