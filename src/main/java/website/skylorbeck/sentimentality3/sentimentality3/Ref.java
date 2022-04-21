@@ -73,6 +73,8 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean sand = true;
     public static boolean gravel = true;
     public static boolean deepslate = true;
+    public static boolean tuff = true;
+    public static boolean calcite = true;
     public static boolean shapeless = true;
     public static boolean shapeless_bread = true;
     public static boolean shapeless_arrow = true;
@@ -167,6 +169,8 @@ public class Ref {//hardcoded references for use in registration and otherwise
         sand = config.toggles.compressedBlocks.sand;
         gravel = config.toggles.compressedBlocks.gravel;
         deepslate = config.toggles.compressedBlocks.deepslate;
+        tuff = config.toggles.compressedBlocks.tuff;
+        calcite = config.toggles.compressedBlocks.calcite;
         chainArmor = config.toggles.chainArmor;
         chests = config.toggles.chests;
         massTorch = config.toggles.massTorch;

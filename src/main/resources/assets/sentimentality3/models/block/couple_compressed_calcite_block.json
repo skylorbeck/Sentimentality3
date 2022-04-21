@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sentimentality3:block/couple_compressed_calcite_block"
+  }
+}

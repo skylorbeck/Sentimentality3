@@ -478,6 +478,45 @@ public class Registrar {
         regItem("nonuple_compressed_cobbled_deepslate", Declarer.nonuple_compressed_cobbled_deepslate);
         regBlock("nonuple_compressed_cobbled_deepslate_block", Declarer.nonuple_compressed_cobbled_deepslate_block);
 
+        regItem("monuple_compressed_tuff", Declarer.monuple_compressed_tuff);
+        regBlock("monuple_compressed_tuff_block", Declarer.monuple_compressed_tuff_block);
+        regItem("couple_compressed_tuff", Declarer.couple_compressed_tuff);
+        regBlock("couple_compressed_tuff_block", Declarer.couple_compressed_tuff_block);
+        regItem("triple_compressed_tuff", Declarer.triple_compressed_tuff);
+        regBlock("triple_compressed_tuff_block", Declarer.triple_compressed_tuff_block);
+        regItem("quadruple_compressed_tuff", Declarer.quadruple_compressed_tuff);
+        regBlock("quadruple_compressed_tuff_block", Declarer.quadruple_compressed_tuff_block);
+        regItem("quintuple_compressed_tuff", Declarer.quintuple_compressed_tuff);
+        regBlock("quintuple_compressed_tuff_block", Declarer.quintuple_compressed_tuff_block);
+        regItem("sextuple_compressed_tuff", Declarer.sextuple_compressed_tuff);
+        regBlock("sextuple_compressed_tuff_block", Declarer.sextuple_compressed_tuff_block);
+        regItem("septuple_compressed_tuff", Declarer.septuple_compressed_tuff);
+        regBlock("septuple_compressed_tuff_block", Declarer.septuple_compressed_tuff_block);
+        regItem("octuple_compressed_tuff", Declarer.octuple_compressed_tuff);
+        regBlock("octuple_compressed_tuff_block", Declarer.octuple_compressed_tuff_block);
+        regItem("nonuple_compressed_tuff", Declarer.nonuple_compressed_tuff);
+        regBlock("nonuple_compressed_tuff_block", Declarer.nonuple_compressed_tuff_block);
+        
+        regItem("monuple_compressed_calcite", Declarer.monuple_compressed_calcite);
+        regBlock("monuple_compressed_calcite_block", Declarer.monuple_compressed_calcite_block);
+        regItem("couple_compressed_calcite", Declarer.couple_compressed_calcite);
+        regBlock("couple_compressed_calcite_block", Declarer.couple_compressed_calcite_block);
+        regItem("triple_compressed_calcite", Declarer.triple_compressed_calcite);
+        regBlock("triple_compressed_calcite_block", Declarer.triple_compressed_calcite_block);
+        regItem("quadruple_compressed_calcite", Declarer.quadruple_compressed_calcite);
+        regBlock("quadruple_compressed_calcite_block", Declarer.quadruple_compressed_calcite_block);
+        regItem("quintuple_compressed_calcite", Declarer.quintuple_compressed_calcite);
+        regBlock("quintuple_compressed_calcite_block", Declarer.quintuple_compressed_calcite_block);
+        regItem("sextuple_compressed_calcite", Declarer.sextuple_compressed_calcite);
+        regBlock("sextuple_compressed_calcite_block", Declarer.sextuple_compressed_calcite_block);
+        regItem("septuple_compressed_calcite", Declarer.septuple_compressed_calcite);
+        regBlock("septuple_compressed_calcite_block", Declarer.septuple_compressed_calcite_block);
+        regItem("octuple_compressed_calcite", Declarer.octuple_compressed_calcite);
+        regBlock("octuple_compressed_calcite_block", Declarer.octuple_compressed_calcite_block);
+        regItem("nonuple_compressed_calcite", Declarer.nonuple_compressed_calcite);
+        regBlock("nonuple_compressed_calcite_block", Declarer.nonuple_compressed_calcite_block);
+
+
         Declarer.FLEATHERCOOK = createSmeltingRecipeJson(Declarer.fleather, Items.LEATHER, 0.1f, 200, furnaceTypes.smoking);//always load this, even if you can't craft the fleather
 
         Identifier tempID;
@@ -1424,6 +1463,46 @@ public class Registrar {
                 Declarer.COBBLED_DEEPSLATE_8XU = createUncompressedBlock(Declarer.octuple_compressed_cobbled_deepslate, Declarer.septuple_compressed_cobbled_deepslate);
                 Declarer.COBBLED_DEEPSLATE_9X = createCompressedBlock(Declarer.octuple_compressed_cobbled_deepslate, Declarer.nonuple_compressed_cobbled_deepslate);
                 Declarer.COBBLED_DEEPSLATE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_cobbled_deepslate, Declarer.octuple_compressed_cobbled_deepslate);
+            }
+            if (Ref.tuff) {
+                Declarer.TUFF_1X = createCompressedBlock(Items.TUFF, Declarer.monuple_compressed_tuff);
+                Declarer.TUFF_1XU = createUncompressedBlock(Declarer.monuple_compressed_tuff, Items.TUFF);
+                Declarer.TUFF_2X = createCompressedBlock(Declarer.monuple_compressed_tuff, Declarer.couple_compressed_tuff);
+                Declarer.TUFF_2XU = createUncompressedBlock(Declarer.couple_compressed_tuff, Declarer.monuple_compressed_tuff);
+                Declarer.TUFF_3X = createCompressedBlock(Declarer.couple_compressed_tuff, Declarer.triple_compressed_tuff);
+                Declarer.TUFF_3XU = createUncompressedBlock(Declarer.triple_compressed_tuff, Declarer.couple_compressed_tuff);
+                Declarer.TUFF_4X = createCompressedBlock(Declarer.triple_compressed_tuff, Declarer.quadruple_compressed_tuff);
+                Declarer.TUFF_4XU = createUncompressedBlock(Declarer.quadruple_compressed_tuff, Declarer.triple_compressed_tuff);
+                Declarer.TUFF_5X = createCompressedBlock(Declarer.quadruple_compressed_tuff, Declarer.quintuple_compressed_tuff);
+                Declarer.TUFF_5XU = createUncompressedBlock(Declarer.quintuple_compressed_tuff, Declarer.quadruple_compressed_tuff);
+                Declarer.TUFF_6X = createCompressedBlock(Declarer.quintuple_compressed_tuff, Declarer.sextuple_compressed_tuff);
+                Declarer.TUFF_6XU = createUncompressedBlock(Declarer.sextuple_compressed_tuff, Declarer.quintuple_compressed_tuff);
+                Declarer.TUFF_7X = createCompressedBlock(Declarer.sextuple_compressed_tuff, Declarer.septuple_compressed_tuff);
+                Declarer.TUFF_7XU = createUncompressedBlock(Declarer.septuple_compressed_tuff, Declarer.sextuple_compressed_tuff);
+                Declarer.TUFF_8X = createCompressedBlock(Declarer.septuple_compressed_tuff, Declarer.octuple_compressed_tuff);
+                Declarer.TUFF_8XU = createUncompressedBlock(Declarer.octuple_compressed_tuff, Declarer.septuple_compressed_tuff);
+                Declarer.TUFF_9X = createCompressedBlock(Declarer.octuple_compressed_tuff, Declarer.nonuple_compressed_tuff);
+                Declarer.TUFF_9XU = createUncompressedBlock(Declarer.nonuple_compressed_tuff, Declarer.octuple_compressed_tuff);
+            }
+            if (Ref.calcite) {
+                Declarer.CALCITE_1X = createCompressedBlock(Items.CALCITE, Declarer.monuple_compressed_calcite);
+                Declarer.CALCITE_1XU = createUncompressedBlock(Declarer.monuple_compressed_calcite, Items.CALCITE);
+                Declarer.CALCITE_2X = createCompressedBlock(Declarer.monuple_compressed_calcite, Declarer.couple_compressed_calcite);
+                Declarer.CALCITE_2XU = createUncompressedBlock(Declarer.couple_compressed_calcite, Declarer.monuple_compressed_calcite);
+                Declarer.CALCITE_3X = createCompressedBlock(Declarer.couple_compressed_calcite, Declarer.triple_compressed_calcite);
+                Declarer.CALCITE_3XU = createUncompressedBlock(Declarer.triple_compressed_calcite, Declarer.couple_compressed_calcite);
+                Declarer.CALCITE_4X = createCompressedBlock(Declarer.triple_compressed_calcite, Declarer.quadruple_compressed_calcite);
+                Declarer.CALCITE_4XU = createUncompressedBlock(Declarer.quadruple_compressed_calcite, Declarer.triple_compressed_calcite);
+                Declarer.CALCITE_5X = createCompressedBlock(Declarer.quadruple_compressed_calcite, Declarer.quintuple_compressed_calcite);
+                Declarer.CALCITE_5XU = createUncompressedBlock(Declarer.quintuple_compressed_calcite, Declarer.quadruple_compressed_calcite);
+                Declarer.CALCITE_6X = createCompressedBlock(Declarer.quintuple_compressed_calcite, Declarer.sextuple_compressed_calcite);
+                Declarer.CALCITE_6XU = createUncompressedBlock(Declarer.sextuple_compressed_calcite, Declarer.quintuple_compressed_calcite);
+                Declarer.CALCITE_7X = createCompressedBlock(Declarer.sextuple_compressed_calcite, Declarer.septuple_compressed_calcite);
+                Declarer.CALCITE_7XU = createUncompressedBlock(Declarer.septuple_compressed_calcite, Declarer.sextuple_compressed_calcite);
+                Declarer.CALCITE_8X = createCompressedBlock(Declarer.septuple_compressed_calcite, Declarer.octuple_compressed_calcite);
+                Declarer.CALCITE_8XU = createUncompressedBlock(Declarer.octuple_compressed_calcite, Declarer.septuple_compressed_calcite);
+                Declarer.CALCITE_9X = createCompressedBlock(Declarer.octuple_compressed_calcite, Declarer.nonuple_compressed_calcite);
+                Declarer.CALCITE_9XU = createUncompressedBlock(Declarer.nonuple_compressed_calcite, Declarer.octuple_compressed_calcite);
             }
         }
     }

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sentimentality3:block/triple_compressed_tuff_block"
+  }
+}

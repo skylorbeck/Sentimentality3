@@ -275,5 +275,9 @@ public class ModConfig implements ConfigData {
         boolean gravel = true;
         @ConfigEntry.Gui.RequiresRestart
         boolean deepslate = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean tuff = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean calcite = true;
     }
 }
