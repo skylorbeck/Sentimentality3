@@ -28,32 +28,21 @@ public class Chunkloader extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        if(world.isClient) {return TypedActionResult.pass(user.getStackInHand(hand));}
         ItemStack itemStack = user.getStackInHand(hand);
-        NbtCompound compoundTag = itemStack.getOrCreateNbt();
         BlockPos blockPos = user.getBlockPos();
         Chunk chunk = world.getChunk(blockPos);
         ChunkPos chunkPos = chunk.getPos();
         MinecraftServer server = world.getServer();
         if (server != null) {
-            long chunkLong = chunkPos.toLong();//get chunk x,y and then convert it to a single long for storage
-            chunks = compoundTag.getLongArray("chunks");//get the array stored in the itemstack
-            boolean toLoad = true;//set this chunk as needing to be loaded
-            for (int i = 0; i < chunks.length; i++) {
-                if (chunks[i] == chunkLong) {//check to see if chunk is already loaded
-                    server.getCommandManager().execute(new ServerCommandSource(server, new Vec3d(user.getX(), user.getY(), user.getZ()), Vec2f.ZERO, (ServerWorld) world, 4, "Chunk Loader", new LiteralText("Chunk Loader"), server, null),
-                            String.format("forceload %s %s %s", "remove", blockPos.getX(), blockPos.getZ()));//unload chunk as server level entity
-                    chunks = ArrayUtils.remove(chunks, i);//remove chunk from array on item
-                    user.sendMessage(Text.of("Chunk Unloaded"), true);//tell the user what happened
-                    toLoad = false;//set chunk as not needed
-                }
+            ServerWorld serverWorld = (ServerWorld) world;
+            if (serverWorld.getForcedChunks().contains(chunkPos.toLong())){
+                serverWorld.setChunkForced(chunkPos.x,chunkPos.z,false);
+                user.sendMessage(Text.of("Chunk Unloaded"), false);
+            } else{
+                serverWorld.setChunkForced(chunkPos.x,chunkPos.z,true);
+                user.sendMessage(Text.of("Chunk Loaded"), false);
             }
-            if (toLoad) {//if chunk wasn't in list
-                server.getCommandManager().execute(new ServerCommandSource(server, new Vec3d(user.getX(), user.getY(), user.getZ()), Vec2f.ZERO, (ServerWorld) world, 4, "Chunk Loader", new LiteralText("Chunk Loader"), server, null),
-                        String.format("forceload %s %s %s", "add", blockPos.getX(), blockPos.getZ()));//load the chunk using server level entity
-                chunks = ArrayUtils.add(chunks, chunkLong);//add chunk to itemstack
-                user.sendMessage(Text.of("Chunk Loaded"), true);//tell the user
-            }
-            compoundTag.putLongArray("chunks", chunks);//save nbt changes
         }
         return TypedActionResult.success(itemStack);
     }
