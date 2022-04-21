@@ -459,5 +459,11 @@
   "item.sentimentality3.dark_oak_pick": "Dark Oak Pickaxe",
   "item.sentimentality3.dark_oak_hoe": "Dark Oak Hoe",
 
+  "item.minecraft.wooden_sword": "Oak Sword",
+  "item.minecraft.wooden_shovel": "Oak Shovel",
+  "item.minecraft.wooden_pickaxe": "Oak Pickaxe",
+  "item.minecraft.wooden_axe": "Oak Axe",
+  "item.minecraft.wooden_hoe": "Oak Hoe",
+
   "itemGroup.sentimentality3.category": "Sentimentality 3"
 }

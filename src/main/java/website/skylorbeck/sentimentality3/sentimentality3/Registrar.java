@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.impl.content.registry.FuelRegistryImpl;
 import net.minecraft.block.Block;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.item.Item;
@@ -312,30 +313,55 @@ public class Registrar {
         regItem("spruce_shovel", Declarer.spruce_shovel);
         regItem("spruce_sword", Declarer.spruce_sword);
         regItem("spruce_hoe", Declarer.spruce_hoe);
+        FuelRegistry.INSTANCE.add(Declarer.spruce_pick,200);
+        FuelRegistry.INSTANCE.add(Declarer.spruce_axe,200);
+        FuelRegistry.INSTANCE.add(Declarer.spruce_shovel,200);
+        FuelRegistry.INSTANCE.add(Declarer.spruce_sword,200);
+        FuelRegistry.INSTANCE.add(Declarer.spruce_hoe,200);
 
         regItem("birch_pick", Declarer.birch_pick);
         regItem("birch_axe", Declarer.birch_axe);
         regItem("birch_shovel", Declarer.birch_shovel);
         regItem("birch_sword", Declarer.birch_sword);
         regItem("birch_hoe", Declarer.birch_hoe);
+        FuelRegistry.INSTANCE.add(Declarer.birch_pick,200);
+        FuelRegistry.INSTANCE.add(Declarer.birch_axe,200);
+        FuelRegistry.INSTANCE.add(Declarer.birch_shovel,200);
+        FuelRegistry.INSTANCE.add(Declarer.birch_sword,200);
+        FuelRegistry.INSTANCE.add(Declarer.birch_hoe,200);
 
         regItem("jungle_pick", Declarer.jungle_pick);
         regItem("jungle_axe", Declarer.jungle_axe);
         regItem("jungle_shovel", Declarer.jungle_shovel);
         regItem("jungle_sword", Declarer.jungle_sword);
         regItem("jungle_hoe", Declarer.jungle_hoe);
+        FuelRegistry.INSTANCE.add(Declarer.jungle_pick,200);
+        FuelRegistry.INSTANCE.add(Declarer.jungle_axe,200);
+        FuelRegistry.INSTANCE.add(Declarer.jungle_shovel,200);
+        FuelRegistry.INSTANCE.add(Declarer.jungle_sword,200);
+        FuelRegistry.INSTANCE.add(Declarer.jungle_hoe,200);
 
         regItem("acacia_pick", Declarer.acacia_pick);
         regItem("acacia_axe", Declarer.acacia_axe);
         regItem("acacia_shovel", Declarer.acacia_shovel);
         regItem("acacia_sword", Declarer.acacia_sword);
         regItem("acacia_hoe", Declarer.acacia_hoe);
+        FuelRegistry.INSTANCE.add(Declarer.acacia_pick,200);
+        FuelRegistry.INSTANCE.add(Declarer.acacia_axe,200);
+        FuelRegistry.INSTANCE.add(Declarer.acacia_shovel,200);
+        FuelRegistry.INSTANCE.add(Declarer.acacia_sword,200);
+        FuelRegistry.INSTANCE.add(Declarer.acacia_hoe,200);
 
         regItem("dark_oak_pick", Declarer.dark_oak_pick);
         regItem("dark_oak_axe", Declarer.dark_oak_axe);
         regItem("dark_oak_shovel", Declarer.dark_oak_shovel);
         regItem("dark_oak_sword", Declarer.dark_oak_sword);
         regItem("dark_oak_hoe", Declarer.dark_oak_hoe);
+        FuelRegistry.INSTANCE.add(Declarer.dark_oak_pick,200);
+        FuelRegistry.INSTANCE.add(Declarer.dark_oak_axe,200);
+        FuelRegistry.INSTANCE.add(Declarer.dark_oak_shovel,200);
+        FuelRegistry.INSTANCE.add(Declarer.dark_oak_sword,200);
+        FuelRegistry.INSTANCE.add(Declarer.dark_oak_hoe,200);
 
         regItem("monuple_compressed_cobblestone", Declarer.monuple_compressed_cobblestone);
         regBlock("monuple_compressed_cobblestone_block", Declarer.monuple_compressed_cobblestone_block);
