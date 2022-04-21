@@ -144,7 +144,10 @@
   "text.autoconfig.sentimentality3.option.cropStuff.cropSparkle": "Sparkle",
   "text.autoconfig.sentimentality3.option.cropStuff.sparkleType": "Sparkle Particle",
   "text.autoconfig.sentimentality3.option.cropStuff.sparkleCount": "Particle Count",
-  "text.autoconfig.sentimentality3.option.durabilityWarn": "Durability Ping",
+  "text.autoconfig.sentimentality3.option.durabilityStuff": "Durability Stuff",
+  "text.autoconfig.sentimentality3.option.durabilityStuff.durabilityWarn": "Durability Ping",
+  "text.autoconfig.sentimentality3.option.durabilityStuff.firstWarn": "First Ping @ Durability",
+  "text.autoconfig.sentimentality3.option.durabilityStuff.secondWarn": "Second Ping @ Durability",
   "text.autoconfig.sentimentality3.option.sleepStuff.doSleepStuff": "Enable Sleep Voting",
   "text.autoconfig.sentimentality3.option.clockStuff.doClock": "Enable Real Time Clock",
 

@@ -204,7 +204,7 @@ public class ModConfig implements ConfigData {
     }
 
     static class DurabilityStuff {
-        public boolean durabilityWarn = false;
+        public boolean durabilityWarn = true;
         @ConfigEntry.BoundedDiscrete(min = 10,max = 30)
         int firstWarn = 10;
         @ConfigEntry.BoundedDiscrete(min = 1,max = 9)
