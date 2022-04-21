@@ -16,6 +16,8 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean altItemEntity = false;
     public static boolean beehiveTips = true;
     public static boolean durabilityWarn = true;
+    public static int firstWarn = 10;
+    public static int secondWarn = 5;
     public static boolean chunker = true;
     public static boolean slimer = true;
     public static boolean massArrow = true;
@@ -222,7 +224,9 @@ public class Ref {//hardcoded references for use in registration and otherwise
         infinityFix = config.infinityFix;
         itemEntity = config.itemEntity;
         beehiveTips = config.beehiveTips;
-        durabilityWarn = config.durabilityWarn;
+        durabilityWarn = config.durabilityStuff.durabilityWarn;
+        firstWarn = config.durabilityStuff.firstWarn;
+        secondWarn = config.durabilityStuff.secondWarn;
         cropSparkle = config.cropStuff.cropSparkle;
         sparkleType = config.cropStuff.sparkleType;
         sparkleCount = config.cropStuff.sparkleCount;

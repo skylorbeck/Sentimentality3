@@ -23,9 +23,8 @@ public class ModConfig implements ConfigData {
 
     public boolean beehiveTips = true;
 
-    public boolean durabilityWarn = false;
-    /*@ConfigEntry.Gui.CollapsibleObject()
-    public durabilityStuff durabilityStuff = new durabilityStuff();*/
+    @ConfigEntry.Gui.CollapsibleObject()
+    public DurabilityStuff durabilityStuff = new DurabilityStuff();
 
     @ConfigEntry.Gui.CollapsibleObject()
     public CropStuff cropStuff = new CropStuff();
@@ -202,6 +201,14 @@ public class ModConfig implements ConfigData {
         int clockCorner = 1;
         boolean clockMilitary = false;
         boolean clockAmPm = true;
+    }
+
+    static class DurabilityStuff {
+        public boolean durabilityWarn = false;
+        @ConfigEntry.BoundedDiscrete(min = 10,max = 30)
+        int firstWarn = 10;
+        @ConfigEntry.BoundedDiscrete(min = 1,max = 9)
+        int secondWarn = 5;
     }
 
     static class toolToggles{
