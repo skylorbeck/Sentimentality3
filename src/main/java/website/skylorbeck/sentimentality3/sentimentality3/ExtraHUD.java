@@ -73,9 +73,9 @@ public class ExtraHUD {
         }
 
         int sleeping = 0;
-        List playerEntities = world.getPlayers();
-        for (int i = 0; i < playerEntities.size(); i++) {//count all sleeping players
-            if (world.getPlayers().get(i).isSleeping()) {
+        List<? extends PlayerEntity> playerEntities = world.getPlayers();
+        for (PlayerEntity playerEntity : playerEntities) {//count all sleeping players
+            if (playerEntity.isSleeping()) {
                 sleeping++;
             }
         }
@@ -85,7 +85,7 @@ public class ExtraHUD {
                 sleepAdj = 8;
             }
             itemRenderer.renderInGui(new ItemStack(Items.RED_BED), 0, scaledHeight - 18 - sleepAdj);
-            if (sleeping * 100 / playerEntities.size() >= world.getGameRules().getInt(GameRules.PLAYERS_SLEEPING_PERCENTAGE)) {//calculate percent of players sleeping, defaults to 50%
+            if ((sleeping / playerEntities.size())*100 >= world.getGameRules().getInt(GameRules.PLAYERS_SLEEPING_PERCENTAGE)) {
                 color = 43520;//green
             } else {
                 color = 16733525;//orange-red
