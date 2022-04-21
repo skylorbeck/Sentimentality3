@@ -33,8 +33,6 @@ public abstract class Cropmixin {
     public void hasRandomTicks(BlockState state, CallbackInfoReturnable<Boolean> cir) {
         if (Ref.cropSparkle) {
             cir.setReturnValue(true);
-        } else {
-            cir.setReturnValue(!this.isMature(state));
         }
     }
     @Inject(at = @At("HEAD"), method = "randomTick")
@@ -82,24 +80,13 @@ public abstract class Cropmixin {
                 double n = (double)pos.getY() + RANDOM.nextDouble() * g;
                 double o = (double)pos.getZ() + l + RANDOM.nextDouble() * d * 2.0D;
                 if (!world.getBlockState((new BlockPos(m, n, o)).down()).isAir()) {
-                    ParticleEffect particleType = ParticleTypes.DRAGON_BREATH;
-                    switch (Ref.sparkleType){
-                        case DRAGON_BREATH:
-                            particleType = ParticleTypes.DRAGON_BREATH;
-                            break;
-                        case ENCHANTED_HIT:
-                            particleType = ParticleTypes.ENCHANTED_HIT;
-                            break;
-                        case HAPPY_VILLAGER:
-                            particleType = ParticleTypes.HAPPY_VILLAGER;
-                            break;
-                        case INSTANT_EFFECT:
-                            particleType = ParticleTypes.INSTANT_EFFECT;
-                            break;
-                        case TOTEM_OF_UNDYING:
-                            particleType = ParticleTypes.TOTEM_OF_UNDYING;
-                            break;
-                    }
+                    ParticleEffect particleType = switch (Ref.sparkleType) {
+                        case DRAGON_BREATH -> ParticleTypes.DRAGON_BREATH;
+                        case ENCHANTED_HIT -> ParticleTypes.ENCHANTED_HIT;
+                        case HAPPY_VILLAGER -> ParticleTypes.HAPPY_VILLAGER;
+                        case INSTANT_EFFECT -> ParticleTypes.INSTANT_EFFECT;
+                        case TOTEM_OF_UNDYING -> ParticleTypes.TOTEM_OF_UNDYING;
+                    };
                     world.addParticle(particleType, m, n, o, h, j, k);
                 }
             }
