@@ -9,14 +9,7 @@
     "ItemEntityMixin",
     "RecipeManagerMixin",
     "repairCostMixin",
-    "SugarCaneBlockMixin",
-    "durability.DurabilityWarningMixinBowItem",
-    "durability.DurabilityWarningMixinCrossbowItem",
-    "durability.DurabilityWarningMixinFlintAndSteel",
-    "durability.DurabilityWarningMixinShear",
-    "durability.DurabilityWarningMixinSpear",
-    "durability.DurabilityWarningMixinSword",
-    "durability.DurabilityWarningMixinTool"
+    "SugarCaneBlockMixin"
   ],
   "client": [
     "Cropmixin",
