@@ -105,27 +105,9 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
             boolean isInCobweb = itemEntity.world.getBlockState(itemEntity.getBlockPos()).getBlock() == Blocks.COBWEB;//check to see if item is stuck in cobweb
             if (itemEntity.isSubmergedInWater() || isAboveWater1 || isInCobweb) {//if it's either of those, make is spin but at 1/4th speed
                 rotation = rotation / 4;
-                if (rotation % 2 == 0) {//50/50 chance to rotate either direction
-                    matrixStack.multiply(Vec3f.POSITIVE_X.getRadialQuaternion(rotation));
-                    matrixStack.multiply(Vec3f.POSITIVE_Y.getRadialQuaternion(rotation));
-                    matrixStack.multiply(Vec3f.POSITIVE_Z.getRadialQuaternion(rotation));
-                } else {
-                    matrixStack.multiply(Vec3f.NEGATIVE_X.getRadialQuaternion(rotation));
-                    matrixStack.multiply(Vec3f.NEGATIVE_Y.getRadialQuaternion(rotation));
-                    matrixStack.multiply(Vec3f.NEGATIVE_Z.getRadialQuaternion(rotation));
-                }
-                rotator.setRotation(new Vec3d(0, 0, rotation));
+                rotate(matrixStack, rotator, rotation);
             } else if (!itemEntity.isOnGround() && !itemEntity.isSubmergedInWater()) {//if the item  isn't on the ground and isn't in water, spin at full speed
-                if (rotation % 2 == 0) {
-                    matrixStack.multiply(Vec3f.POSITIVE_X.getRadialQuaternion(rotation));
-                    matrixStack.multiply(Vec3f.POSITIVE_Y.getRadialQuaternion(rotation));
-                    matrixStack.multiply(Vec3f.POSITIVE_Z.getRadialQuaternion(rotation));
-                } else {
-                    matrixStack.multiply(Vec3f.NEGATIVE_X.getRadialQuaternion(rotation));
-                    matrixStack.multiply(Vec3f.NEGATIVE_Y.getRadialQuaternion(rotation));
-                    matrixStack.multiply(Vec3f.NEGATIVE_Z.getRadialQuaternion(rotation));
-                }
-                rotator.setRotation(new Vec3d(0, 0, rotation));
+                rotate(matrixStack, rotator, rotation);
             } else if (itemEntity.getStack().getItem() instanceof AliasedBlockItem) {//if it's on the ground, but redstone (or a similar item), special case to lay flat
                 matrixStack.multiply(Vec3f.POSITIVE_Z.getRadialQuaternion((float) rotator.getRotation().z));
             } else if (itemEntity.getStack().getItem() instanceof BlockItem && !flat) {//special case to make full cube blocks lay on their correct bottom instead of side
@@ -188,5 +170,18 @@ public abstract class ItemEntityRendererMixin extends EntityRenderer<ItemEntity>
             super.render(itemEntity, f, partialTicks, matrixStack, vertexConsumerProvider, i);
             ci.cancel();
         }
+    }
+
+    private void rotate(MatrixStack matrixStack, ItemEntityRotator rotator, float rotation) {
+        if (rotation % 2 == 0) {//50/50 chance to rotate either direction
+            matrixStack.multiply(Vec3f.POSITIVE_X.getRadialQuaternion(rotation));
+            matrixStack.multiply(Vec3f.POSITIVE_Y.getRadialQuaternion(rotation));
+            matrixStack.multiply(Vec3f.POSITIVE_Z.getRadialQuaternion(rotation));
+        } else {
+            matrixStack.multiply(Vec3f.NEGATIVE_X.getRadialQuaternion(rotation));
+            matrixStack.multiply(Vec3f.NEGATIVE_Y.getRadialQuaternion(rotation));
+            matrixStack.multiply(Vec3f.NEGATIVE_Z.getRadialQuaternion(rotation));
+        }
+        rotator.setRotation(new Vec3d(0, 0, rotation));
     }
 }
