@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": [
+      { "model": "sentimentality3:block/sextuple_compressed_calcite_block" }
+    ]
+  }
+}

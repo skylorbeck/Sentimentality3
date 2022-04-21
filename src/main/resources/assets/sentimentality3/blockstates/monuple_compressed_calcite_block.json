@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": [
+      { "model": "sentimentality3:block/monuple_compressed_calcite_block" }
+    ]
+  }
+}

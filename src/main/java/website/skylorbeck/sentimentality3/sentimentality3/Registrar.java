@@ -306,6 +306,36 @@ public class Registrar {
         regItem("deepslate_shovel", Declarer.deepslate_shovel);
         regItem("deepslate_sword", Declarer.deepslate_sword);
         regItem("deepslate_hoe", Declarer.deepslate_hoe);
+        
+        regItem("spruce_pick", Declarer.spruce_pick);
+        regItem("spruce_axe", Declarer.spruce_axe);
+        regItem("spruce_shovel", Declarer.spruce_shovel);
+        regItem("spruce_sword", Declarer.spruce_sword);
+        regItem("spruce_hoe", Declarer.spruce_hoe);
+
+        regItem("birch_pick", Declarer.birch_pick);
+        regItem("birch_axe", Declarer.birch_axe);
+        regItem("birch_shovel", Declarer.birch_shovel);
+        regItem("birch_sword", Declarer.birch_sword);
+        regItem("birch_hoe", Declarer.birch_hoe);
+
+        regItem("jungle_pick", Declarer.jungle_pick);
+        regItem("jungle_axe", Declarer.jungle_axe);
+        regItem("jungle_shovel", Declarer.jungle_shovel);
+        regItem("jungle_sword", Declarer.jungle_sword);
+        regItem("jungle_hoe", Declarer.jungle_hoe);
+
+        regItem("acacia_pick", Declarer.acacia_pick);
+        regItem("acacia_axe", Declarer.acacia_axe);
+        regItem("acacia_shovel", Declarer.acacia_shovel);
+        regItem("acacia_sword", Declarer.acacia_sword);
+        regItem("acacia_hoe", Declarer.acacia_hoe);
+
+        regItem("dark_oak_pick", Declarer.dark_oak_pick);
+        regItem("dark_oak_axe", Declarer.dark_oak_axe);
+        regItem("dark_oak_shovel", Declarer.dark_oak_shovel);
+        regItem("dark_oak_sword", Declarer.dark_oak_sword);
+        regItem("dark_oak_hoe", Declarer.dark_oak_hoe);
 
         regItem("monuple_compressed_cobblestone", Declarer.monuple_compressed_cobblestone);
         regBlock("monuple_compressed_cobblestone_block", Declarer.monuple_compressed_cobblestone_block);
@@ -1282,6 +1312,49 @@ public class Registrar {
                 Declarer.DEEPSLATE_SHOVEL = createTool(tempID, ToolTypes.Shovel, Declarer.deepslate_shovel);
                 Declarer.DEEPSLATE_HOE = createTool(tempID, ToolTypes.Hoe, Declarer.deepslate_hoe);
             }
+
+            if (Ref.spruceTools) {
+                Declarer.SPRUCE_AXE = createTool(Items.SPRUCE_PLANKS, ToolTypes.Axe, Declarer.spruce_axe);
+                Declarer.SPRUCE_PICKAXE = createTool(Items.SPRUCE_PLANKS, ToolTypes.Pickaxe, Declarer.spruce_pick);
+                Declarer.SPRUCE_SWORD = createTool(Items.SPRUCE_PLANKS, ToolTypes.Sword, Declarer.spruce_sword);
+                Declarer.SPRUCE_SHOVEL = createTool(Items.SPRUCE_PLANKS, ToolTypes.Shovel, Declarer.spruce_shovel);
+                Declarer.SPRUCE_HOE = createTool(Items.SPRUCE_PLANKS, ToolTypes.Hoe, Declarer.spruce_hoe);
+            }
+            if (Ref.birchTools) {
+                Declarer.BIRCH_AXE = createTool(Items.BIRCH_PLANKS, ToolTypes.Axe, Declarer.birch_axe);
+                Declarer.BIRCH_PICKAXE = createTool(Items.BIRCH_PLANKS, ToolTypes.Pickaxe, Declarer.birch_pick);
+                Declarer.BIRCH_SWORD = createTool(Items.BIRCH_PLANKS, ToolTypes.Sword, Declarer.birch_sword);
+                Declarer.BIRCH_SHOVEL = createTool(Items.BIRCH_PLANKS, ToolTypes.Shovel, Declarer.birch_shovel);
+                Declarer.BIRCH_HOE = createTool(Items.BIRCH_PLANKS, ToolTypes.Hoe, Declarer.birch_hoe);
+            }
+            if (Ref.jungleTools) {
+                Declarer.JUNGLE_AXE = createTool(Items.JUNGLE_PLANKS, ToolTypes.Axe, Declarer.jungle_axe);
+                Declarer.JUNGLE_PICKAXE = createTool(Items.JUNGLE_PLANKS, ToolTypes.Pickaxe, Declarer.jungle_pick);
+                Declarer.JUNGLE_SWORD = createTool(Items.JUNGLE_PLANKS, ToolTypes.Sword, Declarer.jungle_sword);
+                Declarer.JUNGLE_SHOVEL = createTool(Items.JUNGLE_PLANKS, ToolTypes.Shovel, Declarer.jungle_shovel);
+                Declarer.JUNGLE_HOE = createTool(Items.JUNGLE_PLANKS, ToolTypes.Hoe, Declarer.jungle_hoe);
+            }
+            if (Ref.acaciaTools) {
+                Declarer.ACACIA_AXE = createTool(Items.ACACIA_PLANKS, ToolTypes.Axe, Declarer.acacia_axe);
+                Declarer.ACACIA_PICKAXE = createTool(Items.ACACIA_PLANKS, ToolTypes.Pickaxe, Declarer.acacia_pick);
+                Declarer.ACACIA_SWORD = createTool(Items.ACACIA_PLANKS, ToolTypes.Sword, Declarer.acacia_sword);
+                Declarer.ACACIA_SHOVEL = createTool(Items.ACACIA_PLANKS, ToolTypes.Shovel, Declarer.acacia_shovel);
+                Declarer.ACACIA_HOE = createTool(Items.ACACIA_PLANKS, ToolTypes.Hoe, Declarer.acacia_hoe);
+            }
+            if (Ref.darkOakTools) {
+                Declarer.DARK_OAK_AXE = createTool(Items.DARK_OAK_PLANKS, ToolTypes.Axe, Declarer.dark_oak_axe);
+                Declarer.DARK_OAK_PICKAXE = createTool(Items.DARK_OAK_PLANKS, ToolTypes.Pickaxe, Declarer.dark_oak_pick);
+                Declarer.DARK_OAK_SWORD = createTool(Items.DARK_OAK_PLANKS, ToolTypes.Sword, Declarer.dark_oak_sword);
+                Declarer.DARK_OAK_SHOVEL = createTool(Items.DARK_OAK_PLANKS, ToolTypes.Shovel, Declarer.dark_oak_shovel);
+                Declarer.DARK_OAK_HOE = createTool(Items.DARK_OAK_PLANKS, ToolTypes.Hoe, Declarer.dark_oak_hoe);
+            }
+//            if (Ref.mangroveTools) {
+//                Declarer.MANGROVE_AXE = createTool(Items.Man, ToolTypes.Axe, Declarer.mangrove_axe);
+//                Declarer.MANGROVE_PICKAXE = createTool(Items.MANGROVE_PLANKS, ToolTypes.Pickaxe, Declarer.mangrove_pick);
+//                Declarer.MANGROVE_SWORD = createTool(Items.MANGROVE_PLANKS, ToolTypes.Sword, Declarer.mangrove_sword);
+//                Declarer.MANGROVE_SHOVEL = createTool(Items.MANGROVE_PLANKS, ToolTypes.Shovel, Declarer.mangrove_shovel);
+//                Declarer.MANGROVE_HOE = createTool(Items.MANGROVE_PLANKS, ToolTypes.Hoe, Declarer.mangrove_hoe);
+//            }
         }
         if (Ref.allCompressedBlocks) {
             if (Ref.cobble) {

@@ -64,6 +64,11 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean amethystTools = true;
     public static boolean copperTools = true;
     public static boolean deepslateTools = true;
+    public static boolean spruceTools = true;
+    public static boolean birchTools = true;
+    public static boolean jungleTools = true;
+    public static boolean acaciaTools = true;
+    public static boolean darkOakTools = true;
     public static boolean cobble = true;
     public static boolean dirt = true;
     public static boolean diorite = true;
@@ -160,6 +165,11 @@ public class Ref {//hardcoded references for use in registration and otherwise
         amethystTools = config.toggles.toolToggles.amethystTools;
         copperTools = config.toggles.toolToggles.copperTools;
         deepslateTools = config.toggles.toolToggles.deepslateTools;
+        spruceTools = config.toggles.toolToggles.spruceTools;
+        birchTools = config.toggles.toolToggles.birchTools;
+        jungleTools = config.toggles.toolToggles.jungleTools;
+        acaciaTools = config.toggles.toolToggles.acaciaTools;
+        darkOakTools = config.toggles.toolToggles.darkOakTools;
         cobble = config.toggles.compressedBlocks.cobble;
         dirt = config.toggles.compressedBlocks.dirt;
         diorite = config.toggles.compressedBlocks.diorite;

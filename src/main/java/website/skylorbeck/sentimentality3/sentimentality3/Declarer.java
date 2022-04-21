@@ -434,6 +434,42 @@ public class Declarer {
     public static final Item deepslate_pick = new ExtraPickaxeItem(ExtraToolMaterials.DEEPSLATE, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
     public static final Item deepslate_axe = new ExtraAxeItem(ExtraToolMaterials.DEEPSLATE, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
     public static final Item deepslate_hoe = new ExtraHoeItem(ExtraToolMaterials.DEEPSLATE, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
+    
+    public static final Item spruce_sword = new SwordItem(ExtraToolMaterials.SPRUCE, 3, -2.4F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item spruce_shovel = new ShovelItem(ExtraToolMaterials.SPRUCE, 1.5F, -3.0F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item spruce_pick = new ExtraPickaxeItem(ExtraToolMaterials.SPRUCE, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
+    public static final Item spruce_axe = new ExtraAxeItem(ExtraToolMaterials.SPRUCE, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item spruce_hoe = new ExtraHoeItem(ExtraToolMaterials.SPRUCE, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
+    
+    public static final Item birch_sword = new SwordItem(ExtraToolMaterials.BIRCH, 3, -2.4F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item birch_shovel = new ShovelItem(ExtraToolMaterials.BIRCH, 1.5F, -3.0F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item birch_pick = new ExtraPickaxeItem(ExtraToolMaterials.BIRCH, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
+    public static final Item birch_axe = new ExtraAxeItem(ExtraToolMaterials.BIRCH, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item birch_hoe = new ExtraHoeItem(ExtraToolMaterials.BIRCH, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
+
+    public static final Item jungle_sword = new SwordItem(ExtraToolMaterials.JUNGLE, 3, -2.4F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item jungle_shovel = new ShovelItem(ExtraToolMaterials.JUNGLE, 1.5F, -3.0F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item jungle_pick = new ExtraPickaxeItem(ExtraToolMaterials.JUNGLE, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
+    public static final Item jungle_axe = new ExtraAxeItem(ExtraToolMaterials.JUNGLE, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item jungle_hoe = new ExtraHoeItem(ExtraToolMaterials.JUNGLE, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
+
+    public static final Item acacia_sword = new SwordItem(ExtraToolMaterials.ACACIA, 3, -2.4F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item acacia_shovel = new ShovelItem(ExtraToolMaterials.ACACIA, 1.5F, -3.0F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item acacia_pick = new ExtraPickaxeItem(ExtraToolMaterials.ACACIA, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
+    public static final Item acacia_axe = new ExtraAxeItem(ExtraToolMaterials.ACACIA, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item acacia_hoe = new ExtraHoeItem(ExtraToolMaterials.ACACIA, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
+
+    public static final Item dark_oak_sword = new SwordItem(ExtraToolMaterials.DARK_OAK, 3, -2.4F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item dark_oak_shovel = new ShovelItem(ExtraToolMaterials.DARK_OAK, 1.5F, -3.0F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item dark_oak_pick = new ExtraPickaxeItem(ExtraToolMaterials.DARK_OAK, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
+    public static final Item dark_oak_axe = new ExtraAxeItem(ExtraToolMaterials.DARK_OAK, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item dark_oak_hoe = new ExtraHoeItem(ExtraToolMaterials.DARK_OAK, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
+
+//    public static final Item mangrove_sword = new SwordItem(ExtraToolMaterials.MANGROVE, 3, -2.4F, (new FabricItemSettings()).group(sentimentality3));
+//    public static final Item mangrove_shovel = new ShovelItem(ExtraToolMaterials.MANGROVE, 1.5F, -3.0F, (new FabricItemSettings()).group(sentimentality3));
+//    public static final Item mangrove_pick = new ExtraPickaxeItem(ExtraToolMaterials.MANGROVE, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
+//    public static final Item mangrove_axe = new ExtraAxeItem(ExtraToolMaterials.MANGROVE, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
+//    public static final Item mangrove_hoe = new ExtraHoeItem(ExtraToolMaterials.MANGROVE, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
 
     public static JsonObject ARROW = null;
     public static JsonObject BREAD = null;
@@ -868,17 +904,48 @@ public class Declarer {
     public static JsonObject REDSTONE_SHOVEL = null;
     public static JsonObject REDSTONE_SWORD = null;
 
-    public static JsonObject STONE_AXE = null;
-    public static JsonObject STONE_HOE = null;
-    public static JsonObject STONE_PICKAXE = null;
-    public static JsonObject STONE_SHOVEL = null;
-    public static JsonObject STONE_SWORD = null;
-
     public static JsonObject WARPED_AXE = null;
     public static JsonObject WARPED_HOE = null;
     public static JsonObject WARPED_PICKAXE = null;
     public static JsonObject WARPED_SHOVEL = null;
     public static JsonObject WARPED_SWORD = null;
+
+    public static JsonObject SPRUCE_AXE = null;
+    public static JsonObject SPRUCE_HOE = null;
+    public static JsonObject SPRUCE_PICKAXE = null;
+    public static JsonObject SPRUCE_SHOVEL = null;
+    public static JsonObject SPRUCE_SWORD = null;
+
+    public static JsonObject BIRCH_AXE = null;
+    public static JsonObject BIRCH_HOE = null;
+    public static JsonObject BIRCH_PICKAXE = null;
+    public static JsonObject BIRCH_SHOVEL = null;
+    public static JsonObject BIRCH_SWORD = null;
+    
+    public static JsonObject JUNGLE_AXE = null;
+    public static JsonObject JUNGLE_HOE = null;
+    public static JsonObject JUNGLE_PICKAXE = null;
+    public static JsonObject JUNGLE_SHOVEL = null;
+    public static JsonObject JUNGLE_SWORD = null;
+
+    public static JsonObject ACACIA_AXE = null;
+    public static JsonObject ACACIA_HOE = null;
+    public static JsonObject ACACIA_PICKAXE = null;
+    public static JsonObject ACACIA_SHOVEL = null;
+    public static JsonObject ACACIA_SWORD = null;
+
+    public static JsonObject DARK_OAK_AXE = null;
+    public static JsonObject DARK_OAK_HOE = null;
+    public static JsonObject DARK_OAK_PICKAXE = null;
+    public static JsonObject DARK_OAK_SHOVEL = null;
+    public static JsonObject DARK_OAK_SWORD = null;
+
+//    public static JsonObject MANGROVE_AXE = null;
+//    public static JsonObject MANGROVE_HOE = null;
+//    public static JsonObject MANGROVE_PICKAXE = null;
+//    public static JsonObject MANGROVE_SHOVEL = null;
+//    public static JsonObject MANGROVE_SWORD = null;
+
 
     public static JsonObject MASS_ARROW = null;
 }

@@ -254,6 +254,16 @@ public class ModConfig implements ConfigData {
         boolean copperTools = true;
         @ConfigEntry.Gui.RequiresRestart
         boolean deepslateTools = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean spruceTools = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean birchTools = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean jungleTools = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean acaciaTools = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean darkOakTools = true;
     }
 
     static class compressedBlocks{

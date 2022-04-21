@@ -1,0 +1,29 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "sentimentality3:item/acacia_pickaxe"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.85
+      },
+      "model": "sentimentality3:item/tools/acacia/pickaxe/2"
+    },
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.9
+      },
+      "model": "sentimentality3:item/tools/acacia/pickaxe/3"
+    },
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.95
+      },
+      "model": "sentimentality3:item/tools/acacia/pickaxe/4"
+    }
+  ]
+}

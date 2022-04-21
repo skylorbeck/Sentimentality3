@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "sentimentality3:item/dark_oak_sword_4"
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "sentimentality3:item/jungle_axe"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.85
+      },
+      "model": "sentimentality3:item/tools/jungle/axe/2"
+    },
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.9
+      },
+      "model": "sentimentality3:item/tools/jungle/axe/3"
+    },
+    {
+      "predicate": {
+        "damaged": 1,
+        "damage": 0.95
+      },
+      "model": "sentimentality3:item/tools/jungle/axe/4"
+    }
+  ]
+}

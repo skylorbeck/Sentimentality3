@@ -428,6 +428,36 @@
   "item.sentimentality3.deepslate_axe": "Deepslate Axe",
   "item.sentimentality3.deepslate_pick": "Deepslate Pickaxe",
   "item.sentimentality3.deepslate_hoe": "Deepslate Hoe",
+  
+  "item.sentimentality3.spruce_sword": "Spruce Sword",
+  "item.sentimentality3.spruce_shovel": "Spruce Shovel",
+  "item.sentimentality3.spruce_axe": "Spruce Axe",
+  "item.sentimentality3.spruce_pick": "Spruce Pickaxe",
+  "item.sentimentality3.spruce_hoe": "Spruce Hoe",
+  
+  "item.sentimentality3.birch_sword": "Birch Sword",
+  "item.sentimentality3.birch_shovel": "Birch Shovel",
+  "item.sentimentality3.birch_axe": "Birch Axe",
+  "item.sentimentality3.birch_pick": "Birch Pickaxe",
+  "item.sentimentality3.birch_hoe": "Birch Hoe",
+  
+  "item.sentimentality3.jungle_sword": "Jungle Sword",
+  "item.sentimentality3.jungle_shovel": "Jungle Shovel",
+  "item.sentimentality3.jungle_axe": "Jungle Axe",
+  "item.sentimentality3.jungle_pick": "Jungle Pickaxe",
+  "item.sentimentality3.jungle_hoe": "Jungle Hoe",
+  
+  "item.sentimentality3.acacia_sword": "Acacia Sword",
+  "item.sentimentality3.acacia_shovel": "Acacia Shovel",
+  "item.sentimentality3.acacia_axe": "Acacia Axe",
+  "item.sentimentality3.acacia_pick": "Acacia Pickaxe",
+  "item.sentimentality3.acacia_hoe": "Acacia Hoe",
+  
+  "item.sentimentality3.dark_oak_sword": "Dark Oak Sword",
+  "item.sentimentality3.dark_oak_shovel": "Dark Oak Shovel",
+  "item.sentimentality3.dark_oak_axe": "Dark Oak Axe",
+  "item.sentimentality3.dark_oak_pick": "Dark Oak Pickaxe",
+  "item.sentimentality3.dark_oak_hoe": "Dark Oak Hoe",
 
   "itemGroup.sentimentality3.category": "Sentimentality 3"
 }
