@@ -15,7 +15,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.profiler.Profiler;
 import net.minecraft.util.registry.Registry;
 import website.skylorbeck.minecraft.skylorlib.Color;
-import website.skylorbeck.sentimentality3.sentimentality3.*;
+import website.skylorbeck.sentimentality3.sentimentality3.ExtraHUD;
+import website.skylorbeck.sentimentality3.sentimentality3.ModConfig;
+import website.skylorbeck.sentimentality3.sentimentality3.Registrar;
+import website.skylorbeck.sentimentality3.sentimentality3.SlimeChunkLocator;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -26,7 +29,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
-import java.util.logging.Logger;
 
 @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
 public class Sentimentality3Client implements ClientModInitializer {

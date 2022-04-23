@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.fabricmc.fabric.impl.content.registry.FuelRegistryImpl;
 import net.minecraft.block.Block;
 import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.item.Item;

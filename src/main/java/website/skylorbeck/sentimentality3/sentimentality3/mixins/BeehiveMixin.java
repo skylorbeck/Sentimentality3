@@ -1,11 +1,9 @@
 package website.skylorbeck.sentimentality3.sentimentality3.mixins;
 
-import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
 import net.minecraft.block.BeehiveBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BeehiveBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.network.packet.s2c.play.TitleS2CPacket;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
