@@ -465,11 +465,11 @@ public class Declarer {
     public static final Item dark_oak_axe = new ExtraAxeItem(ExtraToolMaterials.DARK_OAK, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
     public static final Item dark_oak_hoe = new ExtraHoeItem(ExtraToolMaterials.DARK_OAK, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
 
-//    public static final Item mangrove_sword = new SwordItem(ExtraToolMaterials.MANGROVE, 3, -2.4F, (new FabricItemSettings()).group(sentimentality3));
-//    public static final Item mangrove_shovel = new ShovelItem(ExtraToolMaterials.MANGROVE, 1.5F, -3.0F, (new FabricItemSettings()).group(sentimentality3));
-//    public static final Item mangrove_pick = new ExtraPickaxeItem(ExtraToolMaterials.MANGROVE, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
-//    public static final Item mangrove_axe = new ExtraAxeItem(ExtraToolMaterials.MANGROVE, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
-//    public static final Item mangrove_hoe = new ExtraHoeItem(ExtraToolMaterials.MANGROVE, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item mangrove_sword = new SwordItem(ExtraToolMaterials.MANGROVE, 3, -2.4F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item mangrove_shovel = new ShovelItem(ExtraToolMaterials.MANGROVE, 1.5F, -3.0F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item mangrove_pick = new ExtraPickaxeItem(ExtraToolMaterials.MANGROVE, 1, -2.8F, (new FabricItemSettings().group(sentimentality3)));
+    public static final Item mangrove_axe = new ExtraAxeItem(ExtraToolMaterials.MANGROVE, 7.0F, -3.2F, (new FabricItemSettings()).group(sentimentality3));
+    public static final Item mangrove_hoe = new ExtraHoeItem(ExtraToolMaterials.MANGROVE, -1, -2.0F, (new FabricItemSettings()).group(sentimentality3));
 
     public static JsonObject ARROW = null;
     public static JsonObject BREAD = null;
@@ -940,11 +940,11 @@ public class Declarer {
     public static JsonObject DARK_OAK_SHOVEL = null;
     public static JsonObject DARK_OAK_SWORD = null;
 
-//    public static JsonObject MANGROVE_AXE = null;
-//    public static JsonObject MANGROVE_HOE = null;
-//    public static JsonObject MANGROVE_PICKAXE = null;
-//    public static JsonObject MANGROVE_SHOVEL = null;
-//    public static JsonObject MANGROVE_SWORD = null;
+    public static JsonObject MANGROVE_AXE = null;
+    public static JsonObject MANGROVE_HOE = null;
+    public static JsonObject MANGROVE_PICKAXE = null;
+    public static JsonObject MANGROVE_SHOVEL = null;
+    public static JsonObject MANGROVE_SWORD = null;
 
 
     public static JsonObject MASS_ARROW = null;

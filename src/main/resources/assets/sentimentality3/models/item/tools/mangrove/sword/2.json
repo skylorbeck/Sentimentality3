@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "sentimentality3:item/acacia_sword_2"
+    }
+}

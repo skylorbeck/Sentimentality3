@@ -260,6 +260,11 @@ public class RecipeManagerMixin {
         createMap.apply(Declarer.DARK_OAK_SWORD,"dark_oak_sword");
         createMap.apply(Declarer.DARK_OAK_SHOVEL,"dark_oak_shovel");
         createMap.apply(Declarer.DARK_OAK_HOE,"dark_oak_hoe");
+        createMap.apply(Declarer.MANGROVE_AXE,"mangrove_axe");
+        createMap.apply(Declarer.MANGROVE_PICKAXE,"mangrove_pickaxe");
+        createMap.apply(Declarer.MANGROVE_SWORD,"mangrove_sword");
+        createMap.apply(Declarer.MANGROVE_SHOVEL,"mangrove_shovel");
+        createMap.apply(Declarer.MANGROVE_HOE,"mangrove_hoe");
         
         createMap.apply(Declarer.COBBLESTONE_1X,"cobblestone_1x");
         createMap.apply(Declarer.COBBLESTONE_2X,"cobblestone_2x");

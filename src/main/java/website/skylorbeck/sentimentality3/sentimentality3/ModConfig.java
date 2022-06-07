@@ -264,6 +264,8 @@ public class ModConfig implements ConfigData {
         boolean acaciaTools = true;
         @ConfigEntry.Gui.RequiresRestart
         boolean darkOakTools = true;
+        @ConfigEntry.Gui.RequiresRestart
+        boolean mangroveTools = true;
     }
 
     static class compressedBlocks{

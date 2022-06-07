@@ -45,7 +45,7 @@ public class ExtraHUD {
         int localHour = LocalTime.now().getHour();
         int localMinute = LocalTime.now().getMinute();
         String amPm = "AM";
-        boolean left = client.options.mainArm == Arm.LEFT;//if player left handed
+        boolean left = client.options.getMainArm().getValue() == Arm.LEFT;//if player left handed
 
 
         if (time >= 24000) {//compensate for the fact that time is counted upwards forever

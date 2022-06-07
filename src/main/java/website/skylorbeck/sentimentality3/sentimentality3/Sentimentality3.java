@@ -5,7 +5,7 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
@@ -20,11 +20,11 @@ public class Sentimentality3 implements ModInitializer {
     public void onInitialize() {
         //Logger.getLogger(Ref.MODID).log(Level.WARNING,"This is when Main is loaded");
         ConfigHolder<ModConfig> configHolder = AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);//register config asap to prevent errors down the line
-        ServerSidePacketRegistry.INSTANCE.register(sentimentality3_get_seed, (packetContext, attachedData) -> {//get blank trigger packet
-            packetContext.getTaskQueue().execute(() -> {
+        ServerPlayNetworking.registerGlobalReceiver(sentimentality3_get_seed, (server, player, handler, buf, responseSender) -> {
+            server.execute(() -> {
                 PacketByteBuf data = new PacketByteBuf(Unpooled.buffer());
-                data.writeLong(Objects.requireNonNull(packetContext.getPlayer().getEntityWorld().getServer()).getOverworld().getSeed());//send seed back
-                ServerSidePacketRegistry.INSTANCE.sendToPlayer(packetContext.getPlayer(), Sentimentality3Client.sentimentality3_send_seed, data);
+                data.writeLong(Objects.requireNonNull(player.getEntityWorld().getServer()).getOverworld().getSeed());//send seed back
+                ServerPlayNetworking.send(player, Sentimentality3Client.sentimentality3_send_seed, data);
             });
         });
         configHolder.getConfig();

@@ -2,7 +2,7 @@ package website.skylorbeck.sentimentality3.sentimentality3.client;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleResourceReloadListener;
 import net.fabricmc.loader.api.FabricLoader;
@@ -38,14 +38,15 @@ public class Sentimentality3Client implements ClientModInitializer {
     public void onInitializeClient() {
         AutoConfig.getGuiRegistry(ModConfig.class);
 
-        ClientSidePacketRegistry.INSTANCE.register(sentimentality3_send_seed, (packetContext, attachedData) -> {
-            long seed = attachedData.readLong();
-            packetContext.getTaskQueue().execute(() -> {
+        ClientPlayNetworking.registerGlobalReceiver(sentimentality3_send_seed, (client, handler, buf, responseSender) -> {
+            long seed = buf.readLong();
+            client.execute(() -> {
                 SlimeChunkLocator.receivedSeed(seed);//save seed to slime chunk detector that requested it
             });
         });
         Registrar.clientRegister();
         extraHUD = new ExtraHUD();//add in the custom hud
+        /*
         if (FabricLoader.getInstance().isDevelopmentEnvironment()) {
             ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new SimpleResourceReloadListener<Boolean>() {
 
@@ -71,10 +72,16 @@ public class Sentimentality3Client implements ClientModInitializer {
                                 Identifier sourceTexture = null;
                                 try {
                                     sourceTexture = new Identifier(sourceItem.getNamespace(), String.format("textures/%s%s", "item/" + sourceItem.getPath(), ".png"));
+                                    if (manager.getResource(sourceTexture).isEmpty()){
+                                        throw new IOException();
+                                    }
                                     writeImage(manager, partPath, sourceItem, sourceTexture, image);
                                 } catch (IOException e) {
                                     try {
                                         sourceTexture = new Identifier(sourceItem.getNamespace(), String.format("textures/%s%s", "block/" + sourceItem.getPath(), ".png"));
+                                        if (manager.getResource(sourceTexture).isEmpty()){
+                                            throw new IOException();
+                                        }
                                         writeImage(manager, partPath, sourceItem, sourceTexture, image);
                                     } catch (IOException ignored) {
                                         ignored.printStackTrace();
@@ -92,6 +99,8 @@ public class Sentimentality3Client implements ClientModInitializer {
                 }
             });
         }
+
+         */
     }
     
 
@@ -99,23 +108,11 @@ public class Sentimentality3Client implements ClientModInitializer {
 //        Logger.getGlobal().log(Level.INFO, "Writing image for " + sourceItem.toString());
             ArrayList<Color> colors = new ArrayList<>();
             ArrayList<Color> greys = new ArrayList<>();
-            NativeImage nativeImage = NativeImage.read(manager.getResource(sourceTexture).getInputStream());
-            NativeImage template = NativeImage.read(manager.getResource(new Identifier("sentimentality3","textures/item/staging/"+part+ ".png")).getInputStream());
+            NativeImage nativeImage = NativeImage.read(manager.getResource(sourceTexture).get().getInputStream());
+            NativeImage template = NativeImage.read(manager.getResource(new Identifier("sentimentality3","textures/item/staging/"+part+ ".png")).get().getInputStream());
 
-            for (int x = 0; x < template.getWidth(); x++) {
-                for (int y = 0; y < template.getHeight(); y++) {
-                    Color color = Color.ofTransparent(template.getColor(x, y));
-                    if (!greys.contains(color) && color.getAlpha() != 0)
-                        greys.add(color);
-                }
-            }
-            for (int x = 0; x < nativeImage.getWidth(); x++) {
-                for (int y = 0; y < nativeImage.getHeight(); y++) {
-                    Color color = Color.ofTransparent(nativeImage.getColor(x, y));
-                    if (!colors.contains(color) && color.getAlpha() != 0)
-                        colors.add(color);
-                }
-            }
+            ExtractColor(greys, template);
+            ExtractColor(colors, nativeImage);
             Comparator<Color> comparator = (a, b) -> Float.compare(a.getRed() * 0.21f + a.getBlue() * 0.07f + a.getGreen() * 0.72f, b.getRed() * 0.21f + b.getBlue() * 0.07f + b.getGreen() * 0.72f);
             colors.sort(comparator);
             greys.sort(comparator);
@@ -137,12 +134,23 @@ public class Sentimentality3Client implements ClientModInitializer {
             template.writeTo(path);
         }
 
+    private void ExtractColor(ArrayList<Color> greys, NativeImage template) {
+        for (int x = 0; x < template.getWidth(); x++) {
+            for (int y = 0; y < template.getHeight(); y++) {
+                Color color = Color.ofTransparent(template.getColor(x, y));
+                if (!greys.contains(color) && color.getAlpha() != 0)
+                    greys.add(color);
+            }
+        }
+    }
+
     static Item[] items = new Item[]{
             Items.SPRUCE_PLANKS,
             Items.BIRCH_PLANKS,
             Items.JUNGLE_PLANKS,
             Items.DARK_OAK_PLANKS,
-            Items.ACACIA_PLANKS
+            Items.ACACIA_PLANKS,
+            Items.MANGROVE_PLANKS
     };
     static String[] images = new String[]{
             "axe",

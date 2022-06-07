@@ -36,7 +36,7 @@ public abstract class Cropmixin {
         }
     }
     @Inject(at = @At("HEAD"), method = "randomTick")
-    private void sparkleTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
+    private void sparkleTick(BlockState state, ServerWorld world, BlockPos pos, net.minecraft.util.math.random.Random random, CallbackInfo ci) {
         if (Ref.cropSparkle) {
             ClientWorld clientWorld = MinecraftClient.getInstance().world;
             if (isMature(state)) {

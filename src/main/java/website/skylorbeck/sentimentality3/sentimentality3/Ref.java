@@ -69,6 +69,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
     public static boolean jungleTools = true;
     public static boolean acaciaTools = true;
     public static boolean darkOakTools = true;
+    public static boolean mangroveTools = true;
     public static boolean cobble = true;
     public static boolean dirt = true;
     public static boolean diorite = true;
@@ -170,6 +171,7 @@ public class Ref {//hardcoded references for use in registration and otherwise
         jungleTools = config.toggles.toolToggles.jungleTools;
         acaciaTools = config.toggles.toolToggles.acaciaTools;
         darkOakTools = config.toggles.toolToggles.darkOakTools;
+        mangroveTools = config.toggles.toolToggles.mangroveTools;
         cobble = config.toggles.compressedBlocks.cobble;
         dirt = config.toggles.compressedBlocks.dirt;
         diorite = config.toggles.compressedBlocks.diorite;

@@ -360,7 +360,18 @@ public class Registrar {
         FuelRegistry.INSTANCE.add(Declarer.dark_oak_axe,200);
         FuelRegistry.INSTANCE.add(Declarer.dark_oak_shovel,200);
         FuelRegistry.INSTANCE.add(Declarer.dark_oak_sword,200);
-        FuelRegistry.INSTANCE.add(Declarer.dark_oak_hoe,200);
+        
+        
+        regItem("mangrove_pick", Declarer.mangrove_pick);
+        regItem("mangrove_axe", Declarer.mangrove_axe);
+        regItem("mangrove_shovel", Declarer.mangrove_shovel);
+        regItem("mangrove_sword", Declarer.mangrove_sword);
+        regItem("mangrove_hoe", Declarer.mangrove_hoe);
+        FuelRegistry.INSTANCE.add(Declarer.mangrove_pick,200);
+        FuelRegistry.INSTANCE.add(Declarer.mangrove_axe,200);
+        FuelRegistry.INSTANCE.add(Declarer.mangrove_shovel,200);
+        FuelRegistry.INSTANCE.add(Declarer.mangrove_sword,200);
+        FuelRegistry.INSTANCE.add(Declarer.mangrove_hoe,200);
 
         regItem("monuple_compressed_cobblestone", Declarer.monuple_compressed_cobblestone);
         regBlock("monuple_compressed_cobblestone_block", Declarer.monuple_compressed_cobblestone_block);
@@ -1373,13 +1384,13 @@ public class Registrar {
                 Declarer.DARK_OAK_SHOVEL = createTool(Items.DARK_OAK_PLANKS, ToolTypes.Shovel, Declarer.dark_oak_shovel);
                 Declarer.DARK_OAK_HOE = createTool(Items.DARK_OAK_PLANKS, ToolTypes.Hoe, Declarer.dark_oak_hoe);
             }
-//            if (Ref.mangroveTools) {
-//                Declarer.MANGROVE_AXE = createTool(Items.Man, ToolTypes.Axe, Declarer.mangrove_axe);
-//                Declarer.MANGROVE_PICKAXE = createTool(Items.MANGROVE_PLANKS, ToolTypes.Pickaxe, Declarer.mangrove_pick);
-//                Declarer.MANGROVE_SWORD = createTool(Items.MANGROVE_PLANKS, ToolTypes.Sword, Declarer.mangrove_sword);
-//                Declarer.MANGROVE_SHOVEL = createTool(Items.MANGROVE_PLANKS, ToolTypes.Shovel, Declarer.mangrove_shovel);
-//                Declarer.MANGROVE_HOE = createTool(Items.MANGROVE_PLANKS, ToolTypes.Hoe, Declarer.mangrove_hoe);
-//            }
+            if (Ref.mangroveTools) {
+                Declarer.MANGROVE_AXE = createTool(Items.MANGROVE_PLANKS, ToolTypes.Axe, Declarer.mangrove_axe);
+                Declarer.MANGROVE_PICKAXE = createTool(Items.MANGROVE_PLANKS, ToolTypes.Pickaxe, Declarer.mangrove_pick);
+                Declarer.MANGROVE_SWORD = createTool(Items.MANGROVE_PLANKS, ToolTypes.Sword, Declarer.mangrove_sword);
+                Declarer.MANGROVE_SHOVEL = createTool(Items.MANGROVE_PLANKS, ToolTypes.Shovel, Declarer.mangrove_shovel);
+                Declarer.MANGROVE_HOE = createTool(Items.MANGROVE_PLANKS, ToolTypes.Hoe, Declarer.mangrove_hoe);
+            }
         }
         if (Ref.allCompressedBlocks) {
             if (Ref.cobble) {

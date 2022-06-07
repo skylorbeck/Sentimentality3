@@ -1,7 +1,7 @@
 package website.skylorbeck.sentimentality3.sentimentality3;
 
 import io.netty.buffer.Unpooled;
-import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -51,7 +51,7 @@ public class SlimeChunkLocator extends Item {
             }
             if (!hasSeed) {
                 PacketByteBuf data = new PacketByteBuf(Unpooled.buffer());
-                ClientSidePacketRegistry.INSTANCE.sendToServer(Sentimentality3.sentimentality3_get_seed, data);//send empty trigger packet to server
+                ClientPlayNetworking.send(Sentimentality3.sentimentality3_get_seed, data);//send empty trigger packet to server
                 waitingForSeed = true;
             }
             if(hasSeed){//once you get the seed

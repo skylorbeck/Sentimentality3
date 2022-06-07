@@ -11,14 +11,12 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import website.skylorbeck.sentimentality3.sentimentality3.Ref;
 
-import java.util.Random;
-
 import static net.minecraft.block.SugarCaneBlock.AGE;
 
 @Mixin(SugarCaneBlock.class)
 public class SugarCaneBlockMixin {
     @Inject(method = "randomTick",at = @At("TAIL"))
-    public void EndlessGrowth(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci){
+    public void EndlessGrowth(BlockState state, ServerWorld world, BlockPos pos, net.minecraft.util.math.random.Random random, CallbackInfo ci){
         if (world.isAir(pos.up())) {
             int i = 1;
             while (world.getBlockState(pos.down(i)).isOf(((SugarCaneBlock)(Object)this))) {
