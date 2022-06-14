@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3.mixins;
+package website.skylorbeck.minecraft.sentimentality3.mixins;
 
 import net.minecraft.block.BeehiveBlock;
 import net.minecraft.block.BlockState;
@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import website.skylorbeck.sentimentality3.sentimentality3.Ref;
+import website.skylorbeck.minecraft.sentimentality3.Ref;
 
 @Mixin(BeehiveBlock.class)
 public class BeehiveMixin {

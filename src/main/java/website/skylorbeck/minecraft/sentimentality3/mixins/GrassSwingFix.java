@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3.mixins;
+package website.skylorbeck.minecraft.sentimentality3.mixins;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;

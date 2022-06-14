@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3;
+package website.skylorbeck.minecraft.sentimentality3;
 
 import io.netty.buffer.Unpooled;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -9,7 +9,7 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
-import website.skylorbeck.sentimentality3.sentimentality3.client.Sentimentality3Client;
+import website.skylorbeck.minecraft.sentimentality3.client.Sentimentality3Client;
 
 import java.util.Objects;
 

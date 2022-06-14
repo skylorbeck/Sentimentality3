@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3;
+package website.skylorbeck.minecraft.sentimentality3;
 
 import io.netty.buffer.Unpooled;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;

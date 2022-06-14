@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3.mixins;
+package website.skylorbeck.minecraft.sentimentality3.mixins;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,10 +11,10 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import website.skylorbeck.sentimentality3.sentimentality3.Ref;
+import website.skylorbeck.minecraft.sentimentality3.Ref;
 
-import static website.skylorbeck.sentimentality3.sentimentality3.Ref.firstWarn;
-import static website.skylorbeck.sentimentality3.sentimentality3.Ref.secondWarn;
+import static website.skylorbeck.minecraft.sentimentality3.Ref.firstWarn;
+import static website.skylorbeck.minecraft.sentimentality3.Ref.secondWarn;
 
 @Mixin(ItemStack.class)
 public abstract class DurabilityWarnMixin {

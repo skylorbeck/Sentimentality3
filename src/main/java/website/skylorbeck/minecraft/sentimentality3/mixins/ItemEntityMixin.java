@@ -1,9 +1,9 @@
-package website.skylorbeck.sentimentality3.sentimentality3.mixins;
+package website.skylorbeck.minecraft.sentimentality3.mixins;
 
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
-import website.skylorbeck.sentimentality3.sentimentality3.ItemEntityRotator;
+import website.skylorbeck.minecraft.sentimentality3.ItemEntityRotator;
 
 @Mixin(ItemEntity.class)
 public class ItemEntityMixin implements ItemEntityRotator {

@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3;
+package website.skylorbeck.minecraft.sentimentality3;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

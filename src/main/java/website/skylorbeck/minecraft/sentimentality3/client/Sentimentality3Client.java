@@ -1,34 +1,23 @@
-package website.skylorbeck.sentimentality3.sentimentality3.client;
+package website.skylorbeck.minecraft.sentimentality3.client;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.SimpleResourceReloadListener;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.resource.ResourceManager;
-import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.profiler.Profiler;
-import net.minecraft.util.registry.Registry;
 import website.skylorbeck.minecraft.skylorlib.Color;
-import website.skylorbeck.sentimentality3.sentimentality3.ExtraHUD;
-import website.skylorbeck.sentimentality3.sentimentality3.ModConfig;
-import website.skylorbeck.sentimentality3.sentimentality3.Registrar;
-import website.skylorbeck.sentimentality3.sentimentality3.SlimeChunkLocator;
+import website.skylorbeck.minecraft.sentimentality3.ExtraHUD;
+import website.skylorbeck.minecraft.sentimentality3.ModConfig;
+import website.skylorbeck.minecraft.sentimentality3.Registrar;
+import website.skylorbeck.minecraft.sentimentality3.SlimeChunkLocator;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executor;
 
 @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
 public class Sentimentality3Client implements ClientModInitializer {

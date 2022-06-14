@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3;
+package website.skylorbeck.minecraft.sentimentality3;
 
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;

@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3.mixins;
+package website.skylorbeck.minecraft.sentimentality3.mixins;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;
@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import website.skylorbeck.sentimentality3.sentimentality3.Ref;
+import website.skylorbeck.minecraft.sentimentality3.Ref;
 
 @Mixin({PlayerListHud.class})
 public abstract class PingIndicator extends DrawableHelper {

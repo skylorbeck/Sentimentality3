@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3;
+package website.skylorbeck.minecraft.sentimentality3;
 
 import com.google.common.collect.Lists;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;

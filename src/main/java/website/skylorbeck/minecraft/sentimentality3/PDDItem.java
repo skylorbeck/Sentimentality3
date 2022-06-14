@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3;
+package website.skylorbeck.minecraft.sentimentality3;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;

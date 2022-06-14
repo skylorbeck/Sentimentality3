@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3.mixins;
+package website.skylorbeck.minecraft.sentimentality3.mixins;
 
 import net.minecraft.block.*;
 import net.minecraft.client.render.OverlayTexture;
@@ -27,8 +27,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import website.skylorbeck.sentimentality3.sentimentality3.ItemEntityRotator;
-import website.skylorbeck.sentimentality3.sentimentality3.Ref;
+import website.skylorbeck.minecraft.sentimentality3.ItemEntityRotator;
+import website.skylorbeck.minecraft.sentimentality3.Ref;
 
 
 @Mixin(ItemEntityRenderer.class)

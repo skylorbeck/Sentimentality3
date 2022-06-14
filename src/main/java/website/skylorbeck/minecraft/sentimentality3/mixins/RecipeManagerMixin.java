@@ -1,4 +1,4 @@
-package website.skylorbeck.sentimentality3.sentimentality3.mixins;
+package website.skylorbeck.minecraft.sentimentality3.mixins;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -10,8 +10,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import website.skylorbeck.sentimentality3.sentimentality3.Declarer;
-import website.skylorbeck.sentimentality3.sentimentality3.Ref;
+import website.skylorbeck.minecraft.sentimentality3.Declarer;
+import website.skylorbeck.minecraft.sentimentality3.Ref;
 
 import java.util.Map;
 import java.util.function.BiFunction;

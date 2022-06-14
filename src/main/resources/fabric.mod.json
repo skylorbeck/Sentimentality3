@@ -22,13 +22,13 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "website.skylorbeck.sentimentality3.sentimentality3.client.Sentimentality3Client"
+      "website.skylorbeck.minecraft.sentimentality3.client.Sentimentality3Client"
     ],
     "main": [
-      "website.skylorbeck.sentimentality3.sentimentality3.Sentimentality3"
+      "website.skylorbeck.minecraft.sentimentality3.Sentimentality3"
     ],
     "modmenu": [
-      "website.skylorbeck.sentimentality3.sentimentality3.ModImpl"
+      "website.skylorbeck.minecraft.sentimentality3.ModImpl"
     ]
   },
   "mixins": [
