@@ -35,7 +35,7 @@ public class GrassSwingFix {
         Vec3d rotation = player.getRotationVec(1.0F);
         float reach = manager.getReachDistance();
         Vec3d end = camera.add(rotation.x * reach, rotation.y * reach, rotation.z * reach);
-        EntityHitResult result = ProjectileUtil.getEntityCollision(world, player, camera, end, new Box(camera, end), EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR.and(e -> e != null && e.collides() && e instanceof LivingEntity));
+        EntityHitResult result = ProjectileUtil.getEntityCollision(world, player, camera, end, new Box(camera, end), EntityPredicates.EXCEPT_CREATIVE_OR_SPECTATOR.and(e -> e != null && e.isCollidable() && e instanceof LivingEntity));
         if (result != null && result.getEntity().getFirstPassenger()!=player) {//only pass if a living-entity was hit && don't hit the horse you are riding
             manager.attackEntity(player, result.getEntity());
             return true;
