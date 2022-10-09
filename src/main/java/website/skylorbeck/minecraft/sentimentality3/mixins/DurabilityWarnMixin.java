@@ -30,7 +30,7 @@ public abstract class DurabilityWarnMixin {
 
     @Inject(method = "damage(ILnet/minecraft/util/math/random/Random;Lnet/minecraft/server/network/ServerPlayerEntity;)Z", at = @At("HEAD"))
     public void onDamage(int amount, net.minecraft.util.math.random.Random random, ServerPlayerEntity player, CallbackInfoReturnable<Boolean> cir) {//todo configurable
-        if (Ref.durabilityWarn) {
+        if (Ref.durabilityWarn && player != null) {
             int durability = getMaxDamage() - getDamage();
             if (durability == firstWarn+1) {
                 player.world.playSound(null, player.getBlockPos(), SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 0.4f, 0.8F + player.world.random.nextFloat() * 0.4F);
